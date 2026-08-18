@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "title": "Cursora",
+    "description": "English, Portuguese, programming courses and more."
+  },
+  "common": {
+    "logout": "Log out",
+    "languageSwitcherLabel": "Select language",
+    "passwordVisibility": {
+      "show": "Show password",
+      "hide": "Hide password"
+    }
+  },
+  "courses": {
+    "heading": "Explore our courses",
+    "subheading": "Courses organized by category so you can move at your own pace.",
+    "filters": {
+      "all": "All"
+    },
+    "categories": {
+      "english": "English",
+      "portuguese": "Portuguese",
+      "programming": "Programming",
+      "general": "General"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "duration": "{hours} h",
+    "students": "{count, plural, one {# student} other {# students}}",
+    "viewCourse": "View course",
+    "comingSoonCourse": "Course content will be available soon.",
+    "emptyState": "No courses in this category yet."
+  },
+  "auth": {
+    "brandPanel": {
+      "headline": "Everything you want to learn, in one place.",
+      "subtitle": "Clear, hands-on courses across dozens of topics, designed to help you make real progress, course by course.",
+      "copyright": "© {year} Cursora. All rights reserved."
+    },
+    "divider": "or continue with email",
+    "comingSoon": "Coming soon",
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to continue your English, Portuguese, programming courses and more.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@email.com",
+      "emailRequired": "Enter your email address.",
+      "emailInvalid": "Enter a valid email address.",
+      "passwordLabel": "Password",
+      "passwordRequired": "Enter your password.",
+      "forgotPassword": "Forgot your password?",
+      "remember": "Remember me on this device",
+      "submit": "Sign in",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Sign up for free",
+      "successTitle": "Welcome back!",
+      "successSubtitle": "You've signed in successfully.",
+      "continue": "Continue →",
+      "invalidCredentials": "Incorrect email or password.",
+      "testAccounts": {
+        "title": "Test accounts (hardcoded, temporary)",
+        "admin": "Admin",
+        "user": "User"
+      }
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Sign up for free and get access to English, Portuguese, programming courses and much more.",
+      "nameLabel": "Full name",
+      "namePlaceholder": "Ana Torres",
+      "nameRequired": "Enter your full name.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@email.com",
+      "emailRequired": "Enter your email address.",
+      "emailInvalid": "Enter a valid email address.",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "At least 8 characters",
+      "passwordRequired": "Create a password.",
+      "passwordTooShort": "Must be at least 8 characters.",
+      "confirmPasswordLabel": "Confirm password",
+      "confirmPasswordPlaceholder": "Repeat your password",
+      "confirmPasswordMismatch": "Passwords don't match.",
+      "terms": "I agree to the <terms>terms and conditions</terms> and the <privacy>privacy policy</privacy>.",
+      "termsRequired": "You must accept the terms to continue.",
+      "submit": "Create account",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Sign in",
+      "successTitle": "Account created",
+      "successSubtitle": "Your account was created successfully and you're now signed in.",
+      "continue": "Go to home →",
+      "passwordStrength": {
+        "label": "Password strength:",
+        "veryWeak": "Very weak",
+        "weak": "Weak",
+        "fair": "Fair",
+        "strong": "Strong",
+        "veryStrong": "Very strong"
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "title": "Cursora",
+    "description": "Cursos de inglés, portugués, programación y más."
+  },
+  "common": {
+    "logout": "Cerrar sesión",
+    "languageSwitcherLabel": "Seleccionar idioma",
+    "passwordVisibility": {
+      "show": "Mostrar contraseña",
+      "hide": "Ocultar contraseña"
+    }
+  },
+  "courses": {
+    "heading": "Explora nuestros cursos",
+    "subheading": "Cursos organizados por categoría para que avances a tu propio ritmo.",
+    "filters": {
+      "all": "Todos"
+    },
+    "categories": {
+      "english": "Inglés",
+      "portuguese": "Português",
+      "programming": "Programación",
+      "general": "General"
+    },
+    "levels": {
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzado"
+    },
+    "duration": "{hours} h",
+    "students": "{count, plural, one {# estudiante} other {# estudiantes}}",
+    "viewCourse": "Ver curso",
+    "comingSoonCourse": "El contenido del curso estará disponible próximamente.",
+    "emptyState": "No hay cursos en esta categoría todavía."
+  },
+  "auth": {
+    "brandPanel": {
+      "headline": "Todo lo que quieres aprender, en un solo lugar.",
+      "subtitle": "Cursos claros y prácticos en decenas de temas, pensados para que avances con foco, curso a curso.",
+      "copyright": "© {year} Cursora. Todos los derechos reservados."
+    },
+    "divider": "o con tu correo",
+    "comingSoon": "Disponible próximamente",
+    "login": {
+      "title": "Bienvenido de nuevo",
+      "subtitle": "Inicia sesión para continuar tus cursos de inglés, portugués, programación y más.",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "tu@correo.com",
+      "emailRequired": "Ingresa tu correo electrónico.",
+      "emailInvalid": "Ingresa un correo electrónico válido.",
+      "passwordLabel": "Contraseña",
+      "passwordRequired": "Ingresa tu contraseña.",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "remember": "Recuérdame en este dispositivo",
+      "submit": "Iniciar sesión",
+      "noAccount": "¿No tienes una cuenta?",
+      "registerLink": "Regístrate gratis",
+      "successTitle": "¡Bienvenido de nuevo!",
+      "successSubtitle": "Has iniciado sesión correctamente.",
+      "continue": "Continuar →",
+      "invalidCredentials": "Correo o contraseña incorrectos.",
+      "testAccounts": {
+        "title": "Cuentas de prueba (datos en duro, temporal)",
+        "admin": "Administrador",
+        "user": "Usuario"
+      }
+    },
+    "register": {
+      "title": "Crea tu cuenta",
+      "subtitle": "Regístrate gratis y accede a cursos de inglés, portugués, programación y mucho más.",
+      "nameLabel": "Nombre completo",
+      "namePlaceholder": "Ana Torres",
+      "nameRequired": "Ingresa tu nombre completo.",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "tu@correo.com",
+      "emailRequired": "Ingresa tu correo electrónico.",
+      "emailInvalid": "Ingresa un correo electrónico válido.",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Mínimo 8 caracteres",
+      "passwordRequired": "Crea una contraseña.",
+      "passwordTooShort": "Debe tener al menos 8 caracteres.",
+      "confirmPasswordLabel": "Confirmar contraseña",
+      "confirmPasswordPlaceholder": "Repite tu contraseña",
+      "confirmPasswordMismatch": "Las contraseñas no coinciden.",
+      "terms": "Acepto los <terms>términos y condiciones</terms> y la <privacy>política de privacidad</privacy>.",
+      "termsRequired": "Debes aceptar los términos para continuar.",
+      "submit": "Crear cuenta",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "loginLink": "Inicia sesión",
+      "successTitle": "Cuenta creada",
+      "successSubtitle": "Tu cuenta se creó correctamente y ya iniciaste sesión.",
+      "continue": "Ir al inicio →",
+      "passwordStrength": {
+        "label": "Seguridad de la contraseña:",
+        "veryWeak": "Muy débil",
+        "weak": "Débil",
+        "fair": "Aceptable",
+        "strong": "Fuerte",
+        "veryStrong": "Muy fuerte"
+      }
+    }
+  }
+}

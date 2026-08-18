@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "title": "Cursora",
+    "description": "Cursos de inglês, português, programação e muito mais."
+  },
+  "common": {
+    "logout": "Sair",
+    "languageSwitcherLabel": "Selecionar idioma",
+    "passwordVisibility": {
+      "show": "Mostrar senha",
+      "hide": "Ocultar senha"
+    }
+  },
+  "courses": {
+    "heading": "Explore nossos cursos",
+    "subheading": "Cursos organizados por categoria para você avançar no seu próprio ritmo.",
+    "filters": {
+      "all": "Todos"
+    },
+    "categories": {
+      "english": "Inglês",
+      "portuguese": "Português",
+      "programming": "Programação",
+      "general": "Geral"
+    },
+    "levels": {
+      "beginner": "Iniciante",
+      "intermediate": "Intermediário",
+      "advanced": "Avançado"
+    },
+    "duration": "{hours} h",
+    "students": "{count, plural, one {# aluno} other {# alunos}}",
+    "viewCourse": "Ver curso",
+    "comingSoonCourse": "O conteúdo do curso estará disponível em breve.",
+    "emptyState": "Ainda não há cursos nesta categoria."
+  },
+  "auth": {
+    "brandPanel": {
+      "headline": "Tudo o que você quer aprender, em um só lugar.",
+      "subtitle": "Cursos claros e práticos em dezenas de temas, pensados para você avançar com foco, curso a curso.",
+      "copyright": "© {year} Cursora. Todos os direitos reservados."
+    },
+    "divider": "ou continue com seu e-mail",
+    "comingSoon": "Em breve",
+    "login": {
+      "title": "Bem-vindo de volta",
+      "subtitle": "Faça login para continuar seus cursos de inglês, português, programação e muito mais.",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "voce@email.com",
+      "emailRequired": "Digite seu e-mail.",
+      "emailInvalid": "Digite um e-mail válido.",
+      "passwordLabel": "Senha",
+      "passwordRequired": "Digite sua senha.",
+      "forgotPassword": "Esqueceu sua senha?",
+      "remember": "Lembrar de mim neste dispositivo",
+      "submit": "Entrar",
+      "noAccount": "Ainda não tem uma conta?",
+      "registerLink": "Cadastre-se grátis",
+      "successTitle": "Bem-vindo de volta!",
+      "successSubtitle": "Você entrou com sucesso.",
+      "continue": "Continuar →",
+      "invalidCredentials": "E-mail ou senha incorretos.",
+      "testAccounts": {
+        "title": "Contas de teste (dados fixos, temporário)",
+        "admin": "Administrador",
+        "user": "Usuário"
+      }
+    },
+    "register": {
+      "title": "Crie sua conta",
+      "subtitle": "Cadastre-se grátis e tenha acesso a cursos de inglês, português, programação e muito mais.",
+      "nameLabel": "Nome completo",
+      "namePlaceholder": "Ana Torres",
+      "nameRequired": "Digite seu nome completo.",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "voce@email.com",
+      "emailRequired": "Digite seu e-mail.",
+      "emailInvalid": "Digite um e-mail válido.",
+      "passwordLabel": "Senha",
+      "passwordPlaceholder": "Mínimo de 8 caracteres",
+      "passwordRequired": "Crie uma senha.",
+      "passwordTooShort": "Deve ter pelo menos 8 caracteres.",
+      "confirmPasswordLabel": "Confirmar senha",
+      "confirmPasswordPlaceholder": "Repita sua senha",
+      "confirmPasswordMismatch": "As senhas não coincidem.",
+      "terms": "Concordo com os <terms>termos e condições</terms> e a <privacy>política de privacidade</privacy>.",
+      "termsRequired": "Você precisa aceitar os termos para continuar.",
+      "submit": "Criar conta",
+      "hasAccount": "Já tem uma conta?",
+      "loginLink": "Entrar",
+      "successTitle": "Conta criada",
+      "successSubtitle": "Sua conta foi criada com sucesso e você já está logado.",
+      "continue": "Ir para o início →",
+      "passwordStrength": {
+        "label": "Segurança da senha:",
+        "veryWeak": "Muito fraca",
+        "weak": "Fraca",
+        "fair": "Razoável",
+        "strong": "Forte",
+        "veryStrong": "Muito forte"
+      }
+    }
+  }
+}
