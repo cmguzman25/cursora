@@ -5,6 +5,8 @@ export type CourseLevel = "beginner" | "intermediate" | "advanced";
 
 export interface Course {
   id: string;
+  /** When present, the course has real lessons and links to `/courses/[slug]` instead of showing "coming soon". */
+  slug?: string;
   category: CourseCategory;
   level: CourseLevel;
   durationHours: number;
@@ -20,6 +22,25 @@ export interface Course {
  * doesn't require touching the components that consume it.
  */
 export const COURSES: Course[] = [
+  {
+    id: "aws-cloud-practitioner",
+    slug: "aws-cloud-practitioner",
+    category: "programming",
+    level: "beginner",
+    durationHours: 20,
+    studentsCount: 8,
+    rating: 5.0,
+    title: {
+      es: "AWS Certified Cloud Practitioner",
+      en: "AWS Certified Cloud Practitioner",
+      "pt-BR": "AWS Certified Cloud Practitioner",
+    },
+    description: {
+      es: "Prepárate para la certificación fundacional de AWS: conceptos de la nube, seguridad, servicios principales y precios.",
+      en: "Get ready for AWS's foundational certification: cloud concepts, security, core services, and pricing.",
+      "pt-BR": "Prepare-se para a certificação fundamental da AWS: conceitos de nuvem, segurança, serviços principais e preços.",
+    },
+  },
   {
     id: "eng-beginner",
     category: "english",

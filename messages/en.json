@@ -34,6 +34,21 @@
     "comingSoonCourse": "Course content will be available soon.",
     "emptyState": "No courses in this category yet."
   },
+  "lesson": {
+    "backToCourse": "← Back to course index",
+    "progress": "Lesson {current} of {total}",
+    "markComplete": "Mark as complete",
+    "markedComplete": "Completed",
+    "next": "Go to next lesson",
+    "courseFinished": "You finished the course!",
+    "notReady": "This lesson hasn't been written yet. Check back soon.",
+    "notTranslated": "This lesson hasn't been translated into this language yet. Showing the Spanish version."
+  },
+  "courseDetail": {
+    "completedCount": "{completed} / {total} lessons completed",
+    "startCourse": "Start course",
+    "continueCourse": "Continue course"
+  },
   "auth": {
     "brandPanel": {
       "headline": "Everything you want to learn, in one place.",
@@ -56,9 +71,6 @@
       "submit": "Sign in",
       "noAccount": "Don't have an account?",
       "registerLink": "Sign up for free",
-      "successTitle": "Welcome back!",
-      "successSubtitle": "You've signed in successfully.",
-      "continue": "Continue →",
       "invalidCredentials": "Incorrect email or password.",
       "testAccounts": {
         "title": "Test accounts (hardcoded, temporary)",
@@ -88,9 +100,10 @@
       "submit": "Create account",
       "hasAccount": "Already have an account?",
       "loginLink": "Sign in",
-      "successTitle": "Account created",
-      "successSubtitle": "Your account was created successfully and you're now signed in.",
-      "continue": "Go to home →",
+      "emailTaken": "An account with that email address already exists.",
+      "registerFailed": "We couldn't create your account. Please try again.",
+      "confirmEmailTitle": "Check your email",
+      "confirmEmailSubtitle": "We sent a confirmation link to {email}. Confirm it to be able to sign in.",
       "passwordStrength": {
         "label": "Password strength:",
         "veryWeak": "Very weak",

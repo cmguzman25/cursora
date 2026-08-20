@@ -34,6 +34,21 @@
     "comingSoonCourse": "O conteúdo do curso estará disponível em breve.",
     "emptyState": "Ainda não há cursos nesta categoria."
   },
+  "lesson": {
+    "backToCourse": "← Voltar ao índice do curso",
+    "progress": "Lição {current} de {total}",
+    "markComplete": "Marcar como concluída",
+    "markedComplete": "Concluída",
+    "next": "Ir para a próxima lição",
+    "courseFinished": "Você concluiu o curso!",
+    "notReady": "Esta lição ainda não foi escrita. Volte em breve.",
+    "notTranslated": "Esta lição ainda não foi traduzida para este idioma. Mostrando a versão em espanhol."
+  },
+  "courseDetail": {
+    "completedCount": "{completed} / {total} lições concluídas",
+    "startCourse": "Começar curso",
+    "continueCourse": "Continuar curso"
+  },
   "auth": {
     "brandPanel": {
       "headline": "Tudo o que você quer aprender, em um só lugar.",
@@ -56,9 +71,6 @@
       "submit": "Entrar",
       "noAccount": "Ainda não tem uma conta?",
       "registerLink": "Cadastre-se grátis",
-      "successTitle": "Bem-vindo de volta!",
-      "successSubtitle": "Você entrou com sucesso.",
-      "continue": "Continuar →",
       "invalidCredentials": "E-mail ou senha incorretos.",
       "testAccounts": {
         "title": "Contas de teste (dados fixos, temporário)",
@@ -88,9 +100,10 @@
       "submit": "Criar conta",
       "hasAccount": "Já tem uma conta?",
       "loginLink": "Entrar",
-      "successTitle": "Conta criada",
-      "successSubtitle": "Sua conta foi criada com sucesso e você já está logado.",
-      "continue": "Ir para o início →",
+      "emailTaken": "Já existe uma conta com esse e-mail.",
+      "registerFailed": "Não conseguimos criar sua conta. Tente novamente.",
+      "confirmEmailTitle": "Verifique seu e-mail",
+      "confirmEmailSubtitle": "Enviamos um link de confirmação para {email}. Confirme para poder entrar.",
       "passwordStrength": {
         "label": "Segurança da senha:",
         "veryWeak": "Muito fraca",

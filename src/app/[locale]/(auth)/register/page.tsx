@@ -3,14 +3,13 @@
 import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowRight, CheckCircle2, Mail, User } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 import { Input } from "@/components/ui/Input";
 import { PasswordInput } from "@/components/ui/PasswordInput";
 import { Checkbox } from "@/components/ui/Checkbox";
 import { Button } from "@/components/ui/Button";
 import { SocialButtons } from "@/components/auth/SocialButtons";
 import { PasswordStrength } from "@/components/auth/PasswordStrength";
-import { setSessionCookie } from "@/lib/session";
 
 interface FormValues {
   name: string;
@@ -33,6 +32,7 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export default function RegisterPage() {
   const t = useTranslations("auth.register");
   const tAuth = useTranslations("auth");
+  const router = useRouter();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -40,8 +40,9 @@ export default function RegisterPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [terms, setTerms] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
+  const [formError, setFormError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [requiresConfirmation, setRequiresConfirmation] = useState(false);
 
   function validate(values: FormValues): FormErrors {
     const validationErrors: FormErrors = {};
@@ -56,21 +57,45 @@ export default function RegisterPage() {
     return validationErrors;
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const validationErrors = validate({ name, email, password, confirmPassword, terms });
     setErrors(validationErrors);
+    setFormError(null);
     if (Object.keys(validationErrors).length > 0) return;
 
     setIsSubmitting(true);
-    window.setTimeout(() => {
+    try {
+      const response = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password }),
+      });
+      const data = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        setFormError(
+          data?.error === "email_taken" ? t("emailTaken") : t("registerFailed"),
+        );
+        setIsSubmitting(false);
+        return;
+      }
+
+      if (data?.requiresConfirmation) {
+        setRequiresConfirmation(true);
+        setIsSubmitting(false);
+        return;
+      }
+
+      router.push("/");
+      router.refresh();
+    } catch {
+      setFormError(t("registerFailed"));
       setIsSubmitting(false);
-      setSessionCookie(true);
-      setSuccess(true);
-    }, 900);
+    }
   }
 
-  if (success) {
+  if (requiresConfirmation) {
     return (
       <div className="flex flex-col items-center gap-4 text-center">
         <span className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
@@ -78,15 +103,17 @@ export default function RegisterPage() {
         </span>
         <div className="flex flex-col gap-1">
           <h1 className="text-xl font-semibold text-zinc-900 dark:text-white">
-            {t("successTitle")}
+            {t("confirmEmailTitle")}
           </h1>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">{t("successSubtitle")}</p>
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+            {t("confirmEmailSubtitle", { email })}
+          </p>
         </div>
         <Link
-          href="/"
+          href="/login"
           className="text-sm font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400"
         >
-          {t("continue")}
+          {t("loginLink")}
         </Link>
       </div>
     );
@@ -187,6 +214,12 @@ export default function RegisterPage() {
             ),
           })}
         />
+
+        {formError && (
+          <p role="alert" className="text-sm font-medium text-red-600 dark:text-red-400">
+            {formError}
+          </p>
+        )}
 
         <Button type="submit" isLoading={isSubmitting} className="w-full">
           {t("submit")}

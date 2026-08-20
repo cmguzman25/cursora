@@ -2,6 +2,7 @@
 
 import { Clock, Star, Users } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import type { Course } from "@/lib/courses";
 import { COURSE_CATEGORIES } from "@/lib/course-categories";
 
@@ -51,14 +52,23 @@ export function CourseCard({ course }: { course: Course }) {
           </span>
         </div>
 
-        <button
-          type="button"
-          disabled
-          title={t("comingSoonCourse")}
-          className="mt-1 inline-flex h-9 cursor-not-allowed items-center justify-center rounded-lg border border-zinc-200 text-sm font-medium text-zinc-500 dark:border-zinc-700 dark:text-zinc-500"
-        >
-          {t("viewCourse")}
-        </button>
+        {course.slug ? (
+          <Link
+            href={`/courses/${course.slug}`}
+            className="mt-1 inline-flex h-9 items-center justify-center rounded-lg border border-zinc-200 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
+          >
+            {t("viewCourse")}
+          </Link>
+        ) : (
+          <button
+            type="button"
+            disabled
+            title={t("comingSoonCourse")}
+            className="mt-1 inline-flex h-9 cursor-not-allowed items-center justify-center rounded-lg border border-zinc-200 text-sm font-medium text-zinc-500 dark:border-zinc-700 dark:text-zinc-500"
+          >
+            {t("viewCourse")}
+          </button>
+        )}
       </div>
     </div>
   );

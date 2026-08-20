@@ -1,10 +1,9 @@
 "use client";
 
 import { Suspense, useState, type FormEvent } from "react";
-import NextLink from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { ArrowRight, CheckCircle2, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Input } from "@/components/ui/Input";
 import { PasswordInput } from "@/components/ui/PasswordInput";
@@ -28,6 +27,7 @@ function LoginForm() {
   const t = useTranslations("auth.login");
   const tAuth = useTranslations("auth");
   const locale = useLocale();
+  const router = useRouter();
   const searchParams = useSearchParams();
   const from = searchParams.get("from");
   const redirectTo = isSafeRedirect(from) ? from : `/${locale}`;
@@ -39,7 +39,6 @@ function LoginForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [formError, setFormError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   function validate(): FormErrors {
     const validationErrors: FormErrors = {};
@@ -66,37 +65,16 @@ function LoginForm() {
 
       if (!response.ok) {
         setFormError(t("invalidCredentials"));
+        setIsSubmitting(false);
         return;
       }
 
-      setSuccess(true);
+      router.push(redirectTo);
+      router.refresh();
     } catch {
       setFormError(t("invalidCredentials"));
-    } finally {
       setIsSubmitting(false);
     }
-  }
-
-  if (success) {
-    return (
-      <div className="flex flex-col items-center gap-4 text-center">
-        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
-          <CheckCircle2 className="h-7 w-7" aria-hidden="true" />
-        </span>
-        <div className="flex flex-col gap-1">
-          <h1 className="text-xl font-semibold text-zinc-900 dark:text-white">
-            {t("successTitle")}
-          </h1>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">{t("successSubtitle")}</p>
-        </div>
-        <NextLink
-          href={redirectTo}
-          className="text-sm font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400"
-        >
-          {t("continue")}
-        </NextLink>
-      </div>
-    );
   }
 
   return (

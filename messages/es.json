@@ -34,6 +34,21 @@
     "comingSoonCourse": "El contenido del curso estará disponible próximamente.",
     "emptyState": "No hay cursos en esta categoría todavía."
   },
+  "lesson": {
+    "backToCourse": "← Volver al índice del curso",
+    "progress": "Lección {current} de {total}",
+    "markComplete": "Marcar como completada",
+    "markedComplete": "Completada",
+    "next": "Ir a la siguiente lección",
+    "courseFinished": "¡Terminaste el curso!",
+    "notReady": "Esta lección todavía no está escrita. Vuelve pronto.",
+    "notTranslated": "Esta lección todavía no está traducida a este idioma. Mostrando la versión en español."
+  },
+  "courseDetail": {
+    "completedCount": "{completed} / {total} lecciones completadas",
+    "startCourse": "Comenzar curso",
+    "continueCourse": "Continuar curso"
+  },
   "auth": {
     "brandPanel": {
       "headline": "Todo lo que quieres aprender, en un solo lugar.",
@@ -56,9 +71,6 @@
       "submit": "Iniciar sesión",
       "noAccount": "¿No tienes una cuenta?",
       "registerLink": "Regístrate gratis",
-      "successTitle": "¡Bienvenido de nuevo!",
-      "successSubtitle": "Has iniciado sesión correctamente.",
-      "continue": "Continuar →",
       "invalidCredentials": "Correo o contraseña incorrectos.",
       "testAccounts": {
         "title": "Cuentas de prueba (datos en duro, temporal)",
@@ -88,9 +100,10 @@
       "submit": "Crear cuenta",
       "hasAccount": "¿Ya tienes una cuenta?",
       "loginLink": "Inicia sesión",
-      "successTitle": "Cuenta creada",
-      "successSubtitle": "Tu cuenta se creó correctamente y ya iniciaste sesión.",
-      "continue": "Ir al inicio →",
+      "emailTaken": "Ya existe una cuenta con ese correo electrónico.",
+      "registerFailed": "No pudimos crear tu cuenta. Intenta de nuevo.",
+      "confirmEmailTitle": "Revisa tu correo",
+      "confirmEmailSubtitle": "Te enviamos un enlace de confirmación a {email}. Confírmalo para poder iniciar sesión.",
       "passwordStrength": {
         "label": "Seguridad de la contraseña:",
         "veryWeak": "Muy débil",
