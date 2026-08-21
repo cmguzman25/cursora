@@ -94,7 +94,7 @@ con tres cambios:
       estrategias de migración (`lecciones/05-migracion-y-aws-caf.md`)
 - [x] 1.4 Economía de la nube: costos fijos vs. variables, licenciamiento (BYOL),
       rightsizing, economías de escala (`lecciones/06-economia-de-la-nube.md`)
-- [ ] ★ 1.5 Tablas comparativas: pilares del Well-Architected uno junto al otro,
+- [x] ★ 1.5 Tablas comparativas: pilares del Well-Architected uno junto al otro,
       CapEx vs. OpEx, y cuándo aplica cada estrategia de migración
       (`lecciones/07-comparativas-conceptos-de-la-nube.md`)
 - [ ] 1.6 Analiza preguntas de examen: 20 preguntas de conceptos de la nube,
@@ -175,4 +175,4 @@ con tres cambios:
 
 ## Progreso
 
-**7 / 35 lecciones desarrolladas.**
+**8 / 35 lecciones desarrolladas.**
