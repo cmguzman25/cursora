@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
 import { useCourseProgress } from "@/hooks/useCourseProgress";
-import type { LessonMeta } from "@content/courses/aws-cloud-practitioner/manifest";
+import { localize, type LessonMeta } from "@content/courses/types";
 import type { AppLocale } from "@/i18n/routing";
 
 interface CourseLessonListProps {
@@ -20,7 +20,7 @@ function groupByModule(lessons: LessonMeta[], locale: AppLocale) {
     if (group && group.moduleId === lesson.moduleId) {
       group.lessons.push(lesson);
     } else {
-      modules.push({ moduleId: lesson.moduleId, moduleLabel: lesson.module[locale], lessons: [lesson] });
+      modules.push({ moduleId: lesson.moduleId, moduleLabel: localize(lesson.module, locale), lessons: [lesson] });
     }
   }
   return modules;
@@ -83,7 +83,7 @@ export function CourseLessonList({ courseSlug, lessons }: CourseLessonListProps)
                       aria-hidden="true"
                     />
                   )}
-                  <span className="text-zinc-700 dark:text-zinc-200">{lesson.title[locale]}</span>
+                  <span className="text-zinc-700 dark:text-zinc-200">{localize(lesson.title, locale)}</span>
                 </Link>
               </li>
             ))}

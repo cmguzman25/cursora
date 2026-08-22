@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Course } from "@/lib/courses";
 import { COURSE_CATEGORIES } from "@/lib/course-categories";
+import { localize } from "@content/courses/types";
 
 export function CourseCard({ course }: { course: Course }) {
   const locale = useLocale();
@@ -31,10 +32,10 @@ export function CourseCard({ course }: { course: Course }) {
         </div>
 
         <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
-          {course.title[locale]}
+          {localize(course.title, locale)}
         </h3>
         <p className="flex-1 text-sm text-zinc-500 dark:text-zinc-400">
-          {course.description[locale]}
+          {localize(course.description, locale)}
         </p>
 
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-zinc-500 dark:text-zinc-400">

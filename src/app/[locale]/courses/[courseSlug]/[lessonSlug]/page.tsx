@@ -10,7 +10,8 @@ import { routing } from "@/i18n/routing";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { LessonProgressControls } from "@/components/courses/LessonProgressControls";
 import { AnnotatedLesson } from "@/components/lessons/AnnotatedLesson";
-import { COURSE_SLUG, LESSONS } from "@content/courses/aws-cloud-practitioner/manifest";
+import { COURSE_MANIFESTS, getCourseManifest } from "@content/courses/registry";
+import { localize } from "@content/courses/types";
 
 interface LessonPageParams {
   locale: string;
@@ -42,11 +43,13 @@ export function generateStaticParams() {
   if (process.env.NODE_ENV !== "production") return [];
 
   return routing.locales.flatMap((locale) =>
-    LESSONS.map((lesson) => ({
-      locale,
-      courseSlug: COURSE_SLUG,
-      lessonSlug: lesson.id,
-    })),
+    COURSE_MANIFESTS.flatMap((course) =>
+      course.lessons.map((lesson) => ({
+        locale,
+        courseSlug: course.slug,
+        lessonSlug: lesson.id,
+      })),
+    ),
   );
 }
 
@@ -62,17 +65,18 @@ export default async function LessonPage({
   }
   setRequestLocale(locale);
 
-  if (courseSlug !== COURSE_SLUG) {
+  const course = getCourseManifest(courseSlug);
+  if (!course) {
     notFound();
   }
 
-  const lessonIndex = LESSONS.findIndex((lesson) => lesson.id === lessonSlug);
+  const lessonIndex = course.lessons.findIndex((lesson) => lesson.id === lessonSlug);
   if (lessonIndex === -1) {
     notFound();
   }
 
-  const lesson = LESSONS[lessonIndex];
-  const nextLesson = LESSONS[lessonIndex + 1] ?? null;
+  const lesson = course.lessons[lessonIndex];
+  const nextLesson = course.lessons[lessonIndex + 1] ?? null;
   const t = await getTranslations("lesson");
 
   let content = readLessonFile(courseSlug, lessonSlug, locale);
@@ -96,10 +100,10 @@ export default async function LessonPage({
         {t("backToCourse")}
       </Link>
       <p className="text-xs font-medium tracking-wide text-zinc-400 uppercase">
-        {lesson.module[locale]}
+        {localize(lesson.module, locale)}
       </p>
       <p className="text-xs text-zinc-400">
-        {t("progress", { current: lessonIndex + 1, total: LESSONS.length })}
+        {t("progress", { current: lessonIndex + 1, total: course.lessons.length })}
       </p>
       {isFallbackContent && (
         <p className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-2 text-sm text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300">

@@ -1,21 +1,13 @@
-import type { AppLocale } from "@/i18n/routing";
+import type { CourseManifest, LessonMeta, LocalizedText } from "../types";
 
-export interface LessonMeta {
-  id: string;
-  /** Stable grouping key, independent of locale (used to group lessons by module). */
-  moduleId: string;
-  module: Record<AppLocale, string>;
-  title: Record<AppLocale, string>;
-}
-
-export const COURSE_SLUG = "aws-cloud-practitioner";
-export const COURSE_TITLE: Record<AppLocale, string> = {
+const COURSE_SLUG = "aws-cloud-practitioner";
+const COURSE_TITLE: LocalizedText = {
   es: "AWS Certified Cloud Practitioner (CLF-C02)",
   en: "AWS Certified Cloud Practitioner (CLF-C02)",
   "pt-BR": "AWS Certified Cloud Practitioner (CLF-C02)",
 };
 
-const MODULES: Record<string, Record<AppLocale, string>> = {
+const MODULES: Record<string, LocalizedText> = {
   "module-0": {
     es: "Módulo 0 — Bienvenida y preparación",
     en: "Module 0 — Welcome and setup",
@@ -48,12 +40,7 @@ const MODULES: Record<string, Record<AppLocale, string>> = {
   },
 };
 
-/**
- * Ordered list of every lesson in the course. This is the source of truth
- * the app uses for navigation (current/next lesson, progress totals) — keep
- * it in sync with `README.md` when lessons are added, removed, or reordered.
- */
-export const LESSONS: LessonMeta[] = [
+const LESSONS: LessonMeta[] = [
   { id: "00-bienvenida", moduleId: "module-0", module: MODULES["module-0"], title: { es: "Objetivos del curso y cómo está organizado", en: "Course goals and how it's organized", "pt-BR": "Objetivos do curso e como ele está organizado" } },
   { id: "01-cuenta-free-tier", moduleId: "module-0", module: MODULES["module-0"], title: { es: "Cómo crear y proteger una cuenta AWS Free Tier", en: "Creating and securing an AWS Free Tier account", "pt-BR": "Como criar e proteger uma conta AWS Free Tier" } },
   { id: "02-inscripcion-examen", moduleId: "module-0", module: MODULES["module-0"], title: { es: "Cómo inscribirse al examen y qué esperar el día de la prueba", en: "Registering for the exam and what to expect on test day", "pt-BR": "Como se inscrever no exame e o que esperar no dia da prova" } },
@@ -95,3 +82,9 @@ export const LESSONS: LessonMeta[] = [
   { id: "33-simulacro-de-examen", moduleId: "module-5", module: MODULES["module-5"], title: { es: "Examen de práctica completo", en: "Full practice exam", "pt-BR": "Simulado completo" } },
   { id: "34-estrategias-dia-del-examen", moduleId: "module-5", module: MODULES["module-5"], title: { es: "Estrategias para el día del examen", en: "Exam-day strategies", "pt-BR": "Estratégias para o dia do exame" } },
 ];
+
+export const manifest: CourseManifest = {
+  slug: COURSE_SLUG,
+  title: COURSE_TITLE,
+  lessons: LESSONS,
+};

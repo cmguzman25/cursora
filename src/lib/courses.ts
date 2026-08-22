@@ -1,19 +1,23 @@
-import type { AppLocale } from "@/i18n/routing";
+import type { LocalizedText } from "@content/courses/types";
 import type { CourseCategory } from "./course-categories";
 
 export type CourseLevel = "beginner" | "intermediate" | "advanced";
 
 export interface Course {
   id: string;
-  /** When present, the course has real lessons and links to `/courses/[slug]` instead of showing "coming soon". */
+  /**
+   * When present, the course has real lessons and links to `/courses/[slug]`
+   * instead of showing "coming soon". It must match the `slug` of a manifest
+   * registered in `content/courses/registry.ts`.
+   */
   slug?: string;
   category: CourseCategory;
   level: CourseLevel;
   durationHours: number;
   studentsCount: number;
   rating: number;
-  title: Record<AppLocale, string>;
-  description: Record<AppLocale, string>;
+  title: LocalizedText;
+  description: LocalizedText;
 }
 
 /**
@@ -41,4 +45,27 @@ export const COURSES: Course[] = [
       "pt-BR": "Prepare-se para a certificação fundamental da AWS: conceitos de nuvem, segurança, serviços principais e preços.",
     },
   },
+  {
+    id: "full-stack-developer-aws",
+    slug: "full-stack-developer-aws",
+    category: "programming",
+    level: "beginner",
+    durationHours: 90,
+    studentsCount: 0,
+    rating: 5.0,
+    title: {
+      es: "Full Stack Developer con AWS",
+      en: "Full Stack Developer with AWS",
+      "pt-BR": "Full Stack Developer com AWS",
+    },
+    description: {
+      es: "De cero a intermedio construyendo una aplicación real en AWS: React, Node, base de datos, login, despliegue automático y control del gasto.",
+      en: "From zero to intermediate building a real application on AWS: React, Node, databases, auth, automated deployments, and cost control.",
+      "pt-BR": "Do zero ao intermediário construindo uma aplicação real na AWS: React, Node, banco de dados, login, deploy automático e controle de gastos.",
+    },
+  },
 ];
+
+export function getCourse(slug: string): Course | null {
+  return COURSES.find((course) => course.slug === slug) ?? null;
+}
