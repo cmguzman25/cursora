@@ -9,6 +9,7 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { LessonProgressControls } from "@/components/courses/LessonProgressControls";
+import { AnnotatedLesson } from "@/components/lessons/AnnotatedLesson";
 import { COURSE_SLUG, LESSONS } from "@content/courses/aws-cloud-practitioner/manifest";
 
 interface LessonPageParams {
@@ -75,53 +76,76 @@ export default async function LessonPage({
   const t = await getTranslations("lesson");
 
   let content = readLessonFile(courseSlug, lessonSlug, locale);
+  // The locale of the markdown actually on screen. Comments anchor to the text
+  // they were made against, so a fallback render must be recorded as such —
+  // otherwise a Spanish quote would be filed under `en` and never re-match.
+  let contentLocale = locale;
   let isFallbackContent = false;
   if (!content && locale !== routing.defaultLocale) {
     content = readLessonFile(courseSlug, lessonSlug, routing.defaultLocale);
     isFallbackContent = content !== null;
+    if (isFallbackContent) contentLocale = routing.defaultLocale;
   }
+
+  const lessonHeader = (
+    <div className="flex flex-col gap-2">
+      <Link
+        href={`/courses/${courseSlug}`}
+        className="text-sm font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400"
+      >
+        {t("backToCourse")}
+      </Link>
+      <p className="text-xs font-medium tracking-wide text-zinc-400 uppercase">
+        {lesson.module[locale]}
+      </p>
+      <p className="text-xs text-zinc-400">
+        {t("progress", { current: lessonIndex + 1, total: LESSONS.length })}
+      </p>
+      {isFallbackContent && (
+        <p className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-2 text-sm text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300">
+          {t("notTranslated")}
+        </p>
+      )}
+    </div>
+  );
+
+  const progressControls = (
+    <LessonProgressControls
+      courseSlug={courseSlug}
+      lessonId={lesson.id}
+      nextLessonId={nextLesson?.id ?? null}
+    />
+  );
 
   return (
     <div className="flex min-h-screen flex-1 flex-col bg-zinc-50 dark:bg-zinc-950">
       <AppHeader />
-      <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6 px-6 py-10">
-        <div className="flex flex-col gap-2">
-          <Link
-            href={`/courses/${courseSlug}`}
-            className="text-sm font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400"
-          >
-            {t("backToCourse")}
-          </Link>
-          <p className="text-xs font-medium tracking-wide text-zinc-400 uppercase">
-            {lesson.module[locale]}
-          </p>
-          <p className="text-xs text-zinc-400">
-            {t("progress", { current: lessonIndex + 1, total: LESSONS.length })}
-          </p>
-        </div>
-
+      <main
+        className={`mx-auto flex w-full flex-1 flex-col gap-6 px-6 py-10 ${
+          content ? "max-w-6xl" : "max-w-3xl"
+        }`}
+      >
         {content ? (
-          <>
-            {isFallbackContent && (
-              <p className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-2 text-sm text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300">
-                {t("notTranslated")}
-              </p>
-            )}
-            <article className="prose prose-zinc dark:prose-invert prose-headings:font-semibold prose-a:text-indigo-600 dark:prose-a:text-indigo-400 max-w-none">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-            </article>
-          </>
+          // ReactMarkdown still runs on the server here: AnnotatedLesson takes
+          // the rendered output as children, so the parser stays off the client.
+          <AnnotatedLesson
+            courseSlug={courseSlug}
+            lessonId={lesson.id}
+            contentLocale={contentLocale}
+            header={lessonHeader}
+            footer={progressControls}
+          >
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+          </AnnotatedLesson>
         ) : (
-          <p className="rounded-xl border border-dashed border-zinc-300 p-8 text-center text-sm text-zinc-500 dark:border-zinc-700 dark:text-zinc-400">
-            {t("notReady")}
-          </p>
+          <>
+            {lessonHeader}
+            <p className="rounded-xl border border-dashed border-zinc-300 p-8 text-center text-sm text-zinc-500 dark:border-zinc-700 dark:text-zinc-400">
+              {t("notReady")}
+            </p>
+            {progressControls}
+          </>
         )}
-
-        <LessonProgressControls
-          courseSlug={courseSlug}
-          lessonId={lesson.id}
-          nextLessonId={nextLesson?.id ?? null}
-        />
       </main>
     </div>
   );

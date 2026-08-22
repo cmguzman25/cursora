@@ -25,3 +25,55 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
+
+/*
+ * Lesson comment highlights.
+ *
+ * Painted through the CSS Custom Highlight API from AnnotatedLesson, which
+ * registers one highlight per comment kind. Ranges are decorated without
+ * touching the DOM, so React's server-rendered markup is left intact.
+ * Registered names live in src/lib/comments/kinds.ts.
+ *
+ * `next build` warns that `::highlight` is not a recognised pseudo-element —
+ * Lightning CSS simply doesn't know it yet. The rules are emitted verbatim
+ * into the production bundle (verified in .next/static/chunks/*.css), so the
+ * warning is cosmetic. Do not "fix" it by removing these rules.
+ */
+::highlight(cursora-comment-error) {
+  background-color: rgb(254 205 211 / 0.85);
+}
+
+::highlight(cursora-comment-suggestion) {
+  background-color: rgb(253 230 138 / 0.85);
+}
+
+::highlight(cursora-comment-question) {
+  background-color: rgb(199 210 254 / 0.85);
+}
+
+/* Layered above the kind colours to mark the comment currently in focus. */
+::highlight(cursora-comment-active) {
+  background-color: rgb(129 140 248 / 0.45);
+  text-decoration: underline;
+  text-decoration-color: rgb(79 70 229);
+  text-decoration-thickness: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::highlight(cursora-comment-error) {
+    background-color: rgb(159 18 57 / 0.5);
+  }
+
+  ::highlight(cursora-comment-suggestion) {
+    background-color: rgb(146 64 14 / 0.5);
+  }
+
+  ::highlight(cursora-comment-question) {
+    background-color: rgb(55 48 163 / 0.55);
+  }
+
+  ::highlight(cursora-comment-active) {
+    background-color: rgb(99 102 241 / 0.45);
+    text-decoration-color: rgb(165 180 252);
+  }
+}

@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
 import { LogoutButton } from "@/components/auth/LogoutButton";
+import { AdminNavLink } from "@/components/layout/AdminNavLink";
 
 export function AppHeader() {
   return (
@@ -13,6 +14,7 @@ export function AppHeader() {
           <span className="text-base font-semibold tracking-tight">Cursora</span>
         </Link>
         <div className="flex items-center gap-3">
+          <AdminNavLink />
           <LanguageSwitcher />
           <LogoutButton />
         </div>

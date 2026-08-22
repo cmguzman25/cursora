@@ -113,5 +113,56 @@
         "veryStrong": "Muy fuerte"
       }
     }
+  },
+  "comments": {
+    "panelTitle": "Comentarios",
+    "empty": "Todavía no hay comentarios en esta lección.",
+    "selectHint": "Selecciona un texto para comentarlo.",
+    "loading": "Cargando comentarios…",
+    "saveError": "No se pudo guardar. Inténtalo de nuevo.",
+    "highlightsUnsupported": "Tu navegador no resalta el texto comentado, pero los comentarios siguen aquí.",
+    "showPanel": "Ver comentarios",
+    "hidePanel": "Ocultar comentarios",
+    "composerTitle": "Nuevo comentario",
+    "kindLabel": "Tipo de comentario",
+    "kinds": {
+      "error": "Error",
+      "suggestion": "Sugerencia",
+      "question": "Pregunta"
+    },
+    "placeholder": "¿Qué quieres señalar de este fragmento?",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Borrar",
+    "confirmDelete": "¿Seguro?",
+    "send": "Enviar",
+    "replyPlaceholder": "Responder…",
+    "resolved": "Resuelto",
+    "resolvedBy": "Resuelto por {name}",
+    "markResolved": "Marcar resuelto",
+    "reopen": "Reabrir",
+    "you": "Tú",
+    "adminBadge": "Admin",
+    "orphanedHint": "El texto original ya no está en la lección. El comentario se conserva, pero no se puede resaltar."
+  },
+  "admin": {
+    "nav": "Admin",
+    "comments": {
+      "title": "Comentarios de las lecciones",
+      "subtitle": "Errores y sugerencias que han reportado los estudiantes.",
+      "filterKind": "Tipo",
+      "filterStatus": "Estado",
+      "all": "Todos",
+      "status": {
+        "all": "Todos",
+        "open": "Abiertos",
+        "resolved": "Resueltos"
+      },
+      "empty": "No hay comentarios con estos filtros.",
+      "loading": "Cargando…",
+      "loadError": "No se pudieron cargar los comentarios.",
+      "viewInLesson": "Ver en la lección →"
+    }
   }
 }

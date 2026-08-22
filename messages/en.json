@@ -113,5 +113,56 @@
         "veryStrong": "Very strong"
       }
     }
+  },
+  "comments": {
+    "panelTitle": "Comments",
+    "empty": "No comments on this lesson yet.",
+    "selectHint": "Select some text to comment on it.",
+    "loading": "Loading comments…",
+    "saveError": "Couldn't save. Please try again.",
+    "highlightsUnsupported": "Your browser doesn't highlight commented text, but the comments are still here.",
+    "showPanel": "Show comments",
+    "hidePanel": "Hide comments",
+    "composerTitle": "New comment",
+    "kindLabel": "Comment type",
+    "kinds": {
+      "error": "Error",
+      "suggestion": "Suggestion",
+      "question": "Question"
+    },
+    "placeholder": "What would you like to flag about this passage?",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirmDelete": "Sure?",
+    "send": "Send",
+    "replyPlaceholder": "Reply…",
+    "resolved": "Resolved",
+    "resolvedBy": "Resolved by {name}",
+    "markResolved": "Mark resolved",
+    "reopen": "Reopen",
+    "you": "You",
+    "adminBadge": "Admin",
+    "orphanedHint": "The original text is no longer in the lesson. The comment is kept, but it can't be highlighted."
+  },
+  "admin": {
+    "nav": "Admin",
+    "comments": {
+      "title": "Lesson comments",
+      "subtitle": "Errors and suggestions reported by students.",
+      "filterKind": "Type",
+      "filterStatus": "Status",
+      "all": "All",
+      "status": {
+        "all": "All",
+        "open": "Open",
+        "resolved": "Resolved"
+      },
+      "empty": "No comments match these filters.",
+      "loading": "Loading…",
+      "loadError": "Couldn't load the comments.",
+      "viewInLesson": "View in lesson →"
+    }
   }
 }
