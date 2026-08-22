@@ -225,3 +225,24 @@ drop policy if exists "profiles_admin_select_all" on public.profiles;
 create policy "profiles_admin_select_all" on public.profiles
   for select to authenticated
   using (public.is_admin() or role = 'admin');
+
+-- ---------------------------------------------------------------------------
+-- Function grants
+-- ---------------------------------------------------------------------------
+-- Supabase's default privileges grant EXECUTE on every new public function to
+-- anon/authenticated, so the `revoke ... from public` above does not by itself
+-- close the /rest/v1/rpc endpoint. Revoke the explicit grants too.
+--
+-- Trigger functions are never called directly: PostgreSQL checks EXECUTE
+-- against the trigger's creator at CREATE TRIGGER time, not against the user
+-- firing it, so nobody loses anything here.
+revoke execute on function public.enforce_lesson_comment_update() from public, anon, authenticated;
+revoke execute on function public.touch_comment_reply() from public, anon, authenticated;
+
+-- `touch_comment_reply` runs as SECURITY INVOKER, but pin its search_path
+-- anyway so a role-level setting cannot change what it resolves.
+alter function public.touch_comment_reply() set search_path = public;
+
+-- `is_admin()` stays callable by signed-in users (the RLS policies evaluate it
+-- as the caller), but anon has no business reaching it.
+revoke execute on function public.is_admin() from anon;
