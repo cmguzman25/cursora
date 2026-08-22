@@ -17,13 +17,20 @@ export function CoursesCatalog() {
     [filter],
   );
 
+  // Only offer filters for categories that actually have a course, so the
+  // chips can't lead to an empty catalog.
+  const availableCategories = useMemo(
+    () => COURSE_CATEGORIES.filter((category) => COURSES.some((course) => course.category === category.key)),
+    [],
+  );
+
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-wrap gap-2" role="tablist" aria-label={t("heading")}>
         <FilterChip active={filter === "all"} onClick={() => setFilter("all")}>
           {t("filters.all")}
         </FilterChip>
-        {COURSE_CATEGORIES.map((category) => (
+        {availableCategories.map((category) => (
           <FilterChip
             key={category.key}
             active={filter === category.key}
