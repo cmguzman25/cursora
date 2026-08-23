@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
 import { useCourseProgress } from "@/hooks/useCourseProgress";
 import { localize, type LessonMeta } from "@content/courses/types";
+import { CourseEnrollmentButton } from "./CourseEnrollmentButton";
 import type { AppLocale } from "@/i18n/routing";
 
 interface CourseLessonListProps {
@@ -55,14 +56,17 @@ export function CourseLessonList({ courseSlug, lessons }: CourseLessonListProps)
             />
           </div>
         </div>
-        {startLessonId && (
-          <Link
-            href={`/courses/${courseSlug}/${startLessonId}`}
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 text-sm font-semibold whitespace-nowrap text-white shadow-lg shadow-indigo-600/25 transition-all hover:from-indigo-500 hover:to-violet-500"
-          >
-            {hasProgress ? t("continueCourse") : t("startCourse")}
-          </Link>
-        )}
+        <div className="flex flex-wrap items-center gap-2">
+          <CourseEnrollmentButton courseSlug={courseSlug} userKey={user?.id ?? null} />
+          {startLessonId && (
+            <Link
+              href={`/courses/${courseSlug}/${startLessonId}`}
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 text-sm font-semibold whitespace-nowrap text-white shadow-lg shadow-indigo-600/25 transition-all hover:from-indigo-500 hover:to-violet-500"
+            >
+              {hasProgress ? t("continueCourse") : t("startCourse")}
+            </Link>
+          )}
+        </div>
       </div>
 
       {groupByModule(lessons, locale).map(({ moduleId, moduleLabel, lessons: moduleLessons }) => (

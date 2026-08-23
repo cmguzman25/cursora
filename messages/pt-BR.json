@@ -15,7 +15,8 @@
     "heading": "Explore nossos cursos",
     "subheading": "Cursos organizados por categoria para você avançar no seu próprio ritmo.",
     "filters": {
-      "all": "Todos"
+      "all": "Todos",
+      "inProgress": "Meus cursos"
     },
     "categories": {
       "english": "Inglês",
@@ -47,7 +48,11 @@
   "courseDetail": {
     "completedCount": "{completed} / {total} lições concluídas",
     "startCourse": "Começar curso",
-    "continueCourse": "Continuar curso"
+    "continueCourse": "Continuar curso",
+    "enroll": "Inscrever-me",
+    "leave": "Sair do curso",
+    "leaveHint": "Sair do curso — seu progresso é mantido",
+    "enrolled": "Inscrito"
   },
   "auth": {
     "brandPanel": {
@@ -117,7 +122,7 @@
   "comments": {
     "panelTitle": "Comentários",
     "empty": "Ainda não há comentários nesta lição.",
-    "selectHint": "Selecione um texto para comentá-lo.",
+    "selectHint": "Selecione um texto e dê um duplo clique para comentar.",
     "loading": "Carregando comentários…",
     "saveError": "Não foi possível salvar. Tente novamente.",
     "highlightsUnsupported": "Seu navegador não destaca o texto comentado, mas os comentários continuam aqui.",

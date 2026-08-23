@@ -15,7 +15,8 @@
     "heading": "Explore our courses",
     "subheading": "Courses organized by category so you can move at your own pace.",
     "filters": {
-      "all": "All"
+      "all": "All",
+      "inProgress": "My courses"
     },
     "categories": {
       "english": "English",
@@ -47,7 +48,11 @@
   "courseDetail": {
     "completedCount": "{completed} / {total} lessons completed",
     "startCourse": "Start course",
-    "continueCourse": "Continue course"
+    "continueCourse": "Continue course",
+    "enroll": "Enroll",
+    "leave": "Leave course",
+    "leaveHint": "Leave course — your progress is kept",
+    "enrolled": "Enrolled"
   },
   "auth": {
     "brandPanel": {
@@ -117,7 +122,7 @@
   "comments": {
     "panelTitle": "Comments",
     "empty": "No comments on this lesson yet.",
-    "selectHint": "Select some text to comment on it.",
+    "selectHint": "Select some text, then double-click it to comment.",
     "loading": "Loading comments…",
     "saveError": "Couldn't save. Please try again.",
     "highlightsUnsupported": "Your browser doesn't highlight commented text, but the comments are still here.",

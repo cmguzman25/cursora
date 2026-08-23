@@ -1,6 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+  type ReactNode,
+} from "react";
 import { useTranslations } from "next-intl";
 import { MessageSquare } from "lucide-react";
 import {
@@ -60,10 +67,51 @@ function caretPointFromClick(x: number, y: number) {
   return range ? { node: range.startContainer, offset: range.startOffset } : null;
 }
 
+const PANEL_PREFERENCE_KEY = "cursora:lesson-comments-panel";
+
+/**
+ * The rail's open/closed state lives in `localStorage`, not in React state:
+ * it is a per-browser preference that has to survive navigation between
+ * lessons. Exposing it as an external store lets the server render "closed"
+ * and the client adopt the stored value during hydration, with no effect
+ * writing state on mount.
+ */
+const panelListeners = new Set<() => void>();
+
+function subscribeToPanelPreference(listener: () => void) {
+  panelListeners.add(listener);
+  return () => {
+    panelListeners.delete(listener);
+  };
+}
+
+function readPanelPreference() {
+  try {
+    return window.localStorage.getItem(PANEL_PREFERENCE_KEY) === "open";
+  } catch {
+    // Private mode or blocked storage: closed is a fine default.
+    return false;
+  }
+}
+
+function writePanelPreference(open: boolean) {
+  try {
+    window.localStorage.setItem(PANEL_PREFERENCE_KEY, open ? "open" : "closed");
+  } catch {
+    // The preference just won't persist; the UI still updates.
+  }
+  for (const listener of panelListeners) listener();
+}
+
 interface Draft {
   anchor: TextAnchor;
   top: number;
   left: number;
+}
+
+/** A selection that could become a comment, remembered until a double-click asks for it. */
+interface PendingSelection extends Draft {
+  range: Range;
 }
 
 export function AnnotatedLesson({
@@ -98,13 +146,23 @@ export function AnnotatedLesson({
   const indexRef = useRef<TextIndex | null>(null);
   const rangesRef = useRef<Map<string, Range>>(new Map());
 
+  const pendingRef = useRef<PendingSelection | null>(null);
+
   const [draft, setDraft] = useState<Draft | null>(null);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [orphanIds, setOrphanIds] = useState<Set<string>>(new Set());
   const [indexVersion, setIndexVersion] = useState(0);
-  const [panelOpenOnMobile, setPanelOpenOnMobile] = useState(false);
+  const isPanelOpen = useSyncExternalStore(
+    subscribeToPanelPreference,
+    readPanelPreference,
+    () => false,
+  );
 
   const highlightsSupported = supportsHighlights();
+
+  const togglePanel = useCallback(() => {
+    writePanelPreference(!readPanelPreference());
+  }, []);
 
   // The article is server-rendered and never re-renders, so the index is built
   // once. `indexVersion` lets the painting effect wait for it.
@@ -161,33 +219,21 @@ export function AnnotatedLesson({
     };
   }, []);
 
-  const captureSelection = useCallback((event: Event) => {
-    const target = event.target as Element | null;
-    // Selecting inside the composer must not replace the draft it belongs to.
-    if (target?.closest?.("[data-comment-composer]")) return;
-
+  /** Describes the current selection, or null when there is nothing commentable. */
+  const describeSelection = useCallback((): PendingSelection | null => {
     const article = articleRef.current;
     const column = columnRef.current;
     const index = indexRef.current;
-    if (!article || !column || !index) return;
+    if (!article || !column || !index) return null;
 
     const selection = window.getSelection();
-    if (!selection || selection.isCollapsed || selection.rangeCount === 0) {
-      setDraft(null);
-      return;
-    }
+    if (!selection || selection.isCollapsed || selection.rangeCount === 0) return null;
 
     const range = selection.getRangeAt(0);
-    if (!article.contains(range.commonAncestorContainer)) {
-      setDraft(null);
-      return;
-    }
+    if (!article.contains(range.commonAncestorContainer)) return null;
 
     const anchor = createAnchorFromRange(index, range);
-    if (!anchor) {
-      setDraft(null);
-      return;
-    }
+    if (!anchor) return null;
 
     // Position relative to the article column so the popover scrolls with the
     // page instead of floating over it.
@@ -195,22 +241,41 @@ export function AnnotatedLesson({
     const columnRect = column.getBoundingClientRect();
     const centre = selectionRect.left - columnRect.left + selectionRect.width / 2;
 
-    setDraft({
+    return {
       anchor,
+      range: range.cloneRange(),
       top: selectionRect.bottom - columnRect.top + 8,
       left: Math.min(Math.max(centre, 168), Math.max(columnRect.width - 168, 168)),
-    });
+    };
   }, []);
+
+  // Selecting text only *remembers* it — highlighting while reading, or
+  // selecting to copy, must not pop anything open. The composer is opened
+  // deliberately, by double-clicking the selection (see handleArticleDoubleClick).
+  const rememberSelection = useCallback(
+    (event: Event) => {
+      const target = event.target as Element | null;
+      // Selecting inside the composer must not replace the draft it belongs to.
+      if (target?.closest?.("[data-comment-composer]")) return;
+
+      // The second click of a double-click collapses a multi-word selection to
+      // the word under the pointer. Ignoring it keeps what the reader chose.
+      if ((event as MouseEvent).detail >= 2 && pendingRef.current) return;
+
+      pendingRef.current = describeSelection();
+    },
+    [describeSelection],
+  );
 
   useEffect(() => {
     if (!user) return;
-    document.addEventListener("mouseup", captureSelection);
-    document.addEventListener("keyup", captureSelection);
+    document.addEventListener("mouseup", rememberSelection);
+    document.addEventListener("keyup", rememberSelection);
     return () => {
-      document.removeEventListener("mouseup", captureSelection);
-      document.removeEventListener("keyup", captureSelection);
+      document.removeEventListener("mouseup", rememberSelection);
+      document.removeEventListener("keyup", rememberSelection);
     };
-  }, [captureSelection, user]);
+  }, [rememberSelection, user]);
 
   // `::highlight()` paints but cannot be clicked, so map the click back to a
   // caret position and test it against the resolved ranges.
@@ -224,13 +289,48 @@ export function AnnotatedLesson({
       try {
         if (range.isPointInRange(point.node, point.offset)) {
           setActiveId(commentId);
-          setPanelOpenOnMobile(true);
+          writePanelPreference(true);
           return;
         }
       } catch {
         // Range detached from a stale index — ignore and keep scanning.
       }
     }
+  }
+
+  /** Double-click is the deliberate gesture that opens the composer. */
+  function handleArticleDoubleClick(event: React.MouseEvent) {
+    if (!user) return;
+
+    const pending = pendingRef.current;
+    const point = caretPointFromClick(event.clientX, event.clientY);
+
+    if (pending && point) {
+      let insidePending = false;
+      try {
+        insidePending = pending.range.isPointInRange(point.node, point.offset);
+      } catch {
+        // Range detached from a stale index — fall through to the fresh selection.
+      }
+
+      if (insidePending) {
+        // Put the reader's own selection back: the browser replaced it with the
+        // double-clicked word, and the quote in the composer must match.
+        const selection = window.getSelection();
+        selection?.removeAllRanges();
+        selection?.addRange(pending.range.cloneRange());
+
+        setDraft({ anchor: pending.anchor, top: pending.top, left: pending.left });
+        return;
+      }
+    }
+
+    // No selection under the pointer: comment on the word the double-click just
+    // selected, which is a gesture of its own.
+    const fresh = describeSelection();
+    if (!fresh) return;
+    pendingRef.current = fresh;
+    setDraft({ anchor: fresh.anchor, top: fresh.top, left: fresh.left });
   }
 
   function focusComment(commentId: string) {
@@ -244,6 +344,7 @@ export function AnnotatedLesson({
     <article
       ref={articleRef}
       onClick={handleArticleClick}
+      onDoubleClick={handleArticleDoubleClick}
       className="prose prose-zinc dark:prose-invert prose-headings:font-semibold prose-a:text-indigo-600 dark:prose-a:text-indigo-400 max-w-none"
     >
       {children}
@@ -255,8 +356,38 @@ export function AnnotatedLesson({
   // leaving the text index built against a detached DOM node — so the grid is
   // always rendered and only the contents of the rail come and go.
   return (
-    <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start">
-      <div ref={columnRef} className="relative flex min-w-0 flex-col gap-6">
+    <div
+      className={`grid gap-8 lg:items-start ${
+        isPanelOpen ? "lg:grid-cols-[minmax(0,1fr)_20rem]" : "lg:grid-cols-1"
+      }`}
+    >
+      {/* Only the classes change between states — swapping the tree here would
+          remount the <article> and detach the text index built against it. */}
+      <div
+        ref={columnRef}
+        className={`relative flex min-w-0 flex-col gap-6 ${
+          isPanelOpen ? "" : "mx-auto w-full max-w-4xl"
+        }`}
+      >
+        {user && (
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={togglePanel}
+              aria-expanded={isPanelOpen}
+              className="inline-flex h-9 items-center gap-2 rounded-lg border border-zinc-200 px-3 text-xs font-semibold text-zinc-600 transition-colors hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
+            >
+              <MessageSquare className="h-3.5 w-3.5" aria-hidden="true" />
+              {isPanelOpen ? t("hidePanel") : t("showPanel")}
+              {comments.length > 0 && (
+                <span className="rounded-full bg-zinc-100 px-1.5 dark:bg-zinc-800">
+                  {comments.length}
+                </span>
+              )}
+            </button>
+          </div>
+        )}
+
         {header}
         {article}
 
@@ -267,7 +398,11 @@ export function AnnotatedLesson({
             left={draft.left}
             onSubmit={async (kind, body) => {
               const ok = await addComment({ kind, body, anchor: draft.anchor });
-              if (ok) window.getSelection()?.removeAllRanges();
+              if (ok) {
+                pendingRef.current = null;
+                window.getSelection()?.removeAllRanges();
+                writePanelPreference(true);
+              }
               return ok;
             }}
             onCancel={() => setDraft(null)}
@@ -275,26 +410,9 @@ export function AnnotatedLesson({
         )}
 
         {footer}
-
-        {user && (
-          <button
-            type="button"
-            onClick={() => setPanelOpenOnMobile((value) => !value)}
-            aria-expanded={panelOpenOnMobile}
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-zinc-200 text-sm font-semibold text-zinc-600 lg:hidden dark:border-zinc-700 dark:text-zinc-300"
-          >
-            <MessageSquare className="h-4 w-4" aria-hidden="true" />
-            {panelOpenOnMobile ? t("hidePanel") : t("showPanel")}
-            {comments.length > 0 && (
-              <span className="rounded-full bg-zinc-100 px-1.5 text-xs dark:bg-zinc-800">
-                {comments.length}
-              </span>
-            )}
-          </button>
-        )}
       </div>
 
-      <div className={panelOpenOnMobile ? "" : "hidden lg:block"}>
+      <div className={isPanelOpen ? "" : "hidden"}>
         {user && (
           <CommentPanel
             comments={comments}

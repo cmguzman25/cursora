@@ -20,15 +20,17 @@ export function LessonProgressControls({
 }: LessonProgressControlsProps) {
   const t = useTranslations("lesson");
   const { user } = useCurrentUser();
-  const { isCompleted, toggleCompleted, setCurrentLesson } = useCourseProgress(
-    user?.id ?? null,
-    courseSlug,
-  );
+  const userId = user?.id ?? null;
+  const { isCompleted, toggleCompleted, setCurrentLesson } = useCourseProgress(userId, courseSlug);
 
+  // Record the visit once the user is known. Depending on `lessonId` alone
+  // silently dropped the write on a fresh page load: the effect ran while
+  // `useCurrentUser` was still fetching, and a signed-out call is a no-op — so
+  // only lessons reached by in-app navigation were ever recorded.
   useEffect(() => {
+    if (!userId) return;
     setCurrentLesson(lessonId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lessonId]);
+  }, [userId, lessonId, setCurrentLesson]);
 
   const completed = isCompleted(lessonId);
 
