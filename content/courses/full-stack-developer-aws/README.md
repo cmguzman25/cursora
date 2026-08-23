@@ -33,7 +33,10 @@ desarrolla. La forma de escribir cada lección está definida en
    (automatización, entornos, decisiones de arquitectura y costo).
 3. **Los dos últimos temas de cada módulo son ejercicios guiados profesionales**,
    planteados como encargos reales de trabajo, con criterios de aceptación,
-   verificación (incluidas pruebas negativas) y limpieza obligatoria.
+   verificación (incluidas pruebas negativas) y limpieza obligatoria. No pesan
+   lo mismo: el primero es de **construir** (45-90 min) y el segundo de
+   **operar** lo construido —medir costos, revertir, apagar y restaurar,
+   comprobar que lo que debe fallar falla— en 20-40 minutos.
 4. **El dinero es un tema de primera clase.** Cada lección lleva semáforo de
    costo (💚 $0 / 💛 centavos / 🔴 cargos reales) y cada paso que puede facturar
    lleva un aviso antes de ejecutarse, con la alternativa gratuita.
@@ -76,7 +79,7 @@ desarrolla. La forma de escribir cada lección está definida en
 - [x] 1.6 Presupuesto y alertas de gasto con AWS Budgets (paso obligatorio del curso) (`lecciones/01-06-presupuesto-y-alertas.es.md`)
 - [x] 1.7 Regiones y zonas de disponibilidad: por qué la región cambia el precio (`lecciones/01-07-regiones-y-zonas.es.md`)
 - [x] 1.8 Tour por la consola: buscador, favoritos, cambio de región y CloudShell (`lecciones/01-08-tour-por-la-consola.es.md`)
-- [ ] 1.9 Etiquetas, nombres y la regla de limpieza del curso (`lecciones/01-09-etiquetas-y-limpieza.es.md`)
+- [x] 1.9 Etiquetas, nombres y la regla de limpieza del curso (`lecciones/01-09-etiquetas-y-limpieza.es.md`)
 - [ ] 1.10 ⭐ Ejercicio guiado: auditoría de seguridad y costos de una cuenta recién creada (`lecciones/01-10-ejercicio-auditoria-de-cuenta.es.md`)
 - [ ] 1.11 ⭐ Ejercicio guiado: estimar la factura de una app real con AWS Pricing Calculator (`lecciones/01-11-ejercicio-estimar-factura.es.md`)
 
@@ -337,7 +340,7 @@ desarrolla. La forma de escribir cada lección está definida en
 
 ## Progreso
 
-**8 / 184 lecciones desarrolladas.**
+**9 / 184 lecciones desarrolladas.**
 
 ## Integración con la app
 

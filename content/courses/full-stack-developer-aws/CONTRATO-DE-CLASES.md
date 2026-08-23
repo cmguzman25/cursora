@@ -214,17 +214,45 @@ profesional recordaría del tema seis meses después.
 
 ## 6. Estructura obligatoria — Ejercicio práctico guiado (Tipo B)
 
-**Las dos últimas lecciones de cada módulo son siempre ejercicios guiados.** No
-son "repasos": son encargos de trabajo realistas, del tipo que aparece en una
+**Las dos últimas lecciones de cada módulo son ejercicios guiados.** No son
+"repasos": son encargos de trabajo realistas, del tipo que aparece en una
 empresa de verdad, y se resuelven de punta a punta.
+
+### Los dos ejercicios tienen pesos y papeles distintos
+
+Dos encargos grandes seguidos cansan y hacen abandonar. Por eso no son dos
+versiones de lo mismo: son las dos mitades de cómo se trabaja de verdad.
+
+| | **Ejercicio A — Construir** | **Ejercicio B — Operar** |
+|---|---|---|
+| Qué hace | Levanta algo nuevo de punta a punta | Trabaja **sobre lo que acabas de construir** |
+| Duración | 45 a 90 minutos | 20 a 40 minutos |
+| Ejemplos | La API de pedidos en Lambda; la web publicada con HTTPS; la VPC hecha a mano | Medir cuánto costaría en producción; romperlo y revertir; apagar con snapshot y restaurar; intentar entrar sin permiso y comprobar que falla |
+| Qué enseña | A hacer | A verificar, medir, mantener y deshacer |
+
+El ejercicio B es corto **a propósito**: llega cuando el lector ya gastó energía
+en el A. Si al escribirlo se está estirando más de 40 minutos, es señal de que
+en realidad es otro ejercicio A y hay que replantearlo.
+
+**Excepción 1:** si en un módulo el segundo ejercicio no enseñaría nada que el
+primero no enseñe ya —solo repetir el mismo trabajo con otros datos—, se deja
+**un único ejercicio guiado** y se dice en el índice. Es preferible un ejercicio
+bueno a dos donde el segundo es relleno.
+
+**Excepción 2:** el proyecto final del módulo 17 son **dos ejercicios de
+construir**, partidos en dos por tamaño (la aplicación y su puesta en
+producción). Es el único módulo donde el segundo no es de operar.
 
 Cabecera:
 
 ```markdown
 # X.Y — Ejercicio guiado: Título del encargo
 
-> Módulo X · Ejercicio guiado 1 de 2 · Nivel: Intermedio · ⏱️ 60 min · 💛 Costo: centavos
+> Módulo X · Ejercicio guiado 1 de 2 · Construir · Nivel: Intermedio · ⏱️ 60 min · 💛 Costo: centavos
 ```
+
+(El tercer campo dice **Construir** u **Operar**, para que el lector sepa de
+entrada si le esperan 60 minutos o 25.)
 
 Secciones, en este orden:
 
@@ -356,7 +384,7 @@ que investigar, no cómo hacerlo.
 ```markdown
 # X.Y — Ejercicio guiado: Título del encargo
 
-> Módulo X · Ejercicio guiado 1 de 2 · Nivel: Intermedio · ⏱️ 60 min · 💛 Costo: centavos
+> Módulo X · Ejercicio guiado 1 de 2 · Construir · Nivel: Intermedio · ⏱️ 60 min · 💛 Costo: centavos
 
 ## 🎬 El caso
 
@@ -417,6 +445,9 @@ que investigar, no cómo hacerlo.
 - [ ] ¿Se recuerda la región y la etiqueta `curso = fullstack-aws`?
 - [ ] ¿El código de los ejemplos es completo y funciona si se copia tal cual?
 - [ ] ¿Se conecta con la lección anterior y anuncia la siguiente?
+- [ ] En un ejercicio guiado: ¿la cabecera dice si es de **Construir** u
+      **Operar**, y su duración cae dentro del rango de ese papel (45-90 min /
+      20-40 min)?
 
 ## 10. Convenciones de archivos
 
