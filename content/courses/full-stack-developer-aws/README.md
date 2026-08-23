@@ -89,7 +89,7 @@ desarrolla. La forma de escribir cada lección está definida en
 
 - [x] 2.1 Por qué IAM es lo primero que revisa un profesional (`lecciones/02-01-por-que-importa-iam.es.md`)
 - [x] 2.2 Usuarios, grupos y root: quién es quién en tu cuenta (`lecciones/02-02-usuarios-grupos-root.es.md`)
-- [ ] 2.3 Políticas IAM: leer un JSON de permisos sin miedo (`lecciones/02-03-politicas-iam.es.md`)
+- [x] 2.3 Políticas IAM: leer un JSON de permisos sin miedo (`lecciones/02-03-politicas-iam.es.md`)
 - [ ] 2.4 Políticas administradas vs propias y el principio de menor privilegio (`lecciones/02-04-menor-privilegio.es.md`)
 - [ ] 2.5 Roles IAM: identidad prestada, el concepto que más cuesta y más se usa (`lecciones/02-05-roles-iam.es.md`)
 - [ ] 2.6 Cómo un servicio asume un rol: el caso de una Lambda leyendo un bucket (`lecciones/02-06-servicios-que-asumen-roles.es.md`)
@@ -340,7 +340,7 @@ desarrolla. La forma de escribir cada lección está definida en
 
 ## Progreso
 
-**13 / 184 lecciones desarrolladas.**
+**14 / 184 lecciones desarrolladas.**
 
 ## Integración con la app
 
