@@ -64,7 +64,7 @@ Dos datos útiles por si eliges el gratuito:
 Casi al final del registro aparece una pantalla llamada **Select a support plan**. Es el único lugar del registro donde puedes contratar un gasto fijo mensual sin darte cuenta.
 
 - **Basic Support**: gratis. Incluye la documentación, los foros y las herramientas de salud del servicio. **Es el que necesitas.**
-- **Developer / Business / Enterprise**: soporte con personas que te responden, con un costo mensual mínimo (el plan Developer ronda los 29 USD al mes; verifica el precio actual en la página de AWS Support). Se cobra **todos los meses**, uses o no uses el soporte.
+- **Los planes con soporte humano** (Developer, Business, Enterprise): personas que te responden, con un costo **mensual mínimo desde unos 29 USD**. Se cobra **todos los meses**, uses o no uses el soporte. AWS está reorganizando estos planes —Developer y Business se retiran el 1 de enero de 2027 en favor de *Business Support+*, también desde 29 USD al mes—, así que los nombres que veas pueden variar. Lo que no varía: **todos cuestan y el gratuito es Basic.**
 
 Elige **Basic** y sigue. Nadie que esté aprendiendo necesita soporte pagado.
 
@@ -85,7 +85,7 @@ Y cuando entres por primera vez, la tentación va a ser crear algo. Aguanta dos 
 >
 > Dos cosas de este registro tocan dinero:
 > - **Cargo de verificación de 1 USD** (2 INR en India) al completar el paso del pago. Es una comprobación temporal, no una compra: se devuelve o desaparece en unos días. Es inevitable y es normal.
-> - **El plan de soporte.** Si eliges Developer, Business o Enterprise en vez de **Basic**, contratas un costo fijo mensual (Developer ronda los 29 USD al mes). **Elige siempre Basic Support.**
+> - **El plan de soporte.** Si eliges cualquiera que no sea **Basic**, contratas un costo fijo mensual (desde unos 29 USD). **Elige siempre Basic Support.**
 >
 > Si no quieres registrar una tarjeta todavía: puedes leer esta lección y seguir el curso hasta la 3.12 sin cuenta de AWS (los módulos 3 y 4 se hacen enteros en tu computadora). Necesitarás la cuenta a partir del módulo 5.
 

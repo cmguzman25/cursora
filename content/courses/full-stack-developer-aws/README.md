@@ -80,7 +80,7 @@ desarrolla. La forma de escribir cada lección está definida en
 - [x] 1.7 Regiones y zonas de disponibilidad: por qué la región cambia el precio (`lecciones/01-07-regiones-y-zonas.es.md`)
 - [x] 1.8 Tour por la consola: buscador, favoritos, cambio de región y CloudShell (`lecciones/01-08-tour-por-la-consola.es.md`)
 - [x] 1.9 Etiquetas, nombres y la regla de limpieza del curso (`lecciones/01-09-etiquetas-y-limpieza.es.md`)
-- [ ] 1.10 ⭐ Ejercicio guiado: auditoría de seguridad y costos de una cuenta recién creada (`lecciones/01-10-ejercicio-auditoria-de-cuenta.es.md`)
+- [x] 1.10 ⭐ Ejercicio guiado: auditoría de seguridad y costos de una cuenta recién creada (`lecciones/01-10-ejercicio-auditoria-de-cuenta.es.md`)
 - [ ] 1.11 ⭐ Ejercicio guiado: estimar la factura de una app real con AWS Pricing Calculator (`lecciones/01-11-ejercicio-estimar-factura.es.md`)
 
 ## Módulo 2 — Identidad y accesos: IAM
@@ -340,7 +340,7 @@ desarrolla. La forma de escribir cada lección está definida en
 
 ## Progreso
 
-**9 / 184 lecciones desarrolladas.**
+**10 / 184 lecciones desarrolladas.**
 
 ## Integración con la app
 
