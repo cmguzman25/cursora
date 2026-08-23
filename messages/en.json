@@ -169,5 +169,18 @@
       "loadError": "Couldn't load the comments.",
       "viewInLesson": "View in lesson →"
     }
+  },
+  "reading": {
+    "title": "Reading",
+    "textSize": "Text size",
+    "decrease": "Smaller text",
+    "increase": "Larger text",
+    "background": "Background",
+    "themes": {
+      "system": "System",
+      "light": "Light",
+      "sepia": "Sepia",
+      "dark": "Dark"
+    }
   }
 }

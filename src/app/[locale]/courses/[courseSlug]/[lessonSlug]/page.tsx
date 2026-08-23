@@ -122,7 +122,12 @@ export default async function LessonPage({
   );
 
   return (
-    <div className="flex min-h-screen flex-1 flex-col bg-zinc-50 dark:bg-zinc-950">
+    // `data-reading-surface` is what the reading themes in globals.css paint;
+    // ReadingSettings switches them by writing `data-reading-theme` on <html>.
+    <div
+      data-reading-surface=""
+      className="flex min-h-screen flex-1 flex-col bg-zinc-50 dark:bg-zinc-950"
+    >
       <AppHeader />
       <main
         className={`mx-auto flex w-full flex-1 flex-col gap-6 px-6 py-10 ${

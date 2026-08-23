@@ -77,3 +77,66 @@ body {
     text-decoration-color: rgb(165 180 252);
   }
 }
+
+/*
+ * Reading preferences for lesson pages.
+ *
+ * `AnnotatedLesson` writes `data-reading-theme` and `--reading-font-size` on
+ * <html>, and clears them when you leave the lesson, so the tint only applies
+ * while reading. These rules are deliberately unlayered: Tailwind utilities
+ * live in `@layer utilities`, and unlayered CSS wins over layered CSS, which
+ * is what lets the tint override the page's `bg-*` classes without `!important`.
+ *
+ * Values follow the usual long-form reading guidance: never pure black on pure
+ * white, line height >= 1.5, and a measure capped in `ch` so the line length
+ * stays in the 50-75 character band at every text size.
+ */
+:root[data-reading-theme="light"] {
+  --reading-bg: #fdfcfa;
+  --reading-fg: #26241f;
+  --reading-muted: #6b6559;
+  --reading-border: #e6e1d8;
+}
+
+:root[data-reading-theme="sepia"] {
+  --reading-bg: #f4ecd8;
+  --reading-fg: #4a3f35;
+  --reading-muted: #7a6a58;
+  --reading-border: #e0d4ba;
+}
+
+:root[data-reading-theme="dark"] {
+  --reading-bg: #16161a;
+  --reading-fg: #c9c7c2;
+  --reading-muted: #8b8985;
+  --reading-border: #2c2c33;
+}
+
+:root[data-reading-theme] [data-reading-surface] {
+  background-color: var(--reading-bg);
+  color: var(--reading-fg);
+}
+
+:root[data-reading-theme] [data-reading-surface] .prose {
+  color: var(--reading-fg);
+}
+
+:root[data-reading-theme] [data-reading-surface] .prose :is(h1, h2, h3, h4, strong, blockquote, th) {
+  color: var(--reading-fg);
+}
+
+:root[data-reading-theme] [data-reading-surface] .prose :is(hr, td, th, thead, tbody tr) {
+  border-color: var(--reading-border);
+}
+
+:root[data-reading-theme] [data-reading-surface] .prose :is(code, pre) {
+  background-color: color-mix(in srgb, var(--reading-fg) 8%, transparent);
+  color: var(--reading-fg);
+}
+
+/* Text size and measure apply in every theme, including "system". */
+[data-reading-surface] .prose {
+  font-size: var(--reading-font-size, 18px);
+  line-height: 1.7;
+  max-width: min(70ch, 100%);
+}

@@ -169,5 +169,18 @@
       "loadError": "Não foi possível carregar os comentários.",
       "viewInLesson": "Ver na lição →"
     }
+  },
+  "reading": {
+    "title": "Leitura",
+    "textSize": "Tamanho do texto",
+    "decrease": "Diminuir o texto",
+    "increase": "Aumentar o texto",
+    "background": "Fundo",
+    "themes": {
+      "system": "Sistema",
+      "light": "Claro",
+      "sepia": "Sépia",
+      "dark": "Escuro"
+    }
   }
 }

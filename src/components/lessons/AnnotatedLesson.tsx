@@ -23,6 +23,7 @@ import { useCurrentUser } from "@/hooks/useCurrentUser";
 import { useLessonComments } from "@/hooks/useLessonComments";
 import { CommentComposer } from "@/components/lessons/CommentComposer";
 import { CommentPanel } from "@/components/lessons/CommentPanel";
+import { ReadingSettings } from "@/components/lessons/ReadingSettings";
 
 interface AnnotatedLessonProps {
   courseSlug: string;
@@ -369,8 +370,9 @@ export function AnnotatedLesson({
           isPanelOpen ? "" : "mx-auto w-full max-w-4xl"
         }`}
       >
-        {user && (
-          <div className="flex justify-end">
+        <div className="flex flex-wrap items-center justify-end gap-2">
+          <ReadingSettings />
+          {user && (
             <button
               type="button"
               onClick={togglePanel}
@@ -385,8 +387,8 @@ export function AnnotatedLesson({
                 </span>
               )}
             </button>
-          </div>
-        )}
+          )}
+        </div>
 
         {header}
         {article}
