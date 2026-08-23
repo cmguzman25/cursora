@@ -74,7 +74,7 @@ desarrolla. La forma de escribir cada lección está definida en
 - [x] 1.4 Crear tu cuenta AWS paso a paso, sin sustos con la tarjeta (`lecciones/01-04-crear-cuenta-aws.es.md`)
 - [x] 1.5 Blindar la cuenta: MFA en el usuario root y por qué nunca se trabaja con root (`lecciones/01-05-proteger-cuenta-root-mfa.es.md`)
 - [x] 1.6 Presupuesto y alertas de gasto con AWS Budgets (paso obligatorio del curso) (`lecciones/01-06-presupuesto-y-alertas.es.md`)
-- [ ] 1.7 Regiones y zonas de disponibilidad: por qué la región cambia el precio (`lecciones/01-07-regiones-y-zonas.es.md`)
+- [x] 1.7 Regiones y zonas de disponibilidad: por qué la región cambia el precio (`lecciones/01-07-regiones-y-zonas.es.md`)
 - [ ] 1.8 Tour por la consola: buscador, favoritos, cambio de región y CloudShell (`lecciones/01-08-tour-por-la-consola.es.md`)
 - [ ] 1.9 Etiquetas, nombres y la regla de limpieza del curso (`lecciones/01-09-etiquetas-y-limpieza.es.md`)
 - [ ] 1.10 ⭐ Ejercicio guiado: auditoría de seguridad y costos de una cuenta recién creada (`lecciones/01-10-ejercicio-auditoria-de-cuenta.es.md`)
@@ -337,7 +337,7 @@ desarrolla. La forma de escribir cada lección está definida en
 
 ## Progreso
 
-**6 / 184 lecciones desarrolladas.**
+**7 / 184 lecciones desarrolladas.**
 
 ## Integración con la app
 
