@@ -6,15 +6,21 @@ import { COURSE_CATEGORIES, type CourseCategory } from "@/lib/course-categories"
 import { COURSES } from "@/lib/courses";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
 import { useCoursesProgress } from "@/hooks/useCoursesProgress";
-import { CourseCard } from "./CourseCard";
+import { Skeleton } from "@/components/ui/Skeleton";
+import { CourseCard, CourseCardSkeleton } from "./CourseCard";
 
 type FilterValue = "all" | "inProgress" | CourseCategory;
 
 export function CoursesCatalog() {
   const t = useTranslations("courses");
   const [filter, setFilter] = useState<FilterValue>("all");
-  const { user } = useCurrentUser();
-  const { summaries } = useCoursesProgress(user?.id ?? null);
+  const { user, isLoading: isUserLoading } = useCurrentUser();
+  const { summaries, isLoading: isProgressLoading } = useCoursesProgress(user?.id ?? null);
+
+  // The user's progress decides the order of the cards *and* whether the "my
+  // courses" chip exists. Rendering before it lands would show one order and
+  // then reshuffle, so the catalog waits behind skeletons instead.
+  const isPending = isUserLoading || isProgressLoading;
 
   // Position in the "last touched" ranking: 0 is the most recent course. The
   // API already returns them ordered, so the index is the rank.
@@ -70,7 +76,8 @@ export function CoursesCatalog() {
         </FilterChip>
         {/* Only offered once there is something to show, so the chip can't
             lead to an empty catalog — same rule as the category chips. */}
-        {enrolledSlugs.size > 0 && (
+        {isPending && <Skeleton className="h-8 w-28 rounded-full" />}
+        {!isPending && enrolledSlugs.size > 0 && (
           <FilterChip active={effectiveFilter === "inProgress"} onClick={() => setFilter("inProgress")}>
             {t("filters.inProgress")}
           </FilterChip>
@@ -86,7 +93,13 @@ export function CoursesCatalog() {
         ))}
       </div>
 
-      {filteredCourses.length > 0 ? (
+      {isPending ? (
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {COURSES.map((course) => (
+            <CourseCardSkeleton key={course.id} />
+          ))}
+        </div>
+      ) : filteredCourses.length > 0 ? (
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filteredCourses.map((course) => (
             <CourseCard key={course.id} course={course} />

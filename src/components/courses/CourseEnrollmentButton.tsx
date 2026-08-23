@@ -3,11 +3,14 @@
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { BookmarkCheck, BookmarkPlus, BookmarkX, Loader2 } from "lucide-react";
+import { Skeleton } from "@/components/ui/Skeleton";
 
 interface CourseEnrollmentButtonProps {
   courseSlug: string;
   /** `null` while the user is loading, or when nobody is signed in. */
   userKey: string | null;
+  /** Distinguishes "still loading the session" from "signed out". */
+  isUserLoading?: boolean;
 }
 
 /**
@@ -15,7 +18,11 @@ interface CourseEnrollmentButtonProps {
  * lesson and the current-lesson bookmark stay in place, which is why the
  * button can be pressed without a confirmation dialog.
  */
-export function CourseEnrollmentButton({ courseSlug, userKey }: CourseEnrollmentButtonProps) {
+export function CourseEnrollmentButton({
+  courseSlug,
+  userKey,
+  isUserLoading = false,
+}: CourseEnrollmentButtonProps) {
   const t = useTranslations("courseDetail");
   const [loadedKey, setLoadedKey] = useState<string | null>(userKey);
   const [enrolled, setEnrolled] = useState<boolean | null>(null);
@@ -45,7 +52,13 @@ export function CourseEnrollmentButton({ courseSlug, userKey }: CourseEnrollment
     };
   }, [userKey, courseSlug]);
 
-  // Unknown state: the fetch is still in flight, or nobody is signed in.
+  // Hold the button's space while the answer is on its way, so it doesn't pop
+  // in and shove the rest of the row sideways.
+  if (isUserLoading || (userKey && enrolled === null)) {
+    return <Skeleton className="h-11 w-36 rounded-xl" />;
+  }
+
+  // Signed out: there is nothing to enroll.
   if (!userKey || enrolled === null) return null;
 
   async function toggle() {

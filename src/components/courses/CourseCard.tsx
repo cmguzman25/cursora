@@ -5,7 +5,36 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Course } from "@/lib/courses";
 import { COURSE_CATEGORIES } from "@/lib/course-categories";
+import { Skeleton } from "@/components/ui/Skeleton";
 import { localize } from "@content/courses/types";
+
+/**
+ * Same silhouette as `CourseCard`, shown while the catalog waits for the
+ * user's progress — which decides both the order of the cards and whether the
+ * "my courses" filter exists. Kept next to the real card so the two stay in
+ * step when the card's layout changes.
+ */
+export function CourseCardSkeleton() {
+  return (
+    <div className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+      <Skeleton className="h-28 rounded-none" />
+      <div className="flex flex-1 flex-col gap-3 p-5">
+        <div className="flex items-center justify-between gap-2">
+          <Skeleton className="h-6 w-24 rounded-full" />
+          <Skeleton className="h-6 w-20 rounded-full" />
+        </div>
+        <Skeleton className="h-5 w-3/4" />
+        <div className="flex flex-1 flex-col gap-2">
+          <Skeleton className="h-3.5 w-full" />
+          <Skeleton className="h-3.5 w-11/12" />
+          <Skeleton className="h-3.5 w-2/3" />
+        </div>
+        <Skeleton className="h-4 w-40" />
+        <Skeleton className="mt-1 h-9 w-full rounded-lg" />
+      </div>
+    </div>
+  );
+}
 
 export function CourseCard({ course }: { course: Course }) {
   const locale = useLocale();

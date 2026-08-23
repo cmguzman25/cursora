@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
 import { useCourseProgress } from "@/hooks/useCourseProgress";
 import { localize, type LessonMeta } from "@content/courses/types";
+import { Skeleton } from "@/components/ui/Skeleton";
 import { CourseEnrollmentButton } from "./CourseEnrollmentButton";
 import type { AppLocale } from "@/i18n/routing";
 
@@ -30,11 +31,18 @@ function groupByModule(lessons: LessonMeta[], locale: AppLocale) {
 export function CourseLessonList({ courseSlug, lessons }: CourseLessonListProps) {
   const t = useTranslations("courseDetail");
   const locale = useLocale() as AppLocale;
-  const { user } = useCurrentUser();
-  const { completedLessons, currentLessonId, isCompleted } = useCourseProgress(
-    user?.id ?? null,
-    courseSlug,
-  );
+  const { user, isLoading: isUserLoading } = useCurrentUser();
+  const {
+    completedLessons,
+    currentLessonId,
+    isCompleted,
+    isLoading: isProgressLoading,
+  } = useCourseProgress(user?.id ?? null, courseSlug);
+
+  // Progress arrives from the server after the page paints. Until it does,
+  // every part that depends on it holds its space with a skeleton, so the
+  // counter, the ticks and the buttons don't shove the page around on arrival.
+  const isPending = isUserLoading || isProgressLoading;
 
   const startLessonId = currentLessonId ?? lessons[0]?.id;
   const hasProgress = completedLessons.length > 0 || Boolean(currentLessonId);
@@ -46,9 +54,13 @@ export function CourseLessonList({ courseSlug, lessons }: CourseLessonListProps)
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-4 rounded-2xl border border-zinc-200 bg-white p-5 sm:flex-row sm:items-center sm:justify-between dark:border-zinc-800 dark:bg-zinc-900">
         <div className="flex-1">
-          <p className="text-sm font-medium text-zinc-900 dark:text-white">
-            {t("completedCount", { completed: completedLessons.length, total: lessons.length })}
-          </p>
+          {isPending ? (
+            <Skeleton className="h-5 w-48" />
+          ) : (
+            <p className="text-sm font-medium text-zinc-900 dark:text-white">
+              {t("completedCount", { completed: completedLessons.length, total: lessons.length })}
+            </p>
+          )}
           <div className="mt-2 h-2 w-full max-w-xs overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-800">
             <div
               className="h-full rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 transition-all"
@@ -57,14 +69,22 @@ export function CourseLessonList({ courseSlug, lessons }: CourseLessonListProps)
           </div>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <CourseEnrollmentButton courseSlug={courseSlug} userKey={user?.id ?? null} />
-          {startLessonId && (
-            <Link
-              href={`/courses/${courseSlug}/${startLessonId}`}
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 text-sm font-semibold whitespace-nowrap text-white shadow-lg shadow-indigo-600/25 transition-all hover:from-indigo-500 hover:to-violet-500"
-            >
-              {hasProgress ? t("continueCourse") : t("startCourse")}
-            </Link>
+          <CourseEnrollmentButton
+            courseSlug={courseSlug}
+            userKey={user?.id ?? null}
+            isUserLoading={isUserLoading}
+          />
+          {isPending ? (
+            <Skeleton className="h-11 w-40 rounded-xl" />
+          ) : (
+            startLessonId && (
+              <Link
+                href={`/courses/${courseSlug}/${startLessonId}`}
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-5 text-sm font-semibold whitespace-nowrap text-white shadow-lg shadow-indigo-600/25 transition-all hover:from-indigo-500 hover:to-violet-500"
+              >
+                {hasProgress ? t("continueCourse") : t("startCourse")}
+              </Link>
+            )
           )}
         </div>
       </div>
@@ -79,8 +99,13 @@ export function CourseLessonList({ courseSlug, lessons }: CourseLessonListProps)
                   href={`/courses/${courseSlug}/${lesson.id}`}
                   className="flex items-center gap-3 px-4 py-3 text-sm transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-800"
                 >
-                  {isCompleted(lesson.id) ? (
-                    <Check className="h-4 w-4 shrink-0 text-emerald-500" aria-hidden="true" />
+                  {isPending ? (
+                    <Skeleton className="h-4 w-4 shrink-0 rounded-full" />
+                  ) : isCompleted(lesson.id) ? (
+                    <Check
+                      className="h-4 w-4 shrink-0 text-emerald-500"
+                      aria-hidden="true"
+                    />
                   ) : (
                     <Circle
                       className="h-4 w-4 shrink-0 text-zinc-300 dark:text-zinc-600"
