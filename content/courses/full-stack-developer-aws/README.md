@@ -71,7 +71,7 @@ desarrolla. La forma de escribir cada lección está definida en
 - [x] 1.1 Qué es la nube y qué problema resuelve de verdad (`lecciones/01-01-que-es-la-nube.es.md`)
 - [x] 1.2 Qué significa "full stack" y qué vas a construir en este curso (`lecciones/01-02-que-es-full-stack.es.md`)
 - [x] 1.3 Cómo cobra AWS: pago por uso, Always Free, créditos y pruebas (`lecciones/01-03-como-cobra-aws.es.md`)
-- [ ] 1.4 Crear tu cuenta AWS paso a paso, sin sustos con la tarjeta (`lecciones/01-04-crear-cuenta-aws.es.md`)
+- [x] 1.4 Crear tu cuenta AWS paso a paso, sin sustos con la tarjeta (`lecciones/01-04-crear-cuenta-aws.es.md`)
 - [ ] 1.5 Blindar la cuenta: MFA en el usuario root y por qué nunca se trabaja con root (`lecciones/01-05-proteger-cuenta-root-mfa.es.md`)
 - [ ] 1.6 Presupuesto y alertas de gasto con AWS Budgets (paso obligatorio del curso) (`lecciones/01-06-presupuesto-y-alertas.es.md`)
 - [ ] 1.7 Regiones y zonas de disponibilidad: por qué la región cambia el precio (`lecciones/01-07-regiones-y-zonas.es.md`)
@@ -337,7 +337,7 @@ desarrolla. La forma de escribir cada lección está definida en
 
 ## Progreso
 
-**3 / 184 lecciones desarrolladas.**
+**4 / 184 lecciones desarrolladas.**
 
 ## Integración con la app
 
