@@ -39,13 +39,14 @@ Un **informe de auditoría** guardado en tu cuenta, y una cuenta que pasa las si
 ## 🧰 Antes de empezar
 
 - Haber completado las lecciones **1.4 a 1.9** de este módulo (cuenta creada, MFA, presupuestos, etiquetas).
+- **Tres cosas de este ejercicio no salieron en el módulo**: el alias de cuenta, los contactos alternativos y dos herramientas de diagnóstico (CloudTrail y Trusted Advisor). Van explicadas en su propio paso y **las tres son de solo lectura o cambios de un minuto**: ninguna te puede romper nada ni cobrarte.
 - Tener a mano el teléfono con la app de autenticación.
 - Un correo que revises de verdad.
 - Tiempo real: unos 60 minutos, de una sentada.
 
 ## 💰 Semáforo de costo
 
-> 💚 **Costo: $0.** Todo lo que usa este ejercicio es gratuito: consultar tu cuenta, ver el historial de actividad, leer los diagnósticos básicos y escribir un archivo en CloudShell no cuesta nada.
+> 💚 **Costo: $0.** Todo lo que usa este ejercicio es gratuito: consultar tu cuenta, ver el historial de actividad, leer los diagnósticos básicos y escribir el informe no cuesta nada.
 
 > ⚠️ **AVISO DE COSTO — servicios de seguridad que verás por el camino**
 >
@@ -57,29 +58,26 @@ Un **informe de auditoría** guardado en tu cuenta, y una cuenta que pasa las si
 
 ### Fase 1 — Prepara el informe
 
-1. **Abre CloudShell** (el icono de terminal de la barra superior) y crea el archivo del informe:
+1. **Crea el informe donde te resulte más cómodo.** Abre el Bloc de notas, TextEdit, Word o lo que uses, y crea un archivo con estos seis apartados vacíos:
 
-   ```bash
-   cat > ~/auditoria-cuenta.md << 'FIN'
-   # Informe de auditoría — cuenta AWS
-   Fecha:
-   Auditor:
-   ID de cuenta:
+   ```
+   Informe de auditoría — cuenta AWS
+   Fecha:            Auditor:            ID de cuenta:
 
-   ## 1. Identidad
-   ## 2. Contactos
-   ## 3. Dinero
-   ## 4. Rastro de actividad
-   ## 5. Diagnóstico
-   ## 6. Veredicto
-   FIN
-   cat ~/auditoria-cuenta.md
+   1. Identidad
+   2. Contactos
+   3. Dinero
+   4. Rastro de actividad
+   5. Diagnóstico
+   6. Veredicto
    ```
 
-   *Deberías ver:* el contenido del archivo impreso en pantalla.
-   *Por qué en CloudShell:* está en tu carpeta persistente (el gigabyte de la lección 1.8), así que sigue ahí mañana. Si prefieres, hazlo en un archivo de tu computadora — pero hazlo en algún lado: **una auditoría que no se escribe, no existe**.
+   *Deberías ver:* un documento vacío con los seis apartados. Lo irás rellenando mientras auditas.
+   *Por qué así:* **una auditoría que no se escribe, no existe.** El formato da igual; lo que importa es que quede registrado.
 
-2. **Averigua con qué identidad estás trabajando:**
+   > 💡 **Si prefieres hacerlo dentro de AWS:** en CloudShell (lección 1.8) puedes crear el archivo con `echo "Informe de auditoría" > ~/auditoria.txt` e ir añadiendo líneas con `echo "..." >> ~/auditoria.txt` (dos `>>` añaden, uno solo `>` reemplaza). Queda en tu gigabyte persistente. Es opcional: no te quedes atascado aquí, lo importante es auditar.
+
+2. **Averigua con qué identidad estás trabajando.** Abre **CloudShell** (el icono de terminal de la barra superior, lección 1.8) y ejecuta el mismo comando que ya usaste allí:
 
    ```bash
    aws sts get-caller-identity
@@ -98,7 +96,7 @@ Un **informe de auditoría** guardado en tu cuenta, y una cuenta que pasa las si
 5. **Mira el panel de IAM.** Busca `IAM` en la consola y entra a su página principal.
    *Deberías ver:* un panel de **Security recommendations** (*recomendaciones de seguridad*) y un resumen de usuarios, grupos y roles — todo en cero, porque aún no creaste ninguno. Anota lo que diga el panel.
 
-6. **Ponle alias a la cuenta.** En esa misma página de IAM, busca el **Account Alias** (junto a la URL de inicio de sesión) y crea uno, por ejemplo `donarosa-fsaws`.
+6. **Ponle alias a la cuenta.** *(Esto es nuevo: no salió en ninguna lección, y es un cambio de un minuto.)* En esa misma página de IAM, busca el **Account Alias** (junto a la URL de inicio de sesión) y crea uno, por ejemplo `donarosa-fsaws`.
    *Deberías ver:* la URL de acceso pasa de `https://123456789012.signin.aws.amazon.com/console` a una con tu alias.
    *Por qué:* nadie recuerda 12 dígitos. Cuando en el módulo 2 crees usuarios, entrarán por esa dirección.
 
@@ -107,7 +105,7 @@ Un **informe de auditoría** guardado en tu cuenta, y una cuenta que pasa las si
 7. **Abre la configuración de la cuenta.** Menú de tu nombre → **Account** (*cuenta*).
    *Deberías ver:* tus datos de contacto principales y, más abajo, **Alternate contacts** (*contactos alternativos*).
 
-8. **Rellena los tres contactos alternativos:** *Billing* (facturación), *Operations* (operaciones) y *Security* (seguridad). Si trabajas solo, pon tu mismo correo en los tres.
+8. **Rellena los tres contactos alternativos** *(también nuevo, y de los ajustes que más se agradecen el día que pasa algo)*: *Billing* (facturación), *Operations* (operaciones) y *Security* (seguridad). Si trabajas solo, pon tu mismo correo en los tres.
    *Deberías ver:* los tres con datos guardados.
    *Por qué importa de verdad:* si AWS detecta que tus credenciales se filtraron, o que hay actividad sospechosa, escribe al contacto de seguridad. Si está vacío, escribe solo al correo raíz — el que quizá no revisas a diario. En una empresa, estos tres contactos son personas distintas.
 
@@ -128,6 +126,9 @@ Un **informe de auditoría** guardado en tu cuenta, y una cuenta que pasa las si
 ### Fase 5 — Rastro: qué pasó en esta cuenta
 
 13. **Abre el historial de actividad.** Busca `CloudTrail` → **Event history** (*historial de eventos*).
+
+    > 🆕 **Herramienta nueva.** CloudTrail no apareció en el módulo, y no hace falta configurarlo: es el libro de registro de tu cuenta, y viene encendido de fábrica. Aquí solo vas a **leerlo**. Lo trabajamos a fondo en el módulo 15.
+
     *Deberías ver:* una lista de acciones con fecha, usuario y servicio. **No hiciste nada para activarlo**: CloudTrail viene encendido por defecto y guarda los últimos **90 días** de eventos de gestión, sin costo por consultarlos.
 
 14. **Busca tus propias huellas.** Filtra por nombre de evento `CreateBucket`.
@@ -139,6 +140,9 @@ Un **informe de auditoría** guardado en tu cuenta, y una cuenta que pasa las si
 ### Fase 6 — Diagnóstico automático
 
 16. **Abre Trusted Advisor.** Búscalo en la consola.
+
+    > 🆕 **Herramienta nueva.** Tampoco apareció en el módulo. Es un revisor automático que compara tu cuenta contra las buenas prácticas de AWS y te dice qué falla. Solo lo vas a **leer**: no cambia nada por su cuenta.
+
     *Deberías ver:* un panel con categorías (seguridad, límites de servicio, tolerancia a fallos…). Con el plan **Basic** tienes **todas las comprobaciones de límites de servicio** y **una selección** de las de seguridad y tolerancia a fallos; las demás aparecen bloqueadas y son de los planes de pago.
 
 17. **Refresca a mano.** Pulsa el botón **Refresh** de las comprobaciones de seguridad.
@@ -149,29 +153,18 @@ Un **informe de auditoría** guardado en tu cuenta, y una cuenta que pasa las si
 
 ### Fase 7 — Veredicto
 
-19. **Completa el informe.** Vuelve a CloudShell y ábrelo con el editor incluido:
+19. **Completa el informe.** Vuelve a tu documento y rellena los seis apartados con lo que anotaste en cada fase.
+    *Deberías ver:* un informe sin apartados vacíos. Si alguno quedó en blanco, es que te saltaste una fase.
 
-    ```bash
-    nano ~/auditoria-cuenta.md
-    ```
-
-    Rellena cada sección con lo que anotaste. En **Veredicto**, escribe una de estas dos frases y justifícala en dos líneas:
+20. **Escribe el veredicto.** En el último apartado, elige una de estas dos frases y justifícala en dos líneas:
     - `APTA para empezar a trabajar`
     - `NO APTA — corregir primero: ...`
 
-    *Deberías ver:* al guardar con `Ctrl+O` y salir con `Ctrl+X`, el archivo actualizado.
-
-20. **Guarda una copia legible del resumen:**
-
-    ```bash
-    grep -A 2 "Veredicto" ~/auditoria-cuenta.md
-    ```
-
-    *Deberías ver:* tu veredicto impreso. Eso es lo que le mandarías al cliente.
+    *Deberías ver:* un párrafo que podrías copiar y pegar en un correo a Doña Rosa. Ese es el entregable del ejercicio.
 
 ## 🔍 Verifica que funciona
 
-- **El informe sobrevive.** Cierra CloudShell, navega por la consola, ábrelo de nuevo y ejecuta `cat ~/auditoria-cuenta.md`. Debe seguir completo.
+- **El informe está completo.** Repásalo: los seis apartados con datos, ninguno vacío, y un veredicto justificado. Si lo hiciste en CloudShell, ciérralo, vuelve a abrirlo y comprueba con `cat ~/auditoria.txt` que sigue ahí.
 - **Los contactos quedaron guardados.** Recarga la página de **Account** y comprueba que los tres contactos alternativos siguen ahí.
 - **El alias funciona.** Abre una ventana de incógnito y entra a `https://TU-ALIAS.signin.aws.amazon.com/console`. Debe cargar la pantalla de inicio de sesión de **tu** cuenta.
 - **Prueba negativa — la cerradura de verdad frena.** En esa ventana de incógnito, intenta entrar como usuario raíz **con la contraseña correcta** y luego escribe **un código MFA equivocado** (cambia un dígito).
@@ -183,7 +176,7 @@ Un **informe de auditoría** guardado en tu cuenta, y una cuenta que pasa las si
 
 **No borres nada.** Este ejercicio no crea recursos facturables: crea *configuración*, y toda ella se queda:
 
-1. El informe (`~/auditoria-cuenta.md`) — se queda; lo vas a actualizar en el módulo 17.
+1. El informe — se queda; lo vas a actualizar en el módulo 17.
 2. Los contactos alternativos y el alias — se quedan para siempre.
 3. Los presupuestos y las etiquetas de costos — se quedan.
 4. **Comprobación final:** ve a **Billing and Cost Management** y confirma que el gasto del mes sigue igual que en el paso 11.

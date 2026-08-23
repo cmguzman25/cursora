@@ -274,6 +274,22 @@ verlos en una pantalla"). Nada de "supongamos una empresa X".
 Prerrequisitos concretos: qué lecciones previas hacen falta, qué recursos de
 módulos anteriores deben seguir vivos, qué instalar, tiempo estimado real.
 
+**Regla de autosuficiencia.** Un ejercicio se tiene que poder resolver con lo
+enseñado en el módulo (y en los anteriores). Antes de darlo por terminado, se
+recorre paso por paso preguntando *"¿esto se explicó en alguna lección?"*. Lo
+que no esté cubierto se resuelve así:
+
+- **Un concepto nuevo** (algo que hay que entender para seguir) → **no va en el
+  ejercicio**: va en una lección del módulo, o el ejercicio se replantea.
+- **Una herramienta de solo lectura, o un ajuste de un minuto** → puede
+  aparecer, pero **marcada como nueva** (`> 🆕 **Herramienta nueva.**` con dos o
+  tres líneas de qué es) y listada aquí, en "Antes de empezar". Nunca se cuela
+  como si el lector debiera saberlo.
+- **Comandos o técnicas de terminal** → solo los que ya se usaron en una
+  lección. Nada de *heredocs*, editores de terminal, `grep` o tuberías si no se
+  enseñaron: en un ejercicio, la fricción de herramienta hace abandonar antes
+  que la dificultad del tema.
+
 ### 4. 💰 Semáforo de costo
 
 El semáforo completo, con el aviso de la sección 4.2 si corresponde, **antes**
@@ -448,6 +464,9 @@ que investigar, no cómo hacerlo.
 - [ ] En un ejercicio guiado: ¿la cabecera dice si es de **Construir** u
       **Operar**, y su duración cae dentro del rango de ese papel (45-90 min /
       20-40 min)?
+- [ ] En un ejercicio guiado: ¿se recorrió paso por paso comprobando que **todo
+      lo que se pide se enseñó antes**, y lo que no, está marcado como nuevo y
+      declarado en "Antes de empezar"?
 
 ## 10. Convenciones de archivos
 
