@@ -20,6 +20,30 @@ export interface LessonMeta {
   moduleId: string;
   module: LocalizedText;
   title: LocalizedText;
+  /**
+   * "quiz" lessons render an interactive `ExamQuiz` instead of the markdown
+   * pipeline — their content lives in a question bank (see `ExamQuizQuestion`),
+   * not in a `.md` file. Omitted (or "lesson") for regular content lessons.
+   */
+  kind?: "lesson" | "quiz";
+}
+
+export interface ExamQuizOption {
+  id: string;
+  text: string;
+  correct: boolean;
+  /** Shown after the learner reveals the answer, for this option specifically — why it's right or wrong. */
+  explanation: string;
+}
+
+export interface ExamQuizQuestion {
+  id: string;
+  prompt: string;
+  /** true = "select 2 correct out of 5" (checkbox), like the real exam's multi-answer format. Default: single choice. */
+  multiple?: boolean;
+  options: ExamQuizOption[];
+  /** Short exam-prep tips shown alongside the explanations once revealed. */
+  tips: string[];
 }
 
 export interface CourseManifest {

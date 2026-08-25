@@ -1,5 +1,6 @@
-import type { CourseManifest } from "./types";
+import type { CourseManifest, ExamQuizQuestion } from "./types";
 import { manifest as awsCloudPractitioner } from "./aws-cloud-practitioner/manifest";
+import { EXAM_QUIZZES as AWS_CLOUD_PRACTITIONER_QUIZZES } from "./aws-cloud-practitioner/preguntas";
 import { manifest as fullStackDeveloperAws } from "./full-stack-developer-aws/manifest";
 
 /**
@@ -16,4 +17,13 @@ const BY_SLUG = new Map(COURSE_MANIFESTS.map((course) => [course.slug, course]))
 
 export function getCourseManifest(slug: string): CourseManifest | null {
   return BY_SLUG.get(slug) ?? null;
+}
+
+/** Question banks for "quiz"-kind lessons (see `LessonMeta.kind`), keyed by course slug then lesson id. */
+const EXAM_QUIZZES: Record<string, Record<string, ExamQuizQuestion[]>> = {
+  [awsCloudPractitioner.slug]: AWS_CLOUD_PRACTITIONER_QUIZZES,
+};
+
+export function getExamQuiz(courseSlug: string, lessonId: string): ExamQuizQuestion[] | null {
+  return EXAM_QUIZZES[courseSlug]?.[lessonId] ?? null;
 }

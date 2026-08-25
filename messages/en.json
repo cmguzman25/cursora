@@ -43,7 +43,22 @@
     "next": "Go to next lesson",
     "courseFinished": "You finished the course!",
     "notReady": "This lesson hasn't been written yet. Check back soon.",
-    "notTranslated": "This lesson hasn't been translated into this language yet. Showing the Spanish version."
+    "notTranslated": "This lesson hasn't been translated into this language yet. Showing the Spanish version.",
+    "quiz": {
+      "questionProgress": "Question {current} of {total}",
+      "reviewAnswer": "Review answer",
+      "nextQuestion": "Next question",
+      "previous": "Previous",
+      "finish": "Finish review",
+      "correct": "Correct!",
+      "incorrect": "Not correct",
+      "selectOne": "Pick an answer to continue.",
+      "selectMultiple": "Pick {count} correct answers.",
+      "tipsTitle": "Exam tips",
+      "finishedTitle": "Review complete",
+      "finishedScore": "You got {correct} out of {total} questions right.",
+      "backToLesson": "You can come back and review these questions anytime."
+    }
   },
   "courseDetail": {
     "completedCount": "{completed} / {total} lessons completed",

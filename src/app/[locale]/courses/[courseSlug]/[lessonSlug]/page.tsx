@@ -10,7 +10,8 @@ import { routing } from "@/i18n/routing";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { LessonProgressControls } from "@/components/courses/LessonProgressControls";
 import { AnnotatedLesson } from "@/components/lessons/AnnotatedLesson";
-import { COURSE_MANIFESTS, getCourseManifest } from "@content/courses/registry";
+import { ExamQuiz } from "@/components/lessons/ExamQuiz";
+import { COURSE_MANIFESTS, getCourseManifest, getExamQuiz } from "@content/courses/registry";
 import { localize } from "@content/courses/types";
 
 interface LessonPageParams {
@@ -120,6 +121,26 @@ export default async function LessonPage({
       nextLessonId={nextLesson?.id ?? null}
     />
   );
+
+  if (lesson.kind === "quiz") {
+    const questions = getExamQuiz(courseSlug, lesson.id) ?? [];
+    return (
+      <div className="flex min-h-screen flex-1 flex-col bg-zinc-50 dark:bg-zinc-950">
+        <AppHeader />
+        <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6 px-6 py-10">
+          {lessonHeader}
+          {questions.length > 0 ? (
+            <ExamQuiz courseSlug={courseSlug} lessonId={lesson.id} questions={questions} />
+          ) : (
+            <p className="rounded-xl border border-dashed border-zinc-300 p-8 text-center text-sm text-zinc-500 dark:border-zinc-700 dark:text-zinc-400">
+              {t("notReady")}
+            </p>
+          )}
+          {progressControls}
+        </main>
+      </div>
+    );
+  }
 
   return (
     // `data-reading-surface` is what the reading themes in globals.css paint;

@@ -43,7 +43,22 @@
     "next": "Ir a la siguiente lección",
     "courseFinished": "¡Terminaste el curso!",
     "notReady": "Esta lección todavía no está escrita. Vuelve pronto.",
-    "notTranslated": "Esta lección todavía no está traducida a este idioma. Mostrando la versión en español."
+    "notTranslated": "Esta lección todavía no está traducida a este idioma. Mostrando la versión en español.",
+    "quiz": {
+      "questionProgress": "Pregunta {current} de {total}",
+      "reviewAnswer": "Revisar respuesta",
+      "nextQuestion": "Siguiente pregunta",
+      "previous": "Anterior",
+      "finish": "Terminar repaso",
+      "correct": "¡Correcto!",
+      "incorrect": "No es correcto",
+      "selectOne": "Elige una respuesta para continuar.",
+      "selectMultiple": "Elige {count} respuestas correctas.",
+      "tipsTitle": "Sugerencias para el examen",
+      "finishedTitle": "Repaso completado",
+      "finishedScore": "Acertaste {correct} de {total} preguntas.",
+      "backToLesson": "Puedes volver a repasar las preguntas cuando quieras."
+    }
   },
   "courseDetail": {
     "completedCount": "{completed} / {total} lecciones completadas",
