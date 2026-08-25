@@ -154,44 +154,48 @@ enseña un tema nuevo, entrena reconocer la respuesta correcta entre opciones
 parecidas. No aplica al módulo 0 (todavía no hay contenido de examen) ni al
 módulo 5 (ya tiene el simulacro completo en 5.2).
 
-Reglas:
+Estas lecciones **no se escriben en Markdown**: son interactivas. La lección
+se marca con `kind: "quiz"` en el `manifest.ts` y su contenido vive como datos
+tipados en `preguntas/modulo-N.ts`, registrados en `preguntas/index.ts`. La
+app las renderiza con el componente `ExamQuiz`, que muestra una pregunta a la
+vez, permite elegir una opción y después revisar la respuesta o pasar de largo
+con solo un aviso de si estuvo bien o mal. El avance se guarda por usuario, así
+que se puede retomar donde se dejó.
+
+Reglas de contenido:
 
 - **Exactamente 20 preguntas** por lección, cubriendo temas de todo el
   módulo (no solo del último tema visto).
 - **Formato real del examen:** opción múltiple (1 correcta entre 4) o
-  respuesta múltiple (2 correctas entre 5), igual que el CLF-C02 real.
-- **Por cada pregunta**, además de marcar la opción correcta, hay que
-  explicar por qué **cada una de las opciones incorrectas** está mal — no
-  alcanza con explicar por qué la correcta está bien. Ahí es donde se
+  respuesta múltiple (2 correctas entre 5, con `multiple: true`), igual que
+  el CLF-C02 real. Alrededor del 15 % de respuesta múltiple es una
+  proporción realista.
+- **Por cada opción** —correcta o incorrecta— hay que explicar por qué lo es.
+  No alcanza con justificar la correcta: en las incorrectas es donde se
   enseñan las trampas típicas del examen.
-- **No es un simulacro cronometrado ni tiene puntaje.** El lector puede leer
-  la respuesta y la explicación de inmediato si quiere — el objetivo es
-  analizar, no medir. (El simulacro cronometrado real está en la lección 5.2,
-  al final del curso.)
-- Mismo lenguaje simple que el resto del curso: las explicaciones no dan por
-  sentado que el lector recuerde el detalle exacto, así que conviene
-  recordar brevemente el concepto antes de decir por qué una opción falla.
+- **Tips por pregunta** (`tips`): 2 o 3 sugerencias que enseñen a *reconocer*
+  el tipo de pregunta, no que repitan el dato ya explicado.
+- **No es un simulacro cronometrado ni tiene puntaje que se reporte como
+  nota.** El objetivo es analizar, no medir. (El simulacro cronometrado real
+  está en la lección 5.2, al final del curso.)
+- Mismo lenguaje simple y en voseo que el resto del curso: las explicaciones
+  no dan por sentado que el lector recuerde el detalle exacto, así que
+  conviene recordar brevemente el concepto antes de decir por qué una opción
+  falla.
 
-Plantilla por pregunta:
+Reglas de diseño del banco de preguntas (fáciles de romper sin darse cuenta):
 
-```markdown
-## Pregunta N
-
-[Enunciado de la pregunta, con un caso o escenario si aplica]
-
-- A) ...
-- B) ...
-- C) ...
-- D) ...
-
-**Respuesta correcta: B**
-
-- **A)** Por qué esta opción no es correcta.
-- **B)** Por qué esta es la correcta.
-- **C)** Por qué esta opción no es correcta.
-- **D)** Por qué esta opción no es correcta.
-```
-
-La lección completa es la introducción breve (misma cabecera con
-`> Módulo X · Cierre de módulo — análisis de preguntas de examen`) seguida de
-las 20 preguntas con este formato, una tras otra.
+- **Repartir la respuesta correcta** entre A, B, C y D de forma pareja. Si se
+  escriben las preguntas de corrido, la correcta tiende a caer siempre en la
+  misma letra y se acierta por patrón en vez de por conocimiento.
+- **Cubrir cada concepto del módulo como respuesta correcta** al menos una
+  vez, no solo como distractor.
+- **Los distractores tienen que ser tentadores.** Una opción obviamente falsa
+  no enseña nada; la mejor es la que se confunde de verdad con la correcta
+  (por ejemplo, "License Included" frente a "BYOL").
+- **Ningún distractor puede ser defendible como correcto.** Si alguien con
+  buen criterio puede argumentar que también es válido, hay que reemplazarlo.
+- **Opciones gramaticalmente parejas.** Si tres son frases verbales y una es
+  un sustantivo suelto, esa asimetría es una pista involuntaria.
+- **Un mismo concepto se nombra siempre igual** en todas las preguntas y con
+  el mismo nombre que usa la lección que lo enseñó.

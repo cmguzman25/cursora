@@ -97,9 +97,9 @@ con tres cambios:
 - [x] ★ 1.5 Tablas comparativas: pilares del Well-Architected uno junto al otro,
       CapEx vs. OpEx, y cuándo aplica cada estrategia de migración
       (`lecciones/07-comparativas-conceptos-de-la-nube.md`)
-- [ ] 1.6 Analiza preguntas de examen: 20 preguntas de conceptos de la nube,
+- [x] 1.6 Analiza preguntas de examen: 20 preguntas de conceptos de la nube,
       con el porqué de cada opción correcta e incorrecta
-      (`lecciones/08-analisis-preguntas-modulo-1.md`)
+      (`preguntas/modulo-1.ts` — lección interactiva, no Markdown)
 
 ## Módulo 2 — Seguridad y cumplimiento (Dominio 2 · 30%)
 
@@ -175,4 +175,4 @@ con tres cambios:
 
 ## Progreso
 
-**8 / 35 lecciones desarrolladas.**
+**9 / 35 lecciones desarrolladas.**
