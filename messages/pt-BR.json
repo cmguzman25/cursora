@@ -77,6 +77,7 @@
       "noAccount": "Ainda não tem uma conta?",
       "registerLink": "Cadastre-se grátis",
       "invalidCredentials": "E-mail ou senha incorretos.",
+      "confirmLinkInvalid": "O link de confirmação é inválido ou expirou. Peça para reenviarem o e-mail e tente de novo.",
       "testAccounts": {
         "title": "Contas de teste (dados fixos, temporário)",
         "admin": "Administrador",

@@ -31,6 +31,7 @@ function LoginForm() {
   const searchParams = useSearchParams();
   const from = searchParams.get("from");
   const redirectTo = isSafeRedirect(from) ? from : `/${locale}`;
+  const confirmError = searchParams.get("confirmError") === "1";
 
   const defaultAccount = TEST_ACCOUNTS[0];
   const [email, setEmail] = useState(defaultAccount.email);
@@ -147,9 +148,9 @@ function LoginForm() {
           label={t("remember")}
         />
 
-        {formError && (
+        {(formError || confirmError) && (
           <p role="alert" className="text-sm font-medium text-red-600 dark:text-red-400">
-            {formError}
+            {formError ?? t("confirmLinkInvalid")}
           </p>
         )}
 

@@ -77,6 +77,7 @@
       "noAccount": "Don't have an account?",
       "registerLink": "Sign up for free",
       "invalidCredentials": "Incorrect email or password.",
+      "confirmLinkInvalid": "That confirmation link is invalid or expired. Ask for the email to be resent and try again.",
       "testAccounts": {
         "title": "Test accounts (hardcoded, temporary)",
         "admin": "Admin",

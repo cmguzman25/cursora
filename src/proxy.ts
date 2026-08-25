@@ -59,5 +59,9 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  // "auth" excluded so /auth/confirm (the Supabase email-confirmation
+  // link target) isn't redirected into a locale-prefixed path — it lives
+  // outside [locale] on purpose, since Supabase's email templates link to
+  // it directly without a locale segment.
+  matcher: ["/((?!api|auth|_next|_vercel|.*\\..*).*)"],
 };
