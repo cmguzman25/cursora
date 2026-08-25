@@ -93,7 +93,7 @@ desarrolla. La forma de escribir cada lección está definida en
 - [x] 2.4 Políticas administradas vs propias y el principio de menor privilegio (`lecciones/02-04-menor-privilegio.es.md`)
 - [x] 2.5 Roles IAM: identidad prestada, el concepto que más cuesta y más se usa (`lecciones/02-05-roles-iam.es.md`)
 - [x] 2.6 Cómo un servicio asume un rol: el caso de una Lambda leyendo un bucket (`lecciones/02-06-servicios-que-asumen-roles.es.md`)
-- [ ] 2.7 IAM Identity Center: por qué las empresas ya casi no crean usuarios IAM (`lecciones/02-07-identity-center.es.md`)
+- [x] 2.7 IAM Identity Center: por qué las empresas ya casi no crean usuarios IAM (`lecciones/02-07-identity-center.es.md`)
 - [ ] 2.8 Credenciales, access keys y AWS CLI: cuándo sí y cuándo nunca (`lecciones/02-08-credenciales-y-cli.es.md`)
 - [ ] 2.9 Herramientas de revisión: Access Analyzer, credential report y política de contraseñas (`lecciones/02-09-revision-de-accesos.es.md`)
 - [ ] 2.10 ⭐ Ejercicio guiado: onboarding de un desarrollador junior con permisos mínimos (`lecciones/02-10-ejercicio-onboarding-junior.es.md`)
