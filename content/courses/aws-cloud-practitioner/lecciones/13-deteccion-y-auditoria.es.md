@@ -38,9 +38,9 @@ peligrosa. Uno es el archivo de las cámaras, el otro es quien las mira.
 ### Amazon Inspector: el que revisa si las cerraduras están flojas
 
 **Inspector** no busca intrusos, busca **debilidades tuyas**. Revisa tus
-servidores y aplicaciones y te dice qué tiene una falla conocida: un programa
-desactualizado con un problema de seguridad publicado, un puerto abierto que
-no debería estarlo.
+servidores y aplicaciones y te dice qué tiene una falla conocida: una versión
+vieja de un programa con un problema de seguridad ya publicado, o una
+biblioteca que hace años nadie actualiza.
 
 Es el inspector que recorre el edificio revisando si las cerraduras son
 viejas o si una ventana no cierra bien. Nadie entró todavía: te está avisando
@@ -81,7 +81,7 @@ que el examen quiere que distingas.
 ### AWS Trusted Advisor: el asesor que revisa todo el negocio
 
 **Trusted Advisor** es distinto a los anteriores: no se enfoca solo en
-seguridad. Revisa tu cuenta entera y te da recomendaciones en **cinco
+seguridad. Revisa tu cuenta entera y te da recomendaciones en **seis
 categorías**:
 
 - **Optimización de costos:** recursos que estás pagando y no usás.
@@ -91,6 +91,8 @@ categorías**:
 - **Tolerancia a fallos:** si te falta respaldo por si algo se cae.
 - **Límites de servicio:** si te estás acercando al máximo permitido de algún
   recurso.
+- **Excelencia operativa:** prácticas de mantenimiento descuidadas, como
+  código corriendo sobre versiones que ya nadie actualiza.
 
 Es el asesor que recorre el negocio completo y te deja una lista de mejoras.
 Con el plan de soporte básico ves solo algunas revisiones; con los planes
@@ -105,13 +107,13 @@ Puestos uno al lado del otro:
 | **Inspector** | Vulnerabilidades en tus sistemas | "Software desactualizado, fallas conocidas" |
 | **Macie** | Datos sensibles mal guardados | "Información personal en S3" |
 | **Security Hub** | Todo lo anterior, junto | "Una vista central de la seguridad" |
-| **Trusted Advisor** | Mejoras en 5 categorías | "Recomendaciones de costos, rendimiento y seguridad" |
+| **Trusted Advisor** | Mejoras en 6 categorías | "Recomendaciones de costos, rendimiento y seguridad" |
 
 **En resumen:** GuardDuty detecta amenazas en curso, Inspector encuentra
 vulnerabilidades antes de que alguien las aproveche, Macie identifica datos
 sensibles guardados donde no corresponde, Security Hub junta todos esos
 hallazgos en un panel único, y Trusted Advisor va más allá de la seguridad y
-recomienda mejoras en cinco categorías. Todos **avisan**: bloquear es tarea
+recomienda mejoras en seis categorías. Todos **avisan**: bloquear es tarea
 de los servicios de la lección anterior.
 
 ## 💬 Ahora te toca a ti
@@ -163,7 +165,9 @@ conocidos.
   seguridad, es **Security Hub**. Es el que agrega, no el que descubre.
 - **Trusted Advisor es el único que no es solo de seguridad.** Si la pregunta
   menciona recomendaciones de costos, rendimiento o límites de servicio junto
-  con seguridad, es Trusted Advisor sin dudarlo.
+  con seguridad, es Trusted Advisor sin dudarlo. Sus categorías se parecen a
+  los pilares del Well-Architected, pero no son lo mismo: sostenibilidad es
+  un pilar y **no** es una categoría de Trusted Advisor.
 - Regla general para todo el bloque: estos servicios **detectan y avisan**,
   no bloquean. Si el escenario pide **impedir** que algo pase, la respuesta
   está entre los de la lección anterior (Shield, WAF, Firewall Manager).

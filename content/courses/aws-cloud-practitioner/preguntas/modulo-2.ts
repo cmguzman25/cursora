@@ -199,7 +199,7 @@ export const MODULE_2_QUESTIONS: ExamQuizQuestion[] = [
         text: "En AWS Trusted Advisor",
         correct: false,
         explanation:
-          "Trusted Advisor te da recomendaciones sobre tu cuenta en cinco categorías. No entrega documentos de cumplimiento de AWS.",
+          "Trusted Advisor te da recomendaciones sobre tu cuenta en seis categorías. No entrega documentos de cumplimiento de AWS.",
       },
       {
         id: "D",
@@ -975,7 +975,7 @@ export const MODULE_2_QUESTIONS: ExamQuizQuestion[] = [
         text: "AWS Trusted Advisor",
         correct: false,
         explanation:
-          "Trusted Advisor genera sus propias recomendaciones en cinco categorías, pero no reúne ni ordena los hallazgos de GuardDuty, Inspector y Macie.",
+          "Trusted Advisor genera sus propias recomendaciones en seis categorías, pero no reúne ni ordena los hallazgos de GuardDuty, Inspector y Macie.",
       },
       {
         id: "D",
@@ -1002,7 +1002,7 @@ export const MODULE_2_QUESTIONS: ExamQuizQuestion[] = [
         text: "Optimización de costos",
         correct: true,
         explanation:
-          "Correcta. Trusted Advisor te señala recursos que estás pagando y no usás, que es una de sus cinco categorías.",
+          "Correcta. Trusted Advisor te señala recursos que estás pagando y no usás, que es una de sus seis categorías.",
       },
       {
         id: "B",
@@ -1030,11 +1030,11 @@ export const MODULE_2_QUESTIONS: ExamQuizQuestion[] = [
         text: "Gestión de identidades",
         correct: false,
         explanation:
-          "Trusted Advisor sí revisa cuestiones de seguridad relacionadas con accesos, pero \"gestión de identidades\" no es una de sus cinco categorías: eso es el terreno de IAM.",
+          "Trusted Advisor sí revisa cuestiones de seguridad relacionadas con accesos, pero \"gestión de identidades\" no es una de sus seis categorías: eso es el terreno de IAM.",
       },
     ],
     tips: [
-      "Las cinco categorías de Trusted Advisor: **costos, rendimiento, seguridad, tolerancia a fallos y límites de servicio.**",
+      "Las seis categorías de Trusted Advisor: **costos, rendimiento, seguridad, tolerancia a fallos, límites de servicio y excelencia operativa.**",
       "Trusted Advisor es el único servicio del módulo que no es solo de seguridad. Si la pregunta mezcla costos o rendimiento con seguridad, es él.",
       "No confundas sus categorías con los 6 pilares del Well-Architected (Módulo 1): se parecen, pero sostenibilidad está en los pilares y no en Trusted Advisor.",
     ],

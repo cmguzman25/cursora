@@ -92,7 +92,7 @@ activado y gratis para todos.
 | **Inspector** | Vulnerabilidades todavía sin explotar | "Software desactualizado, fallas conocidas" |
 | **Macie** | Datos sensibles mal guardados | "Información personal en S3" |
 | **Security Hub** | Nada nuevo: junta lo de los demás | "Una vista central de la seguridad" |
-| **Trusted Advisor** | Mejoras en 5 categorías, no solo seguridad | "Recomendaciones de costos, rendimiento y límites" |
+| **Trusted Advisor** | Mejoras en 6 categorías, no solo seguridad | "Recomendaciones de costos, rendimiento y límites" |
 
 Las dos confusiones más caras del módulo están acá: **GuardDuty vs.
 Inspector** (amenaza en curso vs. debilidad latente) y **Security Hub vs. el
