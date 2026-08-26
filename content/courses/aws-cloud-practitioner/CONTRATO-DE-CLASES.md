@@ -29,9 +29,16 @@ tendrá su propio contrato, adaptado a ese tema y a esa audiencia.
   es fijo — no se estira para "meter todo": si un tema es demasiado complejo
   o tiene demasiadas partes para entrar en 1500 palabras sin perder la
   simplicidad, **se divide en dos o tres lecciones** (como ya hicimos con
-  3.6a/3.6b y 3.8a/3.8b), no se alarga una sola lección más allá del rango.
-  Una lección larga cansa y hace que el lector pierda el hilo; varias
-  lecciones cortas y enfocadas se leen mejor y se recuerdan mejor.
+  2.4a/2.4b, 3.6a/3.6b y 3.8a/3.8b), no se alarga una sola lección más allá
+  del rango. Una lección larga cansa y hace que el lector pierda el hilo;
+  varias lecciones cortas y enfocadas se leen mejor y se recuerdan mejor.
+
+  **El piso de 800 palabras no aplica a las lecciones de tablas
+  comparativas (★).** Ahí el contenido es tabular y la prosa es mínima a
+  propósito: sirven para comparar de un vistazo, no para explicar de nuevo lo
+  que ya se enseñó. Rondar las 400-800 palabras es lo esperado en ellas, y
+  agregar párrafos para llegar a un número sería justamente el relleno que
+  este contrato prohíbe.
 
 ## Estructura obligatoria de cada lección
 
@@ -164,8 +171,19 @@ que se puede retomar donde se dejó.
 
 Reglas de contenido:
 
-- **Exactamente 20 preguntas** por lección, cubriendo temas de todo el
-  módulo (no solo del último tema visto).
+- **La cantidad de preguntas depende del módulo**, en proporción a cuánto
+  pesa ese dominio en el examen y a cuántos subtemas tiene. Cubren temas de
+  todo el módulo, no solo del último tema visto:
+
+  | Módulo | Dominio | Peso en el examen | Preguntas |
+  |---|---|---|---|
+  | 1 | Conceptos de la nube | 24 % | 20 |
+  | 2 | Seguridad y cumplimiento | 30 % | 25 |
+  | 3 | Tecnología y servicios | 34 % | 35 |
+  | 4 | Facturación, precios y soporte | 12 % | 15 |
+
+  El Módulo 3 lleva bastantes más porque, además de ser el dominio más
+  pesado, es el que más servicios sueltos hay que reconocer.
 - **Formato real del examen:** opción múltiple (1 correcta entre 4) o
   respuesta múltiple (2 correctas entre 5, con `multiple: true`), igual que
   el CLF-C02 real. Alrededor del 15 % de respuesta múltiple es una
