@@ -23,6 +23,7 @@ import { useCurrentUser } from "@/hooks/useCurrentUser";
 import { useLessonComments } from "@/hooks/useLessonComments";
 import { CommentComposer } from "@/components/lessons/CommentComposer";
 import { CommentPanel } from "@/components/lessons/CommentPanel";
+import { SelectionCommentButton } from "@/components/lessons/SelectionCommentButton";
 import { ReadingSettings } from "@/components/lessons/ReadingSettings";
 
 interface AnnotatedLessonProps {
@@ -110,10 +111,33 @@ interface Draft {
   left: number;
 }
 
-/** A selection that could become a comment, remembered until a double-click asks for it. */
-interface PendingSelection extends Draft {
+/** A selection that could become a comment, remembered until the reader asks for one. */
+interface PendingSelection {
+  anchor: TextAnchor;
   range: Range;
+  /** Below the selection, in column coordinates. */
+  top: number;
+  /** Horizontal centre of the selection, before any clamping. */
+  centre: number;
+  columnWidth: number;
 }
+
+/** Half the composer's width, plus a margin, so it never hangs off the column. */
+const COMPOSER_HALF_WIDTH = 168;
+const BUBBLE_HALF_WIDTH = 72;
+
+function clampToColumn(centre: number, columnWidth: number, halfWidth: number) {
+  return Math.min(Math.max(centre, halfWidth), Math.max(columnWidth - halfWidth, halfWidth));
+}
+
+/**
+ * How long the selection has to hold still before the button appears.
+ *
+ * `selectionchange` fires on every pixel of a drag and on every nudge of the
+ * native handles; waiting for the quiet moment keeps the button from chasing
+ * the reader's thumb.
+ */
+const SELECTION_SETTLE_MS = 250;
 
 export function AnnotatedLesson({
   courseSlug,
@@ -148,8 +172,13 @@ export function AnnotatedLesson({
   const rangesRef = useRef<Map<string, Range>>(new Map());
 
   const pendingRef = useRef<PendingSelection | null>(null);
+  const settleTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [draft, setDraft] = useState<Draft | null>(null);
+  const [bubble, setBubble] = useState<{ top: number; left: number } | null>(null);
+  // Read from the selection listener, which must stay registered across
+  // renders — hence a ref rather than the state value itself.
+  const draftRef = useRef<Draft | null>(null);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [orphanIds, setOrphanIds] = useState<Set<string>>(new Set());
   const [indexVersion, setIndexVersion] = useState(0);
@@ -240,43 +269,78 @@ export function AnnotatedLesson({
     // page instead of floating over it.
     const selectionRect = range.getBoundingClientRect();
     const columnRect = column.getBoundingClientRect();
-    const centre = selectionRect.left - columnRect.left + selectionRect.width / 2;
 
     return {
       anchor,
       range: range.cloneRange(),
       top: selectionRect.bottom - columnRect.top + 8,
-      left: Math.min(Math.max(centre, 168), Math.max(columnRect.width - 168, 168)),
+      centre: selectionRect.left - columnRect.left + selectionRect.width / 2,
+      columnWidth: columnRect.width,
     };
   }, []);
 
-  // Selecting text only *remembers* it — highlighting while reading, or
-  // selecting to copy, must not pop anything open. The composer is opened
-  // deliberately, by double-clicking the selection (see handleArticleDoubleClick).
-  const rememberSelection = useCallback(
-    (event: Event) => {
-      const target = event.target as Element | null;
-      // Selecting inside the composer must not replace the draft it belongs to.
-      if (target?.closest?.("[data-comment-composer]")) return;
+  /** Opens the composer over a remembered selection. */
+  const openDraft = useCallback((pending: PendingSelection) => {
+    const next = {
+      anchor: pending.anchor,
+      top: pending.top,
+      left: clampToColumn(pending.centre, pending.columnWidth, COMPOSER_HALF_WIDTH),
+    };
+    draftRef.current = next;
+    setDraft(next);
+    setBubble(null);
+  }, []);
 
-      // The second click of a double-click collapses a multi-word selection to
-      // the word under the pointer. Ignoring it keeps what the reader chose.
-      if ((event as MouseEvent).detail >= 2 && pendingRef.current) return;
+  const closeDraft = useCallback(() => {
+    draftRef.current = null;
+    setDraft(null);
+  }, []);
 
-      pendingRef.current = describeSelection();
-    },
-    [describeSelection],
-  );
-
+  // Selecting text only *remembers* it and offers the button — highlighting
+  // while reading, or selecting to copy, must not pop the composer open.
+  //
+  // The trigger is `selectionchange` rather than `mouseup`, because dragging
+  // the native selection handles on a phone never produces a mouse event: the
+  // old listener meant a touch reader could select text and be offered
+  // nothing.
   useEffect(() => {
     if (!user) return;
-    document.addEventListener("mouseup", rememberSelection);
-    document.addEventListener("keyup", rememberSelection);
+
+    function handleSelectionChange() {
+      if (settleTimeoutRef.current) clearTimeout(settleTimeoutRef.current);
+
+      settleTimeoutRef.current = setTimeout(() => {
+        // While the composer is open its own selection churn is none of our
+        // business — replacing the pending selection would change the quote
+        // out from under the draft.
+        if (draftRef.current) return;
+
+        const selection = window.getSelection();
+        const withinComposer = selection?.anchorNode
+          ? ((selection.anchorNode as Element).closest?.("[data-comment-composer]") ??
+            selection.anchorNode.parentElement?.closest("[data-comment-composer]"))
+          : null;
+        if (withinComposer) return;
+
+        const pending = describeSelection();
+        pendingRef.current = pending;
+        setBubble(
+          pending
+            ? {
+                top: pending.top,
+                left: clampToColumn(pending.centre, pending.columnWidth, BUBBLE_HALF_WIDTH),
+              }
+            : null,
+        );
+      }, SELECTION_SETTLE_MS);
+    }
+
+    document.addEventListener("selectionchange", handleSelectionChange);
     return () => {
-      document.removeEventListener("mouseup", rememberSelection);
-      document.removeEventListener("keyup", rememberSelection);
+      document.removeEventListener("selectionchange", handleSelectionChange);
+      if (settleTimeoutRef.current) clearTimeout(settleTimeoutRef.current);
     };
-  }, [rememberSelection, user]);
+  }, [describeSelection, user]);
 
   // `::highlight()` paints but cannot be clicked, so map the click back to a
   // caret position and test it against the resolved ranges.
@@ -321,7 +385,7 @@ export function AnnotatedLesson({
         selection?.removeAllRanges();
         selection?.addRange(pending.range.cloneRange());
 
-        setDraft({ anchor: pending.anchor, top: pending.top, left: pending.left });
+        openDraft(pending);
         return;
       }
     }
@@ -331,7 +395,7 @@ export function AnnotatedLesson({
     const fresh = describeSelection();
     if (!fresh) return;
     pendingRef.current = fresh;
-    setDraft({ anchor: fresh.anchor, top: fresh.top, left: fresh.left });
+    openDraft(fresh);
   }
 
   function focusComment(commentId: string) {
@@ -393,6 +457,17 @@ export function AnnotatedLesson({
         {header}
         {article}
 
+        {user && bubble && !draft && (
+          <SelectionCommentButton
+            top={bubble.top}
+            left={bubble.left}
+            onOpen={() => {
+              const pending = pendingRef.current;
+              if (pending) openDraft(pending);
+            }}
+          />
+        )}
+
         {user && draft && (
           <CommentComposer
             quote={draft.anchor.quote}
@@ -407,7 +482,7 @@ export function AnnotatedLesson({
               }
               return ok;
             }}
-            onCancel={() => setDraft(null)}
+            onCancel={closeDraft}
           />
         )}
 

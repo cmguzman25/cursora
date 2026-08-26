@@ -148,7 +148,8 @@
   "comments": {
     "panelTitle": "Comentarios",
     "empty": "Todavía no hay comentarios en esta lección.",
-    "selectHint": "Selecciona un texto y haz doble clic para comentarlo.",
+    "selectHint": "Selecciona un texto y toca «Comentar».",
+    "addComment": "Comentar",
     "loading": "Cargando comentarios…",
     "saveError": "No se pudo guardar. Inténtalo de nuevo.",
     "highlightsUnsupported": "Tu navegador no resalta el texto comentado, pero los comentarios siguen aquí.",

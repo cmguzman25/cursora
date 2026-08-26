@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { useTranslations } from "next-intl";
 import { Loader2 } from "lucide-react";
 import { COMMENT_KINDS, COMMENT_KIND_STYLES, type CommentKind } from "@/lib/comments/kinds";
@@ -15,7 +15,13 @@ interface CommentComposerProps {
 }
 
 /**
- * The popover that appears under a fresh text selection.
+ * The form that opens over a fresh text selection.
+ *
+ * Two shapes, one component: a popover anchored under the selection from `sm`
+ * up, and a sheet pinned to the bottom of the screen below it. A 320px popover
+ * floating mid-paragraph on a phone would be half-covered by the virtual
+ * keyboard the moment the textarea takes focus. The anchored coordinates ride
+ * in as CSS variables because inline styles can't be made responsive.
  *
  * There is no dialog primitive in this codebase, so this follows the
  * outside-click pattern from `LanguageSwitcher` — plus the Escape handling
@@ -34,7 +40,9 @@ export function CommentComposer({ quote, top, left, onSubmit, onCancel }: Commen
   }, []);
 
   useEffect(() => {
-    function handlePointerDown(event: MouseEvent) {
+    // `pointerdown`, not `mousedown`: on a touch screen the mouse events are
+    // synthesised late, so a tap outside would dismiss a beat after it landed.
+    function handlePointerDown(event: PointerEvent) {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
         onCancel();
       }
@@ -43,10 +51,10 @@ export function CommentComposer({ quote, top, left, onSubmit, onCancel }: Commen
       if (event.key === "Escape") onCancel();
     }
 
-    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("pointerdown", handlePointerDown);
     document.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("pointerdown", handlePointerDown);
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [onCancel]);
@@ -66,8 +74,8 @@ export function CommentComposer({ quote, top, left, onSubmit, onCancel }: Commen
     <div
       ref={containerRef}
       data-comment-composer=""
-      style={{ top, left }}
-      className="absolute z-30 w-80 -translate-x-1/2 rounded-2xl border border-zinc-200 bg-white p-4 shadow-xl dark:border-zinc-700 dark:bg-zinc-900"
+      style={{ "--composer-top": `${top}px`, "--composer-left": `${left}px` } as CSSProperties}
+      className="fixed inset-x-0 bottom-0 z-30 max-h-[85dvh] overflow-y-auto rounded-t-2xl border border-zinc-200 bg-white p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] shadow-xl sm:absolute sm:inset-x-auto sm:bottom-auto sm:top-[var(--composer-top)] sm:left-[var(--composer-left)] sm:w-80 sm:-translate-x-1/2 sm:rounded-2xl sm:pb-4 dark:border-zinc-700 dark:bg-zinc-900"
       role="dialog"
       aria-label={t("composerTitle")}
     >

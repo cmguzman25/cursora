@@ -148,7 +148,8 @@
   "comments": {
     "panelTitle": "Comments",
     "empty": "No comments on this lesson yet.",
-    "selectHint": "Select some text, then double-click it to comment.",
+    "selectHint": "Select some text, then tap \"Comment\".",
+    "addComment": "Comment",
     "loading": "Loading comments…",
     "saveError": "Couldn't save. Please try again.",
     "highlightsUnsupported": "Your browser doesn't highlight commented text, but the comments are still here.",
