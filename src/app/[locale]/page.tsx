@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { CoursesCatalog } from "@/components/courses/CoursesCatalog";
+import { getLessonTotals } from "@content/courses/registry";
 
 export default async function Home() {
   const t = await getTranslations("courses");
@@ -15,7 +16,7 @@ export default async function Home() {
           </h1>
           <p className="text-sm text-zinc-500 dark:text-zinc-400">{t("subheading")}</p>
         </div>
-        <CoursesCatalog />
+        <CoursesCatalog lessonTotals={getLessonTotals()} />
       </main>
     </div>
   );

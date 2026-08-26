@@ -25,6 +25,17 @@ export function getCourseManifest(slug: string): CourseManifest | null {
   return BY_SLUG.get(slug) ?? null;
 }
 
+/**
+ * How many lessons each course has, keyed by slug — the denominator of the
+ * catalog's progress percentage. Built here rather than in the catalog itself
+ * because this module pulls in every manifest (and its question banks); the
+ * catalog is a client component, and importing the registry there would ship
+ * all of that to the browser to count array lengths.
+ */
+export function getLessonTotals(): Record<string, number> {
+  return Object.fromEntries(COURSE_MANIFESTS.map((course) => [course.slug, course.lessons.length]));
+}
+
 /** Question banks for "quiz"-kind lessons (see `LessonMeta.kind`), keyed by course slug then lesson id. */
 const EXAM_QUIZZES: Record<string, Record<string, ExamQuizQuestion[]>> = {
   [awsCloudPractitioner.slug]: AWS_CLOUD_PRACTITIONER_QUIZZES,

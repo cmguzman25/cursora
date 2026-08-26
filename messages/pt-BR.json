@@ -5,6 +5,7 @@
   },
   "common": {
     "logout": "Sair",
+    "signedInAs": "Conectado como {name}",
     "languageSwitcherLabel": "Selecionar idioma",
     "passwordVisibility": {
       "show": "Mostrar senha",
@@ -31,6 +32,9 @@
     },
     "duration": "{hours} h",
     "students": "{count, plural, one {# aluno} other {# alunos}}",
+    "progressCount": "{completed} / {total} aulas",
+    "progressPercent": "{percent}%",
+    "progressLabel": "Progresso do curso",
     "viewCourse": "Ver curso",
     "comingSoonCourse": "O conteúdo do curso estará disponível em breve.",
     "emptyState": "Ainda não há cursos nesta categoria."
@@ -57,11 +61,17 @@
       "tipsTitle": "Dicas para o exame",
       "finishedTitle": "Revisão concluída",
       "finishedScore": "Você acertou {correct} de {total} perguntas.",
-      "backToLesson": "Você pode voltar a revisar essas perguntas quando quiser."
+      "backToLesson": "Você pode voltar a revisar essas perguntas quando quiser.",
+      "perfectScore": "Perfeito! Você não errou nenhuma.",
+      "retryWrong": "Refazer {count, plural, one {a que errei} other {as # que errei}}",
+      "restartAll": "Começar do zero",
+      "retryRunBadge": "Só as erradas"
     }
   },
   "courseDetail": {
     "completedCount": "{completed} / {total} lições concluídas",
+    "percentComplete": "{percent}%",
+    "progressLabel": "Progresso do curso",
     "startCourse": "Começar curso",
     "continueCourse": "Continuar curso",
     "enroll": "Inscrever-me",

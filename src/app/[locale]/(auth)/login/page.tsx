@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/Checkbox";
 import { Button } from "@/components/ui/Button";
 import { SocialButtons } from "@/components/auth/SocialButtons";
 import { TestAccountsHint, TEST_ACCOUNTS } from "@/components/auth/TestAccountsHint";
+import { resetCurrentUser } from "@/hooks/useCurrentUser";
 
 interface FormErrors {
   email?: string;
@@ -70,6 +71,9 @@ function LoginForm() {
         return;
       }
 
+      // A previous session in this tab may have left an identity cached; the
+      // header would otherwise greet the account that just signed out.
+      resetCurrentUser();
       router.push(redirectTo);
       router.refresh();
     } catch {

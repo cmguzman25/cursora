@@ -57,11 +57,23 @@ export function CourseLessonList({ courseSlug, lessons }: CourseLessonListProps)
           {isPending ? (
             <Skeleton className="h-5 w-48" />
           ) : (
-            <p className="text-sm font-medium text-zinc-900 dark:text-white">
-              {t("completedCount", { completed: completedLessons.length, total: lessons.length })}
+            <p className="flex max-w-xs items-baseline justify-between gap-3 text-sm font-medium text-zinc-900 dark:text-white">
+              <span>
+                {t("completedCount", { completed: completedLessons.length, total: lessons.length })}
+              </span>
+              <span className="text-indigo-600 dark:text-indigo-400">
+                {t("percentComplete", { percent: progressPct })}
+              </span>
             </p>
           )}
-          <div className="mt-2 h-2 w-full max-w-xs overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-800">
+          <div
+            role="progressbar"
+            aria-valuenow={progressPct}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-label={t("progressLabel")}
+            className="mt-2 h-2 w-full max-w-xs overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-800"
+          >
             <div
               className="h-full rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 transition-all"
               style={{ width: `${progressPct}%` }}

@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { ArrowLeft, Check, Lightbulb, X } from "lucide-react";
+import { ArrowLeft, Check, Lightbulb, RotateCcw, Target, X } from "lucide-react";
 import type { ExamQuizQuestion } from "@content/courses/types";
 import { Button } from "@/components/ui/Button";
 import { Skeleton } from "@/components/ui/Skeleton";
@@ -50,7 +50,15 @@ export function ExamQuiz({ courseSlug, lessonId, questions }: ExamQuizProps) {
     lessonId,
   );
 
-  const [index, setIndex] = useState(0);
+  /**
+   * The questions this run walks through, as indices into `questions`. A first
+   * pass is every question in order; a "redo the ones I missed" pass is just
+   * those. Everything else — selections, results, the saved position — stays
+   * keyed by question index, so it means the same thing in either kind of run.
+   */
+  const fullRun = useMemo(() => questions.map((_, position) => position), [questions]);
+  const [run, setRun] = useState<number[]>(fullRun);
+  const [position, setPosition] = useState(0);
   const [selectionsByIndex, setSelectionsByIndex] = useState<Map<number, Set<string>>>(new Map());
   const [resultsByIndex, setResultsByIndex] = useState<Map<number, boolean>>(new Map());
   const [revealedIndices, setRevealedIndices] = useState<Set<number>>(new Set());
@@ -79,10 +87,14 @@ export function ExamQuiz({ courseSlug, lessonId, questions }: ExamQuizProps) {
         Object.entries(progress.results).map(([key, value]) => [Number(key), value]),
       );
       setResultsByIndex(savedResults);
+      // What's saved is a question index, which only pins down a position in
+      // the full run — a redo pass isn't stored, so resuming one after a
+      // reload continues through the rest of the questions instead.
+      setRun(fullRun);
       if (savedIndex >= questions.length) {
         setFinished(true);
       } else {
-        setIndex(savedIndex);
+        setPosition(savedIndex);
       }
     }
   }
@@ -90,6 +102,31 @@ export function ExamQuiz({ courseSlug, lessonId, questions }: ExamQuizProps) {
   const correctCount = [...resultsByIndex.values()].filter(Boolean).length;
   const answeredCount = resultsByIndex.size;
   const isStillLoading = isUserLoading || (Boolean(userId) && isProgressLoading);
+
+  // Bounded by the current bank: a saved result can outlive the question it
+  // scored if the bank later loses one.
+  const wrongIndices = [...resultsByIndex.entries()]
+    .filter(([questionIndex, correct]) => !correct && questionIndex < questions.length)
+    .map(([questionIndex]) => questionIndex)
+    .sort((a, b) => a - b);
+
+  /**
+   * Starts a fresh pass over `nextRun`. Selections and reveals are dropped so
+   * the questions come up blank; `nextResults` decides what carries over —
+   * nothing when starting from scratch, the previous scores when redoing the
+   * misses, since those questions are about to overwrite their own entries and
+   * the rest of the score should survive.
+   */
+  function startRun(nextRun: number[], nextResults: Map<number, boolean>) {
+    if (nextRun.length === 0) return;
+    setRun(nextRun);
+    setPosition(0);
+    setSelectionsByIndex(new Map());
+    setRevealedIndices(new Set());
+    setResultsByIndex(nextResults);
+    setFinished(false);
+    save({ currentIndex: nextRun[0], results: Object.fromEntries(nextResults) });
+  }
 
   if (isStillLoading) {
     return (
@@ -116,13 +153,34 @@ export function ExamQuiz({ courseSlug, lessonId, questions }: ExamQuizProps) {
         <p className="text-lg font-medium text-indigo-600 dark:text-indigo-400">
           {t("finishedScore", { correct: correctCount, total: answeredCount })}
         </p>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">{t("backToLesson")}</p>
+        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          {wrongIndices.length > 0 ? t("backToLesson") : t("perfectScore")}
+        </p>
+        <div className="flex flex-wrap justify-center gap-3 pt-3">
+          {/* Redoing the misses is the offer that earns its place first: it is
+              the shorter run and the one that moves the score. */}
+          {wrongIndices.length > 0 && (
+            <Button onClick={() => startRun(wrongIndices, resultsByIndex)}>
+              <Target className="h-4 w-4" aria-hidden="true" />
+              {t("retryWrong", { count: wrongIndices.length })}
+            </Button>
+          )}
+          <Button
+            variant={wrongIndices.length > 0 ? "outline" : "primary"}
+            onClick={() => startRun(fullRun, new Map())}
+          >
+            <RotateCcw className="h-4 w-4" aria-hidden="true" />
+            {t("restartAll")}
+          </Button>
+        </div>
       </div>
     );
   }
 
+  // `position` walks the run; `index` is the question it currently points at.
+  const index = run[Math.min(position, run.length - 1)] ?? 0;
   const question = questions[Math.min(index, questions.length - 1)];
-  const isLast = index === questions.length - 1;
+  const isLast = position === run.length - 1;
   const correctIds = new Set(question.options.filter((option) => option.correct).map((option) => option.id));
   const selected = selectionsByIndex.get(index) ?? new Set<string>();
   const isRevealed = revealedIndices.has(index);
@@ -159,19 +217,21 @@ export function ExamQuiz({ courseSlug, lessonId, questions }: ExamQuizProps) {
     save({ currentIndex: nextIndex, results: Object.fromEntries(results) });
   }
 
-  function goTo(nextIndex: number, results: Map<number, boolean>) {
-    if (nextIndex >= questions.length) {
+  function goTo(nextPosition: number, results: Map<number, boolean>) {
+    if (nextPosition >= run.length) {
       setFinished(true);
+      // Saved as "past the last question", which is what marks the quiz
+      // finished on the next visit, whichever run got them here.
       persist(questions.length, results);
       return;
     }
-    setIndex(nextIndex);
-    persist(nextIndex, results);
+    setPosition(nextPosition);
+    persist(run[nextPosition], results);
   }
 
   function handlePrevious() {
-    if (index === 0 || isBusy) return;
-    goTo(index - 1, resultsByIndex);
+    if (position === 0 || isBusy) return;
+    goTo(position - 1, resultsByIndex);
   }
 
   function handleReveal() {
@@ -182,7 +242,7 @@ export function ExamQuiz({ courseSlug, lessonId, questions }: ExamQuizProps) {
   }
 
   function handleAdvanceAfterReveal() {
-    goTo(index + 1, resultsByIndex);
+    goTo(position + 1, resultsByIndex);
   }
 
   function handleQuickAdvance() {
@@ -192,15 +252,22 @@ export function ExamQuiz({ courseSlug, lessonId, questions }: ExamQuizProps) {
     setQuickFeedback(correct);
     quickTimeoutRef.current = setTimeout(() => {
       setQuickFeedback(null);
-      goTo(index + 1, nextResults);
+      goTo(position + 1, nextResults);
     }, QUICK_FEEDBACK_MS);
   }
 
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <p className="text-xs font-medium tracking-wide text-zinc-400 uppercase">
-          {t("questionProgress", { current: index + 1, total: questions.length })}
+        <p className="flex flex-wrap items-center gap-2 text-xs font-medium tracking-wide text-zinc-400 uppercase">
+          {t("questionProgress", { current: position + 1, total: run.length })}
+          {/* A shorter run than the whole quiz can only be a redo of the
+              misses — say so, or the counter looks like the quiz shrank. */}
+          {run.length < questions.length && (
+            <span className="rounded bg-indigo-50 px-1.5 py-0.5 text-[10px] font-semibold text-indigo-600 dark:bg-indigo-950 dark:text-indigo-300">
+              {t("retryRunBadge")}
+            </span>
+          )}
         </p>
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-white">{question.prompt}</h2>
         {!isRevealed && quickFeedback === null && (

@@ -5,6 +5,7 @@
   },
   "common": {
     "logout": "Log out",
+    "signedInAs": "Signed in as {name}",
     "languageSwitcherLabel": "Select language",
     "passwordVisibility": {
       "show": "Show password",
@@ -31,6 +32,9 @@
     },
     "duration": "{hours} h",
     "students": "{count, plural, one {# student} other {# students}}",
+    "progressCount": "{completed} / {total} lessons",
+    "progressPercent": "{percent}%",
+    "progressLabel": "Course progress",
     "viewCourse": "View course",
     "comingSoonCourse": "Course content will be available soon.",
     "emptyState": "No courses in this category yet."
@@ -57,11 +61,17 @@
       "tipsTitle": "Exam tips",
       "finishedTitle": "Review complete",
       "finishedScore": "You got {correct} out of {total} questions right.",
-      "backToLesson": "You can come back and review these questions anytime."
+      "backToLesson": "You can come back and review these questions anytime.",
+      "perfectScore": "Perfect score — you didn't miss one.",
+      "retryWrong": "Redo {count, plural, one {the one I missed} other {the # I missed}}",
+      "restartAll": "Start over",
+      "retryRunBadge": "Missed only"
     }
   },
   "courseDetail": {
     "completedCount": "{completed} / {total} lessons completed",
+    "percentComplete": "{percent}%",
+    "progressLabel": "Course progress",
     "startCourse": "Start course",
     "continueCourse": "Continue course",
     "enroll": "Enroll",

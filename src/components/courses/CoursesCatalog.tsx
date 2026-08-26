@@ -11,7 +11,12 @@ import { CourseCard, CourseCardSkeleton } from "./CourseCard";
 
 type FilterValue = "all" | "inProgress" | CourseCategory;
 
-export function CoursesCatalog() {
+interface CoursesCatalogProps {
+  /** Lessons per course slug, from the manifests — the denominator of each card's percentage. */
+  lessonTotals: Record<string, number>;
+}
+
+export function CoursesCatalog({ lessonTotals }: CoursesCatalogProps) {
   const t = useTranslations("courses");
   const [filter, setFilter] = useState<FilterValue>("all");
   const { user, isLoading: isUserLoading } = useCurrentUser();
@@ -35,6 +40,19 @@ export function CoursesCatalog() {
     () => new Set(summaries.filter((summary) => summary.isEnrolled).map((s) => s.courseSlug)),
     [summaries],
   );
+
+  // Only courses the user has actually touched get an entry, so a card with no
+  // progress shows nothing rather than a 0% bar. Lessons dropped from a
+  // manifest can leave stale completions behind, hence the clamp.
+  const progressBySlug = useMemo(() => {
+    const entries = summaries.flatMap((summary) => {
+      const total = lessonTotals[summary.courseSlug] ?? 0;
+      if (!total) return [];
+      const completed = Math.min(summary.completedCount, total);
+      return [[summary.courseSlug, { completed, total }] as const];
+    });
+    return new Map(entries);
+  }, [summaries, lessonTotals]);
 
   // Signing out takes the "in progress" chip away; fall back to "all" instead
   // of leaving the catalog stuck on an empty selection.
@@ -102,7 +120,11 @@ export function CoursesCatalog() {
       ) : filteredCourses.length > 0 ? (
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filteredCourses.map((course) => (
-            <CourseCard key={course.id} course={course} />
+            <CourseCard
+              key={course.id}
+              course={course}
+              progress={course.slug ? progressBySlug.get(course.slug) : undefined}
+            />
           ))}
         </div>
       ) : (

@@ -36,11 +36,28 @@ export function CourseCardSkeleton() {
   );
 }
 
-export function CourseCard({ course }: { course: Course }) {
+export interface CourseCardProgress {
+  completed: number;
+  total: number;
+}
+
+/**
+ * `progress` is omitted for courses the user hasn't started — those cards show
+ * no bar at all, so the meter means "you got this far" instead of "you're at
+ * zero" on every card in the catalog.
+ */
+export function CourseCard({
+  course,
+  progress,
+}: {
+  course: Course;
+  progress?: CourseCardProgress;
+}) {
   const locale = useLocale();
   const t = useTranslations("courses");
   const category = COURSE_CATEGORIES.find((entry) => entry.key === course.category)!;
   const Icon = category.icon;
+  const progressPct = progress ? Math.round((progress.completed / progress.total) * 100) : 0;
 
   return (
     <div className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900">
@@ -81,6 +98,32 @@ export function CourseCard({ course }: { course: Course }) {
             {course.rating.toFixed(1)}
           </span>
         </div>
+
+        {progress && (
+          <div className="flex flex-col gap-1.5">
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-zinc-500 dark:text-zinc-400">
+                {t("progressCount", { completed: progress.completed, total: progress.total })}
+              </span>
+              <span className="font-semibold text-indigo-600 dark:text-indigo-400">
+                {t("progressPercent", { percent: progressPct })}
+              </span>
+            </div>
+            <div
+              role="progressbar"
+              aria-valuenow={progressPct}
+              aria-valuemin={0}
+              aria-valuemax={100}
+              aria-label={t("progressLabel")}
+              className="h-1.5 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-800"
+            >
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 transition-all"
+                style={{ width: `${progressPct}%` }}
+              />
+            </div>
+          </div>
+        )}
 
         {course.slug ? (
           <Link

@@ -10,6 +10,7 @@ import { Checkbox } from "@/components/ui/Checkbox";
 import { Button } from "@/components/ui/Button";
 import { SocialButtons } from "@/components/auth/SocialButtons";
 import { PasswordStrength } from "@/components/auth/PasswordStrength";
+import { resetCurrentUser } from "@/hooks/useCurrentUser";
 
 interface FormValues {
   name: string;
@@ -87,6 +88,9 @@ export default function RegisterPage() {
         return;
       }
 
+      // Registering signs the new account in, so any identity this tab cached
+      // for an earlier session is stale.
+      resetCurrentUser();
       router.push("/");
       router.refresh();
     } catch {

@@ -5,6 +5,7 @@
   },
   "common": {
     "logout": "Cerrar sesión",
+    "signedInAs": "Sesión iniciada como {name}",
     "languageSwitcherLabel": "Seleccionar idioma",
     "passwordVisibility": {
       "show": "Mostrar contraseña",
@@ -31,6 +32,9 @@
     },
     "duration": "{hours} h",
     "students": "{count, plural, one {# estudiante} other {# estudiantes}}",
+    "progressCount": "{completed} / {total} lecciones",
+    "progressPercent": "{percent}%",
+    "progressLabel": "Avance del curso",
     "viewCourse": "Ver curso",
     "comingSoonCourse": "El contenido del curso estará disponible próximamente.",
     "emptyState": "No hay cursos en esta categoría todavía."
@@ -57,11 +61,17 @@
       "tipsTitle": "Sugerencias para el examen",
       "finishedTitle": "Repaso completado",
       "finishedScore": "Acertaste {correct} de {total} preguntas.",
-      "backToLesson": "Puedes volver a repasar las preguntas cuando quieras."
+      "backToLesson": "Puedes volver a repasar las preguntas cuando quieras.",
+      "perfectScore": "¡Perfecto! No fallaste ninguna.",
+      "retryWrong": "Repetir {count, plural, one {la pregunta fallada} other {las # falladas}}",
+      "restartAll": "Empezar de cero",
+      "retryRunBadge": "Solo falladas"
     }
   },
   "courseDetail": {
     "completedCount": "{completed} / {total} lecciones completadas",
+    "percentComplete": "{percent}%",
+    "progressLabel": "Avance del curso",
     "startCourse": "Comenzar curso",
     "continueCourse": "Continuar curso",
     "enroll": "Inscribirme",

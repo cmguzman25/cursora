@@ -2,74 +2,111 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Check, ChevronDown, Globe } from "lucide-react";
-import { usePathname, useRouter } from "@/i18n/navigation";
-import { routing } from "@/i18n/routing";
+import { Check, Globe } from "lucide-react";
+import { Link, usePathname } from "@/i18n/navigation";
+import { routing, type AppLocale } from "@/i18n/routing";
 import { localeLabels } from "@/i18n/locale-labels";
 
+/**
+ * Language picker for the header, next to the account menu.
+ *
+ * It stays out of the account panel on purpose: the language of the site is
+ * not a property of your account, and the globe is the symbol readers already
+ * scan for when they want to switch. The trigger is the icon alone — the
+ * current language is the one the whole page is already written in, so
+ * spelling it out again in the header buys nothing.
+ *
+ * The options are real links to the same page in another locale, so the
+ * current one is `aria-current` and any of them can be opened in a new tab.
+ */
 export function LanguageSwitcher() {
-  const locale = useLocale();
+  const locale = useLocale() as AppLocale;
   const pathname = usePathname();
-  const router = useRouter();
   const t = useTranslations("common");
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const listRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+    if (!open) return;
 
-  function handleSelect(nextLocale: (typeof routing.locales)[number]) {
-    setOpen(false);
-    router.replace(pathname, { locale: nextLocale });
-  }
+    function handlePointerDown(event: MouseEvent) {
+      if (!containerRef.current?.contains(event.target as Node)) setOpen(false);
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      setOpen(false);
+      // Escape has to hand focus back, or the keyboard user is left on a
+      // list that no longer exists.
+      triggerRef.current?.focus();
+    }
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open]);
 
   return (
     <div ref={containerRef} className="relative">
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => setOpen((value) => !value)}
-        aria-haspopup="listbox"
+        onKeyDown={(event) => {
+          if (event.key !== "ArrowDown") return;
+          event.preventDefault();
+          setOpen(true);
+          requestAnimationFrame(() => {
+            listRef.current?.querySelector<HTMLElement>("a")?.focus();
+          });
+        }}
+        aria-haspopup="true"
         aria-expanded={open}
+        aria-controls="language-panel"
         aria-label={t("languageSwitcherLabel")}
-        className="inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-sm font-medium text-zinc-600 shadow-sm transition-colors hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800"
+        title={t("languageSwitcherLabel")}
+        className={`flex h-9 w-9 items-center justify-center rounded-full text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-200 ${
+          open ? "bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-200" : ""
+        }`}
       >
-        <Globe className="h-4 w-4" aria-hidden="true" />
-        <span aria-hidden="true">{localeLabels[locale].flag}</span>
-        <span className="hidden sm:inline">{localeLabels[locale].name}</span>
-        <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />
+        <Globe className="h-5 w-5" aria-hidden="true" />
       </button>
 
       {open && (
         <ul
-          role="listbox"
+          ref={listRef}
+          id="language-panel"
           aria-label={t("languageSwitcherLabel")}
-          className="absolute right-0 z-20 mt-2 w-48 overflow-hidden rounded-xl border border-zinc-200 bg-white py-1 shadow-lg dark:border-zinc-700 dark:bg-zinc-900"
+          className="absolute right-0 z-20 mt-2 w-56 origin-top-right rounded-xl border border-zinc-200 bg-white p-1.5 shadow-lg dark:border-zinc-700 dark:bg-zinc-900"
         >
           {routing.locales.map((code) => (
             <li key={code}>
-              <button
-                type="button"
-                role="option"
-                aria-selected={code === locale}
-                onClick={() => handleSelect(code)}
-                className="flex w-full items-center gap-2.5 px-3 py-2 text-left text-sm text-zinc-700 transition-colors hover:bg-zinc-50 dark:text-zinc-200 dark:hover:bg-zinc-800"
+              <Link
+                href={pathname}
+                locale={code}
+                onClick={() => setOpen(false)}
+                aria-current={code === locale ? "true" : undefined}
+                className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm text-zinc-700 transition-colors hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800"
               >
-                <span aria-hidden="true">{localeLabels[code].flag}</span>
-                <span className="flex-1">{localeLabels[code].name}</span>
+                <span
+                  aria-hidden="true"
+                  className="w-6 shrink-0 text-[11px] font-semibold tracking-wide text-zinc-400 dark:text-zinc-500"
+                >
+                  {localeLabels[code].code}
+                </span>
+                <span className="flex-1 truncate">{localeLabels[code].name}</span>
                 {code === locale && (
                   <Check
-                    className="h-4 w-4 text-indigo-600 dark:text-indigo-400"
+                    className="h-4 w-4 shrink-0 text-indigo-600 dark:text-indigo-400"
                     aria-hidden="true"
                   />
                 )}
-              </button>
+              </Link>
             </li>
           ))}
         </ul>
