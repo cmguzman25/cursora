@@ -117,16 +117,16 @@ entre paréntesis la primera vez que aparecen en cada lección.
 
 > 10 lecciones · base común · el examen la da por sabida y no la enseña
 
-- [ ] 1.1 Qué hace un ingeniero de datos y qué es un pipeline de datos (`lecciones/01-01-que-hace-un-ingeniero-de-datos.es.md`)
-- [ ] 1.2 Batch, micro-batch y streaming: latencia, volumen y costo (`lecciones/01-02-batch-vs-streaming.es.md`)
-- [ ] 1.3 OLTP, OLAP, data lake, data warehouse y lakehouse (`lecciones/01-03-oltp-olap-lake-warehouse.es.md`)
-- [ ] 1.4 Formatos de archivo: CSV, JSON, Avro, Parquet y ORC (`lecciones/01-04-formatos-de-archivo.es.md`)
-- [ ] 1.5 Particionado, compresión y tamaño de archivo: las tres palancas de costo (`lecciones/01-05-particionado-y-compresion.es.md`)
-- [ ] 1.6 Esquemas: schema-on-read, schema-on-write y evolución (`lecciones/01-06-esquemas-y-evolucion.es.md`)
-- [ ] 1.7 Cómputo distribuido y Apache Spark: particiones, shuffle, DAG y ejecutores (`lecciones/01-07-computo-distribuido-y-spark.es.md`)
-- [ ] 1.8 El mapa de servicios de datos de AWS que entran al examen (`lecciones/01-08-mapa-de-servicios.es.md`)
-- [ ] ★ 1.9 Tablas comparativas: formatos, latencias y tipos de almacén (`lecciones/01-09-comparativas-fundamentos.es.md`)
-- [ ] 1.10 Analiza preguntas de examen: fundamentos — 15 preguntas (`preguntas/modulo-1.ts` — lección interactiva)
+- [x] 1.1 Qué hace un ingeniero de datos y qué es un pipeline de datos (`lecciones/01-01-que-hace-un-ingeniero-de-datos.es.md`)
+- [x] 1.2 Batch, micro-batch y streaming: latencia, volumen y costo (`lecciones/01-02-batch-vs-streaming.es.md`)
+- [x] 1.3 OLTP, OLAP, data lake, data warehouse y lakehouse (`lecciones/01-03-oltp-olap-lake-warehouse.es.md`)
+- [x] 1.4 Formatos de archivo: CSV, JSON, Avro, Parquet y ORC (`lecciones/01-04-formatos-de-archivo.es.md`)
+- [x] 1.5 Particionado, compresión y tamaño de archivo: las tres palancas de costo (`lecciones/01-05-particionado-y-compresion.es.md`)
+- [x] 1.6 Esquemas: schema-on-read, schema-on-write y evolución (`lecciones/01-06-esquemas-y-evolucion.es.md`)
+- [x] 1.7 Cómputo distribuido y Apache Spark: particiones, shuffle, DAG y ejecutores (`lecciones/01-07-computo-distribuido-y-spark.es.md`)
+- [x] 1.8 El mapa de servicios de datos de AWS que entran al examen (`lecciones/01-08-mapa-de-servicios.es.md`)
+- [x] ★ 1.9 Tablas comparativas: formatos, latencias y tipos de almacén (`lecciones/01-09-comparativas-fundamentos.es.md`)
+- [x] 1.10 Analiza preguntas de examen: fundamentos — 15 preguntas (`preguntas/modulo-1.ts` — lección interactiva)
 
 ## Módulo 2 — Dominio 1 · Ingesta de datos
 
@@ -388,12 +388,12 @@ del dominio 4 (18,2 %). Las 65 del simulacro son nuevas: no se reciclan.
 
 ## Progreso
 
-**4 / 167 lecciones desarrolladas.**
+**14 / 167 lecciones desarrolladas.**
 
 | Módulo | Lecciones | Hechas |
 |---|---|---|
 | 0 · Preparación | 4 | **4** |
-| 1 · Fundamentos | 10 | 0 |
+| 1 · Fundamentos | 10 | **10** |
 | 2 · D1 Ingesta | 18 | 0 |
 | 3 · D1 Transformación | 17 | 0 |
 | 4 · D1 Orquestación y programación | 14 | 0 |

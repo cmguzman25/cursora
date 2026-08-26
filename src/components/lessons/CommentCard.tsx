@@ -45,8 +45,11 @@ export function CommentCard({
   const [draftKind, setDraftKind] = useState<CommentKind>(comment.kind);
   const [confirmingDelete, setConfirmingDelete] = useState(false);
   const [replyBody, setReplyBody] = useState("");
-  const [busy, setBusy] = useState(false);
+  /** Which action is in flight, so only that control spins. `null` when idle. */
+  const [pending, setPending] = useState<string | null>(null);
   const cardRef = useRef<HTMLElement>(null);
+
+  const busy = pending !== null;
 
   const isOwn = comment.userId === currentUserId;
   const isResolved = comment.resolvedAt !== null;
@@ -65,23 +68,31 @@ export function CommentCard({
     );
   }
 
-  async function run(action: () => Promise<boolean>) {
-    setBusy(true);
-    const ok = await action();
-    setBusy(false);
-    return ok;
+  /**
+   * Runs a card action with `busy` held for its duration. Every control that
+   * can start one is disabled meanwhile and the one that was pressed shows a
+   * spinner, so a slow round-trip never reads as a press that didn't land.
+   */
+  async function run(key: string, action: () => Promise<boolean>) {
+    if (busy) return false;
+    setPending(key);
+    try {
+      return await action();
+    } finally {
+      setPending(null);
+    }
   }
 
   async function handleSaveEdit() {
     const trimmed = draftBody.trim();
     if (!trimmed) return;
-    if (await run(() => onUpdate(trimmed, draftKind))) setIsEditing(false);
+    if (await run("save", () => onUpdate(trimmed, draftKind))) setIsEditing(false);
   }
 
   async function handleReply() {
     const trimmed = replyBody.trim();
     if (!trimmed) return;
-    if (await run(() => onReply(trimmed))) setReplyBody("");
+    if (await run("reply", () => onReply(trimmed))) setReplyBody("");
   }
 
   return (
@@ -171,7 +182,7 @@ export function CommentCard({
               disabled={busy || !draftBody.trim()}
               className="inline-flex items-center gap-1 rounded-lg bg-indigo-600 px-2 py-1 text-xs font-semibold text-white hover:bg-indigo-500 disabled:opacity-50"
             >
-              {busy && <Loader2 className="h-3 w-3 animate-spin" aria-hidden="true" />}
+              {pending === "save" && <Loader2 className="h-3 w-3 animate-spin" aria-hidden="true" />}
               {t("save")}
             </button>
           </div>
@@ -197,11 +208,17 @@ export function CommentCard({
                 {reply.userId === currentUserId && (
                   <button
                     type="button"
-                    onClick={() => run(() => onDeleteReply(reply.id))}
+                    onClick={() => run(`reply:${reply.id}`, () => onDeleteReply(reply.id))}
+                    disabled={busy}
                     aria-label={t("delete")}
-                    className="ml-auto text-zinc-400 transition-colors hover:text-rose-600"
+                    aria-busy={pending === `reply:${reply.id}`}
+                    className="ml-auto text-zinc-400 transition-colors hover:text-rose-600 disabled:opacity-50"
                   >
-                    <Trash2 className="h-3 w-3" aria-hidden="true" />
+                    {pending === `reply:${reply.id}` ? (
+                      <Loader2 className="h-3 w-3 animate-spin" aria-hidden="true" />
+                    ) : (
+                      <Trash2 className="h-3 w-3" aria-hidden="true" />
+                    )}
                   </button>
                 )}
               </div>
@@ -233,17 +250,23 @@ export function CommentCard({
           <button
             type="button"
             onClick={() => {
-              if (confirmingDelete) run(onDelete);
+              if (confirmingDelete) run("delete", onDelete);
               else setConfirmingDelete(true);
             }}
             onBlur={() => setConfirmingDelete(false)}
-            className={`inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium transition-colors ${
+            disabled={busy}
+            aria-busy={pending === "delete"}
+            className={`inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium transition-colors disabled:opacity-50 ${
               confirmingDelete
                 ? "bg-rose-100 text-rose-700 dark:bg-rose-500/15 dark:text-rose-300"
                 : "text-zinc-500 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
             }`}
           >
-            <Trash2 className="h-3 w-3" aria-hidden="true" />
+            {pending === "delete" ? (
+              <Loader2 className="h-3 w-3 animate-spin" aria-hidden="true" />
+            ) : (
+              <Trash2 className="h-3 w-3" aria-hidden="true" />
+            )}
             {confirmingDelete ? t("confirmDelete") : t("delete")}
           </button>
         )}
@@ -251,15 +274,18 @@ export function CommentCard({
         {canResolve && (
           <button
             type="button"
-            onClick={() => run(() => onToggleResolved(!isResolved))}
+            onClick={() => run("resolve", () => onToggleResolved(!isResolved))}
             disabled={busy}
+            aria-busy={pending === "resolve"}
             className={`ml-auto inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold transition-colors disabled:opacity-50 ${
               isResolved
                 ? "text-zinc-500 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
                 : "bg-emerald-100 text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-500/15 dark:text-emerald-300"
             }`}
           >
-            {isResolved ? (
+            {pending === "resolve" ? (
+              <Loader2 className="h-3 w-3 animate-spin" aria-hidden="true" />
+            ) : isResolved ? (
               <RotateCcw className="h-3 w-3" aria-hidden="true" />
             ) : (
               <Check className="h-3 w-3" aria-hidden="true" />
@@ -284,8 +310,10 @@ export function CommentCard({
             type="button"
             onClick={handleReply}
             disabled={busy}
-            className="mt-0.5 shrink-0 rounded-lg bg-indigo-600 px-2 py-1.5 text-xs font-semibold text-white hover:bg-indigo-500 disabled:opacity-50"
+            aria-busy={pending === "reply"}
+            className="mt-0.5 inline-flex shrink-0 items-center gap-1 rounded-lg bg-indigo-600 px-2 py-1.5 text-xs font-semibold text-white hover:bg-indigo-500 disabled:opacity-50"
           >
+            {pending === "reply" && <Loader2 className="h-3 w-3 animate-spin" aria-hidden="true" />}
             {t("send")}
           </button>
         )}

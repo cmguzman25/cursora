@@ -1,11 +1,12 @@
 import type { ExamQuizQuestion } from "../../types";
+import { MODULE_1_QUESTIONS } from "./modulo-1";
 
 /**
  * Maps each "quiz" lesson id to its question bank.
  *
- * Empty until the first bank is written. The lesson page already handles a
- * missing bank: a `kind: "quiz"` lesson with no entry here renders the
- * "not ready yet" placeholder, same as a lesson without its markdown file.
+ * The lesson page already handles a missing bank: a `kind: "quiz"` lesson with
+ * no entry here renders the "not ready yet" placeholder, same as a lesson
+ * without its markdown file.
  *
  * Question counts per lesson are fixed in `README.md` and the rules for
  * writing them in `CONTRATO-DE-CLASES.md` (lesson types C and D). The per-module
@@ -24,4 +25,6 @@ import type { ExamQuizQuestion } from "../../types";
  *   10-16-analisis-preguntas-modulo-10 → modulo-10.ts  (10)  D4 · cifrado y gobierno
  *   11-04-simulacro-completo           → simulacro.ts  (65)  todos los dominios
  */
-export const EXAM_QUIZZES: Record<string, ExamQuizQuestion[]> = {};
+export const EXAM_QUIZZES: Record<string, ExamQuizQuestion[]> = {
+  "01-10-analisis-preguntas-modulo-1": MODULE_1_QUESTIONS,
+};

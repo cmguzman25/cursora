@@ -27,16 +27,21 @@ for (const file of fs.readdirSync(dir).sort()) {
   if (words < min || words > max) fallo(file, `fuera de rango ${min}-${max}`);
   if (Math.abs(declared - minutes) > 1.5) fallo(file, `tiempo declarado no coincide con el real`);
 
-  // preguntas idénticas palabra por palabra
-  const antes = raw.split("## 🤔 Antes de empezar")[1]?.split("\n## ")[0] ?? "";
-  const qA = [...antes.matchAll(/^-\s+(.+(?:\n {2}.+)*)/gm)].map((m) => m[1].replace(/\s+/g, " ").trim());
-  const post = raw.split("## 💬 Ahora te toca a ti")[1]?.split("\n## ")[0] ?? "";
-  const qB = [...post.matchAll(/\*\*Pregunta:\*\*\s+([\s\S]*?)\n\n/g)].map((m) => m[1].replace(/\s+/g, " ").trim());
-  if (qA.length < 2) fallo(file, `menos de 2 preguntas de activación`);
-  if (qA.length !== qB.length) fallo(file, `${qA.length} preguntas antes vs ${qB.length} después`);
-  qA.forEach((q, i) => {
-    if (q !== qB[i]) fallo(file, `pregunta ${i + 1} no es idéntica:\n      A: ${q}\n      B: ${qB[i]}`);
-  });
+  // Preguntas idénticas palabra por palabra. Las lecciones ★ no las llevan: son
+  // de consulta y se releen, así que el contrato les quita ambas secciones.
+  if (esComparativa) {
+    if (/## 🤔 Antes de empezar/.test(raw)) fallo(file, `una lección ★ no lleva "Antes de empezar"`);
+  } else {
+    const antes = raw.split("## 🤔 Antes de empezar")[1]?.split("\n## ")[0] ?? "";
+    const qA = [...antes.matchAll(/^-\s+(.+(?:\n {2}.+)*)/gm)].map((m) => m[1].replace(/\s+/g, " ").trim());
+    const post = raw.split("## 💬 Ahora te toca a ti")[1]?.split("\n## ")[0] ?? "";
+    const qB = [...post.matchAll(/\*\*Pregunta:\*\*\s+([\s\S]*?)\n\n/g)].map((m) => m[1].replace(/\s+/g, " ").trim());
+    if (qA.length < 2) fallo(file, `menos de 2 preguntas de activación`);
+    if (qA.length !== qB.length) fallo(file, `${qA.length} preguntas antes vs ${qB.length} después`);
+    qA.forEach((q, i) => {
+      if (q !== qB[i]) fallo(file, `pregunta ${i + 1} no es idéntica:\n      A: ${q}\n      B: ${qB[i]}`);
+    });
+  }
 
   // reglas de tono y de fidelidad
   const cuerpo = raw.replace(/^#.*$/gm, "").replace(/^>.*$/gm, "");
