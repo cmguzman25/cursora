@@ -534,13 +534,13 @@ export const MODULE_2_QUESTIONS: ExamQuizQuestion[] = [
         text: "Quitarle permisos para que no pueda borrar recursos",
         correct: false,
         explanation:
-          "No se le pueden quitar permisos al root: es la llave maestra por diseño. Por eso la protección consiste en guardarlo bien y no usarlo, no en limitarlo.",
+          "Desde IAM no se le pueden recortar permisos al root: es la llave maestra por diseño. Por eso la protección consiste en guardarlo bien y no usarlo, no en intentar limitarlo.",
       },
     ],
     tips: [
       "El root se protege de dos formas: **MFA activado** y **no usarlo salvo cuando es obligatorio**. Esas dos aparecen juntas muy seguido.",
       "Cualquier opción que proponga compartir credenciales es incorrecta en cualquier pregunta de IAM.",
-      "Recordá que al root no se le pueden recortar permisos. Si una opción lo plantea, es un distractor inventado.",
+      "Recordá que al root no se le recortan permisos con políticas de IAM. Si una opción propone limitarlo por esa vía, es un distractor.",
     ],
   },
   {
@@ -626,7 +626,7 @@ export const MODULE_2_QUESTIONS: ExamQuizQuestion[] = [
   {
     id: "m2-q16",
     prompt:
-      "Una empresa tiene ocho cuentas de AWS separadas y quiere que sus empleados inicien sesión una sola vez y accedan desde ahí a las cuentas que les correspondan, usando el sistema de usuarios que la empresa ya tiene. ¿Qué servicio le conviene?",
+      "Una empresa tiene ocho cuentas de AWS separadas y quiere que sus empleados inicien sesión una sola vez y accedan desde ahí a las cuentas que les correspondan, usando el sistema de usuarios que la empresa ya tiene. ¿Cuál es el enfoque recomendado?",
     options: [
       {
         id: "A",
@@ -637,21 +637,21 @@ export const MODULE_2_QUESTIONS: ExamQuizQuestion[] = [
       },
       {
         id: "B",
-        text: "AWS Firewall Manager",
+        text: "Aplicar reglas centralizadas con AWS Firewall Manager",
         correct: false,
         explanation:
           "Firewall Manager sí trabaja sobre varias cuentas, pero para aplicar reglas de red y de cortafuegos, no para administrar el inicio de sesión de las personas.",
       },
       {
         id: "C",
-        text: "AWS IAM Identity Center",
+        text: "Centralizar el inicio de sesión con AWS IAM Identity Center",
         correct: true,
         explanation:
           "Correcto. Identity Center permite iniciar sesión una sola vez y acceder a todas las cuentas donde la persona tenga permiso, integrándose además con el sistema de usuarios que la empresa ya use.",
       },
       {
         id: "D",
-        text: "Compartir el usuario root de la cuenta principal",
+        text: "Compartir las credenciales del usuario root de la cuenta principal",
         correct: false,
         explanation:
           "Compartir el root es la peor opción posible en cualquier escenario: permisos totales, sin trazabilidad y sin posibilidad de limitarlo.",
@@ -717,10 +717,10 @@ export const MODULE_2_QUESTIONS: ExamQuizQuestion[] = [
       },
       {
         id: "B",
-        text: "AWS KMS",
+        text: "AWS Firewall Manager",
         correct: false,
         explanation:
-          "KMS administra llaves de cifrado. No filtra tráfico web de ninguna manera.",
+          "Firewall Manager no filtra tráfico por sí mismo: sirve para aplicar reglas de WAF en muchas cuentas a la vez. Acá se trata de una sola aplicación, así que quien hace el filtrado es WAF directamente.",
       },
       {
         id: "C",
@@ -878,10 +878,10 @@ export const MODULE_2_QUESTIONS: ExamQuizQuestion[] = [
       },
       {
         id: "B",
-        text: "Amazon GuardDuty",
+        text: "Amazon Inspector",
         correct: true,
         explanation:
-          "Correcta. GuardDuty analiza la actividad de la cuenta y alerta sobre comportamiento sospechoso, pero no interviene para frenarlo.",
+          "Correcta. Inspector revisa tus sistemas y te informa qué vulnerabilidades encontró, pero no las corrige ni impide que alguien las aproveche.",
       },
       {
         id: "C",
@@ -899,10 +899,10 @@ export const MODULE_2_QUESTIONS: ExamQuizQuestion[] = [
       },
       {
         id: "E",
-        text: "Amazon Inspector",
+        text: "AWS Trusted Advisor",
         correct: true,
         explanation:
-          "Correcta. Inspector revisa tus sistemas y te informa qué vulnerabilidades encontró, pero no las corrige ni impide que alguien las aproveche.",
+          "Correcta. Trusted Advisor revisa tu cuenta y te deja una lista de recomendaciones, pero no impide nada por su cuenta: sos vos quien decide aplicarlas o no.",
       },
     ],
     tips: [
