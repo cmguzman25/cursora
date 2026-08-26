@@ -64,6 +64,25 @@ export const COURSES: Course[] = [
       "pt-BR": "Do zero ao intermediário construindo uma aplicação real na AWS: React, Node, banco de dados, login, deploy automático e controle de gastos.",
     },
   },
+  {
+    id: "aws-data-engineer-associate",
+    slug: "aws-data-engineer-associate",
+    category: "programming",
+    level: "intermediate",
+    durationHours: 50,
+    studentsCount: 0,
+    rating: 5.0,
+    title: {
+      es: "AWS Certified Data Engineer – Associate",
+      en: "AWS Certified Data Engineer – Associate",
+      "pt-BR": "AWS Certified Data Engineer – Associate",
+    },
+    description: {
+      es: "Preparación completa para el examen DEA-C01: ingesta y transformación, almacenes de datos, operaciones y gobierno. Clases de 15 minutos, sin laboratorios.",
+      en: "Complete DEA-C01 exam prep: ingestion and transformation, data stores, operations, and governance. 15-minute lessons, no labs.",
+      "pt-BR": "Preparação completa para o exame DEA-C01: ingestão e transformação, armazenamento, operações e governança. Aulas de 15 minutos, sem laboratórios.",
+    },
+  },
 ];
 
 export function getCourse(slug: string): Course | null {
