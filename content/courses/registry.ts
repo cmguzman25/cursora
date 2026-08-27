@@ -4,6 +4,8 @@ import { EXAM_QUIZZES as AWS_CLOUD_PRACTITIONER_QUIZZES } from "./aws-cloud-prac
 import { manifest as fullStackDeveloperAws } from "./full-stack-developer-aws/manifest";
 import { manifest as awsDataEngineerAssociate } from "./aws-data-engineer-associate/manifest";
 import { EXAM_QUIZZES as AWS_DATA_ENGINEER_QUIZZES } from "./aws-data-engineer-associate/preguntas";
+import { manifest as inglesA1 } from "./ingles-a1/manifest";
+import { EXAM_QUIZZES as INGLES_A1_QUIZZES } from "./ingles-a1/preguntas";
 
 /**
  * Every course the app can render. Adding a course means creating its folder
@@ -17,6 +19,7 @@ export const COURSE_MANIFESTS: CourseManifest[] = [
   awsCloudPractitioner,
   fullStackDeveloperAws,
   awsDataEngineerAssociate,
+  inglesA1,
 ];
 
 const BY_SLUG = new Map(COURSE_MANIFESTS.map((course) => [course.slug, course]));
@@ -40,6 +43,7 @@ export function getLessonTotals(): Record<string, number> {
 const EXAM_QUIZZES: Record<string, Record<string, ExamQuizQuestion[]>> = {
   [awsCloudPractitioner.slug]: AWS_CLOUD_PRACTITIONER_QUIZZES,
   [awsDataEngineerAssociate.slug]: AWS_DATA_ENGINEER_QUIZZES,
+  [inglesA1.slug]: INGLES_A1_QUIZZES,
 };
 
 export function getExamQuiz(courseSlug: string, lessonId: string): ExamQuizQuestion[] | null {

@@ -52,6 +52,7 @@
     "bookmarkHint": "Guarda por dónde vas. Al volver, la clase se abre en este punto. Solo se conserva una marca por clase.",
     "bookmarkHere": "Tu marca",
     "bookmarkRemove": "Quitar la marca",
+    "listen": "Escuchar «{text}»",
     "quiz": {
       "questionProgress": "Pregunta {current} de {total}",
       "reviewAnswer": "Revisar respuesta",

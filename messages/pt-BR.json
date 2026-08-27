@@ -52,6 +52,7 @@
     "bookmarkHint": "Salve até onde você leu. Ao voltar, a aula abre neste ponto. Apenas uma marca por aula.",
     "bookmarkHere": "Sua marca",
     "bookmarkRemove": "Remover a marca",
+    "listen": "Ouvir «{text}»",
     "quiz": {
       "questionProgress": "Pergunta {current} de {total}",
       "reviewAnswer": "Revisar resposta",

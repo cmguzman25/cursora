@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { notFound } from "next/navigation";
-import ReactMarkdown from "react-markdown";
+import type { ReactNode } from "react";
+import ReactMarkdown, { defaultUrlTransform, type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -11,6 +12,7 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { LessonProgressControls } from "@/components/courses/LessonProgressControls";
 import { AnnotatedLesson } from "@/components/lessons/AnnotatedLesson";
 import { ExamQuiz } from "@/components/lessons/ExamQuiz";
+import { SpeakButton } from "@/components/lessons/SpeakButton";
 import { COURSE_MANIFESTS, getCourseManifest, getExamQuiz } from "@content/courses/registry";
 import { localize } from "@content/courses/types";
 
@@ -18,6 +20,63 @@ interface LessonPageParams {
   locale: string;
   courseSlug: string;
   lessonSlug: string;
+}
+
+/** The link protocol that turns a piece of a lesson into something you can hear. */
+const SAY_PROTOCOL = "say:";
+
+/** Flattens a rendered link's children back to plain text, for `[hello](say:)`. */
+function nodeText(node: ReactNode): string {
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(nodeText).join("");
+  if (node && typeof node === "object" && "props" in node) {
+    return nodeText((node.props as { children?: ReactNode }).children);
+  }
+  return "";
+}
+
+/**
+ * Lesson markdown marks audible English as `[hello](say:)` — a normal link
+ * whose destination says "read this out loud" instead of naming a page. The
+ * language courses need it in every vocabulary table; the others never use it,
+ * and their links keep behaving like links.
+ *
+ * Writing the text twice (`[hello](say:hello)`) is allowed but discouraged:
+ * spaces have to be escaped as `%20` in a link destination, which is easy to
+ * get wrong. An empty `say:` reads whatever the link says.
+ */
+const markdownComponents: Components = {
+  a({ href, children, ...props }) {
+    if (!href?.startsWith(SAY_PROTOCOL)) {
+      return (
+        <a href={href} {...props}>
+          {children}
+        </a>
+      );
+    }
+
+    let spoken = href.slice(SAY_PROTOCOL.length);
+    try {
+      spoken = decodeURIComponent(spoken);
+    } catch {
+      // A malformed escape is not worth losing the lesson over: fall back to
+      // the link's own text below.
+      spoken = "";
+    }
+
+    const text = spoken.trim() || nodeText(children);
+    return (
+      <>
+        {children}
+        <SpeakButton text={text} />
+      </>
+    );
+  },
+};
+
+/** `say:` is not a real URL scheme, so the default transform would strip it. */
+function lessonUrlTransform(url: string) {
+  return url.startsWith(SAY_PROTOCOL) ? url : defaultUrlTransform(url);
 }
 
 function readLessonFile(courseSlug: string, lessonSlug: string, locale: string) {
@@ -165,7 +224,13 @@ export default async function LessonPage({
             header={lessonHeader}
             footer={progressControls}
           >
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={markdownComponents}
+              urlTransform={lessonUrlTransform}
+            >
+              {content}
+            </ReactMarkdown>
           </AnnotatedLesson>
         ) : (
           <>

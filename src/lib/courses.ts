@@ -83,6 +83,25 @@ export const COURSES: Course[] = [
       "pt-BR": "Preparação completa para o exame DEA-C01: ingestão e transformação, armazenamento, operações e governança. Aulas de 15 minutos, sem laboratórios.",
     },
   },
+  {
+    id: "ingles-a1",
+    slug: "ingles-a1",
+    category: "english",
+    level: "beginner",
+    durationHours: 45,
+    studentsCount: 0,
+    rating: 5.0,
+    title: {
+      es: "Inglés A1 desde cero",
+      en: "English A1 from scratch",
+      "pt-BR": "Inglês A1 do zero",
+    },
+    description: {
+      es: "Seis meses para llegar al nivel A1, con clases de 20 minutos pensadas para quien habla español: pronunciación desde el primer día, frases listas para usar y repaso espaciado.",
+      en: "Six months to reach A1 level, with 20-minute lessons built for Spanish speakers: pronunciation from day one, ready-to-use phrases, and spaced review.",
+      "pt-BR": "Seis meses para chegar ao nível A1, com aulas de 20 minutos pensadas para quem fala espanhol: pronúncia desde o primeiro dia, frases prontas para usar e revisão espaçada.",
+    },
+  },
 ];
 
 export function getCourse(slug: string): Course | null {

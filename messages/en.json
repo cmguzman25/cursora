@@ -52,6 +52,7 @@
     "bookmarkHint": "Save where you got to. Coming back opens the lesson at this point. One mark per lesson.",
     "bookmarkHere": "Your mark",
     "bookmarkRemove": "Remove the mark",
+    "listen": "Listen to “{text}”",
     "quiz": {
       "questionProgress": "Question {current} of {total}",
       "reviewAnswer": "Review answer",
