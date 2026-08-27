@@ -48,6 +48,10 @@
     "courseFinished": "¡Terminaste el curso!",
     "notReady": "Esta lección todavía no está escrita. Vuelve pronto.",
     "notTranslated": "Esta lección todavía no está traducida a este idioma. Mostrando la versión en español.",
+    "bookmarkSet": "Marcar aquí",
+    "bookmarkHint": "Guarda por dónde vas. Al volver, la clase se abre en este punto. Solo se conserva una marca por clase.",
+    "bookmarkHere": "Tu marca",
+    "bookmarkRemove": "Quitar la marca",
     "quiz": {
       "questionProgress": "Pregunta {current} de {total}",
       "reviewAnswer": "Revisar respuesta",

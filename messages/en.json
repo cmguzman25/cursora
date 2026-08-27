@@ -48,6 +48,10 @@
     "courseFinished": "You finished the course!",
     "notReady": "This lesson hasn't been written yet. Check back soon.",
     "notTranslated": "This lesson hasn't been translated into this language yet. Showing the Spanish version.",
+    "bookmarkSet": "Mark here",
+    "bookmarkHint": "Save where you got to. Coming back opens the lesson at this point. One mark per lesson.",
+    "bookmarkHere": "Your mark",
+    "bookmarkRemove": "Remove the mark",
     "quiz": {
       "questionProgress": "Question {current} of {total}",
       "reviewAnswer": "Review answer",

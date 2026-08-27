@@ -21,9 +21,12 @@ import {
 import { ACTIVE_HIGHLIGHT_NAME, COMMENT_KINDS, COMMENT_KIND_STYLES } from "@/lib/comments/kinds";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
 import { useLessonComments } from "@/hooks/useLessonComments";
+import { useLessonBookmark } from "@/hooks/useLessonBookmark";
 import { CommentComposer } from "@/components/lessons/CommentComposer";
 import { CommentPanel } from "@/components/lessons/CommentPanel";
 import { SelectionCommentButton } from "@/components/lessons/SelectionCommentButton";
+import { ReadingBookmark } from "@/components/lessons/ReadingBookmark";
+import { BookmarkButton } from "@/components/lessons/BookmarkButton";
 import { ReadingSettings } from "@/components/lessons/ReadingSettings";
 
 interface AnnotatedLessonProps {
@@ -139,6 +142,45 @@ function clampToColumn(centre: number, columnWidth: number, halfWidth: number) {
  */
 const SELECTION_SETTLE_MS = 250;
 
+/** Block elements a reading mark can be pinned to. */
+const BLOCK_SELECTOR = "p, li, h1, h2, h3, h4, h5, h6, blockquote, pre, td";
+
+/** Sticky header plus breathing room: where "the top of what I'm reading" is. */
+const VIEWPORT_TOP_INSET = 96;
+
+/** Enough of the block to re-find it later, without storing a whole paragraph. */
+const BOOKMARK_QUOTE_LENGTH = 120;
+
+/**
+ * An anchor on the first block the reader can still see, which is what "I got
+ * to about here" means in practice.
+ *
+ * The mark is a quote rather than a scroll offset on purpose: pixels stop
+ * meaning anything as soon as the reader changes the font size or turns the
+ * phone sideways, and a paragraph number drifts silently when the lesson is
+ * edited. Same reasoning as `lib/comments/anchor.ts`, which this reuses.
+ */
+function anchorAtViewportTop(article: HTMLElement, index: TextIndex): TextAnchor | null {
+  const blocks = article.querySelectorAll<HTMLElement>(BLOCK_SELECTOR);
+
+  let chosen: HTMLElement | null = null;
+  for (const block of blocks) {
+    if (block.getBoundingClientRect().bottom > VIEWPORT_TOP_INSET) {
+      chosen = block;
+      break;
+    }
+  }
+  if (!chosen) return null;
+
+  const firstText = document.createTreeWalker(chosen, NodeFilter.SHOW_TEXT).nextNode() as Text | null;
+  if (!firstText) return null;
+
+  const range = document.createRange();
+  range.setStart(firstText, 0);
+  range.setEnd(firstText, Math.min(firstText.data.length, BOOKMARK_QUOTE_LENGTH));
+  return createAnchorFromRange(index, range);
+}
+
 export function AnnotatedLesson({
   courseSlug,
   lessonId,
@@ -166,6 +208,13 @@ export function AnnotatedLesson({
     contentLocale,
   });
 
+  const {
+    bookmark,
+    isSaving: isSavingBookmark,
+    save: saveBookmark,
+    remove: removeBookmark,
+  } = useLessonBookmark({ userKey: user?.id ?? null, courseSlug, lessonId });
+
   const articleRef = useRef<HTMLElement>(null);
   const columnRef = useRef<HTMLDivElement>(null);
   const indexRef = useRef<TextIndex | null>(null);
@@ -176,6 +225,9 @@ export function AnnotatedLesson({
 
   const [draft, setDraft] = useState<Draft | null>(null);
   const [bubble, setBubble] = useState<{ top: number; left: number } | null>(null);
+  /** Where the reading mark sits in the column, once its quote has been re-found. */
+  const [markTop, setMarkTop] = useState<number | null>(null);
+  const hasJumpedToMarkRef = useRef(false);
   // Read from the selection listener, which must stay registered across
   // renders — hence a ref rather than the state value itself.
   const draftRef = useRef<Draft | null>(null);
@@ -237,6 +289,53 @@ export function AnnotatedLesson({
     if (activeRange) api.registry.set(ACTIVE_HIGHLIGHT_NAME, new api.Constructor(activeRange));
     else api.registry.delete(ACTIVE_HIGHLIGHT_NAME);
   }, [comments, activeId, indexVersion]);
+
+  /**
+   * Places the reading mark, and — the first time it resolves in this visit —
+   * takes the reader to it.
+   *
+   * The position is re-measured through a `ResizeObserver` on the article
+   * rather than computed once: changing the reading font size reflows the text
+   * under the mark, and a line drawn at a stale offset would point at the
+   * wrong paragraph.
+   */
+  useEffect(() => {
+    const index = indexRef.current;
+    const column = columnRef.current;
+    const article = articleRef.current;
+
+    // A quote only means something against the language it was taken from; a
+    // lesson read in Spanish and reopened in English has no mark to show.
+    if (!index || !column || !article || !bookmark || bookmark.locale !== contentLocale) {
+      setMarkTop(null);
+      return;
+    }
+
+    const range = resolveAnchor(index, bookmark);
+    if (!range) {
+      // The text the mark pointed at is gone — the lesson was rewritten.
+      setMarkTop(null);
+      return;
+    }
+
+    function measure() {
+      const columnRect = column!.getBoundingClientRect();
+      setMarkTop(range!.getBoundingClientRect().top - columnRect.top);
+    }
+
+    measure();
+
+    if (!hasJumpedToMarkRef.current) {
+      hasJumpedToMarkRef.current = true;
+      // Centred, so the sticky header can't cover the line the reader is
+      // being sent to.
+      range.startContainer.parentElement?.scrollIntoView({ block: "center" });
+    }
+
+    const observer = new ResizeObserver(measure);
+    observer.observe(article);
+    return () => observer.disconnect();
+  }, [bookmark, contentLocale, indexVersion]);
 
   // Highlights are registered globally, so they must be torn down on unmount
   // or they bleed onto the next lesson.
@@ -398,6 +497,21 @@ export function AnnotatedLesson({
     openDraft(fresh);
   }
 
+  /** Pins the mark to wherever the reader is now, replacing any earlier one. */
+  function handleSetBookmark() {
+    const article = articleRef.current;
+    const index = indexRef.current;
+    if (!article || !index) return;
+
+    const anchor = anchorAtViewportTop(article, index);
+    if (!anchor) return;
+
+    // Already sent here once this visit; moving the mark must not yank the
+    // page back to where it used to be.
+    hasJumpedToMarkRef.current = true;
+    saveBookmark(anchor, contentLocale);
+  }
+
   function focusComment(commentId: string) {
     setActiveId(commentId);
     const range = rangesRef.current.get(commentId);
@@ -456,6 +570,24 @@ export function AnnotatedLesson({
 
         {header}
         {article}
+
+        {/* Hidden while the composer is open: on a phone that is a sheet
+            across the bottom of the screen, and the button would sit on it. */}
+        {user && !draft && (
+          <BookmarkButton
+            hasBookmark={markTop !== null}
+            isSaving={isSavingBookmark}
+            onSet={handleSetBookmark}
+          />
+        )}
+
+        {user && markTop !== null && (
+          <ReadingBookmark
+            top={markTop}
+            isRemoving={isSavingBookmark}
+            onRemove={() => removeBookmark()}
+          />
+        )}
 
         {user && bubble && !draft && (
           <SelectionCommentButton
