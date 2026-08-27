@@ -90,8 +90,9 @@ qué varios de estos servicios trabajan directamente sobre S3.
 - **Amazon QuickSight** arma los tableros y gráficos que la gente de negocio
   mira. Es el informe con gráficos que se lleva a la reunión.
 - **Amazon Redshift** es un almacén de datos pensado para analizar volúmenes
-  enormes con consultas complejas. Es el depósito diseñado específicamente
-  para que contar sea rápido.
+  enormes con consultas complejas. Acá la mercadería **sí se muda**: se carga
+  en un salón preparado de antemano, con todo ordenado para que la cuenta
+  salga en segundos. Es lo contrario de Athena, que cuenta sin mover nada.
 
 ### Datos que llegan sin parar
 

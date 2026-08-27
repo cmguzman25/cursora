@@ -44,7 +44,7 @@ Esta es la comparación que más se pregunta del tema:
 |---|---|---|---|
 | Qué es | Archivos completos con su rótulo | El disco de una instancia | Una carpeta compartida |
 | ¿Cuántos lo usan a la vez? | Muchos, desde cualquier lado | Normalmente uno | Muchos servidores a la vez |
-| Alcance | Regional | Una Zona de disponibilidad | Varias Zonas |
+| Alcance | Regional | Una Zona de disponibilidad | Puede abarcar varias Zonas |
 | Caso típico | Fotos, respaldos, web | Sistema operativo de un servidor | Carpeta compartida entre servidores |
 
 Fijate que la fila del alcance explica muchas decisiones de arquitectura: si

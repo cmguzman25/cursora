@@ -48,8 +48,8 @@ cuánto accedas:
 
 | Clase | Para qué | Idea general |
 |---|---|---|
-| **S3 Standard** | Datos que se usan seguido | Más caro de guardar, gratis y rápido de leer |
-| **S3 Standard-IA** | Datos que se usan poco pero se necesitan ya | Más barato de guardar, se cobra al leer |
+| **S3 Standard** | Datos que se usan seguido | Más caro de guardar, sin cargo por recuperar |
+| **S3 Standard-IA** | Datos que se usan poco pero se necesitan ya | Más barato de guardar, con cargo por recuperar |
 | **S3 Glacier** (varias variantes) | Archivo histórico que casi nunca se toca | Muy barato de guardar; recuperar puede tardar |
 | **S3 Intelligent-Tiering** | Cuando no sabés qué tan seguido se va a usar | AWS mueve cada archivo a la clase que convenga |
 

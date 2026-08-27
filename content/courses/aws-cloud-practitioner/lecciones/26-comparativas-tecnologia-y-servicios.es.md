@@ -15,6 +15,18 @@ Esta lección no trae contenido nuevo: es un repaso de las lecciones 3.1 a
 el examen los mezcla entre sí — casi ninguna pregunta ofrece una opción
 absurda, ofrece cuatro servicios reales parecidos.
 
+### Cómo se le dan órdenes a AWS
+
+| | Cuándo se usa |
+|---|---|
+| **Consola** | Explorar, aprender, hacer algo una sola vez |
+| **CLI** | Automatizar con scripts desde una terminal |
+| **SDK** | Que tu propia aplicación le hable a AWS desde el código |
+| **CloudFormation** | Describir la infraestructura en un archivo y repetirla idéntica |
+
+Y dónde termina corriendo: **todo en la nube**, **híbrido** (parte en AWS,
+parte en servidores propios conectados) o **en instalaciones propias**.
+
 ### Cómputo: cuánto te querés ocupar
 
 | | EC2 | Contenedores (ECS/EKS) | Fargate | Lambda |
@@ -25,6 +37,11 @@ absurda, ofrece cuatro servicios reales parecidos.
 | Señal en el examen | "Control total del sistema operativo" | "Ya usamos contenedores" | "Contenedores sin administrar" | "Sin servidores, pagar por uso" |
 
 **ECS vs. EKS:** si nombra Kubernetes, es EKS. Si no, ECS.
+
+Y las dos piezas que hacen que la capacidad acompañe a la demanda:
+**Auto Scaling** decide **cuántas** instancias hay, y el **balanceador de
+carga** (Elastic Load Balancing) decide **a cuál** va cada visita. Van juntas
+y el examen las cruza.
 
 ### Infraestructura global
 
@@ -43,10 +60,17 @@ lejanos ⇒ ubicaciones de borde.
 |---|---|---|---|
 | Qué guarda | Archivos completos | El disco de una instancia | Una carpeta compartida |
 | Cuántos lo usan | Muchos, desde cualquier lado | Normalmente uno | Muchos servidores a la vez |
-| Alcance | Regional | Una Zona de disponibilidad | Varias Zonas |
+| Alcance | Regional | Una Zona de disponibilidad | Puede abarcar varias Zonas |
 
 **EBS es persistente; instance store es efímero.** **EFS es Linux; FSx es
-Windows.** Y para abaratar según antigüedad, política de ciclo de vida.
+Windows.** Un volumen EBS sale de su Zona sacándole **instantáneas**, que se
+guardan en S3.
+
+Las clases de S3, de más cara a más barata de guardar: **Standard** (uso
+frecuente) → **Standard-IA** (poco uso, disponible ya) → **Glacier** (archivo
+histórico, recuperar tarda) → **Intelligent-Tiering** cuando no sabés el
+patrón de acceso. Para que se muden solas según la antigüedad, **política de
+ciclo de vida**.
 
 ### Bases de datos
 
@@ -78,6 +102,10 @@ el examen las cruza.
 
 **Route 53 resuelve a qué dirección ir; CloudFront, desde dónde se entrega el
 contenido.**
+
+Y las dos puertas de la VPC: la **puerta de enlace a internet** conecta una
+subred pública en los dos sentidos; la **puerta de enlace NAT** deja que una
+subred privada **salga** sin que nadie **entre**.
 
 ### Mensajería: buzón o cartelera
 
@@ -111,6 +139,20 @@ dice el documento)**.
 | **QuickSight** | Arma los tableros y gráficos |
 | **Redshift** | Almacén para consultas complejas y grandes volúmenes |
 | **Kinesis** | Procesa datos a medida que llegan |
+
+### Desarrollo, escritorios e IoT
+
+| Servicio | Qué hace |
+|---|---|
+| **CodePipeline** | Ordena las etapas de publicar software |
+| **CodeBuild / CodeDeploy** | Compila y prueba / instala en los servidores |
+| **Elastic Beanstalk** | Subís la aplicación y él arma la infraestructura |
+| **WorkSpaces** | Un escritorio virtual completo |
+| **AppStream 2.0** | Una sola aplicación por el navegador |
+| **IoT Core** | Conecta dispositivos físicos con AWS |
+
+**Beanstalk es el escalón del medio** entre armar todo con EC2 y no ver
+infraestructura con Lambda.
 
 **En resumen:** en cómputo, la escala va de EC2 (control total) a Lambda (nada
 que administrar). En almacenamiento, la pregunta es cuántos acceden a la vez.

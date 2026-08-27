@@ -204,10 +204,10 @@ export const MODULE_3_QUESTIONS: ExamQuizQuestion[] = [
       },
       {
         id: "E",
-        text: "El color del logotipo de la empresa",
+        text: "El tamaño de las instancias que se van a desplegar",
         correct: false,
         explanation:
-          "No tiene ninguna relación con la decisión técnica. Aparece acá como recordatorio de que conviene descartar rápido lo que no tiene que ver con el problema.",
+          "El tamaño de instancia se elige al crearla y las mismas familias están disponibles en las Regiones principales. Es una decisión posterior, que no condiciona en qué Región desplegar.",
       },
     ],
     tips: [

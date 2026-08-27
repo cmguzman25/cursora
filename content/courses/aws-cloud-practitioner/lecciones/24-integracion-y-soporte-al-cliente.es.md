@@ -94,8 +94,9 @@ programas a tu sistema: recibe cada llamada, verifica que quien la hace tenga
 permiso, controla que nadie abuse haciendo miles de pedidos por segundo, y
 recién ahí la deriva a quien corresponda —muy seguido, a una función Lambda.
 
-Es la recepción del edificio: nadie pasa sin anunciarse. Es también, como
-vimos en la lección 2.4a, uno de los lugares donde se conecta **AWS WAF**.
+Es la mesa de entradas: todo pedido se presenta ahí, se comprueba que esté en
+orden y recién después se deriva a quien corresponda. Es también, como vimos
+en la lección 2.4a, uno de los lugares donde se conecta **AWS WAF**.
 
 ### Atención al cliente y comunicación
 
