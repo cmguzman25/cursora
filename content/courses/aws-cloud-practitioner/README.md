@@ -125,32 +125,32 @@ con tres cambios:
 
 ## Módulo 3 — Tecnología y servicios en la nube (Dominio 3 · 34%)
 
-- [ ] 3.1 Formas de desplegar y operar en AWS: consola, CLI, SDKs, IaC,
+- [x] 3.1 Formas de desplegar y operar en AWS: consola, CLI, SDKs, IaC,
       modelos de despliegue (nube, híbrido, on-premises) (`lecciones/16-formas-de-desplegar.md`)
-- [ ] 3.2 Infraestructura global de AWS: Regiones, Zonas de disponibilidad,
+- [x] 3.2 Infraestructura global de AWS: Regiones, Zonas de disponibilidad,
       edge locations, alta disponibilidad (`lecciones/17-infraestructura-global.md`)
-- [ ] 3.3 Servicios de cómputo: EC2 (tipos de instancia), contenedores (ECS/EKS),
+- [x] 3.3 Servicios de cómputo: EC2 (tipos de instancia), contenedores (ECS/EKS),
       serverless (Lambda, Fargate), Auto Scaling, balanceadores de carga (`lecciones/18-servicios-de-computo.md`)
-- [ ] 3.4 Servicios de bases de datos: RDS, Aurora, DynamoDB, ElastiCache,
+- [x] 3.4 Servicios de bases de datos: RDS, Aurora, DynamoDB, ElastiCache,
       migración de bases de datos (DMS, SCT) (`lecciones/19-servicios-de-bases-de-datos.md`)
-- [ ] 3.5 Servicios de red: componentes de una VPC, security groups vs. NACLs,
+- [x] 3.5 Servicios de red: componentes de una VPC, security groups vs. NACLs,
       Route 53, VPN y Direct Connect (`lecciones/20-servicios-de-red.md`)
-- [ ] 3.6a Almacenamiento — objetos y bloques: S3 y sus clases, EBS e instance
+- [x] 3.6a Almacenamiento — objetos y bloques: S3 y sus clases, EBS e instance
       store (`lecciones/21-almacenamiento-objetos-y-bloques.md`)
-- [ ] 3.6b Almacenamiento — archivos y protección de datos: EFS, FSx, Storage
+- [x] 3.6b Almacenamiento — archivos y protección de datos: EFS, FSx, Storage
       Gateway, políticas de ciclo de vida, AWS Backup (`lecciones/22-almacenamiento-archivos-y-backup.md`)
-- [ ] 3.7 IA/ML y analítica: SageMaker AI, Lex, Athena, Kinesis, Glue, QuickSight (`lecciones/23-ia-ml-y-analitica.md`)
-- [ ] 3.8a Integración, mensajería y soporte al cliente: SNS, SQS, EventBridge,
+- [x] 3.7 IA/ML y analítica: SageMaker AI, Lex, Athena, Kinesis, Glue, QuickSight (`lecciones/23-ia-ml-y-analitica.md`)
+- [x] 3.8a Integración, mensajería y soporte al cliente: SNS, SQS, EventBridge,
       Connect, SES, AWS Support (`lecciones/24-integracion-y-soporte-al-cliente.md`)
-- [ ] 3.8b Desarrollo, cómputo para el usuario final e IoT: CodeBuild,
+- [x] 3.8b Desarrollo, cómputo para el usuario final e IoT: CodeBuild,
       CodePipeline, X-Ray, WorkSpaces, AppStream 2.0, Amplify, IoT Core
       (`lecciones/25-desarrollo-end-user-computing-e-iot.md`)
-- [ ] ★ 3.9 Tablas comparativas: cómputo (EC2 vs. Lambda vs. contenedores),
+- [x] ★ 3.9 Tablas comparativas: cómputo (EC2 vs. Lambda vs. contenedores),
       almacenamiento (S3 vs. EBS vs. EFS) y bases de datos (RDS vs. Aurora vs.
       DynamoDB vs. ElastiCache) (`lecciones/26-comparativas-tecnologia-y-servicios.md`)
-- [ ] 3.10 Analiza preguntas de examen: 35 preguntas de tecnología y servicios,
+- [x] 3.10 Analiza preguntas de examen: 35 preguntas de tecnología y servicios,
       con el porqué de cada opción correcta e incorrecta
-      (`lecciones/27-analisis-preguntas-modulo-3.md`)
+      (`preguntas/modulo-3.ts` — lección interactiva, no Markdown)
 
 ## Módulo 4 — Facturación, precios y soporte (Dominio 4 · 12%)
 
@@ -180,4 +180,4 @@ con tres cambios:
 
 ## Progreso
 
-**16 / 36 lecciones desarrolladas.**
+**28 / 36 lecciones desarrolladas.**
