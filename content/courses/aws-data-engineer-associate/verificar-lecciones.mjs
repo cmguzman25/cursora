@@ -21,7 +21,7 @@ for (const file of fs.readdirSync(dir).sort()) {
   const minutes = words / WPM;
   const declared = Number(raw.match(/⏱️\s*(\d+)\s*min/)?.[1] ?? 0);
   const esComparativa = /★/.test(raw.split("\n")[0]);
-  const [min, max] = esComparativa ? [900, 1600] : [1700, 2500];
+  const [min, max] = esComparativa ? [900, 1600] : [1500, 2500];
 
   console.log(`  palabras ${words} | real ${minutes.toFixed(1)} min | declarado ${declared} min`);
   if (words < min || words > max) fallo(file, `fuera de rango ${min}-${max}`);

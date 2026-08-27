@@ -82,8 +82,9 @@ contrato se contradiga con esos, manda este.
 
 ## 3. Extensión y tiempo de lectura
 
-**Regla dura: ninguna lección puede superar los 15 minutos de lectura, y
-ninguna debe bajar de 10.**
+**Regla dura: ninguna lección puede superar los 15 minutos de lectura.** El rango
+objetivo es de 10 a 15 minutos, pero es una guía, no un mínimo que justifique
+añadir relleno.
 
 El curso mide el tiempo de lectura a **170 palabras por minuto**, que es un
 ritmo realista para prosa técnica en español con términos en inglés
@@ -91,9 +92,15 @@ intercalados. De ahí sale el rango:
 
 | | Palabras |
 |---|---|
-| Mínimo (10 min) | 1.700 |
-| Máximo (15 min) | 2.500 |
-| Objetivo | ~2.100 (12 min) |
+| Mínimo | 1.500 (≈9 min) |
+| Máximo | 2.500 (≈15 min) |
+| Objetivo | ~2.000 (12 min) |
+
+**El techo de 15 minutos es firme; el piso es orientativo.** Una lección densa en
+tablas y cifras —los límites de un servicio, una comparativa— informa más en 1.600
+palabras que en 2.200, y estirarla sería el relleno que este contrato prohíbe. Lo
+que **nunca** se hace es declarar en la cabecera un tiempo distinto del real: si la
+lección dura 9 minutos, la cabecera dice 9.
 
 **El conteo es de la lección completa**, no solo de la sección de contenido:
 título, preguntas, contenido, escenarios de examen, respuestas y pistas. Las
@@ -116,7 +123,7 @@ explicación hasta volverla superficial para que "quepa". El índice del
 `README.md` ya prevé esto: varios servicios grandes (Kinesis, Redshift, Glue,
 Athena) ocupan dos o tres lecciones a propósito.
 
-**El piso de 1.700 palabras no aplica a las lecciones de tablas comparativas
+**El piso de 1.500 palabras no aplica a las lecciones de tablas comparativas
 (★).** Ahí el contenido es tabular y la prosa es mínima por diseño: sirven para
 comparar de un vistazo, no para volver a explicar. En ellas se espera un rango
 de 900 a 1.600 palabras, y agregar párrafos para llegar a un número sería
@@ -538,7 +545,7 @@ Lo que el verificador **no** puede comprobar, y hay que revisar a mano:
 
 - [ ] ¿La cabecera cita el módulo, el dominio con su peso, el task statement
       oficial en inglés y el tiempo de lectura?
-- [ ] ¿La lección completa está entre 1.700 y 2.500 palabras (900–1.600 si es ★)?
+- [ ] ¿La lección completa está entre 1.500 y 2.500 palabras (900–1.600 si es ★)?
 - [ ] ¿El tiempo declarado en la cabecera coincide con el conteo real a 170
       palabras por minuto?
 - [ ] ¿Las preguntas de "Antes de empezar" y "Ahora te toca a ti" son

@@ -132,24 +132,24 @@ entre paréntesis la primera vez que aparecen en cada lección.
 
 > 18 lecciones · Dominio 1 (34 %) · Task 1.1 — Perform data ingestion
 
-- [ ] 2.1 Panorama de la ingesta: fuentes, destinos y las decisiones que pregunta el examen (`lecciones/02-01-panorama-de-la-ingesta.es.md`)
-- [ ] 2.2 Kinesis Data Streams: shards, capacidad, retención y resharding (`lecciones/02-02-kinesis-data-streams.es.md`)
-- [ ] 2.3 Kinesis: productores (KPL, Agent, SDK) y consumidores (KCL, enhanced fan-out) (`lecciones/02-03-kinesis-productores-y-consumidores.es.md`)
-- [ ] 2.4 Kinesis y Lambda: event source mapping, lotes, paralelismo y errores (`lecciones/02-04-kinesis-y-lambda.es.md`)
-- [ ] 2.5 Kinesis Data Firehose: buffering, dynamic partitioning y conversión de formato (`lecciones/02-05-kinesis-data-firehose.es.md`)
-- [ ] 2.6 Amazon MSK: Kafka gestionado, MSK Serverless y MSK Connect (`lecciones/02-06-amazon-msk.es.md`)
-- [ ] 2.7 Amazon Managed Service for Apache Flink: ventanas y procesamiento de streams (`lecciones/02-07-managed-flink.es.md`)
-- [ ] 2.8 Change data capture con DynamoDB Streams y Kinesis Data Streams for DynamoDB (`lecciones/02-08-cdc-con-dynamodb-streams.es.md`)
-- [ ] 2.9 AWS DMS: full load, CDC y validación de la migración (`lecciones/02-09-aws-dms.es.md`)
-- [ ] 2.10 Integraciones zero-ETL: cuando el pipeline desaparece (`lecciones/02-10-zero-etl.es.md`)
-- [ ] 2.11 Ingesta por lotes: S3, Glue, EMR, Redshift COPY y Lambda (`lecciones/02-11-ingesta-por-lotes.es.md`)
-- [ ] 2.12 Amazon AppFlow, consumo de APIs de datos y allowlists de IP (`lecciones/02-12-appflow-y-apis.es.md`)
-- [ ] 2.13 Throttling, límites de tasa y reintentos (Kinesis, DynamoDB, RDS) (`lecciones/02-13-throttling-y-limites.es.md`)
-- [ ] 2.14 Programadores y disparadores: EventBridge Scheduler, S3 Event Notifications y Pipes (`lecciones/02-14-programadores-y-disparadores.es.md`)
-- [ ] 2.15 Replayability y semántica de entrega: at-least-once, exactly-once e idempotencia (`lecciones/02-15-replayability-y-entrega.es.md`)
-- [ ] 2.16 Fan-in, fan-out y transacciones stateful frente a stateless (`lecciones/02-16-fan-out-y-transacciones.es.md`)
-- [ ] ★ 2.17 Tablas comparativas: Data Streams vs. Firehose vs. MSK vs. Flink vs. DMS vs. AppFlow (`lecciones/02-17-comparativas-ingesta.es.md`)
-- [ ] 2.18 Analiza preguntas de examen: ingesta — 16 preguntas (`preguntas/modulo-2.ts` — lección interactiva)
+- [x] 2.1 Panorama de la ingesta: fuentes, destinos y las decisiones que pregunta el examen (`lecciones/02-01-panorama-de-la-ingesta.es.md`)
+- [x] 2.2 Kinesis Data Streams: shards, capacidad, retención y resharding (`lecciones/02-02-kinesis-data-streams.es.md`)
+- [x] 2.3 Kinesis: productores (KPL, Agent, SDK) y consumidores (KCL, enhanced fan-out) (`lecciones/02-03-kinesis-productores-y-consumidores.es.md`)
+- [x] 2.4 Kinesis y Lambda: event source mapping, lotes, paralelismo y errores (`lecciones/02-04-kinesis-y-lambda.es.md`)
+- [x] 2.5 Kinesis Data Firehose: buffering, dynamic partitioning y conversión de formato (`lecciones/02-05-kinesis-data-firehose.es.md`)
+- [x] 2.6 Amazon MSK: Kafka gestionado, MSK Serverless y MSK Connect (`lecciones/02-06-amazon-msk.es.md`)
+- [x] 2.7 Amazon Managed Service for Apache Flink: ventanas y procesamiento de streams (`lecciones/02-07-managed-flink.es.md`)
+- [x] 2.8 Change data capture con DynamoDB Streams y Kinesis Data Streams for DynamoDB (`lecciones/02-08-cdc-con-dynamodb-streams.es.md`)
+- [x] 2.9 AWS DMS: full load, CDC y validación de la migración (`lecciones/02-09-aws-dms.es.md`)
+- [x] 2.10 Integraciones zero-ETL: cuando el pipeline desaparece (`lecciones/02-10-zero-etl.es.md`)
+- [x] 2.11 Ingesta por lotes: S3, Glue, EMR, Redshift COPY y Lambda (`lecciones/02-11-ingesta-por-lotes.es.md`)
+- [x] 2.12 Amazon AppFlow, consumo de APIs de datos y allowlists de IP (`lecciones/02-12-appflow-y-apis.es.md`)
+- [x] 2.13 Throttling, límites de tasa y reintentos (Kinesis, DynamoDB, RDS) (`lecciones/02-13-throttling-y-limites.es.md`)
+- [x] 2.14 Programadores y disparadores: EventBridge Scheduler, S3 Event Notifications y Pipes (`lecciones/02-14-programadores-y-disparadores.es.md`)
+- [x] 2.15 Replayability y semántica de entrega: at-least-once, exactly-once e idempotencia (`lecciones/02-15-replayability-y-entrega.es.md`)
+- [x] 2.16 Fan-in, fan-out y transacciones stateful frente a stateless (`lecciones/02-16-fan-out-y-transacciones.es.md`)
+- [x] ★ 2.17 Tablas comparativas: Data Streams vs. Firehose vs. MSK vs. Flink vs. DMS vs. AppFlow (`lecciones/02-17-comparativas-ingesta.es.md`)
+- [x] 2.18 Analiza preguntas de examen: ingesta — 16 preguntas (`preguntas/modulo-2.ts` — lección interactiva)
 
 ## Módulo 3 — Dominio 1 · Transformación y procesamiento
 
@@ -388,13 +388,13 @@ del dominio 4 (18,2 %). Las 65 del simulacro son nuevas: no se reciclan.
 
 ## Progreso
 
-**14 / 167 lecciones desarrolladas.**
+**32 / 167 lecciones desarrolladas.**
 
 | Módulo | Lecciones | Hechas |
 |---|---|---|
 | 0 · Preparación | 4 | **4** |
 | 1 · Fundamentos | 10 | **10** |
-| 2 · D1 Ingesta | 18 | 0 |
+| 2 · D1 Ingesta | 18 | **18** |
 | 3 · D1 Transformación | 17 | 0 |
 | 4 · D1 Orquestación y programación | 14 | 0 |
 | 5 · D2 Elegir el almacén | 18 | 0 |
