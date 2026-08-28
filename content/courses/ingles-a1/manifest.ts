@@ -39,7 +39,7 @@ const MODULES: Record<string, LocalizedText> = {
 
 const LESSONS: LessonMeta[] = [
   { id: "00-01-que-vas-a-lograr-en-6-meses", moduleId: "unidad-0", module: MODULES["unidad-0"], title: { es: "Qué vas a poder hacer dentro de seis meses" } },
-  { id: "00-02-como-estudiar-20-minutos-al-dia", moduleId: "unidad-0", module: MODULES["unidad-0"], title: { es: "Veinte minutos al día le ganan a tres horas el domingo" } },
+  { id: "00-02-como-estudiar-15-minutos-al-dia", moduleId: "unidad-0", module: MODULES["unidad-0"], title: { es: "Quince minutos al día le ganan a tres horas el domingo" } },
   { id: "00-03-los-sonidos-del-ingles", moduleId: "unidad-0", module: MODULES["unidad-0"], title: { es: "Los sonidos del inglés que no existen en español" } },
   { id: "00-04-tu-kit-de-estudio", moduleId: "unidad-0", module: MODULES["unidad-0"], title: { es: "Tu kit: diccionario, subtítulos y cómo usar la IA sin engañarte" } },
 

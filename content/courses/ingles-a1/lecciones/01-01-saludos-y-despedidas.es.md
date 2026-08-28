@@ -1,6 +1,6 @@
 # 1.1 — Saludar, despedirte y salir del paso
 
-> Unidad 1 · Hola, ¿quién eres? · Semana 1 · ⏱️ 20 min
+> Unidad 1 · Hola, ¿quién eres? · Semana 1 · ⏱️ 15 min
 
 ## 🎯 Al terminar vas a poder
 
@@ -158,53 +158,6 @@ pensar, lo tienes.
   más frecuentes.
 - ❌ *Nice to meet you* cada vez que ves a un compañero → ✅ solo la **primera vez**
   que conoces a alguien. A partir de ahí, *Nice to see you.*
-
-## ✍️ Practica
-
-Hazlo todo antes de bajar a las soluciones. Equivocarte aquí es parte del
-trabajo.
-
-### A. Reconoce
-
-Elige la opción correcta.
-
-1. Son las nueve de la mañana. Dices: (a) *Good evening* (b) *Good morning*
-2. Te presentan a alguien por primera vez: (a) *Nice to meet you* (b) *See you later*
-3. Llegas a una cena a las ocho de la tarde: (a) *Good night* (b) *Good evening*
-4. No has entendido nada: (a) *Thank you* (b) *Sorry, I don't understand*
-5. Alguien te dice *How are you?* La respuesta natural es: (a) *I'm fine, thank you. And you?* (b) una explicación larga sobre tu semana
-
-### B. Completa
-
-Escribe la palabra que falta.
-
-6. Good ________. (son las ocho de la mañana)
-7. Can you repeat that, ________? (por favor)
-8. My ________ is Ana. (nombre)
-9. I'm ________, thank you. (bien)
-10. See you ________. (luego)
-
-### C. Produce
-
-Escríbelo tú, y después dilo en voz alta.
-
-11. Traduce: "Buenas tardes. ¿Cómo estás?"
-12. Traduce: "Perdón, ¿puedes hablar más despacio, por favor?"
-13. Traduce: "Encantado de conocerte. Me llamo…" (con tu nombre real)
-14. Son las diez de la noche y te despides de un vecino. ¿Qué dices?
-15. Escribe el saludo completo de tres pasos con el que empezarías mañana en el trabajo.
-
-### ✅ Soluciones
-
-1. b · 2. a · 3. b (llegas, no te vas: *Good night* es solo para irse) · 4. b · 5. a
-
-6. *morning* · 7. *please* · 8. *name* · 9. *fine* · 10. *later*
-
-11. *Good afternoon. How are you?* · 12. *Sorry, can you speak more slowly,
-please?* · 13. *Nice to meet you. My name is…* · 14. *Good night.* ·
-15. Un modelo posible: *Good morning. How are you? — I'm fine, thank you. And
-you?* Hay otras formas correctas: si hay confianza, *Hi* en lugar de *Good
-morning* también vale.
 
 ## 🔁 Repaso relámpago
 

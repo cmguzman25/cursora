@@ -62,7 +62,7 @@ Son **24 semanas** repartidas en 12 unidades, cada una de dos semanas. Cada
 unidad tiene seis clases de contenido, una de repaso y un cuestionario para
 ponerte a prueba.
 
-Las clases duran **20 minutos** y todas tienen la misma forma, para que no
+Las clases duran **15 minutos** y todas tienen la misma forma, para que no
 gastes energía en averiguar qué toca ahora:
 
 | Sección | Qué hace |
@@ -73,7 +73,6 @@ gastes energía en averiguar qué toca ahora:
 | Tus frases de hoy | Frases completas listas para usar, y el vocabulario |
 | Cómo suena | Un sonido nuevo, con la boca y con audio |
 | Ojo, que en español no es así | El error que vas a cometer, avisado antes |
-| Practica | Ejercicios en escalera, con soluciones |
 | Repaso relámpago | Preguntas de clases anteriores |
 | Tu misión | Algo que haces fuera de la pantalla |
 

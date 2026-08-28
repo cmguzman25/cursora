@@ -1,4 +1,4 @@
-# 0.2 — Veinte minutos al día le ganan a tres horas el domingo
+# 0.2 — Quince minutos al día le ganan a tres horas el domingo
 
 > Unidad 0 · Antes de empezar · Semana 1 · ⏱️ 10 min
 
@@ -13,9 +13,9 @@ curso sobreviva a la vida real.
 
 ### Por qué la maratón del domingo no funciona
 
-Imagina dos personas. Una estudia dos horas y media el domingo. La otra, veinte
-minutos de lunes a viernes. Han dedicado el mismo tiempo. A los tres meses, la
-segunda va muy por delante.
+Imagina dos personas. Una estudia una hora y cuarto de un tirón el domingo. La
+otra, quince minutos de lunes a viernes. Han dedicado exactamente el mismo
+tiempo. A los tres meses, la segunda va muy por delante.
 
 La razón es cómo trabaja la memoria. Lo que aprendes hoy empieza a borrarse casi
 de inmediato, y la borradura es rápida los primeros días. Si vuelves a tocar ese
@@ -51,8 +51,8 @@ abandona.
 
 | Día | Qué haces | Tiempo |
 |---|---|---|
-| Lunes a jueves | Una clase nueva | 20 min |
-| Viernes | El repaso de la unidad o el cuestionario | 15–20 min |
+| Lunes a jueves | Una clase nueva | 15 min |
+| Viernes | El repaso de la unidad o el cuestionario | 15 min |
 | Sábado | La misión de la semana, en voz alta | 15 min |
 | Domingo | Nada | — |
 
@@ -73,7 +73,7 @@ es el fallo, es lo que haces después.
 Lo que no funciona es intentar recuperar cuatro clases en una tarde. Eso es la
 maratón del domingo otra vez, y encima con sentimiento de culpa.
 
-### Los veinte minutos, por dentro
+### Los quince minutos, por dentro
 
 Un consejo sobre cómo gastarlos: **más boca y menos ojos**. Leer inglés y hablar
 inglés son dos habilidades distintas, y se entrenan por separado. Quien solo lee
@@ -91,7 +91,7 @@ Este curso te avisa de los errores **antes** de que los cometas, en una sección
 que aparece en todas las clases. No es para que te sientas vigilado: es para que
 cuando el error aparezca, lo reconozcas en lugar de arrastrarlo dos años.
 
-**En resumen:** veinte minutos, cinco días por semana, siempre a la misma hora.
+**En resumen:** quince minutos, cinco días por semana, siempre a la misma hora.
 El repaso espaciado viene incluido en cada clase y funciona porque te obliga a
 recordar en lugar de releer. Si fallas un día, sigues adelante sin doblar. Y todo
 lo que puedas, dilo en voz alta.
@@ -101,7 +101,7 @@ lo que puedas, dilo en voz alta.
 1. **Ponte la alarma** cinco días a la semana, a la hora que elegiste en la clase
    anterior. Si todavía no la elegiste, hazlo ahora.
 2. **Decide dónde vas a estudiar** y quita de en medio lo que te va a
-   interrumpir. Veinte minutos con el teléfono en silencio rinden más que
+   interrumpir. Quince minutos con el teléfono en silencio rinden más que
    cuarenta con notificaciones.
 3. **Prueba a leer un párrafo de esta clase en voz alta.** Te va a sonar raro
    escucharte. Esa rareza se pasa en una semana, y hay que pasarla ahora.

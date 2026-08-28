@@ -2,7 +2,7 @@
 
 Curso completo de inglés desde el nivel cero hasta el **A1 del Marco Común
 Europeo (MCER)**, escrito para gente que habla español. Seis meses, 24 semanas,
-100 clases de 20 minutos.
+100 clases de 15 minutos.
 
 Este archivo es el **índice vivo**: se marca `[x]` cada clase a medida que se
 escribe. Cómo se escribe cada una está en `CONTRATO-DE-CLASES.md`, y no se
@@ -15,10 +15,10 @@ improvisa.
 | Nivel de partida | Cero o casi cero |
 | Nivel de llegada | A1 del MCER |
 | Duración | 6 meses · 24 semanas |
-| Clases | 100 (88 normales, 11 repasos ★, 12 cuestionarios, 5 de orientación) |
-| Dedicación | 20–30 minutos al día, 5 días por semana |
-| Tiempo total | Unas 45 horas de estudio |
-| Vocabulario al terminar | Entre 850 y 1.000 palabras de alta frecuencia |
+| Clases | 100 (71 normales, 12 repasos ★, 12 cuestionarios, 5 de orientación) |
+| Dedicación | 15 minutos al día, 5 días por semana |
+| Tiempo total | Unas 25 horas de estudio |
+| Vocabulario al terminar | Entre 570 y 850 palabras de alta frecuencia |
 | Idioma de las explicaciones | Español, en proporción decreciente |
 | Requisitos | Ninguno. Saber leer y tener ganas |
 | Material necesario | Nada de pago. El teléfono y algo con lo que grabarte |
@@ -53,11 +53,11 @@ plan que se cumple gana al plan perfecto que se abandona.
 
 | Día | Qué haces | Tiempo |
 |---|---|---|
-| Lunes | Clase nueva | 20 min |
-| Martes | Clase nueva | 20 min |
-| Miércoles | Clase nueva | 20 min |
-| Jueves | Clase nueva | 20 min |
-| Viernes | Repaso ★ o cuestionario de la unidad | 15–20 min |
+| Lunes | Clase nueva | 15 min |
+| Martes | Clase nueva | 15 min |
+| Miércoles | Clase nueva | 15 min |
+| Jueves | Clase nueva | 15 min |
+| Viernes | Repaso ★ o cuestionario de la unidad | 15 min |
 | Sábado | La misión larga de la semana, en voz alta | 15 min |
 | Domingo | Libre | — |
 
@@ -105,7 +105,7 @@ Tres marcadores, y ninguno es "cuántas rachas llevas":
 ### Unidad 0 — Antes de empezar · semana 1
 
 - [x] 0.1 — Qué vas a poder hacer dentro de seis meses
-- [x] 0.2 — Veinte minutos al día le ganan a tres horas el domingo
+- [x] 0.2 — Quince minutos al día le ganan a tres horas el domingo
 - [x] 0.3 — Los sonidos del inglés que no existen en español
 - [x] 0.4 — Tu kit: diccionario, subtítulos y cómo usar la IA sin engañarte
 

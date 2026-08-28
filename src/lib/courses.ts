@@ -97,9 +97,9 @@ export const COURSES: Course[] = [
       "pt-BR": "Inglês A1 do zero",
     },
     description: {
-      es: "Seis meses para llegar al nivel A1, con clases de 20 minutos pensadas para quien habla español: pronunciación desde el primer día, frases listas para usar y repaso espaciado.",
-      en: "Six months to reach A1 level, with 20-minute lessons built for Spanish speakers: pronunciation from day one, ready-to-use phrases, and spaced review.",
-      "pt-BR": "Seis meses para chegar ao nível A1, com aulas de 20 minutos pensadas para quem fala espanhol: pronúncia desde o primeiro dia, frases prontas para usar e revisão espaçada.",
+      es: "Seis meses para llegar al nivel A1, con clases de 15 minutos pensadas para quien habla español: pronunciación desde el primer día, frases listas para usar y repaso espaciado.",
+      en: "Six months to reach A1 level, with 15-minute lessons built for Spanish speakers: pronunciation from day one, ready-to-use phrases, and spaced review.",
+      "pt-BR": "Seis meses para chegar ao nível A1, com aulas de 15 minutos pensadas para quem fala espanhol: pronúncia desde o primeiro dia, frases prontas para usar e revisão espaçada.",
     },
   },
 ];

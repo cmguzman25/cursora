@@ -20,7 +20,6 @@ const SECCIONES = {
     "🗣️ Tus frases de hoy",
     "🔊 Cómo suena",
     "⚠️ Ojo, que en español no es así",
-    "✍️ Practica",
     "🔁 Repaso relámpago",
     "🎒 Tu misión",
   ],
@@ -35,7 +34,7 @@ const SECCIONES = {
 
 // palabras / tiempo declarado en la cabecera, por tipo de clase
 const RANGOS = {
-  A: { min: 1100, max: 1800, minutos: 20 },
+  A: { min: 850, max: 1500, minutos: 15 },
   B: { min: 700, max: 1200, minutos: 15 },
   D: { min: 800, max: 1400, minutos: 10 },
 };
@@ -130,25 +129,23 @@ for (const file of archivos) {
       fallo(`la sección de frases tiene ${altavoces(frases)} altavoces, y hacen falta al menos 8`);
     }
 
-    // Practica: los tres peldaños y las soluciones
-    const practica = raw.split("## ✍️ Practica")[1]?.split("\n## ")[0] ?? "";
-    for (const peldano of ["### A. Reconoce", "### B. Completa", "### C. Produce", "### ✅ Soluciones"]) {
-      if (!practica.includes(peldano)) fallo(`falta "${peldano}" dentro de Practica`);
-    }
-    if (altavoces(practica) > 0) {
-      fallo(`hay altavoces en los ejercicios: ahí el alumno tiene que producir, no escuchar`);
-    }
-
     // Un say: con texto explícito y espacios sin escapar rompe el enlace
     [...raw.matchAll(/\]\(say:([^)]*)\)/g)].forEach((m) => {
       if (/\s/.test(m[1])) fallo(`el altavoz "say:${m[1]}" lleva espacios sin escapar (usa %20)`);
     });
 
-    // Repaso relámpago: cinco preguntas (2 + 2 + 1)
+    // Repaso relámpago: cinco preguntas (2 + 2 + 1), con sus respuestas y sin
+    // altavoces — aquí el trabajo es recordar, no escuchar.
     const repaso = raw.split("## 🔁 Repaso relámpago")[1]?.split("\n## ")[0] ?? "";
     const items = [...repaso.matchAll(/^\s*(?:\d+\.|[-*])\s+\S/gm)].length;
     if (items !== 5) fallo(`el repaso relámpago tiene ${items} preguntas y el contrato pide 5`);
     if (!/\*\*Respuestas:?\*\*/.test(repaso)) fallo(`el repaso relámpago no trae sus respuestas`);
+    if (altavoces(repaso) > 0) fallo(`hay altavoces en el repaso relámpago`);
+
+    // Una clase enseña, muestra y hace recordar: no lleva ejercicios
+    if (/^##+ .*(Practica|Practíca|Ejercicios|Soluciones)/im.test(raw)) {
+      fallo(`hay una sección de ejercicios, y una clase no los lleva`);
+    }
   }
 
   // Tono: palabras que hacen sentir torpe al alumno

@@ -17,8 +17,8 @@ Imagina a una persona concreta y escribe para ella:
 
 - **Adulta, hispanohablante, y empieza de cero o casi.** Quizá vio inglés en el
   colegio hace quince años y le quedó el *my name is*. Quizá ni eso.
-- **Tiene poco tiempo.** Estudia entre 20 y 30 minutos al día, casi siempre desde
-  el teléfono, muchas veces cansada.
+- **Tiene poco tiempo.** Estudia un cuarto de hora al día, casi siempre desde el
+  teléfono, muchas veces cansada.
 - **Ya lo intentó antes y lo dejó.** Con una app de rachas, con un libro, con un
   curso que empezaba por el verbo *to be* y terminaba por el verbo *to be*. Llega
   con la sospecha de que "no es buena para los idiomas".
@@ -31,9 +31,9 @@ Todo lo que sigue existe para que esa persona llegue a la clase 100.
 ### El objetivo, en una línea
 
 Que al terminar las 24 semanas pueda **sostener conversaciones cortas y sencillas
-sobre su vida diaria**, en presente, pasado y futuro cercano, con unas 900
+sobre su vida diaria**, en presente, pasado y futuro cercano, con unas 800
 palabras y sin quedarse en blanco. Eso es el nivel A1 del Marco Común Europeo
-(MCER), y es una meta realista para seis meses a 20 minutos diarios.
+(MCER), y es una meta realista para seis meses a 15 minutos diarios.
 
 Lo que **no** es el objetivo: hablar sin acento, entender películas sin
 subtítulos, ni saberse la lista completa de verbos irregulares. Prometer eso a
@@ -65,7 +65,8 @@ que sepa *butterfly*, *pumpkin* y *skyscraper*.
 **Cómo se traduce:** todo el vocabulario del curso sale de las listas de alta
 frecuencia (referencia: el vocabulario A1 del MCER y las listas de frecuencia del
 inglés general). Una palabra entra al curso solo si el alumno la va a necesitar
-en los próximos seis meses. El curso completo suma entre 850 y 1.000 palabras.
+en los próximos seis meses. El curso completo suma entre 570 y 850 palabras (la
+cuenta está en la sección 5.1).
 
 ### 2.3. Frases enteras, no piezas sueltas
 
@@ -142,8 +143,8 @@ los cursos de inglés:
 | Tablas de conjugación completas de entrada | El A1 no necesita el cuadro entero, necesita cuatro formas que pueda usar hoy |
 | Explicaciones gramaticales largas | Si la explicación pasa de 400 palabras, el problema es la explicación |
 | Metalenguaje sin traducir ("gerundio", "perífrasis", "complemento") | Muchos alumnos tampoco lo tienen claro en español |
-| Rellenar huecos sin contexto | Se resuelven por patrón, sin entender ni una palabra |
-| Ejercicios sin respuestas | El alumno estudia solo: sin la solución no puede corregirse |
+| Rellenar huecos sin contexto, aunque sea en un cuestionario | Se resuelven por patrón, sin entender ni una palabra |
+| Preguntas sin respuesta a la vista | El alumno estudia solo: sin la solución no puede corregirse |
 | "Es fácil", "simplemente", "obviamente", "basta con" | Si al alumno no le sale, esas palabras solo lo humillan |
 | Traducir palabra por palabra | Es el origen de la mitad de los errores del hispanohablante |
 | Contenido de nivel A2 colado "porque es útil" | El *present perfect*, los condicionales y los *phrasal verbs* no van en este curso |
@@ -163,7 +164,7 @@ clase**, sin contar las tablas de vocabulario:
 |---|---|---|---|
 | 0 – 3 | ~70 % | ~30 % | Todo se explica y se traduce en español |
 | 4 – 7 | ~55 % | ~45 % | Los diálogos ya no se traducen enteros, solo lo nuevo |
-| 8 – 10 | ~40 % | ~60 % | Las instrucciones de los ejercicios pasan a inglés simple |
+| 8 – 10 | ~40 % | ~60 % | Los enunciados del repaso y de la misión pasan a inglés simple |
 | 11 – 12 | ~30 % | ~70 % | Solo se traduce lo que de verdad haría tropezar |
 
 No hace falta medirlo con precisión de laboratorio. Sí hace falta que la
@@ -182,22 +183,34 @@ Ni dos estructuras, ni quince palabras. Cuando un tema no cabe, **se parte en do
 clases** — por eso el pasado simple ocupa cuatro clases y no una. Lo que nunca se
 hace es apretar.
 
-Doce palabras por clase × 88 clases de contenido ≈ 1.000 palabras al terminar, que
-es exactamente el vocabulario que define un A1.
+El curso tiene **71 clases de tipo A**, así que la cuenta del vocabulario sale
+así: de 8 a 12 palabras por clase dan entre 570 y 850 palabras al terminar. Un A1
+se define por un vocabulario de entre 500 y 1.000 palabras, de modo que el curso
+aterriza dentro del nivel incluso por el extremo bajo del rango.
+
+Dos precisiones para que la cuenta no se desmadre:
+
+- **Las clases ★ y los cuestionarios no introducen vocabulario nuevo.** Repasan el
+  que ya salió. Si en un repaso aparece una palabra que no se enseñó antes, está
+  mal puesta.
+- **La clase 12.2 es la excepción declarada.** Su título promete cien palabras,
+  y son cien palabras **ya vistas**, reunidas en una lista de consulta. No
+  introduce ninguna nueva.
 
 ### 5.2. Extensión y tiempo declarado
 
 | Tipo de clase | Palabras | Tiempo que declara la cabecera |
 |---|---|---|
-| A — Clase normal | 1.100 – 1.800 | 20 min |
+| A — Clase normal | 850 – 1.500 | 15 min |
 | B — Repaso de unidad (★) | 700 – 1.200 | 15 min |
 | C — Cuestionario | (no es Markdown) | — |
 | D — Clase de orientación | 800 – 1.400 | 10 min |
 
-El tiempo declarado es fijo por tipo, y sale de esta cuenta: leer 1.500 palabras
-en español con inglés intercalado lleva unos 10 minutos, y hacer los ejercicios y
-la misión, otros 10. De ahí los 20 minutos de una clase tipo A. Como el rango de
-palabras está acotado, el número declarado siempre es honesto.
+El tiempo declarado es fijo por tipo, y sale de esta cuenta: leer 1.200 palabras
+en español con inglés intercalado lleva unos 8 minutos, y decir las frases en voz
+alta, contestar el repaso y hacer la misión, unos 7. De ahí los 15 minutos de una
+clase tipo A. Como el rango de palabras está acotado, el número declarado siempre
+es honesto.
 
 **El máximo es firme; el mínimo es orientativo.** Una clase de vocabulario con
 mucha tabla informa más en 1.200 palabras que en 1.700, y estirarla sería el
@@ -207,15 +220,15 @@ relleno que este contrato prohíbe.
 
 ### Tipo A — Clase normal
 
-El formato por defecto: 88 de las 100 clases. Cabecera exacta:
+El formato por defecto: 71 de las 100 clases. Cabecera exacta:
 
 ```markdown
 # 3.2 — He works: la -s que todo el mundo olvida
 
-> Unidad 3 · Mi día a día · Semana 6 · ⏱️ 20 min
+> Unidad 3 · Mi día a día · Semana 6 · ⏱️ 15 min
 ```
 
-Y después estas **nueve secciones, siempre en este orden y sin saltarse
+Y después estas **ocho secciones, siempre en este orden y sin saltarse
 ninguna**:
 
 #### 1. `## 🎯 Al terminar vas a poder`
@@ -309,25 +322,7 @@ recuerdan dos de la lista que sí apliquen.
 
 *80 a 150 palabras.*
 
-#### 7. `## ✍️ Practica`
-
-De 12 a 18 ejercicios, **siempre en esta escalera de tres peldaños**:
-
-- **A. Reconoce** (4–6): elegir entre dos opciones, marcar verdadero o falso,
-  emparejar. Casi sin producción.
-- **B. Completa** (4–6): frases a las que les falta una palabra, pero **con
-  contexto suficiente** para entenderlas. Nunca frases sueltas sin sentido.
-- **C. Produce** (4–6): traducir del español al inglés, responder preguntas
-  personales, escribir tres frases propias. Aquí es donde de verdad se aprende.
-
-La sección cierra con `### ✅ Soluciones`, con la respuesta de todos los ítems y,
-en los de la parte C, un modelo posible más la nota "hay otras formas correctas".
-No se usan bloques desplegables: el renderizador de la app no los soporta, así
-que se avisa con una línea ("intenta todo antes de bajar").
-
-*250 a 400 palabras.*
-
-#### 8. `## 🔁 Repaso relámpago`
+#### 7. `## 🔁 Repaso relámpago`
 
 Cinco preguntas de clases **anteriores**, con la regla de reparto de la
 sección 8. Se plantean como pregunta, y las respuestas van juntas al final de la
@@ -335,13 +330,16 @@ sección. Nunca es un resumen para releer: es un examen corto de memoria.
 
 *80 a 140 palabras.*
 
-#### 9. `## 🎒 Tu misión`
+#### 8. `## 🎒 Tu misión`
 
-Una tarea concreta y corta (5 a 10 minutos) que se hace **fuera de la pantalla**:
-grabarse diciendo cinco frases, escribirle un mensaje real a alguien, contar en
-voz alta lo que hay en la cocina, mandar un audio a un amigo. Reglas:
+**Es la única producción de la clase** (ver sección 12: aquí no hay ejercicios),
+así que es donde el alumno pasa de reconocer a usar. Una tarea concreta y corta (5 a 10 minutos) que se hace **fuera de la
+pantalla**: grabarse diciendo cinco frases, escribirle un mensaje real a alguien,
+contar en voz alta lo que hay en la cocina, mandar un audio a un amigo. Reglas:
 
 - Una sola misión, con criterio de "terminada" claro.
+- **Siempre incluye producir**, no solo escuchar o repetir: al menos una frase
+  que el alumno tenga que construir él.
 - Nada que exija pagar, registrarse o instalar algo.
 - Cuando toque escuchar, se propone algo que el alumno ya tiene a mano (el
   altavoz de un traductor, los subtítulos de una serie que ya ve).
@@ -464,10 +462,10 @@ los dos puntos, **con `%20` en lugar de los espacios**:
 | 🔊 Cómo suena | Las palabras del par mínimo |
 | 📖 y 🎒 de la clase 0.3 | Las palabras de ejemplo de los nueve sonidos. Es la única clase de tipo D con audio: su tema **son** los sonidos |
 
-**Dónde no se marca nunca:** en los ejercicios ni en sus soluciones. Ahí el
-alumno tiene que producir, y un botón que se lo dice hecho le quita el trabajo
-que hace que aprenda. Tampoco en la columna *Ejemplo* de la tabla de
-vocabulario: sería el mismo audio dos veces en la misma fila.
+**Dónde no se marca nunca:** en el repaso relámpago. Ahí el alumno tiene que
+recordar, y un botón que se lo dice hecho le quita el trabajo que hace que
+aprenda. Tampoco en la columna *Ejemplo* de la tabla de vocabulario: sería el
+mismo audio dos veces en la misma fila.
 
 La voz la pone el navegador del alumno, así que suena algo distinta en cada
 dispositivo y no siempre es perfecta. Por eso el audio **no sustituye** a la
@@ -602,7 +600,7 @@ agrega a la tabla** y se le asigna clase.
 ```markdown
 # X.Y — Título
 
-> Unidad X · Nombre de la unidad · Semana N · ⏱️ 20 min
+> Unidad X · Nombre de la unidad · Semana N · ⏱️ 15 min
 
 ## 🎯 Al terminar vas a poder
 
@@ -645,14 +643,6 @@ agrega a la tabla** y se le asigna clase.
 - ❌ *…* → ✅ *…*
   [Una línea de por qué]
 
-## ✍️ Practica
-
-### A. Reconoce
-### B. Completa
-### C. Produce
-
-### ✅ Soluciones
-
 ## 🔁 Repaso relámpago
 
 [5 preguntas: 2 de la clase anterior, 2 de la unidad anterior, 1 antigua]
@@ -688,9 +678,19 @@ agrega a la tabla** y se le asigna clase.
 |---|---|---|---|---|
 ```
 
-## 12. Lo que hoy no podemos dar
+## 12. Lo que este curso no cubre
 
 Conviene decirlo sin adornos, porque afecta a cómo se escribe cada clase:
+
+- **Las clases no llevan ejercicios de práctica.** Ni una sección "Practica", ni
+  huecos para rellenar, ni listas de frases para traducir con sus soluciones
+  debajo. Una clase enseña, muestra en contexto y hace recordar; la repetición
+  intensiva no es su trabajo.
+
+  Lo que sí lleva, y no se toca, es el **repaso relámpago** (recordar) y la
+  **misión** (producir). Y nunca se le explica esto al alumno dentro de una
+  clase: no se le anuncia lo que el curso no trae ni se le manda a buscarlo a
+  otra parte.
 
 - **El audio es sintético y depende del dispositivo.** La voz la pone el
   navegador del alumno, así que un iPhone reciente suena bastante natural y un
@@ -701,8 +701,10 @@ Conviene decirlo sin adornos, porque afecta a cómo se escribe cada clase:
 - **No hay comprensión oral extendida.** Escuchar frases sueltas no es lo mismo
   que seguir una conversación. En este curso no se puede practicar; en la clase
   12.8 se dice dónde hacerlo.
-- **No hay corrección de lo que el alumno produce.** Por eso todos los ejercicios
-  llevan solución y los de producción libre llevan un modelo de respuesta.
+- **No hay corrección de lo que el alumno produce.** El repaso relámpago lleva
+  sus respuestas y el cuestionario de cada unidad explica cada opción, pero lo
+  que el alumno escribe o dice por su cuenta en la misión no lo corrige nadie.
+  Por eso la clase 0.4 le enseña a usar un asistente de IA como corrector.
 - **No hay práctica con otra persona.** Las misiones de la parte oral se diseñan
   para hacerse en solitario, y en la clase 12.8 se explica dónde buscar con quién
   hablar.
@@ -719,10 +721,11 @@ node content/courses/ingles-a1/verificar-lecciones.mjs
 ```
 
 Comprueba lo que se puede medir sin leer: el rango de palabras por tipo, el
-tiempo declarado, el formato de la cabecera, que estén las nueve secciones en
-orden, que la tabla de vocabulario tenga entre 8 y 12 filas, que "Practica" tenga
-sus tres peldaños y sus soluciones, que no haya palabras prohibidas, HTML, ni
-referencias a archivos del repositorio. Sale con código 1 si encuentra algo.
+tiempo declarado, el formato de la cabecera, que estén las ocho secciones en
+orden y sin ninguna de más, que la tabla de vocabulario tenga entre 8 y 12 filas,
+que el repaso tenga cinco preguntas con sus respuestas, que los altavoces estén
+donde toca, que no haya palabras prohibidas, HTML, ni referencias a archivos del
+repositorio. Sale con código 1 si encuentra algo.
 
 Lo que hay que revisar a mano:
 
@@ -734,14 +737,14 @@ Lo que hay que revisar a mano:
 - [ ] ¿Las palabras de la tabla son de alta frecuencia y aparecen en la clase?
 - [ ] ¿La pronunciación está escrita con corchetes y sílaba fuerte en mayúsculas?
 - [ ] ¿Los altavoces `(say:)` están donde toca —diálogo, frases, tabla de
-      vocabulario y par mínimo— y **no** en los ejercicios?
+      vocabulario y par mínimo— y **no** en el repaso relámpago?
 - [ ] ¿Cada altavoz lee lo que debería? Los textos con `…` o con huecos necesitan
       el texto explícito detrás de `say:`.
 - [ ] ¿Los errores de la sección ⚠️ salen de la lista maestra de la sección 9?
-- [ ] ¿"Practica" tiene sus tres peldaños, con contexto en todas las frases?
-- [ ] ¿Todos los ejercicios tienen solución, y los de producción, un modelo?
-- [ ] ¿El repaso relámpago respeta el reparto 2 + 2 + 1?
-- [ ] ¿La misión se puede hacer en 10 minutos, gratis y sin instalar nada?
+- [ ] ¿El repaso relámpago respeta el reparto 2 + 2 + 1, y trae sus respuestas?
+- [ ] ¿No se ha colado ninguna sección de ejercicios (sección 12)?
+- [ ] ¿La misión pide **producir** algo, y se puede hacer en 10 minutos, gratis y
+      sin instalar nada?
 - [ ] ¿No se ha colado nada de nivel A2?
 - [ ] ¿La proporción español/inglés corresponde al tramo de la unidad?
 - [ ] ¿Se marcó `[x]` en el `README.md`, y coincide con `manifest.ts`?
