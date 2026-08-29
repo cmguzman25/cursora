@@ -1,6 +1,7 @@
 "use client";
 
-import { Check, Circle } from "lucide-react";
+import { useMemo, useState } from "react";
+import { Check, ChevronDown, Circle } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
@@ -49,6 +50,46 @@ export function CourseLessonList({ courseSlug, lessons }: CourseLessonListProps)
   const progressPct = lessons.length
     ? Math.round((completedLessons.length / lessons.length) * 100)
     : 0;
+
+  const modules = useMemo(() => groupByModule(lessons, locale), [lessons, locale]);
+
+  /** The module holding the lesson you'd land on if you pressed "continue". */
+  const activeModuleId = useMemo(() => {
+    const target = currentLessonId ?? lessons[0]?.id;
+    const holder = modules.find((group) => group.lessons.some((lesson) => lesson.id === target));
+    return holder?.moduleId ?? modules[0]?.moduleId;
+  }, [modules, currentLessonId, lessons]);
+
+  // Open the first module to begin with: for someone who hasn't started, that
+  // *is* the active one, so the common case never visibly rearranges when
+  // progress lands a moment later.
+  const [openModules, setOpenModules] = useState<Set<string>>(
+    () => new Set(modules[0] ? [modules[0].moduleId] : []),
+  );
+
+  // Once progress arrives, fold everything except where the reader actually
+  // is. Adjusted during render rather than in an effect, since it is derived
+  // from freshly-arrived async data — the pattern used in `ExamQuiz` too. See:
+  // https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes
+  const [appliedDefault, setAppliedDefault] = useState<string | null>(null);
+  if (!isPending && activeModuleId && appliedDefault !== activeModuleId) {
+    setAppliedDefault(activeModuleId);
+    setOpenModules(new Set([activeModuleId]));
+  }
+
+  const allOpen = openModules.size === modules.length;
+
+  function toggleModule(moduleId: string) {
+    setOpenModules((current) => {
+      const next = new Set(current);
+      if (!next.delete(moduleId)) next.add(moduleId);
+      return next;
+    });
+  }
+
+  function toggleAll() {
+    setOpenModules(allOpen ? new Set() : new Set(modules.map((group) => group.moduleId)));
+  }
 
   return (
     <div className="flex flex-col gap-6">
@@ -101,10 +142,52 @@ export function CourseLessonList({ courseSlug, lessons }: CourseLessonListProps)
         </div>
       </div>
 
-      {groupByModule(lessons, locale).map(({ moduleId, moduleLabel, lessons: moduleLessons }) => (
+      <div className="flex justify-end">
+        <button
+          type="button"
+          onClick={toggleAll}
+          className="rounded-lg px-2 py-1 text-xs font-semibold text-zinc-500 transition-colors hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
+        >
+          {allOpen ? t("collapseAll") : t("expandAll")}
+        </button>
+      </div>
+
+      {modules.map(({ moduleId, moduleLabel, lessons: moduleLessons }) => {
+        const isOpen = openModules.has(moduleId);
+        const doneCount = moduleLessons.filter((lesson) => isCompleted(lesson.id)).length;
+        const panelId = `module-panel-${moduleId}`;
+
+        return (
         <div key={moduleId} className="flex flex-col gap-2">
-          <h2 className="text-sm font-semibold text-zinc-500 dark:text-zinc-400">{moduleLabel}</h2>
-          <ul className="flex flex-col divide-y divide-zinc-200 overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:divide-zinc-800 dark:border-zinc-800 dark:bg-zinc-900">
+          <h2>
+            <button
+              type="button"
+              onClick={() => toggleModule(moduleId)}
+              aria-expanded={isOpen}
+              aria-controls={panelId}
+              className="flex w-full items-center gap-2 rounded-lg px-1 py-1 text-left text-sm font-semibold text-zinc-500 transition-colors hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
+            >
+              <ChevronDown
+                aria-hidden="true"
+                className={`h-4 w-4 shrink-0 transition-transform ${isOpen ? "" : "-rotate-90"}`}
+              />
+              <span className="min-w-0 flex-1">{moduleLabel}</span>
+              {/* Kept outside the panel: the count is the one thing worth
+                  knowing about a module you've folded away. */}
+              {isPending ? (
+                <Skeleton className="h-3.5 w-10" />
+              ) : (
+                <span className="shrink-0 text-xs font-medium text-zinc-400 tabular-nums dark:text-zinc-500">
+                  {doneCount}/{moduleLessons.length}
+                </span>
+              )}
+            </button>
+          </h2>
+          <ul
+            id={panelId}
+            hidden={!isOpen}
+            className="flex flex-col divide-y divide-zinc-200 overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:divide-zinc-800 dark:border-zinc-800 dark:bg-zinc-900"
+          >
             {moduleLessons.map((lesson) => (
               <li key={lesson.id}>
                 <Link
@@ -130,7 +213,8 @@ export function CourseLessonList({ courseSlug, lessons }: CourseLessonListProps)
             ))}
           </ul>
         </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

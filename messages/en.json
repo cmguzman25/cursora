@@ -82,7 +82,9 @@
     "enroll": "Enroll",
     "leave": "Leave course",
     "leaveHint": "Leave course — your progress is kept",
-    "enrolled": "Enrolled"
+    "enrolled": "Enrolled",
+    "expandAll": "Expand all",
+    "collapseAll": "Collapse all"
   },
   "auth": {
     "brandPanel": {

@@ -82,7 +82,9 @@
     "enroll": "Inscrever-me",
     "leave": "Sair do curso",
     "leaveHint": "Sair do curso — seu progresso é mantido",
-    "enrolled": "Inscrito"
+    "enrolled": "Inscrito",
+    "expandAll": "Expandir tudo",
+    "collapseAll": "Recolher tudo"
   },
   "auth": {
     "brandPanel": {
