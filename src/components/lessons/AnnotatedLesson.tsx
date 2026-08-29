@@ -610,7 +610,10 @@ export function AnnotatedLesson({
               if (ok) {
                 pendingRef.current = null;
                 window.getSelection()?.removeAllRanges();
-                writePanelPreference(true);
+                // Deliberately *not* opening the rail here. Doing so narrows
+                // the article, reflows the paragraph the reader is looking at
+                // and throws the page off — a jarring price for a comment they
+                // just wrote and can already see highlighted in the text.
               }
               return ok;
             }}
