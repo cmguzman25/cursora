@@ -70,7 +70,8 @@
       "perfectScore": "¡Perfecto! No fallaste ninguna.",
       "retryWrong": "Repetir {count, plural, one {la pregunta fallada} other {las # falladas}}",
       "restartAll": "Empezar de cero",
-      "retryRunBadge": "Solo falladas"
+      "retryRunBadge": "Solo falladas",
+      "languageLabel": "Idioma de las preguntas"
     }
   },
   "courseDetail": {

@@ -1,4 +1,4 @@
-import type { ExamQuizQuestion } from "../../types";
+import type { LocalizedQuestions } from "../../types";
 
 /**
  * Relaciona cada clase de tipo cuestionario con su banco de preguntas.
@@ -24,4 +24,4 @@ import type { ExamQuizQuestion } from "../../types";
  *   11-08-quiz-unidad-11 → unidad-11.ts  (12–15)  modales, comparativos
  *   12-07-examen-final-a1 → examen-final.ts (40)  todo el A1, preguntas nuevas
  */
-export const EXAM_QUIZZES: Record<string, ExamQuizQuestion[]> = {};
+export const EXAM_QUIZZES: Record<string, LocalizedQuestions> = {};

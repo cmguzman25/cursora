@@ -70,7 +70,8 @@
       "perfectScore": "Perfeito! Você não errou nenhuma.",
       "retryWrong": "Refazer {count, plural, one {a que errei} other {as # que errei}}",
       "restartAll": "Começar do zero",
-      "retryRunBadge": "Só as erradas"
+      "retryRunBadge": "Só as erradas",
+      "languageLabel": "Idioma das perguntas"
     }
   },
   "courseDetail": {

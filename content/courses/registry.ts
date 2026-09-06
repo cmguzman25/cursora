@@ -1,4 +1,4 @@
-import type { CourseManifest, ExamQuizQuestion } from "./types";
+import type { CourseManifest, LocalizedQuestions } from "./types";
 import { manifest as awsCloudPractitioner } from "./aws-cloud-practitioner/manifest";
 import { EXAM_QUIZZES as AWS_CLOUD_PRACTITIONER_QUIZZES } from "./aws-cloud-practitioner/preguntas";
 import { manifest as fullStackDeveloperAws } from "./full-stack-developer-aws/manifest";
@@ -40,12 +40,16 @@ export function getLessonTotals(): Record<string, number> {
 }
 
 /** Question banks for "quiz"-kind lessons (see `LessonMeta.kind`), keyed by course slug then lesson id. */
-const EXAM_QUIZZES: Record<string, Record<string, ExamQuizQuestion[]>> = {
+const EXAM_QUIZZES: Record<string, Record<string, LocalizedQuestions>> = {
   [awsCloudPractitioner.slug]: AWS_CLOUD_PRACTITIONER_QUIZZES,
   [awsDataEngineerAssociate.slug]: AWS_DATA_ENGINEER_QUIZZES,
   [inglesA1.slug]: INGLES_A1_QUIZZES,
 };
 
-export function getExamQuiz(courseSlug: string, lessonId: string): ExamQuizQuestion[] | null {
+/**
+ * Every translation of a bank, not just the one for the current locale: the
+ * quiz offers a language switch, so the client needs them all.
+ */
+export function getExamQuiz(courseSlug: string, lessonId: string): LocalizedQuestions | null {
   return EXAM_QUIZZES[courseSlug]?.[lessonId] ?? null;
 }

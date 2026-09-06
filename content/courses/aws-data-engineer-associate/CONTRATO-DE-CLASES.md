@@ -334,6 +334,28 @@ Reglas de diseño del banco de preguntas (fáciles de romper sin darse cuenta):
 - **Un mismo concepto se nombra siempre igual** en todas las preguntas, y con el
   mismo nombre que usó la lección que lo enseñó.
 
+#### Versión en inglés del banco
+
+El DEA-C01 **no se ofrece en español** (lección 0.2). Rendirlo significa leer los
+enunciados en inglés a razón de dos minutos por pregunta, así que descifrar la
+redacción es parte de lo que hay que entrenar. Por eso cada banco se escribe
+además en inglés, en `preguntas/modulo-N.en.ts`, y la app muestra un conmutador
+**ES / EN** dentro del quiz.
+
+- **No es una traducción literal.** Se conserva el escenario, la respuesta
+  correcta y el motivo por el que falla cada distractor, pero la redacción imita
+  la del examen real: *A company…*, *A data engineer needs to…*, *Which solution
+  will meet these requirements with the LEAST operational overhead?*, *(Choose
+  two.)*. Las cifras se escriben como allí: `2 minutes`, `40 GB`, `12 GB`.
+- **Los dos bancos tienen que quedar paralelos:** mismos `id`, mismo orden,
+  mismas letras de opción, mismos `correct` y misma cantidad de tips. El
+  progreso del quiz se guarda por índice y el idioma se puede cambiar a mitad de
+  un repaso; si un banco se desordena, se califica la pregunta equivocada.
+- **Los tips citan la frase en su idioma.** El tip español que enseña a
+  reconocer *"los datos llegan tarde"* cita en inglés *"data arrives late"*: la
+  señal que hay que reconocer en el examen está en inglés.
+- Cambiar una pregunta obliga a cambiar las dos versiones en el mismo commit.
+
 ### Tipo D — Simulacro completo
 
 Una sola lección en todo el curso: **11.4**. Mismo formato de datos que el Tipo C

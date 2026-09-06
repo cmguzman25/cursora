@@ -46,6 +46,18 @@ export interface ExamQuizQuestion {
   tips: string[];
 }
 
+/**
+ * A question bank in every language it has been written in — same shape as
+ * `LocalizedText`: the default locale is required, the rest are optional.
+ *
+ * The translations have to stay parallel: same questions, same order, same
+ * option ids and same correct answers. The quiz keys its progress by question
+ * index and lets the learner switch language in the middle of a run, so a bank
+ * that drifted out of order would score the wrong question.
+ */
+export type LocalizedQuestions = Partial<Record<AppLocale, ExamQuizQuestion[]>> &
+  Record<typeof defaultLocale, ExamQuizQuestion[]>;
+
 export interface CourseManifest {
   slug: string;
   title: LocalizedText;

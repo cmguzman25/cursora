@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowLeft, Check, Lightbulb, RotateCcw, Target, X } from "lucide-react";
-import type { ExamQuizQuestion } from "@content/courses/types";
+import type { LocalizedQuestions } from "@content/courses/types";
+import { localeLabels } from "@/i18n/locale-labels";
+import { defaultLocale, routing, type AppLocale } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
@@ -12,11 +14,50 @@ import { useQuizProgress } from "@/hooks/useQuizProgress";
 interface ExamQuizProps {
   courseSlug: string;
   lessonId: string;
-  questions: ExamQuizQuestion[];
+  /** Every translation of the bank; which one is on screen is the learner's choice. */
+  banks: LocalizedQuestions;
+  locale: AppLocale;
 }
 
 /** How long the quick "correct / incorrect" flash stays up before auto-advancing. */
 const QUICK_FEEDBACK_MS = 900;
+
+const LANGUAGE_PREFERENCE_KEY = "cursora:quiz-language";
+
+/**
+ * Which language the questions are read in is a per-browser preference, not
+ * per-quiz state: someone drilling for an English-language exam wants every
+ * bank in English without re-choosing on each one. It lives in `localStorage`
+ * as an external store so the server can render the page's own locale and the
+ * client can adopt the stored choice during hydration, with no mount effect.
+ */
+const languageListeners = new Set<() => void>();
+
+function subscribeToQuizLanguage(listener: () => void) {
+  languageListeners.add(listener);
+  return () => {
+    languageListeners.delete(listener);
+  };
+}
+
+function readQuizLanguage(): AppLocale | null {
+  try {
+    const stored = window.localStorage.getItem(LANGUAGE_PREFERENCE_KEY);
+    return routing.locales.find((locale) => locale === stored) ?? null;
+  } catch {
+    // Private mode or blocked storage: fall back to the page's locale.
+    return null;
+  }
+}
+
+function writeQuizLanguage(locale: AppLocale) {
+  try {
+    window.localStorage.setItem(LANGUAGE_PREFERENCE_KEY, locale);
+  } catch {
+    // The preference just won't persist; the UI still updates.
+  }
+  for (const listener of languageListeners) listener();
+}
 
 function optionStateClasses(opts: {
   revealed: boolean;
@@ -40,8 +81,18 @@ function optionStateClasses(opts: {
   return "border-zinc-200 opacity-70 dark:border-zinc-700";
 }
 
-export function ExamQuiz({ courseSlug, lessonId, questions }: ExamQuizProps) {
+export function ExamQuiz({ courseSlug, lessonId, banks, locale }: ExamQuizProps) {
   const t = useTranslations("lesson.quiz");
+
+  // Only the languages this bank was actually written in — most have one, and
+  // then there is nothing to switch between.
+  const languages = routing.locales.filter((candidate) => (banks[candidate]?.length ?? 0) > 0);
+  const storedLanguage = useSyncExternalStore(subscribeToQuizLanguage, readQuizLanguage, () => null);
+  const language =
+    (storedLanguage && languages.includes(storedLanguage) ? storedLanguage : null) ??
+    (languages.includes(locale) ? locale : languages[0]);
+  const questions = banks[language] ?? banks[defaultLocale];
+
   const { user, isLoading: isUserLoading } = useCurrentUser();
   const userId = user?.id ?? null;
   const { progress, isLoading: isProgressLoading, save } = useQuizProgress(
@@ -259,16 +310,42 @@ export function ExamQuiz({ courseSlug, lessonId, questions }: ExamQuizProps) {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <p className="flex flex-wrap items-center gap-2 text-xs font-medium tracking-wide text-zinc-400 uppercase">
-          {t("questionProgress", { current: position + 1, total: run.length })}
-          {/* A shorter run than the whole quiz can only be a redo of the
-              misses — say so, or the counter looks like the quiz shrank. */}
-          {run.length < questions.length && (
-            <span className="rounded bg-indigo-50 px-1.5 py-0.5 text-[10px] font-semibold text-indigo-600 dark:bg-indigo-950 dark:text-indigo-300">
-              {t("retryRunBadge")}
-            </span>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <p className="flex flex-wrap items-center gap-2 text-xs font-medium tracking-wide text-zinc-400 uppercase">
+            {t("questionProgress", { current: position + 1, total: run.length })}
+            {/* A shorter run than the whole quiz can only be a redo of the
+                misses — say so, or the counter looks like the quiz shrank. */}
+            {run.length < questions.length && (
+              <span className="rounded bg-indigo-50 px-1.5 py-0.5 text-[10px] font-semibold text-indigo-600 dark:bg-indigo-950 dark:text-indigo-300">
+                {t("retryRunBadge")}
+              </span>
+            )}
+          </p>
+          {languages.length > 1 && (
+            <div
+              role="group"
+              aria-label={t("languageLabel")}
+              className="flex items-center gap-0.5 rounded-lg border border-zinc-200 p-0.5 dark:border-zinc-700"
+            >
+              {languages.map((candidate) => (
+                <button
+                  key={candidate}
+                  type="button"
+                  onClick={() => writeQuizLanguage(candidate)}
+                  aria-pressed={candidate === language}
+                  title={localeLabels[candidate].name}
+                  className={`rounded-md px-2 py-0.5 text-[11px] font-semibold transition-colors ${
+                    candidate === language
+                      ? "bg-indigo-500 text-white"
+                      : "text-zinc-500 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
+                  }`}
+                >
+                  {localeLabels[candidate].code}
+                </button>
+              ))}
+            </div>
           )}
-        </p>
+        </div>
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-white">{question.prompt}</h2>
         {!isRevealed && quickFeedback === null && (
           <p className="text-sm text-zinc-500 dark:text-zinc-400">

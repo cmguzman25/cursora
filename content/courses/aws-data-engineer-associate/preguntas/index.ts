@@ -1,5 +1,6 @@
-import type { ExamQuizQuestion } from "../../types";
+import type { LocalizedQuestions } from "../../types";
 import { MODULE_1_QUESTIONS } from "./modulo-1";
+import { MODULE_1_QUESTIONS_EN } from "./modulo-1.en";
 import { MODULE_2_QUESTIONS } from "./modulo-2";
 
 /**
@@ -14,6 +15,10 @@ import { MODULE_2_QUESTIONS } from "./modulo-2";
  * counts add up to the official domain weights — don't change one without
  * rechecking the totals.
  *
+ * The real DEA-C01 is not offered in Spanish, so each bank also gets an English
+ * version in `<module>.en.ts` and the quiz shows a language switch. The
+ * translations have to stay parallel; see `LocalizedQuestions`.
+ *
  *   01-10-analisis-preguntas-modulo-1  → modulo-1.ts   (15)  fundamentos
  *   02-18-analisis-preguntas-modulo-2  → modulo-2.ts   (16)  D1 · ingesta
  *   03-17-analisis-preguntas-modulo-3  → modulo-3.ts   (12)  D1 · transformación
@@ -26,7 +31,7 @@ import { MODULE_2_QUESTIONS } from "./modulo-2";
  *   10-16-analisis-preguntas-modulo-10 → modulo-10.ts  (10)  D4 · cifrado y gobierno
  *   11-04-simulacro-completo           → simulacro.ts  (65)  todos los dominios
  */
-export const EXAM_QUIZZES: Record<string, ExamQuizQuestion[]> = {
-  "01-10-analisis-preguntas-modulo-1": MODULE_1_QUESTIONS,
-  "02-18-analisis-preguntas-modulo-2": MODULE_2_QUESTIONS,
+export const EXAM_QUIZZES: Record<string, LocalizedQuestions> = {
+  "01-10-analisis-preguntas-modulo-1": { es: MODULE_1_QUESTIONS, en: MODULE_1_QUESTIONS_EN },
+  "02-18-analisis-preguntas-modulo-2": { es: MODULE_2_QUESTIONS },
 };

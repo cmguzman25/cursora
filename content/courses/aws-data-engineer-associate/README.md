@@ -367,10 +367,10 @@ Las lecciones interactivas no tienen archivo Markdown. Su `id` en `manifest.ts`
 es el de la primera columna, y su banco de preguntas se registra en
 `preguntas/index.ts`.
 
-| Lección | `id` en el manifest | Preguntas | Archivo |
-|---|---|---|---|
-| 1.10 Fundamentos | `01-10-analisis-preguntas-modulo-1` | 15 | `preguntas/modulo-1.ts` |
-| 2.18 Ingesta | `02-18-analisis-preguntas-modulo-2` | 16 | `preguntas/modulo-2.ts` |
+| Lección | `id` en el manifest | Preguntas | Archivo | EN |
+|---|---|---|---|---|
+| 1.10 Fundamentos | `01-10-analisis-preguntas-modulo-1` | 15 | `preguntas/modulo-1.ts` | ✅ |
+| 2.18 Ingesta | `02-18-analisis-preguntas-modulo-2` | 16 | `preguntas/modulo-2.ts` | ⬜ |
 | 3.17 Transformación | `03-17-analisis-preguntas-modulo-3` | 12 | `preguntas/modulo-3.ts` |
 | 4.14 Orquestación y programación | `04-14-analisis-preguntas-modulo-4` | 10 | `preguntas/modulo-4.ts` |
 | 5.18 Almacenes de datos | `05-18-analisis-preguntas-modulo-5` | 14 | `preguntas/modulo-5.ts` |
@@ -385,6 +385,12 @@ es el de la primera columna, y su banco de preguntas se registra en
 Las 110 preguntas de los módulos de dominio respetan el peso oficial: 38 del
 dominio 1 (34,5 %), 28 del dominio 2 (25,5 %), 24 del dominio 3 (21,8 %) y 20
 del dominio 4 (18,2 %). Las 65 del simulacro son nuevas: no se reciclan.
+
+La columna **EN** marca los bancos que ya tienen su versión en inglés en
+`preguntas/modulo-N.en.ts`. El examen no se ofrece en español, así que el quiz
+muestra un conmutador ES / EN y la versión inglesa está escrita con la redacción
+del examen real, no traducida palabra por palabra. Las reglas están en
+`CONTRATO-DE-CLASES.md` (tipo C).
 
 ## Progreso
 

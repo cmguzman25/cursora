@@ -70,7 +70,8 @@
       "perfectScore": "Perfect score — you didn't miss one.",
       "retryWrong": "Redo {count, plural, one {the one I missed} other {the # I missed}}",
       "restartAll": "Start over",
-      "retryRunBadge": "Missed only"
+      "retryRunBadge": "Missed only",
+      "languageLabel": "Question language"
     }
   },
   "courseDetail": {
