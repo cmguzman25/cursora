@@ -6,6 +6,8 @@ import { manifest as awsDataEngineerAssociate } from "./aws-data-engineer-associ
 import { EXAM_QUIZZES as AWS_DATA_ENGINEER_QUIZZES } from "./aws-data-engineer-associate/preguntas";
 import { manifest as inglesA1 } from "./ingles-a1/manifest";
 import { EXAM_QUIZZES as INGLES_A1_QUIZZES } from "./ingles-a1/preguntas";
+import { manifest as videojuegoRtsUnity } from "./videojuego-rts-unity/manifest";
+import { EXAM_QUIZZES as VIDEOJUEGO_RTS_QUIZZES } from "./videojuego-rts-unity/preguntas";
 
 /**
  * Every course the app can render. Adding a course means creating its folder
@@ -20,6 +22,7 @@ export const COURSE_MANIFESTS: CourseManifest[] = [
   fullStackDeveloperAws,
   awsDataEngineerAssociate,
   inglesA1,
+  videojuegoRtsUnity,
 ];
 
 const BY_SLUG = new Map(COURSE_MANIFESTS.map((course) => [course.slug, course]));
@@ -44,6 +47,7 @@ const EXAM_QUIZZES: Record<string, Record<string, LocalizedQuestions>> = {
   [awsCloudPractitioner.slug]: AWS_CLOUD_PRACTITIONER_QUIZZES,
   [awsDataEngineerAssociate.slug]: AWS_DATA_ENGINEER_QUIZZES,
   [inglesA1.slug]: INGLES_A1_QUIZZES,
+  [videojuegoRtsUnity.slug]: VIDEOJUEGO_RTS_QUIZZES,
 };
 
 /**

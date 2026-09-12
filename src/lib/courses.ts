@@ -102,6 +102,25 @@ export const COURSES: Course[] = [
       "pt-BR": "Seis meses para chegar ao nível A1, com aulas de 15 minutos pensadas para quem fala espanhol: pronúncia desde o primeiro dia, frases prontas para usar e revisão espaçada.",
     },
   },
+  {
+    id: "videojuego-rts-unity",
+    slug: "videojuego-rts-unity",
+    category: "programming",
+    level: "intermediate",
+    durationHours: 80,
+    studentsCount: 0,
+    rating: 5.0,
+    title: {
+      es: "Crea tu RTS con Unity, Blender y Claude Code",
+      en: "Build your RTS with Unity, Blender, and Claude Code",
+      "pt-BR": "Crie seu RTS com Unity, Blender e Claude Code",
+    },
+    description: {
+      es: "Construye un juego de estrategia estilo Age of Empires desde cero: Unity para el código, Blender para tu propio arte y Claude Code como copiloto. Termina con una partida 1v1 por internet. Clases de 8 a 10 minutos.",
+      en: "Build an Age of Empires-style strategy game from scratch: Unity for the code, Blender for your own art, and Claude Code as your copilot. It ends with a 1v1 online match. 8-to-10-minute lessons.",
+      "pt-BR": "Construa um jogo de estratégia estilo Age of Empires do zero: Unity para o código, Blender para a sua própria arte e Claude Code como copiloto. Termina com uma partida 1v1 pela internet. Aulas de 8 a 10 minutos.",
+    },
+  },
 ];
 
 export function getCourse(slug: string): Course | null {
