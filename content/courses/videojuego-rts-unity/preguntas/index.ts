@@ -1,5 +1,6 @@
 import type { LocalizedQuestions } from "../../types";
 import { MODULE_0_QUESTIONS } from "./modulo-0";
+import { MODULE_1_QUESTIONS } from "./modulo-1";
 
 /**
  * Relaciona cada clase de tipo cuestionario con su banco de preguntas.
@@ -24,4 +25,5 @@ import { MODULE_0_QUESTIONS } from "./modulo-0";
  */
 export const EXAM_QUIZZES: Record<string, LocalizedQuestions> = {
   "00-08-checkpoint-modulo-0": { es: MODULE_0_QUESTIONS },
+  "01-11-checkpoint-modulo-1": { es: MODULE_1_QUESTIONS },
 };

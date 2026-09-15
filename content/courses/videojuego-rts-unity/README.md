@@ -35,17 +35,30 @@ node content/courses/videojuego-rts-unity/verificar-lecciones.mjs
 La columna **Estado** se pone a `✅` cuando la clase pasa el verificador y la
 checklist manual del contrato.
 
-Escritas: el **módulo 0 entero** (8 clases, checkpoint incluido) y la 1.6, que
-fue el **piloto** con el que se calibraron los presupuestos de longitud.
+Escritos: los **módulos 0 y 1 completos**, 19 clases con sus dos checkpoints. La
+1.6 fue el piloto con el que se calibraron los presupuestos de longitud.
 
 Todas pasan el verificador. Ninguna ha pasado todavía la parte de la checklist
-manual que exige ejecutar sus pasos: crear el proyecto en Unity 6.3, seguir la
-instalación en una máquina limpia y comprobar que cada ruta de menú está donde
+manual que exige ejecutar sus pasos: crear el proyecto en Unity 6.3, pegar los
+scripts y comprobar que compilan, y confirmar que cada ruta de menú está donde
 dice la clase. Hasta entonces se quedan en `⚠️`.
 
-Calibración medida al escribir el módulo 0: una clase de tipo B, sin código,
-ronda las 1.200 palabras. Una de tipo A con 20 a 35 líneas de código ronda las
-900 o 1.100, y las dos salen en ocho minutos.
+Calibración medida: una clase de tipo B, sin código, ronda las 1.200 palabras.
+Una de tipo A con 20 a 35 líneas de código ronda las 1.000 o 1.100. Las dos
+salen en ocho minutos.
+
+Los scripts del módulo 1 se encadenan, así que conviene leerlos como una sola
+secuencia antes de tocar ninguno:
+
+```text
+Assets/Scripts/Input/CameraPan.cs          1.6  paneo con teclado
+Assets/Scripts/Input/CameraZoom.cs         1.7  rueda y rotación con Q/E
+Assets/Scripts/Input/CameraEdgeScroll.cs   1.8  scroll de borde
+Assets/Scripts/Input/CameraBounds.cs       1.8  recorte en LateUpdate
+Assets/Scripts/Input/GroundClick.cs        1.9  raycast al suelo
+Assets/Scripts/Presentation/Spinner.cs     1.3  andamio, se borra en 1.5
+Assets/Scripts/Data/UnitData.cs            1.10 ficha de unidad
+```
 
 ---
 
@@ -72,17 +85,17 @@ clic en el suelo.
 
 | # | id | Título | Tipo | Estado |
 |---|---|---|---|---|
-| 1.1 | `01-01-el-editor-de-unity` | El editor de Unity: escena, jerarquía e Inspector | A | |
-| 1.2 | `01-02-gameobject-y-component` | GameObject y Component: el modelo mental | B | |
-| 1.3 | `01-03-tu-primer-script` | Tu primer script: MonoBehaviour y el ciclo de vida | A | |
-| 1.4 | `01-04-campos-en-el-inspector` | Campos en el Inspector: serialización y rangos | A | |
-| 1.5 | `01-05-el-terreno-del-mapa` | El terreno del mapa | A | |
-| 1.6 | `01-06-camara-rts-paneo` | La cámara RTS: paneo con teclado | A | ⚠️ piloto |
-| 1.7 | `01-07-zoom-y-rotacion` | Zoom y rotación de la cámara | A | |
-| 1.8 | `01-08-scroll-de-borde-y-limites` | Scroll de borde y límites del mapa | A | |
-| 1.9 | `01-09-del-raton-al-mundo` | Del ratón al mundo: raycast, capas y clic en el suelo | A | |
-| 1.10 | `01-10-datos-con-scriptableobject` | Los datos del juego con ScriptableObject | A | |
-| 1.11 | `01-11-checkpoint-modulo-1` | Checkpoint del módulo 1 | C | |
+| 1.1 | `01-01-el-editor-de-unity` | El editor de Unity: escena, jerarquía e Inspector | A | ⚠️ escrita |
+| 1.2 | `01-02-gameobject-y-component` | GameObject y Component: el modelo mental | B | ⚠️ escrita |
+| 1.3 | `01-03-tu-primer-script` | Tu primer script: MonoBehaviour y el ciclo de vida | A | ⚠️ escrita |
+| 1.4 | `01-04-campos-en-el-inspector` | Campos en el Inspector: serialización y rangos | A | ⚠️ escrita |
+| 1.5 | `01-05-el-terreno-del-mapa` | El terreno del mapa | A | ⚠️ escrita |
+| 1.6 | `01-06-camara-rts-paneo` | La cámara RTS: paneo con teclado | A | ⚠️ escrita |
+| 1.7 | `01-07-zoom-y-rotacion` | Zoom y rotación de la cámara | A | ⚠️ escrita |
+| 1.8 | `01-08-scroll-de-borde-y-limites` | Scroll de borde y límites del mapa | A | ⚠️ escrita |
+| 1.9 | `01-09-del-raton-al-mundo` | Del ratón al mundo: raycast, capas y clic en el suelo | A | ⚠️ escrita |
+| 1.10 | `01-10-datos-con-scriptableobject` | Los datos del juego con ScriptableObject | A | ⚠️ escrita |
+| 1.11 | `01-11-checkpoint-modulo-1` | Checkpoint del módulo 1 | C | ⚠️ escrita |
 
 ## Módulo 2 — Blender a fondo: el arte del juego
 

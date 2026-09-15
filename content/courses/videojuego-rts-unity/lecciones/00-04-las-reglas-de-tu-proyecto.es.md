@@ -34,7 +34,7 @@ Un buen archivo de reglas responde a cuatro preguntas:
 | Pregunta | Ejemplo de respuesta |
 |---|---|
 | ¿Con qué trabajamos? | Unity 6.3 LTS, C#, Input System |
-| ¿Dónde va cada cosa? | Los scripts de unidades en `Assets/Scripts/Units` |
+| ¿Dónde va cada cosa? | El control de la cámara en `Assets/Scripts/Input` |
 | ¿Cómo se nombra? | Clases en PascalCase, campos privados con `_` |
 | ¿Qué está prohibido? | Tocar `Library`, inventar APIs, usar el Input viejo |
 

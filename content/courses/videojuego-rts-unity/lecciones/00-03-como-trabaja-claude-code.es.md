@@ -102,7 +102,7 @@ Haz que la cámara se mueva.
 El segundo, ✅ el que sí:
 
 ```text
-En Assets/Scripts/Camera/CameraPan.cs, añade zoom con la rueda del ratón.
+En Assets/Scripts/Input/CameraPan.cs, añade zoom con la rueda del ratón.
 Usa el Input System, como el resto del archivo. Limita la altura entre 10 y
 40 metros. No toques el paneo con teclado, que ya funciona.
 ```

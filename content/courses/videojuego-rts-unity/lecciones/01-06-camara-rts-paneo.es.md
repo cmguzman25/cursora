@@ -65,7 +65,7 @@ Son 25 metros de altura y 50 grados de inclinación. Con menos altura se ve muy
 poco mapa. Con más inclinación, los edificios se ven desde arriba y pierden su
 silueta.
 
-Ahora el script. Crea la carpeta `Assets/Scripts/Camera` y dentro un script de
+Ahora el script. Crea la carpeta `Assets/Scripts/Input` y dentro un script de
 C# llamado `CameraPan`.
 
 3. Clic derecho sobre la carpeta → `Create` → `Scripting` → `MonoBehaviour Script`.
@@ -73,7 +73,7 @@ C# llamado `CameraPan`.
 
 Reemplaza todo el contenido por esto:
 
-`Assets/Scripts/Camera/CameraPan.cs`
+`Assets/Scripts/Input/CameraPan.cs`
 
 ```csharp
 using UnityEngine;
@@ -119,7 +119,7 @@ Este script es corto y conviene escribirlo a mano. Lo que sí puedes delegar es
 la variante con aceleración:
 
 ```text
-En Assets/Scripts/Camera/CameraPan.cs, añade una aceleración suave: que la
+En Assets/Scripts/Input/CameraPan.cs, añade una aceleración suave: que la
 cámara tarde 0,2 segundos en alcanzar su velocidad máxima y otros 0,2 en
 pararse. Usa Vector3.SmoothDamp. No cambies las teclas ni el rango de speed.
 ```
