@@ -77,7 +77,7 @@ const LESSONS: LessonMeta[] = [
   { id: "29-facturacion-y-costos", moduleId: "module-4", module: MODULES["module-4"], title: { es: "Recursos de facturación y costos", en: "Billing and cost management tools", "pt-BR": "Recursos de faturamento e custos" } },
   { id: "30-soporte-y-recursos-tecnicos", moduleId: "module-4", module: MODULES["module-4"], title: { es: "Soporte técnico", en: "Technical support", "pt-BR": "Suporte técnico" } },
   { id: "31-comparativas-precios-y-soporte", moduleId: "module-4", module: MODULES["module-4"], title: { es: "★ Tablas comparativas: precios y soporte", en: "★ Comparison tables: pricing and support", "pt-BR": "★ Tabelas comparativas: preços e suporte" } },
-  { id: "32-analisis-preguntas-modulo-4", moduleId: "module-4", module: MODULES["module-4"], title: { es: "Analiza preguntas de examen: precios y soporte", en: "Exam question breakdown: pricing and support", "pt-BR": "Análise de questões de exame: preços e suporte" } },
+  { id: "32-analisis-preguntas-modulo-4", moduleId: "module-4", module: MODULES["module-4"], title: { es: "Analiza preguntas de examen: precios y soporte", en: "Exam question breakdown: pricing and support", "pt-BR": "Análise de questões de exame: preços e suporte" }, kind: "quiz" },
 
   { id: "33-repaso-por-dominio", moduleId: "module-5", module: MODULES["module-5"], title: { es: "Repaso rápido por dominio", en: "Quick review by domain", "pt-BR": "Revisão rápida por domínio" } },
   { id: "34-simulacro-de-examen", moduleId: "module-5", module: MODULES["module-5"], title: { es: "Examen de práctica completo", en: "Full practice exam", "pt-BR": "Simulado completo" } },

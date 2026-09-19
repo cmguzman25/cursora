@@ -154,18 +154,18 @@ con tres cambios:
 
 ## Módulo 4 — Facturación, precios y soporte (Dominio 4 · 12%)
 
-- [ ] 4.1 Modelos de precios: On-Demand, Reserved Instances, Spot, Savings Plans,
+- [x] 4.1 Modelos de precios: On-Demand, Reserved Instances, Spot, Savings Plans,
       Dedicated Hosts/Instances, costos de transferencia de datos (`lecciones/28-modelos-de-precios.md`)
-- [ ] 4.2 Recursos de facturación y costos: AWS Budgets, Cost Explorer,
+- [x] 4.2 Recursos de facturación y costos: AWS Budgets, Cost Explorer,
       Pricing Calculator, consolidated billing, cost allocation tags (`lecciones/29-facturacion-y-costos.md`)
-- [ ] 4.3 Soporte técnico: planes de AWS Support (Basic, Developer, Business,
+- [x] 4.3 Soporte técnico: planes de AWS Support (Basic, Developer, Business,
       Enterprise), Trusted Advisor, AWS Health Dashboard, AWS Partner Network (`lecciones/30-soporte-y-recursos-tecnicos.md`)
-- [ ] ★ 4.4 Tablas comparativas: On-Demand vs. Reserved vs. Spot vs. Savings
+- [x] ★ 4.4 Tablas comparativas: On-Demand vs. Reserved vs. Spot vs. Savings
       Plans, y los planes de soporte de AWS uno junto al otro
       (`lecciones/31-comparativas-precios-y-soporte.md`)
-- [ ] 4.5 Analiza preguntas de examen: 15 preguntas de facturación, precios y
+- [x] 4.5 Analiza preguntas de examen: 15 preguntas de facturación, precios y
       soporte, con el porqué de cada opción correcta e incorrecta
-      (`lecciones/32-analisis-preguntas-modulo-4.md`)
+      (`preguntas/modulo-4.ts` — lección interactiva, no Markdown)
 
 ## Módulo 5 — Repaso final y simulacro
 
@@ -180,4 +180,4 @@ con tres cambios:
 
 ## Progreso
 
-**28 / 36 lecciones desarrolladas.**
+**33 / 36 lecciones desarrolladas.**
