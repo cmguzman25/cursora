@@ -4,9 +4,9 @@
 
 ## 🤔 Antes de empezar
 
-- ¿Por qué quieres certificarte en AWS? ¿Qué te imaginas que vas a poder hacer una vez que lo logres?
+- ¿Por qué querés certificarte en AWS? ¿Qué te imaginás que vas a poder hacer una vez que lo logres?
 - Si tuvieras que explicarle a un amigo qué es "la nube" en una sola frase, ¿qué le dirías?
-- ¿Cuánto tiempo crees que te va a tomar sentirte listo para el examen?
+- ¿Cuánto tiempo creés que te va a tomar sentirte listo para el examen?
 
 ## 📘 Contenido
 
@@ -22,7 +22,7 @@ Antes de que existiera la red eléctrica, cada fábrica necesitaba su propio gen
 para tener electricidad. Construir y mantener ese generador costaba caro, ocupaba
 espacio, y si la fábrica crecía había que comprar un generador más grande.
 
-Hoy simplemente conectas un cable a la pared y pagas por la electricidad que
+Hoy simplemente conectás un cable a la pared y pagás por la electricidad que
 consumís, sin preocuparte por cómo se genera.
 
 La computación en la nube funciona igual, pero con tecnología: en vez de comprar y
@@ -86,7 +86,7 @@ medida que avanzás.
 
 ## 💬 Ahora te toca a ti
 
-**Pregunta:** ¿Por qué quieres certificarte en AWS? ¿Qué te imaginas que vas a
+**Pregunta:** ¿Por qué querés certificarte en AWS? ¿Qué te imaginás que vas a
 poder hacer una vez que lo logres?
 
 *Intenta responderla con tus palabras antes de seguir.*
@@ -107,7 +107,7 @@ de una empresa como AWS, pagando solo por lo que usás, en vez de comprar y
 mantener tus propios servidores." Si tu respuesta se parece a eso, vas muy bien
 encaminado.
 
-**Pregunta:** ¿Cuánto tiempo crees que te va a tomar sentirte listo para el
+**Pregunta:** ¿Cuánto tiempo creés que te va a tomar sentirte listo para el
 examen?
 
 *Intenta responderla con tus palabras antes de seguir.*

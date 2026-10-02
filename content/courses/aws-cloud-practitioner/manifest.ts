@@ -80,7 +80,7 @@ const LESSONS: LessonMeta[] = [
   { id: "32-analisis-preguntas-modulo-4", moduleId: "module-4", module: MODULES["module-4"], title: { es: "Analiza preguntas de examen: precios y soporte", en: "Exam question breakdown: pricing and support", "pt-BR": "Análise de questões de exame: preços e suporte" }, kind: "quiz" },
 
   { id: "33-repaso-por-dominio", moduleId: "module-5", module: MODULES["module-5"], title: { es: "Repaso rápido por dominio", en: "Quick review by domain", "pt-BR": "Revisão rápida por domínio" } },
-  { id: "34-simulacro-de-examen", moduleId: "module-5", module: MODULES["module-5"], title: { es: "Examen de práctica completo", en: "Full practice exam", "pt-BR": "Simulado completo" } },
+  { id: "34-simulacro-de-examen", moduleId: "module-5", module: MODULES["module-5"], title: { es: "Examen de práctica completo", en: "Full practice exam", "pt-BR": "Simulado completo" }, kind: "exam" },
   { id: "35-estrategias-dia-del-examen", moduleId: "module-5", module: MODULES["module-5"], title: { es: "Estrategias para el día del examen", en: "Exam-day strategies", "pt-BR": "Estratégias para o dia do exame" } },
 ];
 

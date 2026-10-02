@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
-import { ArrowLeft, Check, Lightbulb, RotateCcw, Target, X } from "lucide-react";
+import { ArrowLeft, Info, RotateCcw, Target } from "lucide-react";
 import type { LocalizedQuestions } from "@content/courses/types";
 import { localeLabels } from "@/i18n/locale-labels";
 import { defaultLocale, routing, type AppLocale } from "@/i18n/routing";
@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/Button";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
 import { useQuizProgress } from "@/hooks/useQuizProgress";
+import { OptionButton, TipsPanel } from "@/components/lessons/question-options";
 
 interface ExamQuizProps {
   courseSlug: string;
@@ -59,30 +60,11 @@ function writeQuizLanguage(locale: AppLocale) {
   for (const listener of languageListeners) listener();
 }
 
-function optionStateClasses(opts: {
-  revealed: boolean;
-  selected: boolean;
-  correct: boolean;
-}): string {
-  const { revealed, selected, correct } = opts;
-
-  if (!revealed) {
-    return selected
-      ? "border-indigo-500 bg-indigo-50 dark:border-indigo-400 dark:bg-indigo-500/10"
-      : "border-zinc-200 hover:border-indigo-300 hover:bg-zinc-50 dark:border-zinc-700 dark:hover:border-indigo-500/50 dark:hover:bg-zinc-800/50";
-  }
-
-  if (correct) {
-    return "border-emerald-500 bg-emerald-50 dark:border-emerald-500/60 dark:bg-emerald-500/10";
-  }
-  if (selected) {
-    return "border-red-500 bg-red-50 dark:border-red-500/60 dark:bg-red-500/10";
-  }
-  return "border-zinc-200 opacity-70 dark:border-zinc-700";
-}
-
 export function ExamQuiz({ courseSlug, lessonId, banks, locale }: ExamQuizProps) {
   const t = useTranslations("lesson.quiz");
+  // The "only in Spanish" notice is shared with the practice exam, so it lives
+  // in that namespace rather than being duplicated here.
+  const tExam = useTranslations("lesson.exam");
 
   // Only the languages this bank was actually written in — most have one, and
   // then there is nothing to switch between.
@@ -309,6 +291,17 @@ export function ExamQuiz({ courseSlug, lessonId, banks, locale }: ExamQuizProps)
 
   return (
     <div className="flex flex-col gap-6">
+      {/* Until now the fallback to Spanish was silent: an English or
+          Portuguese reader got Spanish questions with no explanation, and
+          couldn't tell a missing translation from a bug. The notice is keyed
+          off the language actually on screen, not the page's locale, so it
+          stays true when the learner uses the switcher above. */}
+      {language !== locale && (
+        <p className="flex items-start gap-2.5 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300">
+          <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+          {tExam("questionsOnlyInSpanish")}
+        </p>
+      )}
       <div className="flex flex-col gap-2">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="flex flex-wrap items-center gap-2 text-xs font-medium tracking-wide text-zinc-400 uppercase">
@@ -355,48 +348,16 @@ export function ExamQuiz({ courseSlug, lessonId, banks, locale }: ExamQuizProps)
       </div>
 
       <div className="flex flex-col gap-3" role="group" aria-label={question.prompt}>
-        {question.options.map((option) => {
-          const isSelected = selected.has(option.id);
-          return (
-            <div key={option.id} className="flex flex-col">
-              <button
-                type="button"
-                onClick={() => toggleOption(option.id)}
-                disabled={isRevealed || isBusy}
-                aria-pressed={isSelected}
-                className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm transition-colors disabled:cursor-default ${optionStateClasses(
-                  { revealed: isRevealed, selected: isSelected, correct: option.correct },
-                )}`}
-              >
-                <span
-                  className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-xs font-semibold ${
-                    isRevealed && option.correct
-                      ? "border-emerald-500 bg-emerald-500 text-white"
-                      : isRevealed && isSelected
-                        ? "border-red-500 bg-red-500 text-white"
-                        : isSelected
-                          ? "border-indigo-500 bg-indigo-500 text-white"
-                          : "border-zinc-300 text-zinc-500 dark:border-zinc-600 dark:text-zinc-400"
-                  }`}
-                >
-                  {isRevealed && option.correct ? (
-                    <Check className="h-3.5 w-3.5" aria-hidden="true" />
-                  ) : isRevealed && isSelected ? (
-                    <X className="h-3.5 w-3.5" aria-hidden="true" />
-                  ) : (
-                    option.id
-                  )}
-                </span>
-                <span className="text-zinc-800 dark:text-zinc-200">{option.text}</span>
-              </button>
-              {isRevealed && (
-                <p className="mt-1.5 px-4 text-sm text-zinc-600 dark:text-zinc-400">
-                  {option.explanation}
-                </p>
-              )}
-            </div>
-          );
-        })}
+        {question.options.map((option) => (
+          <OptionButton
+            key={option.id}
+            option={option}
+            selected={selected.has(option.id)}
+            revealed={isRevealed}
+            disabled={isBusy}
+            onToggle={toggleOption}
+          />
+        ))}
       </div>
 
       {(isRevealed || quickFeedback !== null) && (
@@ -412,19 +373,7 @@ export function ExamQuiz({ courseSlug, lessonId, banks, locale }: ExamQuizProps)
         </div>
       )}
 
-      {isRevealed && question.tips.length > 0 && (
-        <div className="flex flex-col gap-2 rounded-xl border border-amber-300 bg-amber-50 p-4 dark:border-amber-500/30 dark:bg-amber-500/10">
-          <p className="flex items-center gap-2 text-sm font-semibold text-amber-800 dark:text-amber-300">
-            <Lightbulb className="h-4 w-4" aria-hidden="true" />
-            {t("tipsTitle")}
-          </p>
-          <ul className="list-disc space-y-1 pl-5 text-sm text-amber-800 dark:text-amber-300">
-            {question.tips.map((tip, tipIndex) => (
-              <li key={tipIndex}>{tip}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {isRevealed && <TipsPanel tips={question.tips} title={t("tipsTitle")} />}
 
       <div className="flex items-center justify-between gap-3">
         {index > 0 ? (

@@ -101,9 +101,9 @@ pagaste de más por espacio o capacidad sin usar. Si fue más chico, seguro
 tuviste que hacer viajes extra o arreglártelas con menos de lo que
 necesitabas. Ambos casos son justo lo que el rightsizing busca evitar.
 
-**Pregunta:** Si ya compraste una herramienta cara, ¿tendría sentido volver
-a pagar por una igual si te la prestan en otro lugar, o preferirías poder
-llevar la tuya?
+**Pregunta:** Si ya compraste una herramienta cara (por ejemplo, un taladro),
+¿tendría sentido volver a pagar por uno igual si te lo prestan en otro lugar, o
+preferirías poder llevar el tuyo?
 
 *Intenta responderla con tus palabras antes de seguir.*
 

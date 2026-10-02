@@ -1,6 +1,7 @@
-import type { CourseManifest, LocalizedQuestions } from "./types";
+import type { CourseManifest, LocalizedQuestions, PracticeExamBank } from "./types";
 import { manifest as awsCloudPractitioner } from "./aws-cloud-practitioner/manifest";
 import { EXAM_QUIZZES as AWS_CLOUD_PRACTITIONER_QUIZZES } from "./aws-cloud-practitioner/preguntas";
+import { FINAL_EXAM as AWS_CLOUD_PRACTITIONER_FINAL_EXAM } from "./aws-cloud-practitioner/preguntas/simulacro";
 import { manifest as fullStackDeveloperAws } from "./full-stack-developer-aws/manifest";
 import { manifest as awsDataEngineerAssociate } from "./aws-data-engineer-associate/manifest";
 import { EXAM_QUIZZES as AWS_DATA_ENGINEER_QUIZZES } from "./aws-data-engineer-associate/preguntas";
@@ -56,4 +57,20 @@ const EXAM_QUIZZES: Record<string, Record<string, LocalizedQuestions>> = {
  */
 export function getExamQuiz(courseSlug: string, lessonId: string): LocalizedQuestions | null {
   return EXAM_QUIZZES[courseSlug]?.[lessonId] ?? null;
+}
+
+/**
+ * Timed, scored mock exams for "exam"-kind lessons. Kept apart from
+ * `EXAM_QUIZZES` on purpose: the payload is a configured bank (duration, pass
+ * mark, domains) rather than a bare `LocalizedQuestions`, so merging the two
+ * would force every caller of `getExamQuiz` to narrow a union for no gain.
+ */
+const PRACTICE_EXAMS: Record<string, Record<string, PracticeExamBank>> = {
+  [awsCloudPractitioner.slug]: {
+    "34-simulacro-de-examen": AWS_CLOUD_PRACTITIONER_FINAL_EXAM,
+  },
+};
+
+export function getPracticeExam(courseSlug: string, lessonId: string): PracticeExamBank | null {
+  return PRACTICE_EXAMS[courseSlug]?.[lessonId] ?? null;
 }

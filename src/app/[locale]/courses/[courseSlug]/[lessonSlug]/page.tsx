@@ -12,8 +12,14 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { LessonProgressControls } from "@/components/courses/LessonProgressControls";
 import { AnnotatedLesson } from "@/components/lessons/AnnotatedLesson";
 import { ExamQuiz } from "@/components/lessons/ExamQuiz";
+import { PracticeExam } from "@/components/lessons/PracticeExam";
 import { SpeakButton } from "@/components/lessons/SpeakButton";
-import { COURSE_MANIFESTS, getCourseManifest, getExamQuiz } from "@content/courses/registry";
+import {
+  COURSE_MANIFESTS,
+  getCourseManifest,
+  getExamQuiz,
+  getPracticeExam,
+} from "@content/courses/registry";
 import { localize } from "@content/courses/types";
 
 interface LessonPageParams {
@@ -139,19 +145,11 @@ export default async function LessonPage({
   const nextLesson = course.lessons[lessonIndex + 1] ?? null;
   const t = await getTranslations("lesson");
 
-  let content = readLessonFile(courseSlug, lessonSlug, locale);
-  // The locale of the markdown actually on screen. Comments anchor to the text
-  // they were made against, so a fallback render must be recorded as such —
-  // otherwise a Spanish quote would be filed under `en` and never re-match.
-  let contentLocale = locale;
-  let isFallbackContent = false;
-  if (!content && locale !== routing.defaultLocale) {
-    content = readLessonFile(courseSlug, lessonSlug, routing.defaultLocale);
-    isFallbackContent = content !== null;
-    if (isFallbackContent) contentLocale = routing.defaultLocale;
-  }
-
-  const lessonHeader = (
+  // The header is a function of whether the markdown on screen is a fallback,
+  // which only the markdown path below can know. The interactive kinds pass
+  // `false`: they have no `.md` file at all, so there is nothing to fall back
+  // from.
+  const renderHeader = (isFallbackContent: boolean) => (
     <div className="flex flex-col gap-2">
       <Link
         href={`/courses/${courseSlug}`}
@@ -181,13 +179,46 @@ export default async function LessonPage({
     />
   );
 
+  // The interactive kinds are dispatched before the filesystem reads below:
+  // they have no markdown, so looking for it was two wasted `existsSync` calls
+  // on every request.
+  if (lesson.kind === "exam") {
+    const bank = getPracticeExam(courseSlug, lesson.id);
+    return (
+      <div className="flex min-h-screen flex-1 flex-col bg-zinc-50 dark:bg-zinc-950">
+        <AppHeader />
+        {/* Wider than a quiz: the 65-cell question grid needs the room. */}
+        <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col gap-6 px-6 py-10">
+          {renderHeader(false)}
+          {bank && bank.questions[defaultLocale].length > 0 ? (
+            <PracticeExam
+              courseSlug={courseSlug}
+              lessonId={lesson.id}
+              bank={bank}
+              locale={locale}
+            />
+          ) : (
+            <p className="rounded-xl border border-dashed border-zinc-300 p-8 text-center text-sm text-zinc-500 dark:border-zinc-700 dark:text-zinc-400">
+              {t("notReady")}
+            </p>
+          )}
+          {progressControls}
+        </main>
+      </div>
+    );
+  }
+
   if (lesson.kind === "quiz") {
     const banks = getExamQuiz(courseSlug, lesson.id);
+    // Which translation of the bank is on screen is a client-side preference
+    // (see ExamQuiz's language switcher), so the "questions are only in
+    // Spanish" notice lives in the component, where it can reflect the
+    // language actually being read instead of going stale on the first switch.
     return (
       <div className="flex min-h-screen flex-1 flex-col bg-zinc-50 dark:bg-zinc-950">
         <AppHeader />
         <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6 px-6 py-10">
-          {lessonHeader}
+          {renderHeader(false)}
           {banks && banks[defaultLocale].length > 0 ? (
             <ExamQuiz
               courseSlug={courseSlug}
@@ -205,6 +236,20 @@ export default async function LessonPage({
       </div>
     );
   }
+
+  let content = readLessonFile(courseSlug, lessonSlug, locale);
+  // The locale of the markdown actually on screen. Comments anchor to the text
+  // they were made against, so a fallback render must be recorded as such —
+  // otherwise a Spanish quote would be filed under `en` and never re-match.
+  let contentLocale = locale;
+  let isFallbackContent = false;
+  if (!content && locale !== routing.defaultLocale) {
+    content = readLessonFile(courseSlug, lessonSlug, routing.defaultLocale);
+    isFallbackContent = content !== null;
+    if (isFallbackContent) contentLocale = routing.defaultLocale;
+  }
+
+  const lessonHeader = renderHeader(isFallbackContent);
 
   return (
     // `data-reading-surface` is what the reading themes in globals.css paint;

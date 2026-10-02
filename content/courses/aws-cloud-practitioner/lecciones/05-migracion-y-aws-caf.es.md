@@ -110,9 +110,9 @@ algunos directamente se reemplazan por algo nuevo (repurchasing). Las
 empresas migran igual — rara vez usan una sola de las 6 estrategias para
 todo su sistema.
 
-**Pregunta:** ¿Alguna vez tuviste algo que sabías que ya no usabas pero
-seguías "manteniendo" por las dudas? ¿Qué tan buena idea fue eso, en
-retrospectiva?
+**Pregunta:** ¿Alguna vez tuviste algo (una app, un archivo, una suscripción)
+que sabías que ya no usabas pero seguías "manteniendo" por las dudas? ¿Qué tan
+buena idea fue eso, mirándolo en retrospectiva?
 
 *Intenta responderla con tus palabras antes de seguir.*
 

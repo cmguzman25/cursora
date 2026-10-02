@@ -4,9 +4,9 @@
 
 ## 🤔 Antes de empezar
 
-- ¿Alguna vez te registraste en un servicio "gratis" que igual te pidió una tarjeta de crédito? ¿Por qué crees que lo hacen?
+- ¿Alguna vez te registraste en un servicio "gratis" que igual te pidió una tarjeta de crédito? ¿Por qué creés que lo hacen?
 - Si tuvieras la llave maestra de un edificio completo —una que abre absolutamente todas las puertas—, ¿la usarías para entrar todos los días o la guardarías para casos especiales?
-- ¿Qué crees que puede pasar si usás un servicio que cobra "por uso" y nunca revisás cuánto llevás gastado?
+- ¿Qué creés que puede pasar si usás un servicio que cobra "por uso" y nunca revisás cuánto llevás gastado?
 
 ## 📘 Contenido
 
@@ -103,7 +103,7 @@ Budgets es la forma más simple de evitar sorpresas.
 ## 💬 Ahora te toca a ti
 
 **Pregunta:** ¿Alguna vez te registraste en un servicio "gratis" que igual te
-pidió una tarjeta de crédito? ¿Por qué crees que lo hacen?
+pidió una tarjeta de crédito? ¿Por qué creés que lo hacen?
 
 *Intenta responderla con tus palabras antes de seguir.*
 
@@ -122,7 +122,7 @@ una llave normal (con acceso limitado) para el día a día — así, si esa llav
 pierde o alguien la usa mal, el daño posible es mucho menor. Es exactamente la
 lógica de no usar el usuario root para el trabajo diario.
 
-**Pregunta:** ¿Qué crees que puede pasar si usás un servicio que cobra "por uso"
+**Pregunta:** ¿Qué creés que puede pasar si usás un servicio que cobra "por uso"
 y nunca revisás cuánto llevás gastado?
 
 *Intenta responderla con tus palabras antes de seguir.*

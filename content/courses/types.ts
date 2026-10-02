@@ -21,11 +21,17 @@ export interface LessonMeta {
   module: LocalizedText;
   title: LocalizedText;
   /**
-   * "quiz" lessons render an interactive `ExamQuiz` instead of the markdown
-   * pipeline — their content lives in a question bank (see `ExamQuizQuestion`),
-   * not in a `.md` file. Omitted (or "lesson") for regular content lessons.
+   * How the lesson is rendered. Omitted (or "lesson") for regular content
+   * lessons, which come from a `.md` file:
+   *
+   * - "quiz" renders an interactive `ExamQuiz` — an untimed, unscored drill
+   *   whose content lives in a question bank (see `ExamQuizQuestion`).
+   * - "exam" renders a timed, scored `PracticeExam` — a full mock exam with a
+   *   countdown and a scaled score (see `PracticeExamBank`).
+   *
+   * Neither interactive kind has a `.md` file.
    */
-  kind?: "lesson" | "quiz";
+  kind?: "lesson" | "quiz" | "exam";
 }
 
 export interface ExamQuizOption {
@@ -44,7 +50,21 @@ export interface ExamQuizQuestion {
   options: ExamQuizOption[];
   /** Short exam-prep tips shown alongside the explanations once revealed. */
   tips: string[];
+  /**
+   * Which exam domain this question belongs to, matching an `ExamDomain.id` of
+   * its bank. Optional here so the module quizzes — which don't report a
+   * per-domain breakdown — stay as they are; practice exams require it, see
+   * `ExamQuestionWithDomain`.
+   */
+  domain?: string;
 }
+
+/**
+ * A question that can appear on a scored practice exam. The per-domain
+ * breakdown is computed from `domain`, so it isn't optional here — a question
+ * without one would silently vanish from the learner's diagnosis.
+ */
+export type ExamQuestionWithDomain = ExamQuizQuestion & { domain: string };
 
 /**
  * A question bank in every language it has been written in — same shape as
@@ -57,6 +77,51 @@ export interface ExamQuizQuestion {
  */
 export type LocalizedQuestions = Partial<Record<AppLocale, ExamQuizQuestion[]>> &
   Record<typeof defaultLocale, ExamQuizQuestion[]>;
+
+/** Same shape and same parallelism rule as `LocalizedQuestions`, for exam banks. */
+export type LocalizedExamQuestions = Partial<Record<AppLocale, ExamQuestionWithDomain[]>> &
+  Record<typeof defaultLocale, ExamQuestionWithDomain[]>;
+
+export interface ExamDomain {
+  /** Stable, locale-independent key. Matches `ExamQuizQuestion.domain`. */
+  id: string;
+  name: LocalizedText;
+  /**
+   * How much the domain weighs on the real exam, as a fraction (0.24 = 24 %).
+   * Shown next to the learner's per-domain result: our question count can
+   * never match the official weighting exactly, and showing both keeps that
+   * gap visible instead of implying a precision we don't have.
+   */
+  weight: number;
+}
+
+/**
+ * A timed, scored mock exam — the payload behind an "exam"-kind lesson.
+ *
+ * The duration and the scale live here rather than in the component so a
+ * second course can ship its own exam (the Data Engineer one is 130 minutes)
+ * without touching the UI.
+ */
+export interface PracticeExamBank {
+  durationMinutes: number;
+  /** Reported score range. The real AWS exams use 100–1000. */
+  scaledMin: number;
+  scaledMax: number;
+  passingScore: number;
+  /**
+   * The raw fraction the pass mark is pinned to, so `passingScore` lands
+   * exactly on the percentage learners already have in their heads. See
+   * `src/lib/exams/scaled-score.ts` for why this is an approximation.
+   */
+  passingRawFraction: number;
+  domains: ExamDomain[];
+  /**
+   * Bumped whenever a question is added, removed, reworded or re-keyed. Stored
+   * on each attempt so an old attempt is never reviewed against a newer bank.
+   */
+  version: number;
+  questions: LocalizedExamQuestions;
+}
 
 export interface CourseManifest {
   slug: string;

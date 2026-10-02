@@ -169,15 +169,30 @@ con tres cambios:
 
 ## Módulo 5 — Repaso final y simulacro
 
-- [ ] 5.1 Repaso rápido por dominio con los puntos que más se confunden
-      (`lecciones/33-repaso-por-dominio.md`)
-- [ ] 5.2 Examen de práctica completo (65 preguntas, 90 minutos, cronometrado)
-      (`lecciones/34-simulacro-de-examen.md`)
-- [ ] 5.3 Estrategias para el día del examen y qué hacer si no se aprueba
-      (`lecciones/35-estrategias-dia-del-examen.md`)
+- [x] 5.1 Repaso rápido por dominio con los puntos que más se confunden
+      (`lecciones/33-repaso-por-dominio.es.md`)
+- [x] 5.2 Examen de práctica completo: 65 preguntas en 90 minutos, cronometrado,
+      con nota en escala 100-1000 y desglose por dominio
+      (`preguntas/simulacro/` — lección interactiva, no Markdown)
+- [x] 5.3 Estrategias para el día del examen y qué hacer si no se aprueba
+      (`lecciones/35-estrategias-dia-del-examen.es.md`)
 
 ---
 
 ## Progreso
 
-**33 / 36 lecciones desarrolladas.**
+**36 / 36 lecciones desarrolladas.**
+
+### Lo que queda pendiente
+
+El contenido del curso está completo en español. Falta:
+
+- **Traducciones.** El manifiesto declara títulos en español, inglés y portugués,
+  pero de las 31 lecciones Markdown solo `00-bienvenida` existe en los tres
+  idiomas; las otras 30 son solo español. Los cinco bancos de preguntas (los
+  cuatro de módulo más el simulacro) también son solo español. La interfaz sí
+  está traducida en los tres idiomas, y tanto los quizzes como el simulacro
+  avisan cuando las preguntas no están en el idioma de la página.
+- **Correr la migración `0005_exam_attempts.sql`** en el panel de Supabase. Sin
+  ella el simulacro funciona igual, pero el intento vive solo en memoria: no se
+  guarda el resultado ni se recupera al recargar, y la pantalla previa lo avisa.

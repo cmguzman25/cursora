@@ -6,7 +6,7 @@
 
 - ¿Ya rendiste algún examen importante (de manejo, un idioma, la universidad)? ¿Qué fue lo que más te puso nervioso/a ese día?
 - Si pudieras elegir entre rendir un examen en un centro con otras personas alrededor, o solo, en tu casa, frente a tu computadora, ¿cuál elegirías? ¿Por qué?
-- ¿Qué crees que pasa si te desconectás de internet a mitad de un examen que estás rindiendo online?
+- ¿Qué creés que pasa si te desconectás de internet a mitad de un examen que estás rindiendo online?
 
 ## 📘 Contenido
 
@@ -130,7 +130,7 @@ concentrarse en su casa o no cuentan con un cuarto privado y silencioso. Ambas
 opciones dan el mismo certificado — la mejor elección es la que te permita
 concentrarte, no la que parezca más moderna o más cómoda en el papel.
 
-**Pregunta:** ¿Qué crees que pasa si te desconectás de internet a mitad de un
+**Pregunta:** ¿Qué creés que pasa si te desconectás de internet a mitad de un
 examen que estás rindiendo online?
 
 *Intenta responderla con tus palabras antes de seguir.*
