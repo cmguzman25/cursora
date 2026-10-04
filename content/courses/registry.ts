@@ -9,6 +9,8 @@ import { manifest as inglesA1 } from "./ingles-a1/manifest";
 import { EXAM_QUIZZES as INGLES_A1_QUIZZES } from "./ingles-a1/preguntas";
 import { manifest as videojuegoRtsUnity } from "./videojuego-rts-unity/manifest";
 import { EXAM_QUIZZES as VIDEOJUEGO_RTS_QUIZZES } from "./videojuego-rts-unity/preguntas";
+// Sin banco de preguntas: este curso no tiene cuestionarios ni examen.
+import { manifest as redesEnAws } from "./redes-en-aws/manifest";
 
 /**
  * Every course the app can render. Adding a course means creating its folder
@@ -24,6 +26,7 @@ export const COURSE_MANIFESTS: CourseManifest[] = [
   awsDataEngineerAssociate,
   inglesA1,
   videojuegoRtsUnity,
+  redesEnAws,
 ];
 
 const BY_SLUG = new Map(COURSE_MANIFESTS.map((course) => [course.slug, course]));

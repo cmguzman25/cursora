@@ -254,25 +254,28 @@ Marcas de estado: `[x]` terminada, pasada por el verificador **y** revisada a
 mano · `[~]` escrita y en verde, pendiente de revisión manual o de probar sus
 pasos en la consola real · `[ ]` sin escribir.
 
-## Pendiente para conectar el curso a la app
+## El curso ya está conectado a la app
 
-Nada de esto existe todavía; el curso no aparece en la aplicación hasta que se
-haga. Son cuatro cosas:
+Hecho, en tres sitios:
 
-1. **`manifest.ts`** en esta carpeta, exportando `manifest: CourseManifest` con
-   las 68 clases de este índice. Los identificadores son los de las tablas de
-   arriba. Ninguna lleva `kind`: no hay cuestionarios ni examen.
-2. **`content/courses/registry.ts`** — importar el manifest y añadirlo a
-   `COURSE_MANIFESTS`. No hay que tocar `EXAM_QUIZZES` ni `PRACTICE_EXAMS`.
-3. **`src/lib/courses.ts`** — una entrada en `COURSES` con
-   `slug: "redes-en-aws"`, `category: "programming"`, `level: "beginner"`,
-   `durationHours: 35`, y título y descripción en los tres idiomas.
-4. **No hace falta carpeta `preguntas/`.** Un curso sin clases de tipo
-   cuestionario no la necesita.
+1. **`manifest.ts`** en esta carpeta, con las 68 clases de este índice.
+   Ninguna lleva `kind`: no hay cuestionarios ni examen.
+2. **`content/courses/registry.ts`** — el manifest añadido a
+   `COURSE_MANIFESTS`. No se tocó `EXAM_QUIZZES` ni `PRACTICE_EXAMS`.
+3. **`src/lib/courses.ts`** — la entrada de `COURSES`, con
+   `category: "programming"` y `level: "beginner"`.
 
-Un aviso que ahorra una hora: el título del manifest y el del catálogo se leen
-desde sitios distintos — uno sale en la tarjeta y otro en la cabecera del curso.
-Tienen que ser el mismo texto: **Redes en AWS desde cero**.
+**No hay carpeta `preguntas/`** y no hace falta: un curso sin clases de tipo
+cuestionario no la necesita.
+
+Las 54 clases sin escribir están listadas igualmente en el manifest. La app
+muestra un aviso de "no está lista" en cada una, así que el curso se navega
+entero desde ya.
+
+Un aviso que ahorra una hora si alguien cambia el nombre: el título del
+manifest y el del catálogo se leen desde sitios distintos — uno sale en la
+tarjeta y otro en la cabecera del curso. Tienen que ser el mismo texto:
+**Redes en AWS desde cero**.
 
 ## Lo que este curso no cubre
 

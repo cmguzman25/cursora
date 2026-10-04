@@ -121,6 +121,25 @@ export const COURSES: Course[] = [
       "pt-BR": "Construa um jogo de estratégia estilo Age of Empires do zero: Unity para o código, Blender para a sua própria arte e Claude Code como copiloto. Termina com uma partida 1v1 pela internet. Aulas de 8 a 10 minutos.",
     },
   },
+  {
+    id: "redes-en-aws",
+    slug: "redes-en-aws",
+    category: "programming",
+    level: "beginner",
+    durationHours: 35,
+    studentsCount: 0,
+    rating: 5.0,
+    title: {
+      es: "Redes en AWS desde cero",
+      en: "AWS Networking from Scratch",
+      "pt-BR": "Redes na AWS do zero",
+    },
+    description: {
+      es: "Entiende las redes de AWS en lugar de reconocerlas. Empieza por qué es una dirección IP y termina en Transit Gateway y PrivateLink, con laboratorios en la consola. No prepara ninguna certificación.",
+      en: "Understand AWS networking instead of just recognizing it. Starts at what an IP address is and ends at Transit Gateway and PrivateLink, with hands-on console labs. Not tied to any certification.",
+      "pt-BR": "Entenda as redes da AWS em vez de apenas reconhecê-las. Começa pelo que é um endereço IP e termina em Transit Gateway e PrivateLink, com laboratórios no console. Não prepara nenhuma certificação.",
+    },
+  },
 ];
 
 export function getCourse(slug: string): Course | null {
