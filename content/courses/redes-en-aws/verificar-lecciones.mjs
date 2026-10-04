@@ -291,12 +291,14 @@ for (const file of archivos) {
   );
   if (/!\[[^\]]*\]\(/.test(prosa)) fallo(`hay una imagen, y las clases no pueden llevarlas`);
 
-  // Emojis fuera de los títulos (❌ y ✅ sí se permiten en el cuerpo).
+  // Emojis fuera de los títulos. Se permiten en el cuerpo ❌ y ✅, más los tres
+  // del semáforo de costo: son notación declarada del curso (contrato, 5.1), y
+  // la clase que los explica tiene que poder enseñarlos en una tabla.
   // Las líneas de cita se saltan: ahí vive el aviso de costo, con su ⚠️.
   const emoji = /\p{Extended_Pictographic}/u;
   prosa.split("\n").forEach((l, i) => {
     if (l.startsWith("#") || l.startsWith(">")) return;
-    if (emoji.test(l.replace(/[❌✅]/g, ""))) {
+    if (emoji.test(l.replace(/[❌✅💚💛🔴]/g, ""))) {
       fallo(`emoji fuera de un título (línea ${i + 1}): ${l.trim().slice(0, 60)}`);
     }
   });
@@ -362,7 +364,9 @@ for (const file of archivos) {
   //
   // Exentas: las clases de síntesis y las que continúan la analogía de otra,
   // declaradas aquí por su id para que la excepción sea explícita.
-  const SIN_ANALOGIA_PROPIA = new Set(["01-04", "01-13"]);
+  // 00-01 orienta sobre el curso y no explica ningún concepto de red, así que
+  // no tiene analogía que cerrar. Forzarle una sería peor que no tenerla.
+  const SIN_ANALOGIA_PROPIA = new Set(["00-01", "01-04", "01-13"]);
   const detalle = seccion(prosa, "🔬 En detalle");
   if (tipo === "A" && detalle !== null && !SIN_ANALOGIA_PROPIA.has(claveActual)) {
     if (!/deja de valer|se rompe la analog|no cubre la analog/i.test(detalle)) {
@@ -433,7 +437,9 @@ for (const file of archivos) {
     // a la clase 1.10, y el control se saltaba en silencio.
     const [mod, cls] = claveDef.split("-");
     const destino = `${Number(mod)}.${Number(cls)}`;
-    const puntero = new RegExp(`\\bclases?\\s+${destino.replace(".", "\\.")}\\b`);
+    // Con `i`: el puntero vale igual en prosa ("la clase 1.2") que en la
+    // celda de una tabla ("Clase 1.2").
+    const puntero = new RegExp(`\\bclases?\\s+${destino.replace(".", "\\.")}\\b`, "i");
     if (puntero.test(cuerpo)) continue;
 
     fallo(`usa "${termino}" antes de la clase ${destino}, y no dice en ningún sitio que se explica allí`);

@@ -216,9 +216,10 @@ clases repiten el aviso de verificar el precio actual.
 | `CONTRATO-DE-CLASES.md` | Terminado |
 | `README.md` | Terminado |
 | `verificar-lecciones.mjs` | Terminado, y probado contra dos archivos rotos a propósito (uno por tipo) |
+| **Módulo 0 completo** (3 clases, 0.1 a 0.3) | Escritas y en verde. Marcadas `[~]` |
 | **Módulo 1 completo** (13 clases, 1.1 a 1.13) | Escritas y en verde. Marcadas `[~]`: ver abajo |
 | `lecciones/02-07-internet-gateway.es.md` | Clase piloto de tipo B, en verde |
-| Los módulos 0 y 2 a 8 (54 clases) | Sin escribir |
+| Los módulos 2 a 8 (51 clases) | Sin escribir |
 
 El módulo 1 ha pasado dos revisiones manuales.
 
@@ -243,9 +244,10 @@ Ninguna clase está marcada `[x]` todavía:
 
 - **Módulo 1.** No toca la consola, así que no hay pasos que probar. Falta que
   alguien lea las trece seguidas y juzgue si las analogías ayudan de verdad.
-- **Clase 2.7.** Sus pasos de menú salen de la documentación de AWS y **nadie
-  los ha pulsado**. Hasta que alguien recorra el lab en una cuenta real, se
-  queda en `[~]`.
+- **Clases 0.2, 0.3 y 2.7.** Sus pasos de menú salen de la documentación de AWS
+  y **nadie los ha pulsado**. Hasta que alguien las recorra en una cuenta real,
+  se quedan en `[~]`. La 0.2 además afirma que el correo de aviso llega, y eso
+  no se puede comprobar sin gastar de verdad.
 
 **Pasar el verificador no es estar verificada**: el script mide forma, no
 verdad.
