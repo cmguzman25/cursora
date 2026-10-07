@@ -41,6 +41,15 @@ export async function POST(request: Request, { params }: { params: Promise<Route
     return NextResponse.json({ error: "no_exam" }, { status: 404 });
   }
 
+  // El saneador y el calificador trabajan sobre el array de preguntas del idioma
+  // que se rindió, no sobre el mapa de traducciones del banco (ver `GradableExam`
+  // en src/lib/exams/grading.ts). Acá es siempre el español: es el idioma en el
+  // que todo banco está completo, y el único con el que se puede calificar un
+  // intento viejo sin que la nota dependa de qué traducciones se agregaron
+  // después.
+  const preguntas = bank.questions.es;
+  const examen = { ...bank, questions: preguntas };
+
   const body = await request.json().catch(() => null);
   const attemptId = typeof body?.attemptId === "string" ? body.attemptId : null;
   const autoSubmitted = body?.autoSubmitted === true;
@@ -52,12 +61,12 @@ export async function POST(request: Request, { params }: { params: Promise<Route
 
   // --- sin sesión, o sin intento guardado: se califica y no se persiste ---
   if (!user || !attemptId) {
-    const answers = sanitizeAnswers(bank, body?.answers ?? {});
+    const answers = sanitizeAnswers(preguntas, body?.answers ?? {});
     if (answers === null) {
       return NextResponse.json({ error: "invalid_body" }, { status: 400 });
     }
     return NextResponse.json({
-      result: gradeAttempt(bank, answers),
+      result: gradeAttempt(examen, answers),
       answers,
       autoSubmitted,
       persisted: false,
@@ -75,12 +84,12 @@ export async function POST(request: Request, { params }: { params: Promise<Route
     .maybeSingle();
 
   if (errorLectura && faltaLaTabla(errorLectura)) {
-    const answers = sanitizeAnswers(bank, body?.answers ?? {});
+    const answers = sanitizeAnswers(preguntas, body?.answers ?? {});
     if (answers === null) {
       return NextResponse.json({ error: "invalid_body" }, { status: 400 });
     }
     return NextResponse.json({
-      result: gradeAttempt(bank, answers),
+      result: gradeAttempt(examen, answers),
       answers,
       autoSubmitted,
       persisted: false,
@@ -115,7 +124,7 @@ export async function POST(request: Request, { params }: { params: Promise<Route
   const vencimiento = new Date(fila.expires_at).getTime();
   const aTiempo = Date.now() <= vencimiento + GRACIA_MS;
 
-  const delCuerpo = sanitizeAnswers(bank, body?.answers ?? {});
+  const delCuerpo = sanitizeAnswers(preguntas, body?.answers ?? {});
   if (delCuerpo === null) {
     return NextResponse.json({ error: "invalid_body" }, { status: 400 });
   }
@@ -124,7 +133,7 @@ export async function POST(request: Request, { params }: { params: Promise<Route
     ? delCuerpo
     : ((fila.answers as ExamAnswers | null) ?? {});
 
-  const result = gradeAttempt(bank, answers);
+  const result = gradeAttempt(examen, answers);
   const vencido = Date.now() > vencimiento;
 
   const { error } = await supabase

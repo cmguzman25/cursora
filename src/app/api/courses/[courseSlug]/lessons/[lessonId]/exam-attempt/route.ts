@@ -183,14 +183,18 @@ export async function PATCH(request: Request, { params }: { params: Promise<Rout
 
   const body = await request.json().catch(() => null);
   const attemptId = typeof body?.attemptId === "string" ? body.attemptId : null;
-  const answers = sanitizeAnswers(bank, body?.answers ?? {});
-  const flagged = sanitizeFlagged(bank, body?.flagged ?? []);
+  // Se sanea contra las preguntas en español: es el idioma en el que el banco
+  // está completo, y los ids de pregunta y de opción son los mismos en todas las
+  // traducciones (lo exige `LocalizedQuestions` en content/courses/types.ts).
+  const preguntas = bank.questions.es;
+  const answers = sanitizeAnswers(preguntas, body?.answers ?? {});
+  const flagged = sanitizeFlagged(preguntas, body?.flagged ?? []);
   const cursor = Number.isInteger(body?.cursor) ? (body.cursor as number) : null;
 
   if (!attemptId || answers === null || flagged === null || cursor === null) {
     return NextResponse.json({ error: "invalid_body" }, { status: 400 });
   }
-  if (cursor < 0 || cursor > bank.questions.es.length) {
+  if (cursor < 0 || cursor > preguntas.length) {
     return NextResponse.json({ error: "invalid_body" }, { status: 400 });
   }
 

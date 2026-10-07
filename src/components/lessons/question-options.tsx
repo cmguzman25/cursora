@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Lightbulb, X } from "lucide-react";
+import { Check, Flag, Lightbulb, X } from "lucide-react";
 import type { ExamQuizOption } from "@content/courses/types";
 
 /**
@@ -10,6 +10,14 @@ import type { ExamQuizOption } from "@content/courses/types";
  * demás —uno revela al instante y obliga a responder, el otro no revela nada
  * hasta entregar y permite dejar en blanco—, así que acá vive solo la parte
  * presentacional, no un motor común lleno de condicionales.
+ *
+ * Los exámenes de la sección `/exams` reusan este archivo entero.
+ *
+ * **Nada de acá llama a `useTranslations`**, y conviene que siga así: los textos
+ * entran por props (ver `TipsPanel.title` o `FlagButton.labels`). Es lo que
+ * permite que lo use tanto una lección —con su namespace `lesson.*`— como la
+ * sección de exámenes, sin que el componente tenga que saber de qué namespace
+ * salen sus palabras.
  */
 
 export function optionStateClasses(opts: {
@@ -109,6 +117,42 @@ export function OptionButton({
         <p className="mt-1.5 px-4 text-sm text-zinc-600 dark:text-zinc-400">{option.explanation}</p>
       )}
     </div>
+  );
+}
+
+interface FlagButtonProps {
+  flagged: boolean;
+  onToggle: () => void;
+  /** Texto del botón según el estado. Entra por prop, ver la nota del encabezado. */
+  labels: { flag: string; unflag: string };
+  /** Mientras la marca viaja al servidor. Evita el doble clic que la pondría y la quitaría. */
+  isPending?: boolean;
+}
+
+/**
+ * "Marcar para repasar después".
+ *
+ * Vive acá y no dentro de un orquestador porque los tres lugares que lo
+ * necesitan no se parecen en nada más: el simulacro de un curso, el examen
+ * cronometrado de `/exams` y el repaso sin reloj. Lo que comparten es
+ * exactamente este botón.
+ */
+export function FlagButton({ flagged, onToggle, labels, isPending = false }: FlagButtonProps) {
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      disabled={isPending}
+      aria-pressed={flagged}
+      className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-colors disabled:opacity-60 ${
+        flagged
+          ? "bg-amber-100 text-amber-800 dark:bg-amber-500/15 dark:text-amber-300"
+          : "text-zinc-500 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
+      }`}
+    >
+      <Flag className="h-3.5 w-3.5" aria-hidden="true" />
+      {flagged ? labels.unflag : labels.flag}
+    </button>
   );
 }
 

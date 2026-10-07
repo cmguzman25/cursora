@@ -1,12 +1,42 @@
-import type { ExamQuizQuestion, PracticeExamBank } from "@content/courses/types";
+import type { ExamQuizQuestion } from "@content/courses/types";
 
 /**
- * Calificación de un simulacro. Este módulo no es ni de cliente ni de
+ * Calificación de un examen con nota. Este módulo no es ni de cliente ni de
  * servidor a propósito: el servidor calcula la nota que se guarda y el cliente
  * pinta la revisión pregunta por pregunta, y las dos tienen que coincidir
  * exactamente. Una segunda implementación de la misma regla en el componente
  * sería una forma garantizada de que alguna vez difieran.
  */
+
+/**
+ * En qué escala se reporta la nota.
+ *
+ * Las funciones de este módulo piden esto y no un `PracticeExamBank` entero para
+ * que los exámenes de la sección `/exams` — que no pertenecen a ningún curso ni
+ * imitan la escala de ningún examen oficial — se califiquen con **estas**
+ * funciones y no con una segunda copia de la regla. `PracticeExamBank` lo cumple
+ * sin cambios.
+ */
+export interface ScoreScale {
+  scaledMin: number;
+  scaledMax: number;
+  passingScore: number;
+  passingRawFraction: number;
+}
+
+/** Una escala, los grupos del diagnóstico y las preguntas que se califican. */
+export interface GradableExam extends ScoreScale {
+  /** Dominios oficiales en un simulacro de certificación, temas en un examen de `/exams`. */
+  domains: readonly { id: string }[];
+  /**
+   * Las preguntas **en el idioma que se rindió**, ya resueltas por quien llama.
+   * Recibirlas como un array y no como el mapa `LocalizedQuestions` es
+   * deliberado: el banco de un curso guarda todas sus traducciones, y un
+   * calificador que eligiera una por su cuenta sería un segundo lugar donde
+   * decidir qué idioma se está rindiendo.
+   */
+  questions: readonly ExamQuizQuestion[];
+}
 
 /** Lo que el alumno marcó, por id de pregunta: `{ "sim-d1-q01": ["B"] }`. */
 export type ExamAnswers = Record<string, string[]>;
@@ -62,12 +92,15 @@ export function isAnswerCorrect(selected: readonly string[] | Set<string>, quest
  * cuando el umbral real está en el 70 %. Partir la recta en el ancla hace que
  * la nota reportada y el porcentaje que el alumno calcula de cabeza coincidan.
  *
- * El resultado es una **aproximación** y la pantalla de resultados tiene que
- * decirlo: el examen real tiene 15 preguntas que no puntúan y usa un modelo de
- * equiparación que AWS no publica.
+ * Para un simulacro de AWS el resultado es una **aproximación** y la pantalla de
+ * resultados tiene que decirlo: el examen real tiene 15 preguntas que no puntúan
+ * y usa un modelo de equiparación que AWS no publica. Un examen de la sección
+ * `/exams` no tiene ese problema: declara `scaledMin: 0`, `scaledMax: 100` y
+ * `passingScore = passingRawFraction * 100`, con lo que la recta quebrada
+ * colapsa en una sola y la nota **es** el porcentaje de aciertos.
  */
-export function scaledScore(correct: number, total: number, bank: PracticeExamBank): number {
-  const { scaledMin, scaledMax, passingScore, passingRawFraction } = bank;
+export function scaledScore(correct: number, total: number, scale: ScoreScale): number {
+  const { scaledMin, scaledMax, passingScore, passingRawFraction } = scale;
   if (total <= 0) return scaledMin;
 
   const fraccion = Math.min(1, Math.max(0, correct / total));
@@ -82,15 +115,15 @@ export function scaledScore(correct: number, total: number, bank: PracticeExamBa
 }
 
 /** Cuántos aciertos hacen falta para aprobar, para poder decírselo al alumno. */
-export function passingRawCount(bank: PracticeExamBank, total: number): number {
-  return Math.ceil(total * bank.passingRawFraction);
+export function passingRawCount(scale: ScoreScale, total: number): number {
+  return Math.ceil(total * scale.passingRawFraction);
 }
 
-export function gradeAttempt(bank: PracticeExamBank, answers: ExamAnswers): ExamResult {
-  const preguntas = bank.questions.es;
+export function gradeAttempt(exam: GradableExam, answers: ExamAnswers): ExamResult {
+  const preguntas = exam.questions;
 
   const porDominio = new Map<string, DomainScore>(
-    bank.domains.map((domain) => [domain.id, { domainId: domain.id, correct: 0, total: 0 }]),
+    exam.domains.map((domain) => [domain.id, { domainId: domain.id, correct: 0, total: 0 }]),
   );
 
   let rawCorrect = 0;
@@ -111,16 +144,16 @@ export function gradeAttempt(bank: PracticeExamBank, answers: ExamAnswers): Exam
   }
 
   const rawTotal = preguntas.length;
-  const nota = scaledScore(rawCorrect, rawTotal, bank);
+  const nota = scaledScore(rawCorrect, rawTotal, exam);
 
   return {
     rawCorrect,
     rawTotal,
     scaledScore: nota,
-    passed: nota >= bank.passingScore,
+    passed: nota >= exam.passingScore,
     // El orden lo fija el banco, no el recorrido de las preguntas, para que la
     // tabla de resultados salga siempre en el orden de los dominios oficiales.
-    domainScores: bank.domains.map(
+    domainScores: exam.domains.map(
       (domain) => porDominio.get(domain.id) ?? { domainId: domain.id, correct: 0, total: 0 },
     ),
     unanswered,

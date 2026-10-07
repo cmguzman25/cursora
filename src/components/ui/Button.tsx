@@ -17,6 +17,21 @@ const variantClasses: Record<ButtonVariant, string> = {
     "text-zinc-600 hover:bg-zinc-100 focus-visible:outline-indigo-600 dark:text-zinc-300 dark:hover:bg-zinc-800",
 };
 
+const baseClasses =
+  "inline-flex h-11 items-center justify-center gap-2 rounded-xl px-4 text-sm font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60";
+
+/**
+ * Las clases del botón, para un enlace que tiene que parecerse a uno.
+ *
+ * Existe porque este `Button` renderiza un `<button>` y no acepta `asChild`: una
+ * acción que **navega** tiene que ser un `<a>` de verdad, o se pierde el clic con
+ * el medio, el "abrir en pestaña nueva" y el menú contextual. En vez de agregarle
+ * polimorfismo al componente, se exponen sus clases.
+ */
+export function buttonClasses(variant: ButtonVariant = "primary", className = ""): string {
+  return `${baseClasses} ${variantClasses[variant]} ${className}`;
+}
+
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   { variant = "primary", isLoading = false, disabled, className = "", children, ...props },
   ref,
@@ -26,7 +41,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       ref={ref}
       disabled={disabled || isLoading}
       aria-busy={isLoading}
-      className={`inline-flex h-11 items-center justify-center gap-2 rounded-xl px-4 text-sm font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60 ${variantClasses[variant]} ${className}`}
+      className={buttonClasses(variant, className)}
       {...props}
     >
       {isLoading && <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />}

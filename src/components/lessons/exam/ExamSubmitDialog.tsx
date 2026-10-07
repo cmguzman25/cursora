@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 
@@ -9,6 +9,14 @@ interface ExamSubmitDialogProps {
   unanswered: number;
   flagged: number;
   isSubmitting: boolean;
+  /**
+   * Aviso de las preguntas sin responder. Entra por prop y no por `t()` porque
+   * es el único texto de este diálogo que no es genérico: el del simulacro de
+   * AWS dice "no hay penalización por respuesta incorrecta", que es cierto en una
+   * lección de certificación y falso en un examen sobre vocabulario de inglés.
+   * El resto de la copia sí sirve igual en los dos lados y vive en `exam.*`.
+   */
+  unansweredNotice: ReactNode;
   onConfirm: () => void;
   onCancel: () => void;
 }
@@ -18,10 +26,11 @@ export function ExamSubmitDialog({
   unanswered,
   flagged,
   isSubmitting,
+  unansweredNotice,
   onConfirm,
   onCancel,
 }: ExamSubmitDialogProps) {
-  const t = useTranslations("lesson.exam");
+  const t = useTranslations("exam");
   const panelRef = useRef<HTMLDivElement>(null);
   const cancelarRef = useRef<HTMLButtonElement>(null);
 
@@ -77,7 +86,7 @@ export function ExamSubmitDialog({
 
         {unanswered > 0 && (
           <p className="rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300">
-            {t("confirmUnanswered", { count: unanswered })}
+            {unansweredNotice}
           </p>
         )}
         {flagged > 0 && (

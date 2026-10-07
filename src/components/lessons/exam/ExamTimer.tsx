@@ -9,7 +9,9 @@ import { formatRemaining } from "@/hooks/useExamCountdown";
 const AVISOS = [10, 5, 1];
 
 export function ExamTimer({ remainingMs }: { remainingMs: number }) {
-  const t = useTranslations("lesson.exam");
+  // Namespace `exam`: el reloj es el mismo para un simulacro de curso y para un
+  // examen de `/exams`.
+  const t = useTranslations("exam");
   const minutosRestantes = Math.ceil(remainingMs / 60_000);
 
   // Qué avisos ya se anunciaron, para no repetirlos en cada tic.

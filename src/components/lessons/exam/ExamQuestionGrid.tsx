@@ -41,14 +41,16 @@ interface ExamQuestionGridProps {
 }
 
 /**
- * Las 65 preguntas como una grilla, para saltar a cualquiera.
+ * Las preguntas de un examen como una grilla, para saltar a cualquiera.
  *
  * Usa un único punto de tabulación con navegación por flechas en vez de 65
  * botones tabulables: una grilla de este tamaño con un tab stop por celda
  * vuelve el teclado inutilizable para llegar a lo que viene después.
  */
 export function ExamQuestionGrid({ celdas, actual, onJump }: ExamQuestionGridProps) {
-  const t = useTranslations("lesson.exam");
+  // Namespace `exam` y no `lesson.exam`: esta grilla la usan también los
+  // exámenes de `/exams`, que no son lecciones de ningún curso.
+  const t = useTranslations("exam");
   const contenedorRef = useRef<HTMLDivElement>(null);
 
   const mover = (desde: number, delta: number) => {

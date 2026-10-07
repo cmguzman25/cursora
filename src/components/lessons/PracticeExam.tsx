@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
-import { AlertTriangle, ArrowLeft, ArrowRight, Flag, Info } from "lucide-react";
+import { AlertTriangle, ArrowLeft, ArrowRight, Info } from "lucide-react";
 import type { PracticeExamBank } from "@content/courses/types";
 import type { AppLocale } from "@/i18n/routing";
 import { defaultLocale } from "@/i18n/routing";
@@ -12,7 +12,12 @@ import { useCurrentUser } from "@/hooks/useCurrentUser";
 import { useExamAttempt } from "@/hooks/useExamAttempt";
 import { useExamCountdown } from "@/hooks/useExamCountdown";
 import { isAnswerCorrect, passingRawCount } from "@/lib/exams/grading";
-import { OptionButton, TipsPanel, toggleSelection } from "@/components/lessons/question-options";
+import {
+  FlagButton,
+  OptionButton,
+  TipsPanel,
+  toggleSelection,
+} from "@/components/lessons/question-options";
 import { ExamGate } from "@/components/lessons/exam/ExamGate";
 import { ExamTimer } from "@/components/lessons/exam/ExamTimer";
 import { ExamQuestionGrid, type Celda } from "@/components/lessons/exam/ExamQuestionGrid";
@@ -39,7 +44,11 @@ type Filtro = "all" | "unanswered" | "flagged" | "wrong";
  * entrega solo. Un motor común sería una pila de condicionales.
  */
 export function PracticeExam({ courseSlug, lessonId, bank, locale }: PracticeExamProps) {
+  // Dos namespaces: `lesson.exam` para lo que habla del simulacro oficial de AWS
+  // (la pantalla previa, la nota escalada, los dominios), y `exam` para los textos
+  // de interfaz que comparte con los exámenes de `/exams`.
   const t = useTranslations("lesson.exam");
+  const tExam = useTranslations("exam");
 
   const preguntas = bank.questions[locale] ?? bank.questions[defaultLocale];
   // El banco todavía puede estar solo en español. El aviso se decide por el
@@ -48,7 +57,10 @@ export function PracticeExam({ courseSlug, lessonId, bank, locale }: PracticeExa
 
   const { user, isLoading: cargandoUsuario } = useCurrentUser();
   const { attempt, isLoading, isPersisted, skewMs, start, update, submit, isSubmitting, error } =
-    useExamAttempt(courseSlug, lessonId, bank.durationMinutes);
+    useExamAttempt({
+      base: `/api/courses/${courseSlug}/lessons/${lessonId}/exam-attempt`,
+      durationMinutes: bank.durationMinutes,
+    });
 
   /** Si el alumno ya apretó "Empezar" en esta visita. */
   const [empezado, setEmpezado] = useState(false);
@@ -220,9 +232,9 @@ export function PracticeExam({ courseSlug, lessonId, bank, locale }: PracticeExa
     return (
       <div className="flex flex-col gap-6">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">{t("reviewIntro")}</p>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">{tExam("reviewIntro")}</p>
           <Button variant="outline" onClick={() => setRevisando(false)}>
-            {t("exitReview")}
+            {tExam("exitReview")}
           </Button>
         </div>
 
@@ -243,14 +255,14 @@ export function PracticeExam({ courseSlug, lessonId, bank, locale }: PracticeExa
         <div className="flex items-center justify-between gap-3">
           <Button variant="ghost" onClick={() => irA(posicion - 1)} disabled={posicion === 0}>
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-            {t("previous")}
+            {tExam("previous")}
           </Button>
           <Button
             variant="outline"
             onClick={() => irA(posicion + 1)}
             disabled={posicion >= preguntas.length - 1}
           >
-            {t("next")}
+            {tExam("next")}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Button>
         </div>
@@ -273,12 +285,12 @@ export function PracticeExam({ courseSlug, lessonId, bank, locale }: PracticeExa
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-col gap-0.5">
           <span className="text-sm font-semibold text-zinc-900 dark:text-white">
-            {t("questionProgress", { current: posicion + 1, total: preguntas.length })}
+            {tExam("questionProgress", { current: posicion + 1, total: preguntas.length })}
           </span>
           <span className="text-xs text-zinc-500 dark:text-zinc-400">
-            {t("answeredCount", { count: respondidas })} ·{" "}
-            {t("unansweredCount", { count: sinResponder })} ·{" "}
-            {t("flaggedCount", { count: marcadas.size })}
+            {tExam("answeredCount", { count: respondidas })} ·{" "}
+            {tExam("unansweredCount", { count: sinResponder })} ·{" "}
+            {tExam("flaggedCount", { count: marcadas.size })}
           </span>
         </div>
         <ExamTimer remainingMs={remainingMs} />
@@ -301,7 +313,7 @@ export function PracticeExam({ courseSlug, lessonId, bank, locale }: PracticeExa
       <div className="flex flex-wrap items-center justify-between gap-3">
         <Button variant="ghost" onClick={() => irA(posicion - 1)} disabled={posicion === 0}>
           <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-          {t("previous")}
+          {tExam("previous")}
         </Button>
 
         <div className="flex gap-3">
@@ -316,10 +328,10 @@ export function PracticeExam({ courseSlug, lessonId, bank, locale }: PracticeExa
             onClick={() => irA(posicion + 1)}
             disabled={posicion >= preguntas.length - 1}
           >
-            {t("next")}
+            {tExam("next")}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Button>
-          <Button onClick={() => setConfirmando(true)}>{t("finishAttempt")}</Button>
+          <Button onClick={() => setConfirmando(true)}>{tExam("finishAttempt")}</Button>
         </div>
       </div>
 
@@ -329,6 +341,7 @@ export function PracticeExam({ courseSlug, lessonId, bank, locale }: PracticeExa
           unanswered={sinResponder}
           flagged={marcadas.size}
           isSubmitting={isSubmitting}
+          unansweredNotice={t("confirmUnanswered", { count: sinResponder })}
           onConfirm={() => {
             void submit().then(() => setConfirmando(false));
           }}
@@ -348,14 +361,14 @@ function FiltroDeGrilla({
   onChange: (filtro: Filtro) => void;
   revisando: boolean;
 }) {
-  const t = useTranslations("lesson.exam");
+  const tExam = useTranslations("exam");
 
   const opciones: { valor: Filtro; etiqueta: string }[] = [
-    { valor: "all", etiqueta: t("filterAll") },
+    { valor: "all", etiqueta: tExam("filterAll") },
     revisando
-      ? { valor: "wrong", etiqueta: t("filterWrong") }
-      : { valor: "unanswered", etiqueta: t("filterUnanswered") },
-    { valor: "flagged", etiqueta: t("filterFlagged") },
+      ? { valor: "wrong", etiqueta: tExam("filterWrong") }
+      : { valor: "unanswered", etiqueta: tExam("filterUnanswered") },
+    { valor: "flagged", etiqueta: tExam("filterFlagged") },
   ];
 
   return (
@@ -398,7 +411,7 @@ function PreguntaDelExamen({
   onToggleOption: (optionId: string) => void;
   onToggleFlag?: () => void;
 }) {
-  const t = useTranslations("lesson.exam");
+  const tExam = useTranslations("exam");
   const tQuiz = useTranslations("lesson.quiz");
 
   if (!pregunta) return null;
@@ -411,22 +424,14 @@ function PreguntaDelExamen({
       <div className="flex flex-col gap-2">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-            {t("questionProgress", { current: numero, total })}
+            {tExam("questionProgress", { current: numero, total })}
           </span>
           {onToggleFlag && (
-            <button
-              type="button"
-              onClick={onToggleFlag}
-              aria-pressed={marcada}
-              className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-colors ${
-                marcada
-                  ? "bg-amber-100 text-amber-800 dark:bg-amber-500/15 dark:text-amber-300"
-                  : "text-zinc-500 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
-              }`}
-            >
-              <Flag className="h-3.5 w-3.5" aria-hidden="true" />
-              {marcada ? t("unflagThis") : t("flagThis")}
-            </button>
+            <FlagButton
+              flagged={marcada}
+              onToggle={onToggleFlag}
+              labels={{ flag: tExam("flagThis"), unflag: tExam("unflagThis") }}
+            />
           )}
         </div>
 
@@ -439,7 +444,7 @@ function PreguntaDelExamen({
         )}
         {revelada && (
           <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            {elegidas.length > 0 ? `${t("reviewYourAnswer")}: ${elegidas.join(", ")}` : t("reviewNoAnswer")}
+            {elegidas.length > 0 ? `${tExam("reviewYourAnswer")}: ${elegidas.join(", ")}` : tExam("reviewNoAnswer")}
           </p>
         )}
       </div>
