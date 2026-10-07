@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { getPracticeExam } from "@content/courses/registry";
 import { sanitizeAnswers, sanitizeFlagged } from "@/lib/exams/answers";
+import { tablaFaltante } from "@/lib/exams/persistence";
 
 /**
  * Un intento de simulacro cronometrado. A diferencia de `quiz-progress`, que
@@ -64,10 +65,17 @@ function comoRespuesta(fila: FilaIntento) {
   };
 }
 
-/** La tabla puede no existir todavía: la migración 0005 se corre a mano. */
+/**
+ * La tabla puede no existir todavía: la migración 0005 se corre a mano.
+ *
+ * Delega en el detector compartido, que compara el mensaje de forma exacta. La
+ * versión anterior hacía `message.includes("exam_attempts")`, y eso confundía la
+ * violación del índice `exam_attempts_one_open` —que contiene esa subcadena— con
+ * una tabla inexistente: un intento ya abierto se reportaba como "no se puede
+ * guardar" en vez de como 409.
+ */
 function faltaLaTabla(error: { code?: string; message?: string } | null): boolean {
-  if (!error) return false;
-  return error.code === "42P01" || (error.message ?? "").includes("exam_attempts");
+  return tablaFaltante(error, "exam_attempts");
 }
 
 export async function GET(_request: Request, { params }: { params: Promise<RouteParams> }) {
@@ -145,14 +153,17 @@ export async function POST(_request: Request, { params }: { params: Promise<Rout
     .single();
 
   if (error) {
-    if (faltaLaTabla(error)) {
-      return NextResponse.json({ error: "not_persisted" }, { status: 503 });
-    }
+    // El código exacto antes que la heurística: si no, un intento ya abierto se
+    // reporta como "no se puede guardar".
+    //
     // El índice único parcial rechaza un segundo intento abierto. No es un
     // error del usuario: pasa con dos pestañas, y el cliente lo resuelve
     // volviendo a pedir el intento que ya existe.
     if (error.code === "23505") {
       return NextResponse.json({ error: "attempt_open" }, { status: 409 });
+    }
+    if (faltaLaTabla(error)) {
+      return NextResponse.json({ error: "not_persisted" }, { status: 503 });
     }
     return NextResponse.json({ error: "start_failed" }, { status: 500 });
   }

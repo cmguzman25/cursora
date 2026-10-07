@@ -148,14 +148,19 @@ export async function POST(request: Request, { params }: { params: Promise<Route
     .single();
 
   if (error) {
-    if (tablaFaltante(error, TABLA_RENDIDAS)) {
-      return NextResponse.json({ error: "not_persisted" }, { status: 503 });
-    }
+    // El código exacto se mira **primero**. El detector de tabla faltante es una
+    // heurística, y una heurística que corre antes que un código de error preciso
+    // se lo come: así fue como una rendida ya abierta terminó reportándose como
+    // "no se puede guardar" en vez de como "retomá la que tenés".
+    //
     // El índice único parcial rechaza una segunda rendida abierta del mismo modo.
-    // No es un error del usuario: pasa con dos pestañas, y el cliente lo resuelve
-    // volviendo a pedir la que ya existe.
+    // No es un error del usuario: pasa con dos pestañas o al volver a entrar, y el
+    // cliente lo resuelve adoptando la que ya existe.
     if (error.code === "23505") {
       return NextResponse.json({ error: "run_open" }, { status: 409 });
+    }
+    if (tablaFaltante(error, TABLA_RENDIDAS)) {
+      return NextResponse.json({ error: "not_persisted" }, { status: 503 });
     }
     return NextResponse.json({ error: "start_failed" }, { status: 500 });
   }

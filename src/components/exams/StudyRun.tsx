@@ -53,34 +53,54 @@ export function StudyRun({ examSlug, questions }: StudyRunProps) {
 
   const flags = useExamReviewFlags({ userKey: user?.id ?? null, examSlug });
 
-  /**
-   * Qué preguntas están reveladas **en esta visita**.
-   *
-   * Es estado local y no algo que venga del servidor a propósito: al retomar un
-   * repaso, lo útil es volver a ver la pregunta y poder pensarla, no encontrarse
-   * la respuesta ya destapada. Lo que sí persiste es lo que marcó, que es lo que
-   * permite saber por dónde iba.
-   */
-  const [reveladas, setReveladas] = useState<ReadonlySet<string>>(new Set());
   const [terminado, setTerminado] = useState(false);
 
   const respuestas = useMemo(() => attempt?.answers ?? {}, [attempt?.answers]);
   const posicion = Math.min(attempt?.cursor ?? 0, Math.max(0, questions.length - 1));
+  const abierta = Boolean(attempt && !attempt.submittedAt);
 
-  // Se arranca al montar: a esta ruta se llega habiendo elegido el modo en la
-  // pantalla previa. No hay reloj, así que no hay nada que quemar por entrar.
+  /**
+   * Qué preguntas están reveladas.
+   *
+   * Se **deriva** de las respuestas guardadas en vez de llevarse como estado
+   * propio, y eso es lo que hace que recargar la página devuelva el repaso donde
+   * estaba, con las explicaciones abiertas.
+   *
+   * La equivalencia es exacta, no una aproximación: en este modo una pregunta se
+   * revela justo cuando se completó su respuesta (ver `alternarOpcion`), así que
+   * "tiene tantas marcas como opciones correctas" y "ya se reveló" son la misma
+   * cosa. Una selección a medias en una pregunta de dos correctas se guarda pero
+   * todavía no revela, y la cuenta lo refleja sola.
+   */
+  const reveladas = useMemo(() => {
+    const destapadas = new Set<string>();
+    for (const pregunta of questions) {
+      const marcadas = respuestas[pregunta.id] ?? [];
+      const correctas = pregunta.options.filter((o) => o.correct).length;
+      if (marcadas.length === correctas) destapadas.add(pregunta.id);
+    }
+    return destapadas;
+  }, [questions, respuestas]);
+
+  // Abre una rendida solo si no hay ninguna abierta. A esta ruta se llega habiendo
+  // elegido el modo en la pantalla previa, y como no hay reloj, no hay nada que
+  // quemar por entrar.
+  //
+  // La guarda de `abierta` no es un ahorro de red: sin ella, cada recarga manda un
+  // POST que el índice único rechaza, y basta que ese rechazo se malinterprete una
+  // vez para que el hook reemplace la rendida cargada por una vacía en memoria —
+  // que es exactamente cómo este repaso perdía la posición y las respuestas.
   //
   // Va en un efecto y no derivado durante el render porque `start()` hace una
-  // petición, y un render no puede tener efectos secundarios. La guarda es una ref
-  // y no estado porque nada la dibuja, y porque llamar a `setState` dentro de un
-  // efecto provoca el render en cascada que la regla
-  // `react-hooks/set-state-in-effect` existe para evitar.
+  // petición. La guarda es una ref y no estado porque nada la dibuja, y porque
+  // llamar a `setState` dentro de un efecto provoca el render en cascada que la
+  // regla `react-hooks/set-state-in-effect` existe para evitar.
   const empezadoRef = useRef(false);
   useEffect(() => {
-    if (isLoading || empezadoRef.current) return;
+    if (isLoading || empezadoRef.current || abierta) return;
     empezadoRef.current = true;
     void start();
-  }, [isLoading, start]);
+  }, [isLoading, abierta, start]);
 
   const irA = useCallback(
     (index: number) => {
@@ -110,8 +130,11 @@ export function StudyRun({ examSlug, questions }: StudyRunProps) {
       // pregunta. En las de una sola correcta es inmediato; en las de varias
       // espera a que complete, porque revelar con media respuesta le diría que se
       // equivocó cuando todavía estaba eligiendo.
+      //
+      // No hace falta marcarla como revelada: `reveladas` se deriva de esta misma
+      // condición sobre las respuestas. Lo único que queda por hacer es registrar
+      // el resultado en el historial.
       if (siguiente.size === correctas) {
-        setReveladas((previas) => new Set(previas).add(pregunta.id));
         void recordAnswer(pregunta.id, [...siguiente]);
       }
     },
@@ -161,12 +184,16 @@ export function StudyRun({ examSlug, questions }: StudyRunProps) {
           <Link href={`/exams/${examSlug}/review`} className={buttonClasses()}>
             {tExams("goToReview")}
           </Link>
+          {/*
+            Empezar de nuevo borra las respuestas **en el servidor**, no solo en
+            la pantalla: ahora que lo revelado se deriva de ellas, limpiar estado
+            local dejaría el repaso igual de destapado en la próxima carga.
+          */}
           <Button
             variant="outline"
             onClick={() => {
-              setReveladas(new Set());
+              update({ answers: {}, cursor: 0 });
               setTerminado(false);
-              irA(0);
             }}
           >
             {tExams("studyRestart")}
