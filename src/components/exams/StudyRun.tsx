@@ -39,6 +39,12 @@ interface StudyRunProps {
  *
  * No hay autoentrega ni diálogo de confirmación: terminar es irse. Lo que el
  * alumno respondió ya está guardado.
+ *
+ * Por eso el botón de terminar **solo aparece en la última pregunta**. Abandonar a la
+ * mitad es el caso normal y no necesita botón: se cierra la pestaña y no se pierde
+ * nada. En cambio, al llegar al final sí hace falta una salida, porque "Siguiente" ya
+ * está deshabilitado y si no el repaso no termina en ningún lado. Ofrecerlo en las 64
+ * preguntas anteriores solo le daba al alumno algo que compite con "Siguiente".
  */
 export function StudyRun({ examSlug, questions }: StudyRunProps) {
   const t = useTranslations("exam");
@@ -207,6 +213,7 @@ export function StudyRun({ examSlug, questions }: StudyRunProps) {
   }
 
   const pregunta = questions[posicion];
+  const esUltima = posicion === questions.length - 1;
   const revelada = pregunta ? reveladas.has(pregunta.id) : false;
   const acerto = pregunta && revelada && isAnswerCorrect(respuestas[pregunta.id] ?? [], pregunta);
 
@@ -280,7 +287,9 @@ export function StudyRun({ examSlug, questions }: StudyRunProps) {
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Button>
         </div>
-        <Button onClick={() => setTerminado(true)}>{tExams("studyFinish")}</Button>
+        {esUltima && (
+          <Button onClick={() => setTerminado(true)}>{tExams("studyFinish")}</Button>
+        )}
       </div>
     </div>
   );

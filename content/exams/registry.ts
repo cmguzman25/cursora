@@ -1,5 +1,6 @@
 import type { ExamSummary, GeneratedExamBank } from "./types";
 import { bank as awsCloudPractitionerSimulacro } from "./aws-cloud-practitioner-simulacro/manifest";
+import { bank as awsDataEngineerIngesta } from "./aws-data-engineer-ingesta/manifest";
 import { bank as inglesTiemposYCondicionales } from "./ingles-tiempos-y-condicionales/manifest";
 
 /**
@@ -13,6 +14,7 @@ import { bank as inglesTiemposYCondicionales } from "./ingles-tiempos-y-condicio
  */
 export const EXAM_BANKS: GeneratedExamBank[] = [
   awsCloudPractitionerSimulacro,
+  awsDataEngineerIngesta,
   inglesTiemposYCondicionales,
 ];
 
