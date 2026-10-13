@@ -1,0 +1,3108 @@
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+⚠ ./src/app/globals.css:2665:15
+Warning: Parsing CSS source code failed
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+'highlight' is not recognized as a valid pseudo-element. Did you mean ':highlight' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:2665:15
+  [90m2663 |[0m     background-color: rgb([35m55[0m [35m48[0m [35m163[0m / [35m0.55[0m);
+  [90m2664 |[0m   }
+[33m[1m>[0m [90m2665 |[0m   ::highlight(cursora-comment-active) {
+  [90m     |[0m               [33m[1m^[0m
+  [90m2666 |[0m     background-color: rgb([35m99[0m [35m102[0m [35m241[0m / [35m0.45[0m);
+  [90m2667 |[0m     text-decoration-color: rgb([35m165[0m [35m180[0m [35m252[0m);
+  [90m2668 |[0m   }
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+

@@ -6,7 +6,7 @@ import { routing, type AppLocale } from "@/i18n/routing";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { ExamStartPanel } from "@/components/exams/ExamStartPanel";
 import { buttonClasses } from "@/components/ui/Button";
-import { EXAM_SLUGS, getExamBank } from "@content/exams/registry";
+import { EXAM_SLUGS, getExamBank, getGroupOfExam } from "@content/exams/registry";
 import { localize } from "@content/exams/types";
 import { examQuestions, DURACION_MAXIMA, DURACION_MINIMA } from "@/lib/exams/generated";
 import { leerRendidasAbiertas } from "@/lib/exams/server-queries";
@@ -57,6 +57,11 @@ export default async function ExamStartPage({
   const t = await getTranslations("exams");
   const preguntas = examQuestions(bank, locale as AppLocale);
 
+  // El enlace de vuelta apunta al grupo de la prueba, que es de donde se llegó.
+  // Sin grupo —un alta a medias— vuelve a la portada, que es donde la portada la
+  // muestra suelta.
+  const grupo = getGroupOfExam(examSlug);
+
   const supabase = await createClient();
   const {
     data: { user },
@@ -70,10 +75,10 @@ export default async function ExamStartPage({
       <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col gap-8 px-6 py-10">
         <div className="flex flex-col gap-3">
           <Link
-            href="/exams"
+            href={grupo ? `/exams/groups/${grupo.slug}` : "/exams"}
             className="self-start text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
           >
-            ← {t("backToExams")}
+            ← {grupo ? localize(grupo.title, locale as AppLocale) : t("backToExams")}
           </Link>
           <h1 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-white">
             {localize(bank.title, locale as AppLocale)}

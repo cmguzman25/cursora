@@ -53,6 +53,7 @@ dio alguna respuesta en su petición, no la vuelvas a preguntar.
 | ¿Qué dificultad? | Introductorio (reconocer) · Intermedio (aplicar a un escenario) · Avanzado (discriminar entre opciones cercanas) · Mixta escalonada |
 | ¿Cuántas preguntas? | 20 · 40 · 65 · Lo decide la cobertura de los temas |
 | ¿Cómo se reparten entre temas? | Parejo · Según el peso que yo indique · Según cuánto material tiene cada tema |
+| ¿En qué grupo del catálogo va? | *Leé `content/exams/groups.ts` y ofrecé los que ya existen*, más "un grupo nuevo" (pedí entonces su nombre y su descripción) |
 
 ### Ronda 2 — la forma de las preguntas
 
@@ -114,6 +115,7 @@ archivos que mandan son estos:
 
 - `content/exams/types.ts` — `GeneratedExamBank`, `ExamTopic`, `ExamQuestionWithTopic`
 - `content/exams/registry.ts` — dónde se da de alta el examen
+- `content/exams/groups.ts` — los grupos del catálogo, y en cuál entra el examen
 - `content/exams/intercalar.ts` — cómo se ordenan las preguntas
 - `src/lib/exams/generated.ts` — cómo el banco se vuelve calificable
 - `src/lib/exams/answers.ts` — qué es una respuesta que se puede guardar
@@ -147,6 +149,15 @@ A día de hoy eso impone:
   enunciados que ese alumno no respondió.
 - **El examen no existe para la app hasta darlo de alta** en
   `content/exams/registry.ts`.
+- **Y no es visible hasta entrar en un grupo.** El catálogo de `/exams` lista
+  **grupos**, no pruebas: una prueba se ve entrando a su grupo. Una que no está en
+  ninguno aparece suelta al final de la portada, bajo un título que dice justamente
+  eso, y `verificar-grupos.mjs` falla. Preguntale al usuario en qué grupo va antes de
+  inventar uno nuevo: lo normal es que la prueba sea una parte más de una
+  certificación que ya tiene grupo.
+- **El grupo no se rinde.** No tiene preguntas ni duración ni nota; es la carpeta.
+  Por eso el `slug` de una prueba **no cambia** por entrar a un grupo: es el que
+  quedó guardado en cada rendida, y su ruta sigue siendo `/exams/<slug>`.
 
 ---
 
@@ -194,7 +205,22 @@ Bajo `content/exams/<slug>/`:
 6. **`README.md`** — qué cubre, los parámetros con los que se generó, la tabla de
    preguntas, la medición del verificador, y **qué no se verificó**.
 
-Más una línea en `content/exams/registry.ts`.
+Más dos altas, las dos de una línea:
+
+- `content/exams/registry.ts` — el import del `manifest` y la entrada en `EXAM_BANKS`.
+- `content/exams/groups.ts` — el slug de la prueba en el `examSlugs` del grupo que le
+  corresponde, **en la posición que le toca**: esa lista es también el orden en que se
+  muestran, y el orden que importa es el del examen real, no el de escritura.
+
+Y correr los dos verificadores:
+
+```
+node --no-warnings=MODULE_TYPELESS_PACKAGE_JSON content/exams/<slug>/verificar-preguntas.mjs
+node --no-warnings=MODULE_TYPELESS_PACKAGE_JSON content/exams/verificar-grupos.mjs
+```
+
+El segundo es de la sección, no del examen: comprueba la correspondencia entre las
+carpetas que hay en disco, las altas del registro y los `examSlugs` de los grupos.
 
 ---
 
@@ -225,6 +251,8 @@ El error que cometerías cuarenta veces cuesta diez preguntas encontrarlo acá.
 - **Los ids de opción que no son letras salen impresos** en el círculo de la opción.
 - **El Markdown no se renderiza.** `**negrita**` sale con asteriscos.
 - **Olvidarse del alta en el registro** deja el examen en disco y en ninguna parte.
+- **Olvidarse del alta en el grupo** lo deja suelto al final de la portada, fuera de
+  la certificación a la que pertenece. Lo detecta `verificar-grupos.mjs`.
 - **Olvidarse de subir `version`** rompe la revisión de los intentos viejos.
 - **Comprobá que el verificador también falla.** Rompé un archivo a propósito —un id
   duplicado, una explicación vacía, todas las correctas en B—, confirmá que salta
