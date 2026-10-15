@@ -25,7 +25,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "La genera a partir de una copia completa del sitio que CloudFront replicó al configurarse",
         correct: false,
         explanation:
-          "Es la idea que hace pensar que CloudFront reemplaza al origen: que al activarlo todo el sitio se copia a cada ubicación de borde. No es así. CloudFront no replica el sitio por adelantado; guarda lo que se le va pidiendo.",
+          "Esta opción describe una replicación completa por adelantado: copiar todo el sitio a cada ubicación de borde al activar el servicio. Es la idea que hace pensar que CloudFront reemplaza al origen. No es así: CloudFront no replica el sitio por adelantado; guarda en caché lo que se le va pidiendo.",
       },
       {
         id: "B",
@@ -39,14 +39,14 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Devuelve un error hasta que el equipo suba la imagen a esa ubicación de borde",
         correct: false,
         explanation:
-          "Tienta a quien imagina las ubicaciones de borde como servidores que hay que cargar a mano. Pero el cliente no sube nada a las ubicaciones de borde: CloudFront las llena solo, a pedido, desde el origen.",
+          "Esta opción imagina las ubicaciones de borde como servidores de almacenamiento que el cliente tiene que cargar a mano, uno por uno. Tienta a quien las piensa así. Pero el cliente no sube nada a las ubicaciones de borde: CloudFront las llena solo, a pedido, desde el origen.",
       },
       {
         id: "D",
         text: "Redirige al usuario a la zona de disponibilidad más cercana de la región de Tokio",
         correct: false,
         explanation:
-          "Mezcla dos piezas de la infraestructura global. Las ubicaciones de borde no son zonas de disponibilidad, y CloudFront no redirige al usuario: le responde desde el borde, trayendo lo que falta del origen.",
+          "Una zona de disponibilidad es uno o más centros de datos dentro de una región, donde corren los recursos del cliente (EC2, RDS). La opción mezcla dos piezas de la infraestructura global: las ubicaciones de borde no son zonas de disponibilidad, y CloudFront no redirige al usuario: le responde desde el borde, trayendo lo que falta del origen.",
       },
     ],
     tips: [
@@ -65,21 +65,21 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon CloudFront",
         correct: false,
         explanation:
-          "Usuarios en todo el mundo y baja latencia suenan a CloudFront, por eso es la trampa. Pero CloudFront es una caché de contenido web: no sirve para tráfico UDP de un juego en tiempo real, donde no hay nada que cachear, ni da direcciones IP fijas.",
+          "Amazon CloudFront es la red de entrega de contenido (CDN) de AWS: cachea contenido web (HTTP/HTTPS) en ubicaciones de borde cerca de los usuarios. Usuarios en todo el mundo y baja latencia suenan a CloudFront, por eso es la trampa. Pero no sirve para tráfico UDP de un juego en tiempo real, donde no hay nada que cachear, ni da direcciones IP fijas.",
       },
       {
         id: "B",
         text: "Amazon S3 Transfer Acceleration",
         correct: false,
         explanation:
-          "También usa las ubicaciones de borde para acelerar, y por eso se parece. Pero solo acelera las subidas y descargas de objetos a un bucket de S3.",
+          "Amazon S3 Transfer Acceleration acelera las subidas y descargas a un bucket de S3 haciendo que los datos entren a la red de AWS por la ubicación de borde más cercana. También usa el borde para acelerar, y por eso se parece. Pero solo sirve para objetos de S3, no para tráfico UDP hacia servidores.",
       },
       {
         id: "C",
         text: "Amazon Route 53 con enrutamiento por latencia",
         correct: false,
         explanation:
-          "Route 53 puede mandar a cada jugador a la región más cercana, y eso cubre parte del pedido. Pero es DNS: devuelve las IP de cada región, que cambian si se mueve un servidor, y el tráfico viaja por internet hasta la región.",
+          "Amazon Route 53 es el servicio de DNS de AWS; con enrutamiento por latencia responde a cada usuario con la IP de la región que le queda más rápida. Cubre parte del pedido, mandar a cada jugador a la región más cercana. Pero es DNS: devuelve las IP de cada región, que cambian si se mueve un servidor, y el tráfico viaja por internet hasta la región.",
       },
       {
         id: "D",
@@ -113,21 +113,21 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "El servicio sigue funcionando aunque se borren los servidores, porque el contenido ya está en el borde",
         correct: false,
         explanation:
-          "Es la misma confusión de 'CloudFront reemplaza al origen'. La caché tiene vencimiento y solo guarda lo pedido: un video nunca visto o una caché expirada necesitan el origen.",
+          "Esta opción supone que la caché del borde es una copia permanente y completa del contenido, capaz de funcionar sin servidores. Es la misma confusión de 'CloudFront reemplaza al origen'. La caché tiene vencimiento y solo guarda lo pedido: un video nunca visto o una caché expirada necesitan el origen.",
       },
       {
         id: "C",
         text: "Los servidores de origen se copian automáticamente a otras regiones cercanas a los usuarios",
         correct: false,
         explanation:
-          "Parece una forma de bajar la latencia, y por eso tienta. Pero CloudFront no replica servidores ni crea recursos en otras regiones: cachea respuestas en el borde.",
+          "Copiar servidores a otras regiones es una estrategia multirregión, que se arma copiando AMI, replicando bases de datos o desplegando plantillas de CloudFormation en cada región, no con una CDN. Parece una forma de bajar la latencia, y por eso tienta. Pero CloudFront no replica servidores ni crea recursos en otras regiones: cachea respuestas en el borde.",
       },
       {
         id: "D",
         text: "Desaparece el cargo por transferencia de datos hacia los usuarios",
         correct: false,
         explanation:
-          "Tienta porque la transferencia del origen en AWS hacia CloudFront no se cobra. Pero lo que CloudFront entrega a los usuarios sí tiene un costo de transferencia, aunque suele ser menor.",
+          "La transferencia de datos hacia internet (data transfer out) es lo que AWS cobra por cada GB que sale hacia los usuarios. Tienta porque la transferencia del origen en AWS hacia CloudFront no se cobra. Pero lo que CloudFront entrega a los usuarios sí tiene un costo de transferencia, aunque suele ser menor.",
       },
       {
         id: "E",
@@ -160,21 +160,21 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Un internet gateway en la VPC",
         correct: false,
         explanation:
-          "Conecta la VPC con internet, y la oficina está en internet: por eso parece servir. Pero expone la aplicación a todo internet, sin túnel ni cifrado propio. No crea un enlace privado entre la oficina y la VPC.",
+          "Un internet gateway es el componente que conecta una VPC con internet, en ambas direcciones, para las subredes públicas. La oficina está en internet, y por eso parece servir. Pero expone la aplicación a todo internet, sin túnel ni cifrado propio. No crea un enlace privado entre la oficina y la VPC.",
       },
       {
         id: "C",
         text: "AWS Direct Connect",
         correct: false,
         explanation:
-          "Es la respuesta cuando se pide un enlace privado y estable, y por eso es la tentación. Pero un enlace dedicado tarda semanas en instalarse, cuesta más, y por defecto no cifra el tráfico. Para poco tráfico esta semana, es la herramienta equivocada.",
+          "AWS Direct Connect es un enlace de red físico y dedicado entre el centro de datos del cliente y AWS, que no pasa por internet. Es la respuesta cuando se pide un enlace privado y estable, y por eso es la tentación. Pero tarda semanas en instalarse, cuesta más y por defecto no cifra el tráfico. Para poco tráfico esta semana, es la herramienta equivocada.",
       },
       {
         id: "D",
         text: "Un VPC peering",
         correct: false,
         explanation:
-          "El peering conecta dos VPC entre sí, dentro de AWS. La oficina no es una VPC, así que no aplica.",
+          "Un VPC peering es una conexión privada entre dos VPC, de la misma cuenta o de cuentas distintas, para que se comuniquen como si fueran una sola red. Conecta VPC entre sí, dentro de AWS. La oficina no es una VPC, así que no aplica.",
       },
     ],
     tips: [
@@ -193,14 +193,14 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "AWS Site-to-Site VPN",
         correct: false,
         explanation:
-          "La VPN suena privada porque cifra el tráfico, y eso la hace tentadora. Pero los túneles viajan por internet: la latencia sube y baja con el estado de la red pública, que es justo lo que el enunciado no acepta.",
+          "AWS Site-to-Site VPN crea túneles IPsec cifrados entre la red del cliente y su VPC, usando la conexión a internet que ya existe. Suena privada porque cifra el tráfico, y eso la hace tentadora. Pero los túneles viajan por internet: la latencia sube y baja con el estado de la red pública, que es justo lo que el enunciado no acepta.",
       },
       {
         id: "B",
         text: "Un internet gateway con una IP elástica",
         correct: false,
         explanation:
-          "Una IP fija da estabilidad de dirección, no de latencia. Todo el tráfico que pasa por un internet gateway viaja por internet.",
+          "Una IP elástica es una dirección IPv4 pública fija que se asigna a un recurso y no cambia aunque se reinicie; el internet gateway conecta la VPC con internet. Una IP fija da estabilidad de dirección, no de latencia: todo el tráfico que pasa por un internet gateway viaja por internet.",
       },
       {
         id: "C",
@@ -214,7 +214,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Un VPC peering",
         correct: false,
         explanation:
-          "El peering da conectividad privada y de baja latencia, pero entre VPC. No conecta un centro de datos del cliente.",
+          "Un VPC peering conecta dos VPC por la red privada de AWS, con baja latencia. Da conectividad privada, pero entre VPC. No conecta un centro de datos del cliente.",
       },
     ],
     tips: [
@@ -234,7 +234,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "AWS Transit Gateway",
         correct: false,
         explanation:
-          "Transit Gateway aparece seguido en preguntas de conectividad híbrida, y por eso tienta. Pero es un concentrador que interconecta muchas VPC y conexiones; no es en sí un enlace dedicado al centro de datos ni da acceso desde internet.",
+          "AWS Transit Gateway es un concentrador regional que interconecta muchas VPC y conexiones locales (VPN o Direct Connect) en un modelo de estrella, en lugar de armar decenas de peerings. Aparece seguido en preguntas de conectividad híbrida, y por eso tienta. Pero no es en sí un enlace dedicado al centro de datos ni da acceso desde internet.",
       },
       {
         id: "B",
@@ -248,7 +248,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Un NAT gateway",
         correct: false,
         explanation:
-          "Se confunde con el internet gateway porque los dos tienen que ver con salir a internet. Pero el NAT gateway solo permite conexiones salientes desde subredes privadas; nadie desde internet puede iniciar una conexión a través de él.",
+          "Un NAT gateway permite que las instancias de una subred privada salgan a internet (por ejemplo, para descargar actualizaciones) sin quedar expuestas. Se confunde con el internet gateway porque los dos tienen que ver con internet. Pero solo permite conexiones salientes: nadie desde internet puede iniciar una conexión a través de él.",
       },
       {
         id: "D",
@@ -262,7 +262,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Una conexión Site-to-Site VPN",
         correct: false,
         explanation:
-          "Conecta el centro de datos, así que cubre la mitad de la idea. Pero viaja por internet: no es dedicada y su ancho de banda por túnel es limitado.",
+          "AWS Site-to-Site VPN conecta la red local con la VPC mediante túneles IPsec cifrados sobre internet. Conecta el centro de datos, así que cubre la mitad de la idea. Pero viaja por internet: no es dedicada y su ancho de banda por túnel es limitado.",
       },
     ],
     tips: [
@@ -281,21 +281,21 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Un volumen de Amazon EBS",
         correct: false,
         explanation:
-          "EBS es el disco persistente de EC2, y por eso tienta. Pero un volumen EBS vive en una sola zona de disponibilidad y, salvo casos especiales dentro de la misma AZ, se adjunta a una instancia por vez. No sirve para veinte instancias en tres zonas.",
+          "Amazon EBS es almacenamiento en bloque persistente: un disco de red que se adjunta a una instancia EC2. Es el disco natural de EC2, y por eso tienta. Pero un volumen vive en una sola zona de disponibilidad y, salvo casos especiales dentro de la misma AZ, se adjunta a una instancia por vez. No sirve para veinte instancias en tres zonas.",
       },
       {
         id: "B",
         text: "El almacén de instancia de una de ellas, compartido por la red",
         correct: false,
         explanation:
-          "Compartirlo por la red suena ingenioso, pero el almacén de instancia es efímero: si esa instancia se detiene o falla, las veinte pierden los archivos.",
+          "El almacén de instancia (instance store) es un disco físicamente conectado al servidor donde corre la instancia: muy rápido, pero efímero. Compartirlo por la red suena ingenioso, pero si esa instancia se detiene o falla, las veinte pierden los archivos.",
       },
       {
         id: "C",
         text: "Un bucket de Amazon S3",
         correct: false,
         explanation:
-          "S3 es accesible desde todas las zonas y crece solo, que es la mitad del pedido. Pero es almacenamiento de objetos, no un sistema de archivos que se monte y se modifique como un disco: no se edita una parte de un archivo, se reemplaza el objeto entero.",
+          "Amazon S3 es almacenamiento de objetos: guarda archivos enteros en buckets, accesibles por API desde cualquier lugar, con durabilidad altísima y capacidad ilimitada. Es accesible desde todas las zonas y crece solo, que es la mitad del pedido. Pero no es un sistema de archivos que se monte y se modifique como un disco: no se edita una parte de un archivo, se reemplaza el objeto entero.",
       },
       {
         id: "D",
@@ -328,21 +328,21 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Un volumen de Amazon EBS",
         correct: false,
         explanation:
-          "Es la respuesta correcta cuando los datos tienen que sobrevivir a un reinicio, y por eso tienta después de aprender esa regla. Pero acá la persistencia no se pide: se pide velocidad para datos descartables, y para eso el almacén de instancia es más rápido y no se paga aparte.",
+          "Amazon EBS es almacenamiento en bloque persistente para EC2: los datos sobreviven a que la instancia se detenga. Es la respuesta correcta cuando los datos tienen que sobrevivir a un reinicio, y por eso tienta después de aprender esa regla. Pero acá la persistencia no se pide: se pide velocidad para datos descartables, y para eso el almacén de instancia es más rápido y no se paga aparte.",
       },
       {
         id: "C",
         text: "Un bucket de Amazon S3",
         correct: false,
         explanation:
-          "S3 es durable y barato, pero cada lectura y escritura es una llamada por red. Para archivos intermedios que se escriben y leen todo el tiempo es la opción más lenta de la lista.",
+          "Amazon S3 es almacenamiento de objetos durable y barato, accesible por API a través de la red. Para guardar datos a largo plazo es excelente. Pero cada lectura y escritura es una llamada por red: para archivos intermedios que se escriben y leen todo el tiempo es la opción más lenta de la lista.",
       },
       {
         id: "D",
         text: "Amazon S3 Glacier Deep Archive",
         correct: false,
         explanation:
-          "Deep Archive es la clase más barata de S3, para archivar datos que casi nunca se consultan, y recuperar un objeto tarda horas. Es lo opuesto a lo que se pide.",
+          "S3 Glacier Deep Archive es la clase de almacenamiento más barata de S3, pensada para archivar datos que casi nunca se consultan (por ejemplo, por retención legal); recuperar un objeto tarda horas. Es lo opuesto a lo que se pide: velocidad inmediata para datos temporales.",
       },
     ],
     tips: [
@@ -362,14 +362,14 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Se puede adjuntar directamente a una instancia de cualquier zona de disponibilidad de la región",
         correct: false,
         explanation:
-          "Tienta porque muchos servicios de AWS son regionales. Pero un volumen EBS se crea en una zona de disponibilidad y solo se adjunta a instancias de esa zona; para llevarlo a otra se pasa por una instantánea.",
+          "Esta opción describe un recurso regional, disponible en todas las zonas de la región. Tienta porque muchos servicios de AWS son regionales. Pero un volumen EBS se crea en una zona de disponibilidad y solo se adjunta a instancias de esa zona; para llevarlo a otra se pasa por una instantánea.",
       },
       {
         id: "B",
         text: "Pierde sus datos cada vez que la instancia se detiene",
         correct: false,
         explanation:
-          "Es el comportamiento del almacén de instancia, no de EBS. Confundirlos es justamente el error que esta pregunta busca separar.",
+          "Perder los datos al detener la instancia es el comportamiento del almacén de instancia (instance store), el disco efímero conectado físicamente al servidor. No es lo que hace EBS, que es persistente. Confundirlos es justamente el error que esta pregunta busca separar.",
       },
       {
         id: "C",
@@ -390,7 +390,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Lo pueden montar miles de instancias a la vez como sistema de archivos compartido",
         correct: false,
         explanation:
-          "Eso describe a EFS. EBS es un disco en bloque pensado para una instancia; incluso su modo de adjuntar a varias tiene límites estrictos y queda dentro de una misma zona.",
+          "Un sistema de archivos compartido que montan muchas instancias a la vez describe a Amazon EFS, el almacenamiento de archivos NFS administrado. EBS es un disco en bloque pensado para una instancia; incluso su modo de adjuntar a varias (Multi-Attach) tiene límites estrictos y queda dentro de una misma zona.",
       },
     ],
     tips: [
@@ -409,7 +409,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "AWS DataSync",
         correct: false,
         explanation:
-          "DataSync es el servicio de AWS para mover datos a S3 o EFS, y por eso es la tentación. Pero mueve los datos por la red: con una conexión lenta e inestable, tarda lo mismo que cualquier otra transferencia en línea.",
+          "AWS DataSync es el servicio para mover y sincronizar archivos por la red entre almacenamiento local y S3, EFS o FSx, de forma automatizada. Por eso es la tentación. Pero mueve los datos por la red: con una conexión lenta e inestable, tarda lo mismo que cualquier otra transferencia en línea.",
       },
       {
         id: "B",
@@ -423,14 +423,14 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "AWS Database Migration Service",
         correct: false,
         explanation:
-          "'Migrar' está en el nombre, y por eso aparece en cualquier pregunta de migración. Pero DMS migra bases de datos, y lo que hay acá son archivos de imágenes.",
+          "AWS Database Migration Service (DMS) migra bases de datos a AWS, manteniendo la base de origen en funcionamiento durante la migración. 'Migrar' está en el nombre, y por eso aparece en cualquier pregunta de migración. Pero lo que hay acá son archivos de imágenes, no una base de datos.",
       },
       {
         id: "D",
         text: "Amazon S3 Transfer Acceleration",
         correct: false,
         explanation:
-          "Acelera la parte del camino que va de la ubicación de borde hasta la región. Pero el tramo lento acá es la conexión del laboratorio, y eso ningún servicio en línea lo arregla.",
+          "S3 Transfer Acceleration acelera las transferencias a S3 haciendo entrar los datos a la red de AWS por la ubicación de borde más cercana. Acelera el tramo que va del borde hasta la región. Pero el tramo lento acá es la conexión del laboratorio, y eso ningún servicio en línea lo arregla.",
       },
     ],
     tips: [
@@ -449,14 +449,14 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "AWS Snowball",
         correct: false,
         explanation:
-          "Snowball puede llevar a AWS las cintas que ya existen, de una vez, y por eso aparece. Pero el pedido es seguir respaldando todos los días sin cambiar el software, y un dispositivo que se envía por correo no es un destino de backup permanente.",
+          "AWS Snowball es un dispositivo físico de almacenamiento que AWS envía al cliente para cargar datos sin usar la red y devolverlo para que se suban a S3. Podría llevar a AWS las cintas que ya existen, de una vez, y por eso aparece. Pero el pedido es seguir respaldando todos los días sin cambiar el software, y un dispositivo que se envía por correo no es un destino de backup permanente.",
       },
       {
         id: "B",
         text: "Amazon EBS",
         correct: false,
         explanation:
-          "EBS es almacenamiento en bloque para instancias EC2 dentro de AWS. El software de backup está en el centro de datos del cliente y no puede escribir en un volumen EBS como si fuera una cinta.",
+          "Amazon EBS es almacenamiento en bloque que se adjunta a instancias EC2 dentro de AWS. El software de backup está en el centro de datos del cliente y no puede escribir en un volumen EBS como si fuera una cinta.",
       },
       {
         id: "C",
@@ -470,7 +470,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "AWS DataSync",
         correct: false,
         explanation:
-          "DataSync mueve y sincroniza archivos, y eso suena a respaldar. Pero no se presenta como una biblioteca de cintas: habría que cambiar el software de backup, que es justo lo que no se quiere.",
+          "AWS DataSync mueve y sincroniza archivos por la red entre el almacenamiento local y servicios de AWS. Suena a respaldar. Pero no se presenta como una biblioteca de cintas: habría que cambiar el software de backup, que es justo lo que no se quiere.",
       },
     ],
     tips: [
@@ -497,7 +497,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "AWS Snowball",
         correct: false,
         explanation:
-          "Snowball se asocia con migrar volúmenes grandes, y por eso se elige por reflejo. Pero acá la red alcanza de sobra para 2 TB por semana, y un dispositivo físico no sirve para una sincronización que se repite cada semana.",
+          "AWS Snowball es un dispositivo físico que se carga en el centro de datos y se envía a AWS, pensado para mover volúmenes enormes cuando la red no alcanza. Se elige por reflejo al hablar de migrar. Pero acá la red alcanza de sobra para 2 TB por semana, y un dispositivo físico no sirve para una sincronización que se repite cada semana.",
       },
       {
         id: "C",
@@ -511,14 +511,14 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "AWS Storage Gateway",
         correct: false,
         explanation:
-          "Storage Gateway también une lo local con AWS, por eso se parece. Pero sirve para que aplicaciones locales sigan usando almacenamiento respaldado en la nube; no es una herramienta de sincronización programada ni de migración de bases.",
+          "AWS Storage Gateway es un servicio híbrido que presenta almacenamiento respaldado en la nube a las aplicaciones locales como si fuera local: un recurso compartido de archivos, un volumen o una biblioteca de cintas. También une lo local con AWS, por eso se parece. Pero no es una herramienta de sincronización programada ni de migración de bases.",
       },
       {
         id: "E",
         text: "Amazon EBS",
         correct: false,
         explanation:
-          "EBS es almacenamiento para instancias EC2. No mueve ni migra nada desde el centro de datos.",
+          "Amazon EBS es almacenamiento en bloque para instancias EC2 dentro de AWS. Es un destino donde guardar datos, no una herramienta: no mueve ni migra nada desde el centro de datos.",
       },
     ],
     tips: [
@@ -544,21 +544,21 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon Transcribe",
         correct: false,
         explanation:
-          "Es el par exacto de Polly, y por eso se confunden. Pero Transcribe va en la dirección contraria: toma audio y produce texto. Acá se parte de texto.",
+          "Amazon Transcribe convierte audio en texto (reconocimiento de voz): toma una grabación o un flujo de audio y devuelve la transcripción. Es el par exacto de Polly, y por eso se confunden. Pero va en la dirección contraria: acá se parte de texto y se quiere voz.",
       },
       {
         id: "C",
         text: "Amazon Comprehend",
         correct: false,
         explanation:
-          "Comprehend trabaja con el texto de los artículos, y eso lo acerca. Pero lo analiza (temas, entidades, sentimiento); no produce audio.",
+          "Amazon Comprehend analiza texto con procesamiento de lenguaje natural: detecta el sentimiento, las entidades (personas, lugares, productos), los temas y el idioma. Trabaja con el texto de los artículos, y eso lo acerca. Pero lo analiza; no produce audio.",
       },
       {
         id: "D",
         text: "Amazon Lex",
         correct: false,
         explanation:
-          "Lex arma interfaces conversacionales por voz o texto, y 'voz' lo vuelve tentador. Pero sirve para que un usuario dialogue con un bot, no para leer un artículo en voz alta.",
+          "Amazon Lex sirve para construir chatbots y asistentes conversacionales por voz o texto (la misma tecnología de Alexa). 'Voz' lo vuelve tentador. Pero sirve para que un usuario dialogue con un bot, no para leer un artículo en voz alta.",
       },
     ],
     tips: [
@@ -577,7 +577,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon Transcribe",
         correct: false,
         explanation:
-          "Llamadas de un centro de atención es el escenario típico de Transcribe, y por eso tienta. Pero el enunciado dice que las conversaciones ya están en texto: el paso de audio a texto ya está hecho.",
+          "Amazon Transcribe convierte audio en texto. Las llamadas de un centro de atención son su escenario típico, y por eso tienta. Pero el enunciado dice que las conversaciones ya están en texto: el paso de audio a texto ya está hecho.",
       },
       {
         id: "B",
@@ -591,14 +591,14 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon Translate",
         correct: false,
         explanation:
-          "Translate trabaja con texto, y por eso aparece. Pero solo lo traduce de un idioma a otro; no dice nada sobre lo que el texto expresa.",
+          "Amazon Translate traduce texto de un idioma a otro con traducción automática neuronal. Trabaja con texto, y por eso aparece. Pero solo lo traduce; no dice nada sobre lo que el texto expresa.",
       },
       {
         id: "D",
         text: "Amazon Rekognition",
         correct: false,
         explanation:
-          "Rekognition también detecta emociones, y eso lo hace parecer útil. Pero en rostros de imágenes y video, no en texto.",
+          "Amazon Rekognition analiza imágenes y video: reconoce objetos, rostros, texto en imágenes y contenido inapropiado. También detecta emociones, y eso lo hace parecer útil. Pero en rostros de imágenes y video, no en texto.",
       },
     ],
     tips: [
@@ -618,21 +618,21 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon Polly",
         correct: false,
         explanation:
-          "Es la confusión que esta pregunta ataca: Polly trabaja con voz, y la entrada es voz. Pero Polly produce voz, no la recibe. El equipo de calidad quiere leer, y Polly no genera texto.",
+          "Amazon Polly convierte texto en voz natural (text-to-speech), en muchos idiomas. Es la confusión que esta pregunta ataca: Polly trabaja con voz, y la entrada es voz. Pero Polly produce voz, no la recibe. El equipo de calidad quiere leer, y Polly no genera texto.",
       },
       {
         id: "B",
         text: "Amazon Lex",
         correct: false,
         explanation:
-          "Lex entiende voz para armar un bot conversacional, y eso lo acerca. Pero el objetivo no es que un bot dialogue con el cliente, sino tener la conversación completa por escrito.",
+          "Amazon Lex sirve para construir chatbots conversacionales que entienden voz o texto y responden. Entiende voz, y eso lo acerca. Pero el objetivo no es que un bot dialogue con el cliente, sino tener la conversación completa por escrito.",
       },
       {
         id: "C",
         text: "Amazon Comprehend",
         correct: false,
         explanation:
-          "Comprehend podría analizar las conversaciones una vez en texto, y por eso tienta. Pero el pedido es leerlas en otro idioma, no analizarlas, y Comprehend no traduce.",
+          "Amazon Comprehend analiza texto: sentimiento, entidades, temas, frases clave. Podría analizar las conversaciones una vez en texto, y por eso tienta. Pero el pedido es leerlas en otro idioma, no analizarlas, y Comprehend no traduce.",
       },
       {
         id: "D",
@@ -665,14 +665,14 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon Athena",
         correct: false,
         explanation:
-          "Athena también ejecuta SQL sobre grandes volúmenes, y por eso tienta. Pero está pensada para consultas puntuales sobre archivos en S3, pagando por dato escaneado; para cientos de analistas consultando todo el día con rendimiento estable, el servicio diseñado es un data warehouse.",
+          "Amazon Athena es un servicio sin servidor para consultar con SQL archivos guardados en S3, pagando por cada dato escaneado. También ejecuta SQL sobre grandes volúmenes, y por eso tienta. Pero está pensada para consultas puntuales; para cientos de analistas consultando todo el día con rendimiento estable, el servicio diseñado es un data warehouse.",
       },
       {
         id: "B",
         text: "Amazon RDS for MySQL",
         correct: false,
         explanation:
-          "RDS es la base relacional administrada, y las uniones entre tablas suenan a base relacional. Pero RDS está optimizado para transacciones (muchas escrituras pequeñas), no para consultas analíticas sobre petabytes.",
+          "Amazon RDS es el servicio de bases de datos relacionales administradas (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, Db2 y Aurora), pensado para cargas transaccionales (OLTP). Las uniones entre tablas suenan a base relacional. Pero RDS está optimizado para muchas escrituras pequeñas, no para consultas analíticas sobre petabytes.",
       },
       {
         id: "C",
@@ -686,7 +686,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon DynamoDB",
         correct: false,
         explanation:
-          "DynamoDB escala a cualquier volumen, y 'petabytes' lo hace tentador. Pero es una base clave-valor sin uniones entre tablas: no sirve para análisis con SQL complejo.",
+          "Amazon DynamoDB es una base NoSQL clave-valor y de documentos, sin servidor, con latencia de milisegundos a cualquier escala. 'Petabytes' la hace tentadora. Pero no tiene uniones entre tablas: no sirve para análisis con SQL complejo.",
       },
     ],
     tips: [
@@ -712,21 +712,21 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon Athena",
         correct: false,
         explanation:
-          "Athena procesa grandes volúmenes sin administrar servidores, e incluso ofrece cuadernos interactivos de Spark, y por eso es tentadora. Pero es serverless justamente para no dar control sobre el clúster: cuando el pedido es configurar el clúster y sus bibliotecas, el servicio es EMR.",
+          "Amazon Athena es un servicio sin servidor para consultar con SQL los datos en S3, sin administrar infraestructura; incluso ofrece cuadernos interactivos de Spark. Por eso es tentadora. Pero es serverless justamente para no dar control sobre el clúster: cuando el pedido es configurar el clúster y sus bibliotecas, el servicio es EMR.",
       },
       {
         id: "C",
         text: "Amazon QuickSight",
         correct: false,
         explanation:
-          "QuickSight es para ver los resultados en tableros. Aparece en las preguntas de análisis, pero no procesa trabajos de Spark.",
+          "Amazon QuickSight es el servicio de inteligencia de negocios (BI) de AWS: arma tableros y visualizaciones a partir de distintas fuentes de datos. Aparece en las preguntas de análisis, pero es para ver resultados, no procesa trabajos de Spark.",
       },
       {
         id: "D",
         text: "Amazon Redshift",
         correct: false,
         explanation:
-          "Redshift es para análisis a gran escala, y eso lo acerca. Pero es un data warehouse que se consulta con SQL, no un clúster donde se ejecutan trabajos de Spark.",
+          "Amazon Redshift es el data warehouse de AWS: almacena datos en columnas y los consulta con SQL a escala de petabytes. Es para análisis a gran escala, y eso lo acerca. Pero se consulta con SQL; no es un clúster donde se ejecutan trabajos de Spark propios.",
       },
     ],
     tips: [
@@ -746,7 +746,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon RDS",
         correct: false,
         explanation:
-          "SQL hace pensar en una base relacional, por eso aparece. Pero habría que cargar los registros en la base y pagarla encendida todo el tiempo, cuando el pedido es consultar donde están, solo cuando hace falta.",
+          "Amazon RDS es el servicio de bases relacionales administradas, siempre encendidas y pagadas por hora. SQL hace pensar en una base relacional, por eso aparece. Pero habría que cargar los registros en la base y pagarla todo el tiempo, cuando el pedido es consultar los datos donde están, solo cuando hace falta.",
       },
       {
         id: "B",
@@ -767,14 +767,14 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon Redshift",
         correct: false,
         explanation:
-          "Es el error del simulacro: Redshift también consulta con SQL y puede leer de S3. Pero es un almacén dedicado pensado para uso continuo; para consultas ocasionales cuando algo falla, sin administrar nada, la herramienta es Athena.",
+          "Amazon Redshift es el data warehouse de AWS, para análisis con SQL a gran escala y uso continuo; con Redshift Spectrum también puede leer de S3. Es el error del simulacro, porque también consulta con SQL. Pero es un almacén dedicado pensado para uso constante; para consultas ocasionales cuando algo falla, sin administrar nada, la herramienta es Athena.",
       },
       {
         id: "E",
         text: "Amazon EMR",
         correct: false,
         explanation:
-          "EMR procesa grandes volúmenes en S3, y eso lo acerca. Pero hay que levantar y configurar un clúster, que es más de lo que pide una consulta SQL ocasional.",
+          "Amazon EMR es una plataforma administrada para ejecutar frameworks de big data (Spark, Hadoop, Hive) en clústeres. Procesa grandes volúmenes en S3, y eso lo acerca. Pero hay que levantar y configurar un clúster, que es más de lo que pide una consulta SQL ocasional.",
       },
     ],
     tips: [
@@ -793,7 +793,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon WorkSpaces",
         correct: false,
         explanation:
-          "WorkSpaces también entrega trabajo remoto en cualquier dispositivo, y por eso es la trampa. Pero da un escritorio completo y persistente por usuario; el enunciado dice explícitamente que solo hace falta una aplicación.",
+          "Amazon WorkSpaces es el servicio de escritorios virtuales (VDI): cada usuario recibe un escritorio Windows o Linux completo y persistente en la nube. También entrega trabajo remoto en cualquier dispositivo, y por eso es la trampa. Pero el enunciado dice explícitamente que solo hace falta una aplicación, no un escritorio entero.",
       },
       {
         id: "B",
@@ -807,14 +807,14 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "Amazon EC2 con acceso por escritorio remoto",
         correct: false,
         explanation:
-          "Técnicamente podría funcionar, y por eso tienta. Pero obliga a administrar cada servidor, sus licencias y el acceso de cientos de estudiantes: es lo que AppStream resuelve como servicio administrado.",
+          "Amazon EC2 con escritorio remoto significa levantar servidores propios y que cada usuario se conecte a ellos por RDP. Técnicamente podría funcionar, y por eso tienta. Pero obliga a administrar cada servidor, sus licencias y el acceso de cientos de estudiantes: es lo que AppStream resuelve como servicio administrado.",
       },
       {
         id: "D",
         text: "AWS Amplify",
         correct: false,
         explanation:
-          "Amplify es para construir y alojar aplicaciones web y móviles. Suena a 'aplicación en el navegador', pero no transmite un programa de escritorio existente.",
+          "AWS Amplify es un conjunto de herramientas para construir, desplegar y alojar aplicaciones web y móviles modernas (frontend y backend). Suena a 'aplicación en el navegador', pero sirve para desarrollar aplicaciones nuevas, no para transmitir un programa de escritorio existente.",
       },
     ],
     tips: [
@@ -833,14 +833,14 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "AWS CodeBuild",
         correct: false,
         explanation:
-          "Pertenece a la misma familia de herramientas de entrega continua, y por eso aparece. Pero CodeBuild compila y ejecuta pruebas, que es justo la parte que el equipo ya tiene resuelta. No instala nada en las instancias.",
+          "AWS CodeBuild es el servicio administrado de integración continua que compila el código, ejecuta las pruebas y produce los artefactos listos para desplegar. Pertenece a la misma familia de herramientas, y por eso aparece. Pero compila y prueba, que es justo la parte que el equipo ya tiene resuelta. No instala nada en las instancias.",
       },
       {
         id: "B",
         text: "AWS CodePipeline",
         correct: false,
         explanation:
-          "Es la tentación después de aprender que CodePipeline automatiza la entrega. Pero CodePipeline orquesta etapas: no instala por sí mismo el código en las instancias, sino que le pasa esa etapa a un servicio de despliegue. Acá se pide solo esa etapa.",
+          "AWS CodePipeline orquesta el flujo de entrega continua: encadena etapas (origen, compilación, pruebas, aprobación, despliegue) y las dispara ante cada cambio. Es la tentación después de aprender que automatiza la entrega. Pero no instala por sí mismo el código en las instancias, sino que le pasa esa etapa a un servicio de despliegue. Acá se pide solo esa etapa.",
       },
       {
         id: "C",
@@ -854,7 +854,7 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "AWS X-Ray",
         correct: false,
         explanation:
-          "X-Ray ayuda a ver si las instancias nuevas empiezan a fallar, porque traza las solicitudes a través de la aplicación, y eso lo acerca a la segunda mitad del pedido. Pero observa; no instala versiones ni las revierte.",
+          "AWS X-Ray es un servicio de trazado distribuido: sigue cada solicitud a través de los componentes de la aplicación para encontrar errores y cuellos de botella. Ayuda a ver si las instancias nuevas empiezan a fallar, y eso lo acerca a la segunda mitad del pedido. Pero observa; no instala versiones ni las revierte.",
       },
     ],
     tips: [
@@ -873,21 +873,21 @@ export const TEMA_3_TECNOLOGIA: ExamQuestionWithTopic[] = [
         text: "AWS CodeBuild",
         correct: false,
         explanation:
-          "Compilar y ejecutar pruebas es justo lo que hace CodeBuild, y por eso tienta. Pero CodeBuild es una etapa del flujo; no espera aprobaciones ni encadena el despliegue.",
+          "AWS CodeBuild es el servicio administrado que compila el código y ejecuta las pruebas. Compilar y probar es justo parte del flujo, y por eso tienta. Pero CodeBuild es una etapa; no espera aprobaciones ni encadena el despliegue.",
       },
       {
         id: "B",
         text: "AWS CodeDeploy",
         correct: false,
         explanation:
-          "CodeDeploy hace la última etapa, el despliegue en EC2, Lambda o ECS. Es una pieza del flujo, no lo que conecta todas las etapas.",
+          "AWS CodeDeploy automatiza la instalación de nuevas versiones en EC2, servidores locales, Lambda o ECS, de a grupos y con reversión automática si algo falla. Hace la última etapa, el despliegue. Es una pieza del flujo, no lo que conecta todas las etapas.",
       },
       {
         id: "C",
         text: "AWS CloudFormation",
         correct: false,
         explanation:
-          "CloudFormation automatiza la creación de infraestructura, y 'automatizar' lo acerca. Pero crea recursos a partir de plantillas; no reacciona a cambios en el código ni coordina compilación y pruebas.",
+          "AWS CloudFormation es el servicio de infraestructura como código: crea y actualiza recursos de AWS a partir de plantillas. 'Automatizar' lo acerca. Pero crea infraestructura; no reacciona a cambios en el código ni coordina compilación, pruebas y aprobaciones.",
       },
       {
         id: "D",

@@ -50,7 +50,7 @@ export const DURACION_SUGERIDA_MINUTOS = 70;
 export const PORCENTAJE_PARA_APROBAR = 70;
 
 /** Sube ante cualquier edición de cualquier pregunta. */
-export const VERSION_DEL_BANCO = 1;
+export const VERSION_DEL_BANCO = 2;
 
 /** Prefijo de los ids de pregunta: `ref-gr-d<dominio>-q<nn>`. */
 export const PREFIJO_DE_IDS = "ref-gr";

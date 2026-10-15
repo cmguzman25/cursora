@@ -23,7 +23,7 @@ export const TEMA_1_CONCEPTOS: ExamQuestionWithTopic[] = [
         text: "Optimización de costos",
         correct: false,
         explanation:
-          "Tienta porque 'elegir el tipo de instancia correcto' suena a rightsizing, que es una práctica de costos. Pero mirá qué se mide: la latencia, no la factura. El criterio de elección es la velocidad de respuesta, y eso es rendimiento.",
+          "Optimización de costos es el pilar que busca entregar el valor del negocio al menor precio: pagar solo por lo que se usa, ajustar el tamaño de los recursos (rightsizing) y saber quién gasta qué. Tienta porque 'elegir el tipo de instancia correcto' suena a rightsizing. Pero mirá qué se mide: la latencia, no la factura. El criterio de elección es la velocidad de respuesta, y eso es rendimiento.",
       },
       {
         id: "B",
@@ -37,14 +37,14 @@ export const TEMA_1_CONCEPTOS: ExamQuestionWithTopic[] = [
         text: "Fiabilidad",
         correct: false,
         explanation:
-          "Fiabilidad es que la carga siga funcionando y se recupere cuando algo falla. Probar tres instancias tiene aire de 'hacer pruebas', pero ninguna de estas pruebas simula una falla: comparan velocidad.",
+          "Fiabilidad es el pilar que se ocupa de que la carga cumpla su función de forma constante y se recupere sola cuando algo falla: redundancia entre zonas, recuperación automática, respaldos probados. Probar tres instancias tiene aire de 'hacer pruebas', pero ninguna de estas pruebas simula una falla: comparan velocidad.",
       },
       {
         id: "D",
         text: "Sostenibilidad",
         correct: false,
         explanation:
-          "Sostenibilidad también habla de elegir instancias nuevas, porque las generaciones recientes suelen consumir menos energía por trabajo hecho. Lo que la descarta es el objetivo declarado: el equipo busca la que responde más rápido, no la que consume menos.",
+          "Sostenibilidad es el pilar que busca reducir el impacto ambiental de la carga: consumir menos energía y recursos por unidad de trabajo útil. También habla de elegir instancias nuevas, porque las generaciones recientes suelen consumir menos. Lo que la descarta es el objetivo declarado: el equipo busca la que responde más rápido, no la que consume menos.",
       },
     ],
     tips: [
@@ -63,21 +63,21 @@ export const TEMA_1_CONCEPTOS: ExamQuestionWithTopic[] = [
         text: "Excelencia operativa",
         correct: false,
         explanation:
-          "Presupuestos por departamento y revisiones trimestrales suenan a 'buena gestión', y la buena gestión parece excelencia operativa. Pero ese pilar trata de cómo se opera y se mejora la carga (despliegues, runbooks, aprendizaje de incidentes), no de cuánto cuesta.",
+          "Excelencia operativa es el pilar que trata de cómo el equipo opera y mejora la carga: operaciones como código, cambios pequeños y reversibles, runbooks y aprender de cada incidente. Presupuestos por departamento y revisiones trimestrales suenan a 'buena gestión', y por eso tienta. Pero nada de eso habla de operar la carga: todo habla de cuánto cuesta.",
       },
       {
         id: "B",
         text: "Eficiencia de rendimiento",
         correct: false,
         explanation:
-          "Comparar servicios administrados con servidores propios aparece también en rendimiento, cuando se elige lo que mejor responde a la carga. Acá la comparación es explícitamente 'más barato', así que el criterio es costo.",
+          "Eficiencia de rendimiento es el pilar que trata de elegir y reevaluar los recursos para que respondan bien a lo que exige la carga (latencia, capacidad, tipo de hardware). Comparar servicios administrados con servidores propios también aparece en este pilar, cuando se elige lo que mejor responde. Acá la comparación es explícitamente 'más barato', así que el criterio es costo.",
       },
       {
         id: "C",
         text: "Sostenibilidad",
         correct: false,
         explanation:
-          "Pasar a servicios administrados puede reducir la huella, porque AWS los opera con mayor aprovechamiento. Pero nada en el enunciado habla de energía ni de impacto ambiental: todo está medido en gasto.",
+          "Sostenibilidad es el pilar que busca reducir el consumo de energía y la huella ambiental de la carga. Pasar a servicios administrados puede reducir esa huella, porque AWS los opera con mayor aprovechamiento. Pero nada en el enunciado habla de energía ni de impacto ambiental: todo está medido en gasto.",
       },
       {
         id: "D",
@@ -111,7 +111,7 @@ export const TEMA_1_CONCEPTOS: ExamQuestionWithTopic[] = [
         text: "Elegir instancias con GPU para entrenar un modelo porque terminan el trabajo en menos horas",
         correct: false,
         explanation:
-          "'Menos horas' puede leerse como 'menos costo', y por eso tienta. Pero el motivo que da el enunciado es terminar antes: elegir el hardware que mejor se ajusta al tipo de trabajo es eficiencia de rendimiento.",
+          "Elegir hardware especializado (como GPU) según el tipo de trabajo es una práctica de eficiencia de rendimiento: usar el recurso que mejor se ajusta a la carga para que termine antes. 'Menos horas' puede leerse como 'menos costo', y por eso tienta. Pero el motivo que da la opción es terminar antes, no gastar menos.",
       },
       {
         id: "C",
@@ -125,14 +125,14 @@ export const TEMA_1_CONCEPTOS: ExamQuestionWithTopic[] = [
         text: "Maximizar el aprovechamiento de cada instancia para reducir la energía consumida por unidad de trabajo",
         correct: false,
         explanation:
-          "Es casi la misma acción que el rightsizing, y por eso es la trampa de esta pregunta. La diferencia está en el motivo: reducir la energía por unidad de trabajo es el objetivo del pilar de sostenibilidad.",
+          "Maximizar el aprovechamiento de cada recurso para consumir menos energía por unidad de trabajo es una práctica del pilar de sostenibilidad. Es casi la misma acción que el rightsizing, y por eso es la trampa de esta pregunta. La diferencia está en el motivo: la opción habla de energía, no de dinero.",
       },
       {
         id: "E",
         text: "Desplegar la aplicación en dos zonas de disponibilidad para soportar la caída de una",
         correct: false,
         explanation:
-          "Repartir en dos AZ para seguir funcionando ante una caída es fiabilidad. Aparece como distractor porque duplicar recursos tiene un costo, pero el objetivo es resistir fallas.",
+          "Desplegar en dos zonas de disponibilidad es redundancia: si un centro de datos cae, el otro sigue atendiendo. Es una práctica del pilar de fiabilidad. Aparece como distractor porque duplicar recursos tiene un costo, pero el objetivo declarado es resistir fallas, no ahorrar.",
       },
     ],
     tips: [
@@ -158,21 +158,21 @@ export const TEMA_1_CONCEPTOS: ExamQuestionWithTopic[] = [
         text: "Fiabilidad",
         correct: false,
         explanation:
-          "Es la confusión más común: cambios reversibles hacen que un error dure menos, y eso parece fiabilidad. Pero fiabilidad trata de cómo la carga resiste y se recupera de fallas (redundancia, recuperación automática, respaldos). Acá se describe cómo el equipo hace cambios, que es operación.",
+          "Fiabilidad es el pilar que trata de cómo la carga resiste y se recupera de fallas: redundancia, recuperación automática, respaldos probados. Es la confusión más común: cambios reversibles hacen que un error dure menos, y eso parece fiabilidad. Pero acá se describe cómo el equipo hace los cambios, que es operación.",
       },
       {
         id: "C",
         text: "Seguridad",
         correct: false,
         explanation:
-          "Tener la infraestructura en un repositorio deja un historial auditable, y eso aporta a la seguridad. Pero el foco del enunciado es el ritmo y la forma de los cambios, no el control de acceso ni la protección de datos.",
+          "Seguridad es el pilar que protege datos, sistemas y accesos: identidades y permisos, cifrado, trazabilidad y respuesta a incidentes. Tener la infraestructura en un repositorio deja un historial auditable, y eso aporta a la seguridad. Pero el foco del enunciado es el ritmo y la forma de los cambios, no el control de acceso ni la protección de datos.",
       },
       {
         id: "D",
         text: "Eficiencia de rendimiento",
         correct: false,
         explanation:
-          "Desplegar seguido suena a agilidad, y la agilidad se suele asociar a rendimiento. Pero ese pilar trata de elegir recursos que respondan bien a la carga, y el enunciado no menciona ni latencia ni capacidad.",
+          "Eficiencia de rendimiento es el pilar que trata de elegir recursos que respondan bien a la carga y reevaluarlos cuando aparece tecnología nueva. Desplegar seguido suena a agilidad, y la agilidad se suele asociar a rendimiento. Pero el enunciado no menciona ni latencia ni capacidad: habla de cómo trabaja el equipo.",
       },
     ],
     tips: [
@@ -191,14 +191,14 @@ export const TEMA_1_CONCEPTOS: ExamQuestionWithTopic[] = [
         text: "Excelencia operativa",
         correct: false,
         explanation:
-          "Hay automatización y una prueba periódica, y las dos suenan a operación bien hecha. Pero todo apunta a una misma pregunta: ¿la carga sobrevive y se recupera si algo se rompe? Eso es fiabilidad, aunque lo ejecute el equipo de operaciones.",
+          "Excelencia operativa es el pilar que trata de cómo el equipo opera y mejora la carga: runbooks, operaciones como código, cambios pequeños y aprendizaje de incidentes. Hay automatización y una prueba periódica, y las dos suenan a operación bien hecha. Pero todo apunta a una misma pregunta: ¿la carga sobrevive y se recupera si algo se rompe? Eso es fiabilidad, aunque lo ejecute el equipo de operaciones.",
       },
       {
         id: "B",
         text: "Seguridad",
         correct: false,
         explanation:
-          "Restaurar en otra cuenta podría parecer una medida de aislamiento. El objetivo declarado, sin embargo, es comprobar que el respaldo funciona, que es probar la recuperación, no proteger el acceso.",
+          "Seguridad es el pilar que protege los datos y los accesos: permisos mínimos, cifrado, aislamiento entre cuentas, detección de amenazas. Restaurar en otra cuenta podría parecer una medida de aislamiento. El objetivo declarado, sin embargo, es comprobar que el respaldo funciona, que es probar la recuperación, no proteger el acceso.",
       },
       {
         id: "C",
@@ -212,7 +212,7 @@ export const TEMA_1_CONCEPTOS: ExamQuestionWithTopic[] = [
         text: "Eficiencia de rendimiento",
         correct: false,
         explanation:
-          "Auto Scaling aparece seguido en preguntas de rendimiento, cuando agrega capacidad ante más demanda. Acá no escala por demanda: reemplaza instancias que fallan, que es recuperación.",
+          "Eficiencia de rendimiento es el pilar que trata de que los recursos respondan bien a la demanda, por ejemplo agregando capacidad cuando sube el tráfico. Auto Scaling aparece seguido en preguntas de este pilar por eso. Acá no escala por demanda: reemplaza instancias que fallan, que es recuperación.",
       },
     ],
     tips: [
@@ -239,14 +239,14 @@ export const TEMA_1_CONCEPTOS: ExamQuestionWithTopic[] = [
         text: "Configurar la conmutación automática de la base de datos a una réplica en otra zona",
         correct: false,
         explanation:
-          "Es automatización, y la automatización suele asociarse a excelencia operativa. Pero esta automatización existe para que la carga sobreviva a una falla, y eso la ubica en fiabilidad.",
+          "La conmutación automática a una réplica en otra zona (Multi-AZ) mantiene la base de datos disponible cuando falla la zona principal: es una práctica de fiabilidad. Es automatización, y la automatización suele asociarse a excelencia operativa. Pero esta automatización existe para que la carga sobreviva a una falla, no para mejorar cómo opera el equipo.",
       },
       {
         id: "C",
         text: "Cifrar los datos en reposo con claves administradas en AWS KMS",
         correct: false,
         explanation:
-          "Es una buena práctica, pero de seguridad: protege la confidencialidad de los datos. No dice nada de cómo opera el equipo.",
+          "Cifrar en reposo con AWS KMS protege la confidencialidad de los datos guardados con claves cuyo uso se controla y audita: es una práctica del pilar de seguridad. Es una buena iniciativa, pero no dice nada de cómo opera el equipo el día a día.",
       },
       {
         id: "D",
@@ -260,7 +260,7 @@ export const TEMA_1_CONCEPTOS: ExamQuestionWithTopic[] = [
         text: "Distribuir el tráfico entre varias instancias para que la caída de una no interrumpa el servicio",
         correct: false,
         explanation:
-          "Suena a 'operar bien', pero el motivo declarado es que la caída de una instancia no interrumpa el servicio: eso es redundancia, y la redundancia es fiabilidad.",
+          "Distribuir el tráfico entre varias instancias (con un balanceador de carga) evita que la caída de una interrumpa el servicio: es redundancia, y la redundancia es fiabilidad. Suena a 'operar bien', pero el motivo declarado es resistir una falla, no mejorar los procesos del equipo.",
       },
     ],
     tips: [

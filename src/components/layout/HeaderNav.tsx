@@ -15,11 +15,17 @@ import { Link, usePathname } from "@/i18n/navigation";
  */
 export function HeaderNav() {
   const t = useTranslations("exams");
+  const tPractice = useTranslations("practice");
   const pathname = usePathname();
 
   const enlaces = [
     { href: "/", etiqueta: t("navCourses"), activo: pathname === "/" },
     { href: "/exams", etiqueta: t("navExams"), activo: pathname.startsWith("/exams") },
+    {
+      href: "/practice",
+      etiqueta: tPractice("navPractice"),
+      activo: pathname.startsWith("/practice"),
+    },
   ] as const;
 
   return (

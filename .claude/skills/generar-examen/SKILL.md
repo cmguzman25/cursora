@@ -16,13 +16,36 @@ esta plataforma. Se puede rendir de dos maneras, y las dos salen del mismo banco
 
 ## La regla que define este skill
 
-**La explicación de una opción incorrecta tiene que decir por qué es tentadora.**
+**La explicación de una opción incorrecta enseña qué es esa opción, y después por
+qué no es la correcta.**
 
-Es lo único que separa este banco de un cuestionario cualquiera. "No es correcta"
-no enseña nada; el alumno ya sabía que no era. Lo que no sabe es **qué lo hizo
-elegirla**, y nombrárselo es la clase. Si una explicación no identifica una
-confusión concreta —una marca temporal mal leída, dos conceptos que se parecen, una
-regla aplicada fuera de su caso—, está sin escribir.
+Siempre en ese orden, y las dos partes son obligatorias:
+
+1. **Qué es o para qué sirve.** Una o dos frases que definen la opción por sí misma,
+   sin referirse al enunciado: qué hace el servicio, qué cubre el pilar, qué es ese
+   tiempo verbal, cómo funciona ese modelo de compra. Si la opción no es un concepto
+   con nombre sino una afirmación ("el cliente, igual que en EC2"), se explica la
+   regla o la idea que esa afirmación aplica.
+2. **Por qué no es la correcta acá.** Qué la hace tentadora —la confusión concreta:
+   una marca temporal mal leída, dos conceptos que se parecen, una regla aplicada
+   fuera de su caso— y qué detalle del enunciado la descarta.
+
+Es lo que separa este banco de un cuestionario cualquiera. "No es correcta" no
+enseña nada; el alumno ya sabía que no era. Le faltan dos cosas: **saber qué es lo
+que eligió**, porque muchas veces lo eligió sin conocerlo, y **qué lo hizo
+elegirlo**. Una explicación que solo dice por qué no corresponde deja al alumno sin
+aprender la opción, y esa opción puede ser la respuesta correcta de la pregunta
+siguiente. Si falta cualquiera de las dos partes, la explicación está sin escribir.
+
+Ejemplo, en una pregunta cuya respuesta es AWS WAF:
+
+> Mal: "GuardDuty detecta y avisa, no bloquea solicitudes."
+>
+> Bien: "Amazon GuardDuty es el servicio de detección de amenazas: analiza
+> CloudTrail, los registros de flujo de la VPC y el DNS para encontrar actividad
+> maliciosa y genera hallazgos. Podría detectar el patrón de ataque, y por eso
+> tienta. Pero detecta y avisa: no bloquea solicitudes ni permite escribir reglas
+> de filtrado."
 
 El modo estudio existe para mostrar esas explicaciones. Un banco con distractores
 sin explicar convierte la mitad de la sección en decoración.
@@ -169,7 +192,7 @@ principio sin regla es una declaración de intenciones.
 | Principio | Cómo se materializa |
 |---|---|
 | Una sola idea por pregunta | Si acertar exige dos conocimientos independientes, son dos preguntas |
-| El distractor enseña | Cada opción incorrecta nombra la confusión concreta que la hace atractiva |
+| El distractor enseña | Cada opción incorrecta empieza definiendo qué es o para qué sirve, y después nombra la confusión concreta que la hace atractiva y el detalle que la descarta |
 | Sin pistas de forma | La correcta no es la más larga, ni la única con jerga, ni la única con un cuantificador prudente ("generalmente", "puede") |
 | Sin "todas / ninguna de las anteriores" | Evalúan lógica de examen, no el tema. El verificador las rechaza |
 | Enunciado en positivo | Una negación en el enunciado mide lectura, no conocimiento |
@@ -232,6 +255,8 @@ No es opcional, y es el paso que más tiempo ahorra.
 2. Pasale el verificador.
 3. **Leé las explicaciones de punta a punta**, las de las incorrectas incluidas. Es
    lo único que detecta el fallo que importa: un distractor que no enseña nada.
+   En cada incorrecta, tapá el enunciado y leé solo la primera frase: si no se
+   entiende qué es la opción, falta la definición.
 4. Arreglá lo que la lectura encuentre, y recién entonces escribí los otros temas.
 
 El error que cometerías cuarenta veces cuesta diez preguntas encontrarlo acá.
@@ -267,8 +292,9 @@ comprobó. Lo habitual:
 
 - **Que cada respuesta marcada como correcta sea de verdad la correcta no lo
   comprueba ningún script.** Solo lo leyó alguien.
-- Las explicaciones de las incorrectas afirman cuál es la confusión que las hace
-  tentadoras. Eso es una hipótesis didáctica, no un hecho medido.
+- Las explicaciones de las incorrectas definen cada opción y afirman cuál es la
+  confusión que las hace tentadoras. Las definiciones son contenido técnico que
+  nadie más revisó; la confusión es una hipótesis didáctica, no un hecho medido.
 - La calibración de la dificultad es un juicio, no el resultado de haberlo probado
   con nadie.
 - Si hay traducciones, que digan lo mismo que el original no lo revisó un nativo.

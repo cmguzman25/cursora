@@ -21,7 +21,7 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "El cliente, igual que cuando la base corría en EC2",
         correct: false,
         explanation:
-          "Es la regla correcta para EC2, y por eso tienta aplicarla acá. Pero RDS es un servicio administrado: el cliente ya no tiene acceso al sistema operativo del servidor, y quien no puede entrar al servidor no puede parchearlo.",
+          "En EC2 el cliente administra el sistema operativo invitado, así que parchearlo (y parchear el motor de base de datos que instaló) es su responsabilidad. Es la regla correcta para EC2, y por eso tienta aplicarla acá. Pero RDS es un servicio administrado: el cliente ya no tiene acceso al sistema operativo del servidor, y quien no puede entrar al servidor no puede parchearlo.",
       },
       {
         id: "B",
@@ -35,14 +35,14 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "El cliente, conectándose por SSH a la instancia de RDS",
         correct: false,
         explanation:
-          "Suena a cómo se haría en EC2, pero en RDS no existe esa posibilidad: el servicio no da acceso SSH al servidor subyacente. Justamente porque el cliente no puede entrar, la responsabilidad de parchear pasa a AWS.",
+          "SSH es el protocolo para entrar a la consola de un servidor y administrarlo, que es como se parchea una instancia EC2. Suena a cómo se haría en EC2, pero en RDS no existe esa posibilidad: el servicio no da acceso SSH al servidor subyacente. Justamente porque el cliente no puede entrar, la responsabilidad de parchear pasa a AWS.",
       },
       {
         id: "D",
         text: "Depende de si el cliente contrató el plan de soporte Business",
         correct: false,
         explanation:
-          "Los planes de soporte cambian cuánta ayuda y qué tan rápido la recibe el cliente, no cómo se reparten las responsabilidades. El modelo de responsabilidad compartida es el mismo con cualquier plan.",
+          "Los planes de soporte (Basic, Developer, Business, Enterprise On-Ramp, Enterprise) definen cuánta ayuda técnica recibe el cliente, por qué canales y con qué tiempos de respuesta. No cambian cómo se reparten las responsabilidades: el modelo de responsabilidad compartida es el mismo con cualquier plan.",
       },
     ],
     tips: [
@@ -61,14 +61,14 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Parchear el sistema operativo de los servidores donde corren las funciones",
         correct: false,
         explanation:
-          "Es lo que le corresponde al cliente en EC2, y por eso aparece. En Lambda el cliente nunca ve esos servidores: el sistema operativo y el entorno de ejecución los mantiene AWS.",
+          "Parchear el sistema operativo de los servidores es responsabilidad del cliente cuando él administra esos servidores, como en EC2. Por eso aparece. En Lambda el cliente nunca ve esos servidores: el sistema operativo y el entorno de ejecución los mantiene AWS.",
       },
       {
         id: "B",
         text: "Nada: en un servicio sin servidor toda la seguridad es responsabilidad de AWS",
         correct: false,
         explanation:
-          "Es la sobrecorrección típica después de aprender que AWS administra mucho en Lambda. Pero 'sin servidor' no significa 'sin responsabilidad': el código que sube el cliente, y lo que ese código importa, sigue siendo suyo.",
+          "Sin servidor (serverless) significa que AWS administra la infraestructura, el sistema operativo y el entorno de ejecución, y el cliente solo sube su código. Es la sobrecorrección típica después de aprender que AWS administra mucho en Lambda. Pero 'sin servidor' no significa 'sin responsabilidad': el código que sube el cliente, y las bibliotecas que ese código importa, siguen siendo suyos.",
       },
       {
         id: "C",
@@ -82,7 +82,7 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Pedirle a AWS Support que actualice la biblioteca dentro del entorno de ejecución",
         correct: false,
         explanation:
-          "Tienta porque el runtime sí lo actualiza AWS. Pero una biblioteca de terceros empaquetada con la función no es parte del runtime: es parte del código del cliente, y AWS no lo modifica.",
+          "AWS Support es la ayuda técnica de AWS: responde consultas, orienta y ayuda a diagnosticar, pero no modifica el código del cliente. Tienta porque el runtime de Lambda sí lo actualiza AWS. Pero una biblioteca de terceros empaquetada con la función no es parte del runtime: es parte del código del cliente.",
       },
     ],
     tips: [
@@ -102,7 +102,7 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Actualizar el hipervisor que separa las instancias de distintos clientes",
         correct: false,
         explanation:
-          "El hipervisor está en el mismo servidor que la instancia, y por eso parece 'cerca' del cliente. Pero es la capa de virtualización de AWS: el cliente no tiene acceso a ella, y aislar a un cliente de otro es responsabilidad de AWS.",
+          "El hipervisor es la capa de virtualización que divide un servidor físico en varias instancias y aísla a un cliente de otro. Está en el mismo servidor que la instancia, y por eso parece 'cerca' del cliente. Pero es software de AWS: el cliente no tiene acceso a él, y mantenerlo es responsabilidad de AWS.",
       },
       {
         id: "B",
@@ -116,7 +116,7 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Reemplazar los discos físicos que fallan en el centro de datos",
         correct: false,
         explanation:
-          "Los datos del cliente están en esos discos, y eso hace que parezca que el cliente tiene algo que decir. Pero el hardware físico es siempre de AWS, en cualquier servicio.",
+          "Los discos físicos del centro de datos son el hardware donde se guardan, entre otros, los volúmenes de los clientes. Los datos del cliente están en esos discos, y eso hace que parezca que el cliente tiene algo que decir. Pero el hardware físico es siempre de AWS, en cualquier servicio.",
       },
       {
         id: "D",
@@ -130,7 +130,7 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Aplicar las actualizaciones del motor de Amazon DynamoDB que usa la aplicación",
         correct: false,
         explanation:
-          "La aplicación sí usa DynamoDB, por eso aparece. Pero DynamoDB es un servicio totalmente administrado: el cliente no ve ningún motor ni servidor que actualizar.",
+          "Amazon DynamoDB es una base de datos NoSQL clave-valor totalmente administrada: no hay servidores ni motor visibles para el cliente. La aplicación sí la usa, por eso aparece. Pero como el cliente no ve ningún motor que actualizar, esa tarea es de AWS.",
       },
     ],
     tips: [
@@ -156,21 +156,21 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "De AWS, porque S3 ya cifra los objetos sin que el cliente haga nada",
         correct: false,
         explanation:
-          "Es la trampa central: el cifrado por defecto existe, y por eso parece que el tema quedó en manos de AWS. Pero el cifrado por defecto no da control sobre quién usa la clave ni un registro de cada uso, que es lo que exige la norma. Proteger los datos sigue siendo del cliente.",
+          "El cifrado por defecto de S3 (SSE-S3) cifra todos los objetos nuevos con claves que crea y administra el propio servicio, sin que el cliente haga nada. Es la trampa central: como existe, parece que el tema quedó en manos de AWS. Pero no da control sobre quién usa la clave ni un registro de cada uso, que es lo que exige la norma. Proteger los datos sigue siendo del cliente.",
       },
       {
         id: "C",
         text: "De AWS, siempre que el cliente use AWS KMS",
         correct: false,
         explanation:
-          "AWS es responsable de la seguridad del hardware y del servicio KMS. Pero la política de la clave, quién puede usarla y cuándo rotarla son configuración del cliente. Usar un servicio de AWS no le transfiere la decisión.",
+          "AWS KMS es el servicio para crear y administrar claves de cifrado: cada clave tiene una política que define quién puede usarla, y cada uso queda registrado en CloudTrail. AWS es responsable del hardware y del servicio. Pero la política de la clave, quién puede usarla y cuándo rotarla son configuración del cliente: usar un servicio de AWS no le transfiere la decisión.",
       },
       {
         id: "D",
         text: "De nadie: con el cifrado por defecto ya no queda ninguna decisión que tomar",
         correct: false,
         explanation:
-          "El cifrado por defecto resuelve 'que los datos estén cifrados', pero la norma pide algo más: control y auditoría de la clave. Esa decisión existe y es del cliente.",
+          "Esta opción parte de la idea de que el cifrado por defecto resuelve todo lo que hay que decidir sobre los datos. Resuelve 'que los datos estén cifrados', pero la norma pide algo más: control y auditoría de la clave. Esa decisión existe y es del cliente.",
       },
     ],
     tips: [
@@ -189,21 +189,21 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Configurar TLS entre los navegadores de los usuarios y el balanceador de carga",
         correct: false,
         explanation:
-          "El cifrado en tránsito suena a algo técnico de infraestructura, y la infraestructura es de AWS. Pero instalar el certificado y exigir HTTPS en el balanceador es configuración del cliente: AWS da la herramienta (ACM, el listener HTTPS) y el cliente decide usarla.",
+          "TLS es el protocolo que cifra el tráfico entre el navegador y el servidor (lo que hace que una URL sea HTTPS); en AWS se configura con un certificado de ACM en el listener del balanceador. Suena a algo técnico de infraestructura, y la infraestructura es de AWS. Pero instalar el certificado y exigir HTTPS es configuración del cliente: AWS da la herramienta y el cliente decide usarla.",
       },
       {
         id: "B",
         text: "Activar la autenticación multifactor en el usuario raíz de la cuenta",
         correct: false,
         explanation:
-          "Es la primera recomendación de seguridad que hace AWS, y por eso se asocia con AWS. Pero las identidades y sus credenciales son siempre del cliente.",
+          "La autenticación multifactor (MFA) pide un segundo factor, como un código del celular, además de la contraseña; el usuario raíz es la identidad con control total de la cuenta. Activarla es la primera recomendación de seguridad que hace AWS, y por eso se asocia con AWS. Pero las identidades y sus credenciales son siempre del cliente.",
       },
       {
         id: "C",
         text: "Definir las listas de control de acceso de red de las subredes de la VPC",
         correct: false,
         explanation:
-          "La red física es de AWS, y una NACL suena a red. Pero la NACL es una regla que el cliente escribe dentro de su VPC: es configuración, no infraestructura.",
+          "Una NACL (lista de control de acceso de red) es un filtro sin estado que permite o deniega tráfico por IP y puerto a nivel de subred. La red física es de AWS, y una NACL suena a red. Pero la NACL es una regla que el cliente escribe dentro de su VPC: es configuración, no infraestructura.",
       },
       {
         id: "D",
@@ -230,14 +230,14 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Proteger los módulos de hardware donde AWS KMS guarda el material de las claves",
         correct: false,
         explanation:
-          "Tienta porque las claves son del cliente, y parecería que todo lo que las rodea también. Pero el hardware que guarda las claves es infraestructura de AWS: el cliente usa las claves, no administra los equipos.",
+          "Los módulos de hardware de KMS (HSM) son los equipos físicos, endurecidos, donde se guarda y se usa el material criptográfico de las claves. Tienta porque las claves son del cliente, y parecería que todo lo que las rodea también. Pero ese hardware es infraestructura de AWS: el cliente usa las claves, no administra los equipos.",
       },
       {
         id: "B",
         text: "Mantener la red global que conecta las regiones de AWS",
         correct: false,
         explanation:
-          "Los datos del cliente pueden viajar por esa red, y eso la acerca al tema. Pero la red global es infraestructura de AWS en cualquier servicio.",
+          "La red global de AWS es la red privada de fibra que conecta regiones, zonas de disponibilidad y ubicaciones de borde. Los datos del cliente pueden viajar por ella, y eso la acerca al tema. Pero es infraestructura de AWS en cualquier servicio.",
       },
       {
         id: "C",
@@ -251,7 +251,7 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Garantizar la seguridad física de las ubicaciones de borde de Amazon CloudFront",
         correct: false,
         explanation:
-          "Las ubicaciones de borde sirven contenido del cliente, y por eso aparecen acá. Pero son instalaciones físicas de AWS, y la seguridad física es siempre de AWS.",
+          "Las ubicaciones de borde de CloudFront son los centros de datos repartidos por el mundo donde se cachea contenido cerca de los usuarios. Sirven contenido del cliente, y por eso aparecen acá. Pero son instalaciones físicas de AWS, y la seguridad física es siempre de AWS.",
       },
       {
         id: "E",
@@ -277,14 +277,14 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "AWS Shield Standard",
         correct: false,
         explanation:
-          "Muchas solicitudes por minuto suena a ataque de denegación de servicio, y Shield protege contra eso. Pero Shield Standard actúa sobre ataques de red y transporte, automático y sin reglas propias: no puede limitar intentos de login por IP ni filtrar por país.",
+          "AWS Shield Standard es la protección contra DDoS que AWS aplica gratis y en forma automática a todos los clientes, frente a ataques de red y transporte (capas 3 y 4). Muchas solicitudes por minuto suena a DDoS, y por eso tienta. Pero no tiene reglas propias: no puede limitar intentos de login por IP ni filtrar por país.",
       },
       {
         id: "B",
         text: "Una lista de control de acceso de red (NACL)",
         correct: false,
         explanation:
-          "Una NACL puede bloquear direcciones IP, por eso parece servir para la primera necesidad. Pero trabaja con IP y puertos, no entiende solicitudes HTTP, no cuenta solicitudes por minuto y no sabe de qué país viene una IP.",
+          "Una NACL es un filtro sin estado a nivel de subred que permite o deniega tráfico según IP, puerto y protocolo. Puede bloquear direcciones IP, por eso parece servir para la primera necesidad. Pero no entiende solicitudes HTTP, no cuenta solicitudes por minuto y no sabe de qué país viene una IP.",
       },
       {
         id: "C",
@@ -298,7 +298,7 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Amazon GuardDuty",
         correct: false,
         explanation:
-          "GuardDuty podría detectar un patrón de actividad sospechosa, y por eso tienta. Pero detecta y avisa: no bloquea solicitudes ni permite escribir reglas de filtrado.",
+          "Amazon GuardDuty es el servicio de detección de amenazas: analiza CloudTrail, los registros de flujo de la VPC y el DNS para encontrar actividad maliciosa y genera hallazgos. Podría detectar un patrón sospechoso, y por eso tienta. Pero detecta y avisa: no bloquea solicitudes ni permite escribir reglas de filtrado.",
       },
     ],
     tips: [
@@ -324,21 +324,21 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "AWS WAF",
         correct: false,
         explanation:
-          "WAF protege contra ataques que explotan vulnerabilidades en aplicaciones web, y por eso se asocia con 'vulnerabilidades'. Pero filtra solicitudes que llegan; no revisa qué paquetes tiene instalados una instancia.",
+          "AWS WAF es un firewall de aplicaciones web: inspecciona cada solicitud HTTP que llega a CloudFront, un balanceador o API Gateway y la bloquea según reglas (inyección SQL, XSS, IP, país, límite de solicitudes). Se asocia con 'vulnerabilidades' porque frena ataques que las explotan. Pero filtra solicitudes que llegan; no revisa qué paquetes tiene instalados una instancia.",
       },
       {
         id: "C",
         text: "Amazon Macie",
         correct: false,
         explanation:
-          "Macie también escanea, y por eso puede confundirse. Pero escanea el contenido de buckets de S3 buscando datos sensibles, no el software de instancias o contenedores.",
+          "Amazon Macie usa aprendizaje automático para descubrir datos sensibles (datos personales, números de tarjeta) dentro de los objetos de los buckets de S3. También escanea, y por eso puede confundirse. Pero escanea contenido de S3, no el software de instancias o contenedores.",
       },
       {
         id: "D",
         text: "AWS Shield Advanced",
         correct: false,
         explanation:
-          "Shield Advanced es protección reforzada contra DDoS. Es un servicio de seguridad, pero no mira el software instalado en ninguna parte.",
+          "AWS Shield Advanced es la versión paga de Shield: protección reforzada contra DDoS, acceso al equipo de respuesta de AWS (SRT) y protección ante los costos del escalado que provoca un ataque. Es un servicio de seguridad, pero no mira el software instalado en ninguna parte.",
       },
     ],
     tips: [
@@ -358,7 +358,7 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Amazon Inspector",
         correct: false,
         explanation:
-          "XSS es una vulnerabilidad, y Inspector busca vulnerabilidades: esa es la asociación que lo hace tentador. Pero Inspector revisa el software instalado, no filtra lo que envían los visitantes.",
+          "Amazon Inspector escanea de forma continua instancias EC2, imágenes de contenedor en ECR y funciones Lambda buscando vulnerabilidades de software conocidas (CVE). XSS es una vulnerabilidad, y esa es la asociación que lo hace tentador. Pero Inspector revisa el software instalado, no filtra lo que envían los visitantes.",
       },
       {
         id: "B",
@@ -372,14 +372,14 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Los grupos de seguridad de la VPC",
         correct: false,
         explanation:
-          "Los grupos de seguridad filtran tráfico, por eso parecen útiles para las dos cosas. Pero solo deciden por puerto, protocolo y origen; un ataque XSS llega por el puerto 443 abierto, igual que cualquier visitante legítimo.",
+          "Los grupos de seguridad son firewalls con estado a nivel de instancia que permiten tráfico según puerto, protocolo y origen. Filtran tráfico, por eso parecen útiles para las dos cosas. Pero un ataque XSS llega por el puerto 443 abierto, igual que cualquier visitante legítimo, y el grupo no mira el contenido de la solicitud ni frena un DDoS de gran volumen.",
       },
       {
         id: "D",
         text: "AWS Trusted Advisor",
         correct: false,
         explanation:
-          "Trusted Advisor recomienda configuraciones más seguras, pero no protege nada en tiempo real: no frena un ataque en curso ni filtra solicitudes.",
+          "AWS Trusted Advisor revisa la cuenta y recomienda mejoras en costos, rendimiento, seguridad, tolerancia a fallas y cuotas de servicio. Recomienda configuraciones más seguras, pero no protege nada en tiempo real: no frena un ataque en curso ni filtra solicitudes.",
       },
       {
         id: "E",
@@ -405,7 +405,7 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Amazon Macie",
         correct: false,
         explanation:
-          "Macie es un servicio de detección, y por eso puede confundirse. Pero lo que detecta son datos sensibles guardados en S3, no comportamientos sospechosos de instancias o credenciales.",
+          "Amazon Macie descubre datos sensibles (datos personales, números de tarjeta) dentro de los objetos guardados en S3. Es un servicio de detección, y por eso puede confundirse. Pero lo que detecta es contenido sensible, no comportamientos sospechosos de instancias o credenciales.",
       },
       {
         id: "B",
@@ -419,14 +419,14 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Amazon Inspector",
         correct: false,
         explanation:
-          "Inspector revisa instancias EC2, pero busca software vulnerable, no comportamiento. Una instancia con todo parcheado puede igual estar minando criptomonedas, y eso Inspector no lo ve.",
+          "Amazon Inspector escanea instancias EC2, contenedores y funciones Lambda buscando software con vulnerabilidades conocidas. Revisa instancias EC2, y eso lo acerca. Pero busca software vulnerable, no comportamiento: una instancia con todo parcheado puede igual estar minando criptomonedas, y eso Inspector no lo ve.",
       },
       {
         id: "D",
         text: "AWS WAF",
         correct: false,
         explanation:
-          "WAF filtra solicitudes que llegan a una aplicación web. Ni la comunicación saliente de una instancia ni las llamadas a la API de AWS pasan por él.",
+          "AWS WAF es un firewall de aplicaciones web que filtra las solicitudes HTTP que llegan a una aplicación según reglas. Ni la comunicación saliente de una instancia ni las llamadas a la API de AWS pasan por él.",
       },
     ],
     tips: [
@@ -445,21 +445,21 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Amazon GuardDuty",
         correct: false,
         explanation:
-          "GuardDuty protege S3, y por eso tienta. Pero detecta accesos sospechosos al bucket (quién y cómo lo usa), no lee el contenido de los archivos buscando datos sensibles.",
+          "Amazon GuardDuty detecta amenazas analizando la actividad de la cuenta: llamadas a la API, tráfico de red, DNS y, con su protección para S3, accesos sospechosos a los buckets. Protege S3, y por eso tienta. Pero mira quién accede y cómo, no lee el contenido de los archivos buscando datos sensibles.",
       },
       {
         id: "B",
         text: "Amazon Inspector",
         correct: false,
         explanation:
-          "Inspector escanea, y la pregunta pide escanear. Pero Inspector escanea software de instancias, contenedores y funciones, no el contenido de objetos en S3.",
+          "Amazon Inspector escanea software buscando vulnerabilidades conocidas en instancias EC2, imágenes de contenedor y funciones Lambda. La pregunta pide escanear, y por eso tienta. Pero Inspector no escanea el contenido de objetos en S3.",
       },
       {
         id: "C",
         text: "IAM Access Analyzer",
         correct: false,
         explanation:
-          "Access Analyzer encaja con la parte de 'darle acceso a un socio': muestra qué recursos son accesibles desde fuera de la cuenta. Pero responde quién puede entrar, no qué hay adentro.",
+          "IAM Access Analyzer revisa las políticas de los recursos (buckets, roles, claves) y muestra cuáles son accesibles desde fuera de la cuenta. Encaja con la parte de 'darle acceso a un socio'. Pero responde quién puede entrar, no qué hay adentro de los archivos.",
       },
       {
         id: "D",
@@ -486,14 +486,14 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "Amazon Inspector",
         correct: false,
         explanation:
-          "Inspector se asocia con 'encontrar problemas de seguridad', pero sus problemas son vulnerabilidades de software. No ve ni el contenido de S3 ni el patrón de acceso a los buckets.",
+          "Amazon Inspector busca vulnerabilidades de software conocidas en instancias EC2, contenedores y funciones Lambda. Se asocia con 'encontrar problemas de seguridad', pero sus problemas son de software: no ve ni el contenido de S3 ni el patrón de acceso a los buckets.",
       },
       {
         id: "B",
         text: "AWS Artifact",
         correct: false,
         explanation:
-          "Una aseguradora tiene requisitos de cumplimiento, y Artifact suena a cumplimiento. Pero Artifact entrega los informes de auditoría de AWS (SOC, ISO); no inspecciona nada de la cuenta del cliente.",
+          "AWS Artifact es el portal donde se descargan los informes de auditoría y certificaciones de AWS (SOC, ISO, PCI) y se aceptan acuerdos como el BAA. Una aseguradora tiene requisitos de cumplimiento, y Artifact suena a cumplimiento. Pero entrega documentos sobre AWS; no inspecciona nada de la cuenta del cliente.",
       },
       {
         id: "C",
@@ -514,7 +514,7 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "AWS Config",
         correct: false,
         explanation:
-          "Config puede detectar un bucket mal configurado (por ejemplo, público), y eso lo acerca. Pero evalúa configuraciones, no el contenido de los archivos ni quién los descarga.",
+          "AWS Config registra la configuración de cada recurso y sus cambios a lo largo del tiempo, y evalúa reglas sobre ella (por ejemplo, 'ningún bucket público'). Puede detectar un bucket mal configurado, y eso lo acerca. Pero evalúa configuraciones, no el contenido de los archivos ni quién los descarga.",
       },
     ],
     tips: [
@@ -540,21 +540,21 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "AWS CloudTrail",
         correct: false,
         explanation:
-          "CloudTrail registra todo lo que pasa en la cuenta, y 'todo en un lugar' suena a eso. Pero registra llamadas a la API, no hallazgos de seguridad: no sabe qué encontró GuardDuty ni compara la cuenta contra CIS.",
+          "AWS CloudTrail registra cada llamada a la API hecha en la cuenta: quién, qué acción, cuándo y desde qué IP. 'Todo en un lugar' suena a eso. Pero registra acciones, no hallazgos de seguridad: no sabe qué encontró GuardDuty ni compara la cuenta contra CIS.",
       },
       {
         id: "C",
         text: "Amazon Detective",
         correct: false,
         explanation:
-          "Detective se alimenta de los hallazgos de GuardDuty, y por eso parece un centralizador. Pero sirve para investigar a fondo un hallazgo puntual (qué pasó, con qué recursos), no para ver todos los hallazgos juntos ni evaluar estándares.",
+          "Amazon Detective ayuda a investigar un incidente: arma gráficos de relaciones entre recursos, usuarios e IP a partir de CloudTrail, los registros de flujo y los hallazgos de GuardDuty. Se alimenta de hallazgos, y por eso parece un centralizador. Pero sirve para investigar a fondo un hallazgo puntual, no para ver todos juntos ni evaluar estándares.",
       },
       {
         id: "D",
         text: "Amazon CloudWatch",
         correct: false,
         explanation:
-          "CloudWatch centraliza métricas y logs, y puede tener tableros con todo. Pero no entiende de hallazgos de seguridad ni de estándares de cumplimiento.",
+          "Amazon CloudWatch es el servicio de monitoreo: recoge métricas y logs de los recursos, dispara alarmas y arma tableros. Puede tener tableros con todo, y por eso tienta. Pero no entiende de hallazgos de seguridad ni de estándares de cumplimiento.",
       },
     ],
     tips: [
@@ -573,21 +573,21 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "AWS Security Hub",
         correct: false,
         explanation:
-          "Security Hub es el lugar central de la seguridad, y por eso parece que debería saberlo. Pero muestra hallazgos y evaluaciones de configuración, no el registro de cada acción hecha en la cuenta.",
+          "AWS Security Hub reúne en una consola los hallazgos de GuardDuty, Inspector, Macie y otros, los prioriza y evalúa la cuenta contra estándares como CIS. Es el lugar central de la seguridad, y por eso parece que debería saberlo. Pero muestra hallazgos y evaluaciones, no el registro de cada acción hecha en la cuenta.",
       },
       {
         id: "B",
         text: "AWS Trusted Advisor",
         correct: false,
         explanation:
-          "Trusted Advisor revisa cómo está configurada la cuenta hoy y recomienda mejoras. No guarda un historial de quién hizo qué.",
+          "AWS Trusted Advisor revisa cómo está configurada la cuenta hoy y recomienda mejoras en costos, seguridad, rendimiento, tolerancia a fallas y cuotas. Es una foto del presente: no guarda un historial de quién hizo qué.",
       },
       {
         id: "C",
         text: "Amazon Detective",
         correct: false,
         explanation:
-          "Investigar un incidente es exactamente lo que suena a Detective. Pero Detective arma su análisis a partir de otras fuentes, entre ellas CloudTrail; el dato primario de quién llamó a DeleteBucket está en CloudTrail.",
+          "Amazon Detective sirve para investigar incidentes: cruza CloudTrail, registros de flujo y hallazgos de GuardDuty y los muestra como relaciones entre identidades, recursos e IP. Investigar un incidente suena exactamente a Detective. Pero arma su análisis a partir de otras fuentes; el dato primario de quién llamó a DeleteBucket está en CloudTrail.",
       },
       {
         id: "D",
@@ -613,7 +613,7 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "AWS Security Hub",
         correct: false,
         explanation:
-          "Security Hub también puede marcar que el usuario raíz no tiene MFA, y eso lo hace muy tentador. Pero solo cubre seguridad: no habla de recursos ociosos ni de cuotas de servicio.",
+          "AWS Security Hub centraliza los hallazgos de seguridad de varios servicios y evalúa la cuenta contra estándares como CIS o las buenas prácticas de AWS. También puede marcar que el usuario raíz no tiene MFA, y eso lo hace muy tentador. Pero solo cubre seguridad: no habla de recursos ociosos ni de cuotas de servicio.",
       },
       {
         id: "B",
@@ -627,14 +627,14 @@ export const TEMA_2_SEGURIDAD: ExamQuestionWithTopic[] = [
         text: "AWS Cost Explorer",
         correct: false,
         explanation:
-          "Cost Explorer cubre lo del dinero: muestra el gasto y tiene recomendaciones de ajuste de tamaño. Pero no sabe de cuotas de servicio ni de la MFA del usuario raíz.",
+          "AWS Cost Explorer muestra el gasto histórico con filtros y gráficos, proyecta el gasto futuro y recomienda compras de Savings Plans y ajustes de tamaño. Cubre la parte del dinero. Pero no sabe de cuotas de servicio ni de la MFA del usuario raíz.",
       },
       {
         id: "D",
         text: "Amazon GuardDuty",
         correct: false,
         explanation:
-          "GuardDuty es seguridad, pero de detección de amenazas: avisa si alguien usa la cuenta de forma sospechosa, no recomienda activar MFA ni apagar recursos.",
+          "Amazon GuardDuty es el servicio de detección de amenazas: avisa si alguien usa la cuenta o los recursos de forma sospechosa. Es seguridad, pero de detección: no recomienda activar MFA ni apagar recursos, y no sabe nada de cuotas.",
       },
     ],
     tips: [

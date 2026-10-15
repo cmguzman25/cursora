@@ -49,7 +49,7 @@ El "+" marca las de elegir dos, donde acertó una y erró la otra.
 | Idioma | Español (casillero `es`) |
 | Aprobación | 70 % |
 | Duración sugerida | 70 minutos |
-| Versión | 1 |
+| Versión | 2 |
 
 ## Verificador
 
@@ -95,6 +95,15 @@ desfasado.
   sacó la palabra "textual" a dos citas de principios de diseño, porque la lista de
   principios del framework cambió entre versiones.
 
+## Revisión (15 de octubre de 2026) — versión 2
+
+Las 144 explicaciones de opciones incorrectas se reescribieron con un patrón fijo:
+**primero qué es o para qué sirve esa opción** (el servicio, el pilar, el modelo de
+compra), **después por qué no es la correcta en este escenario**, nombrando la confusión
+que la hace tentadora. Antes muchas solo decían por qué no correspondía, y quien no
+conocía el servicio se quedaba sin saber qué era. Enunciados, opciones, correctas y tips
+no cambiaron. La versión sube a 2 porque cambia el texto que se muestra al revisar.
+
 ## Qué no se verificó
 
 - **Que cada respuesta marcada como correcta sea de verdad la correcta no lo comprueba
@@ -102,8 +111,9 @@ desfasado.
   que alguien con la certificación las lea, sobre todo los datos que cambian con el
   tiempo: los porcentajes de descuento de Savings Plans (~66 % y ~72 %), el cifrado
   por defecto de S3 y la protección de S3 de GuardDuty.
-- Las explicaciones de las incorrectas dicen qué confusión las hace tentadoras. Es una
-  hipótesis didáctica, no algo medido.
+- Las explicaciones de las incorrectas describen qué es cada opción y qué confusión la
+  hace tentadora. Las descripciones de los servicios no las revisó nadie con la
+  certificación; la confusión es una hipótesis didáctica, no algo medido.
 - Nombres y disponibilidad de servicios que AWS pudo haber cambiado. Sobre la familia
   Snow (Snowball Edge, q10), QuickSight y AppStream 2.0 hubo anuncios de cambios de
   disponibilidad o de marca que no se confirmaron. Se usan los nombres de la guía del

@@ -18,7 +18,7 @@ export const TEMA_4_FACTURACION: ExamQuestionWithTopic[] = [
         text: "EC2 Instance Savings Plans",
         correct: false,
         explanation:
-          "Tienta porque dice Savings Plans, y Savings Plans suena a flexibilidad. Pero el EC2 Instance Savings Plan ata el compromiso a una familia de instancias EC2 en una región: en cuanto la carga pasa a Fargate o Lambda, el descuento deja de aplicarse a esa parte.",
+          "EC2 Instance Savings Plans dan el mayor descuento de los Savings Plans a cambio de comprometer un gasto por hora en una familia de instancias EC2 dentro de una región. Tienta porque dice Savings Plans, y Savings Plans suena a flexibilidad. Pero el compromiso queda atado a EC2: en cuanto la carga pasa a Fargate o Lambda, el descuento deja de aplicarse a esa parte.",
       },
       {
         id: "B",
@@ -32,14 +32,14 @@ export const TEMA_4_FACTURACION: ExamQuestionWithTopic[] = [
         text: "Reserved Instances convertibles",
         correct: false,
         explanation:
-          "Es la trampa más cercana: las convertibles permiten cambiar de familia, sistema operativo y tenencia durante el plazo, y eso se parece mucho a 'flexibilidad'. Pero siguen siendo reservas de instancias EC2. No cubren Fargate ni Lambda.",
+          "Las Reserved Instances convertibles son reservas de EC2 a uno o tres años que permiten cambiar de familia, sistema operativo y tenencia durante el plazo, a cambio de un descuento algo menor que las estándar. Es la trampa más cercana, porque eso se parece mucho a 'flexibilidad'. Pero siguen siendo reservas de instancias EC2: no cubren Fargate ni Lambda.",
       },
       {
         id: "D",
         text: "Spot Instances con una solicitud persistente",
         correct: false,
         explanation:
-          "Spot da el descuento más grande, por eso aparece. Pero no es un compromiso a un año, AWS puede interrumpir la instancia con dos minutos de aviso, y una API que atiende usuarios no tolera eso. Además tampoco se aplica a Lambda.",
+          "Las Spot Instances usan capacidad sobrante de EC2 con hasta 90 % de descuento, pero AWS puede interrumpirlas con dos minutos de aviso; una solicitud persistente solo vuelve a pedirlas cuando se interrumpen. Dan el descuento más grande, por eso aparecen. Pero no son un compromiso a un año, una API que atiende usuarios no tolera las interrupciones, y no se aplican a Lambda.",
       },
     ],
     tips: [
@@ -58,21 +58,21 @@ export const TEMA_4_FACTURACION: ExamQuestionWithTopic[] = [
         text: "Compute Savings Plans",
         correct: false,
         explanation:
-          "Tolera los cambios, y mucho más: otra familia, otra región, Fargate, Lambda. Por eso tienta. Pero esa flexibilidad se paga: su descuento máximo ronda el 66 %. Si el equipo ya sabe que no va a salir de la familia M en us-east-1, está pagando por una flexibilidad que no usa.",
+          "Compute Savings Plans son el modelo de compromiso más flexible: un gasto por hora que se aplica a EC2 de cualquier familia, tamaño, sistema operativo o región, y también a Fargate y Lambda. Tolera los cambios, y mucho más, por eso tienta. Pero esa flexibilidad se paga: su descuento máximo ronda el 66 %. Si el equipo ya sabe que no va a salir de la familia M en us-east-1, paga por una flexibilidad que no usa.",
       },
       {
         id: "B",
         text: "Reserved Instances estándar regionales",
         correct: false,
         explanation:
-          "Dan un descuento comparable, y por eso tientan. Pero una RI estándar queda fijada a la plataforma con la que se compró: el paso de Windows a Linux la deja sin aplicar. Además, la flexibilidad de tamaño de las RI regionales solo existe para Linux, así que las instancias Windows tampoco podrían cambiar de tamaño sin perder el descuento.",
+          "Las Reserved Instances estándar regionales son reservas de EC2 a uno o tres años con un descuento alto, aplicables a cualquier zona de la región, pero fijas en familia, plataforma y tenencia. Dan un descuento comparable, y por eso tientan. Pero quedan fijadas a la plataforma con la que se compraron: el paso de Windows a Linux las deja sin aplicar, y la flexibilidad de tamaño solo existe para Linux.",
       },
       {
         id: "C",
         text: "On-Demand con un presupuesto de AWS Budgets",
         correct: false,
         explanation:
-          "Budgets avisa cuando el gasto se pasa de un umbral, y por eso aparece cuando se habla de controlar costos. Pero no descuenta nada: On-Demand es el precio de lista, el más alto de todos los modelos.",
+          "On-Demand es pagar por segundo u hora el precio de lista, sin compromiso; AWS Budgets es la herramienta que avisa cuando el gasto real o proyectado supera un umbral. Budgets aparece cuando se habla de controlar costos. Pero no descuenta nada: On-Demand es el precio más alto de todos los modelos.",
       },
       {
         id: "D",
@@ -106,14 +106,14 @@ export const TEMA_4_FACTURACION: ExamQuestionWithTopic[] = [
         text: "Reserved Instances estándar para el servicio web",
         correct: false,
         explanation:
-          "Para una carga estable 24 horas es la respuesta de manual, y por eso tienta. El detalle que la descarta es la migración a Lambda: una RI cubre instancias EC2 y nada más, así que la parte que se mude dejaría pagando una reserva sin usar.",
+          "Las Reserved Instances estándar son reservas de instancias EC2 a uno o tres años con uno de los descuentos más altos, a cambio de fijar familia, región y plataforma. Para una carga estable 24 horas es la respuesta de manual, y por eso tienta. El detalle que la descarta es la migración a Lambda: una RI cubre instancias EC2 y nada más, así que la parte que se mude dejaría pagando una reserva sin usar.",
       },
       {
         id: "C",
         text: "Dedicated Hosts para el renderizado nocturno",
         correct: false,
         explanation:
-          "Un Dedicated Host es un servidor físico entero para el cliente. Se elige por licencias atadas al hardware o por requisitos de cumplimiento, no para ahorrar: es de los modelos más caros, y el enunciado no menciona ninguna de esas dos necesidades.",
+          "Un Dedicated Host es un servidor físico entero reservado para el cliente, con visibilidad de sockets y núcleos. Se elige por licencias atadas al hardware o por requisitos de cumplimiento, no para ahorrar: es de los modelos más caros, y el enunciado no menciona ninguna de esas dos necesidades.",
       },
       {
         id: "D",
@@ -127,7 +127,7 @@ export const TEMA_4_FACTURACION: ExamQuestionWithTopic[] = [
         text: "On-Demand para el servicio web",
         correct: false,
         explanation:
-          "On-Demand es lo correcto cuando no se puede prever el uso o la carga dura poco. Acá el servicio corre las 24 horas: pagar precio de lista por algo que se sabe que va a estar encendido todo el año es dejar el descuento sobre la mesa.",
+          "On-Demand es pagar el precio de lista por segundo u hora, sin compromiso: es lo correcto cuando no se puede prever el uso o la carga dura poco. Acá el servicio corre las 24 horas: pagar precio de lista por algo que se sabe que va a estar encendido todo el año es dejar el descuento sobre la mesa.",
       },
     ],
     tips: [
@@ -153,21 +153,21 @@ export const TEMA_4_FACTURACION: ExamQuestionWithTopic[] = [
         text: "Amazon CloudWatch",
         correct: false,
         explanation:
-          "Es la herramienta de monitoreo por excelencia, por eso se elige. Pero CloudWatch mide lo que pasa en los recursos del cliente (CPU, latencia, logs). No sabe que AWS planea retirar un servidor físico: ese es un evento del proveedor, no una métrica del recurso.",
+          "Amazon CloudWatch es el servicio de monitoreo: recoge métricas (CPU, latencia) y logs de los recursos del cliente y dispara alarmas. Es la herramienta de monitoreo por excelencia, por eso se elige. Pero no sabe que AWS planea retirar un servidor físico: ese es un evento del proveedor, no una métrica del recurso.",
       },
       {
         id: "C",
         text: "AWS Trusted Advisor",
         correct: false,
         explanation:
-          "Trusted Advisor revisa la cuenta y recomienda: instancias subutilizadas, puertos abiertos, límites cerca del tope. Es una auditoría de la configuración del cliente, no un aviso de lo que AWS va a hacer con su infraestructura.",
+          "AWS Trusted Advisor revisa la cuenta y recomienda mejoras: instancias subutilizadas, puertos abiertos, límites cerca del tope. Es una auditoría de la configuración del cliente, no un aviso de lo que AWS va a hacer con su infraestructura.",
       },
       {
         id: "D",
         text: "AWS Config",
         correct: false,
         explanation:
-          "Config registra cómo cambió la configuración de cada recurso a lo largo del tiempo y evalúa reglas sobre ella. Tienta porque habla de 'los recursos de la cuenta', pero registra cambios hechos por el cliente, no eventos de mantenimiento de AWS.",
+          "AWS Config registra cómo cambió la configuración de cada recurso a lo largo del tiempo y evalúa reglas sobre ella. Tienta porque habla de 'los recursos de la cuenta'. Pero registra cambios hechos por el cliente, no eventos de mantenimiento de AWS.",
       },
     ],
     tips: [
@@ -186,14 +186,14 @@ export const TEMA_4_FACTURACION: ExamQuestionWithTopic[] = [
         text: "Una notificación de AWS Health Dashboard",
         correct: false,
         explanation:
-          "Health avisa, y por eso parece encajar con 'recibir un aviso'. Pero sus avisos son de eventos de AWS: una interrupción del servicio, un mantenimiento. El CPU alto de una instancia del cliente no es un evento de AWS; AWS está funcionando bien mientras el servidor se satura.",
+          "AWS Health Dashboard muestra el estado de los servicios de AWS y los eventos que afectan a la cuenta: interrupciones, mantenimientos programados, retiros de hardware. Avisa, y por eso parece encajar con 'recibir un aviso'. Pero sus avisos son de eventos de AWS: el CPU alto de una instancia del cliente no lo es; AWS está funcionando bien mientras el servidor se satura.",
       },
       {
         id: "B",
         text: "Un chequeo de AWS Trusted Advisor",
         correct: false,
         explanation:
-          "Trusted Advisor sí mira el uso de CPU, pero al revés y en otra escala de tiempo: busca instancias que pasan días casi sin uso para recomendar achicarlas. No dispara una alerta a los diez minutos de un pico.",
+          "AWS Trusted Advisor revisa la cuenta contra buenas prácticas y recomienda mejoras en costos, seguridad, rendimiento, tolerancia a fallas y cuotas. Sí mira el uso de CPU, pero al revés y en otra escala de tiempo: busca instancias que pasan días casi sin uso para recomendar achicarlas. No dispara una alerta a los diez minutos de un pico.",
       },
       {
         id: "C",
@@ -207,7 +207,7 @@ export const TEMA_4_FACTURACION: ExamQuestionWithTopic[] = [
         text: "Un registro de AWS CloudTrail",
         correct: false,
         explanation:
-          "CloudTrail registra quién llamó a qué API y cuándo. Tienta porque 'registra lo que pasa en la cuenta', pero una CPU al 80 % no es una llamada a la API de nadie: es una métrica.",
+          "AWS CloudTrail registra cada llamada a la API de la cuenta: quién hizo qué, cuándo y desde dónde. Tienta porque 'registra lo que pasa en la cuenta'. Pero una CPU al 80 % no es una llamada a la API de nadie: es una métrica.",
       },
     ],
     tips: [
@@ -227,7 +227,7 @@ export const TEMA_4_FACTURACION: ExamQuestionWithTopic[] = [
         text: "Amazon CloudWatch",
         correct: false,
         explanation:
-          "CloudWatch mostraría el síntoma (la latencia subiendo, los errores), y por eso parece útil después de una caída. Pero no responde ninguna de las dos preguntas: no sabe del estado de AWS ni registra quién cambió una regla.",
+          "Amazon CloudWatch es el servicio de monitoreo de métricas y logs de los recursos del cliente, con alarmas y tableros. Mostraría el síntoma (la latencia subiendo, los errores), y por eso parece útil después de una caída. Pero no responde ninguna de las dos preguntas: no sabe del estado de AWS ni registra quién cambió una regla.",
       },
       {
         id: "B",
@@ -241,14 +241,14 @@ export const TEMA_4_FACTURACION: ExamQuestionWithTopic[] = [
         text: "AWS Trusted Advisor",
         correct: false,
         explanation:
-          "Trusted Advisor puede señalar un grupo de seguridad con puertos abiertos al mundo, y eso lo acerca a la segunda pregunta. Pero dice cómo está configurado hoy, no quién lo cambió ni cuándo.",
+          "AWS Trusted Advisor revisa la configuración actual de la cuenta y recomienda mejoras en costos, seguridad, rendimiento y cuotas. Puede señalar un grupo de seguridad con puertos abiertos al mundo, y eso lo acerca a la segunda pregunta. Pero dice cómo está configurado hoy, no quién lo cambió ni cuándo.",
       },
       {
         id: "D",
         text: "Amazon Inspector",
         correct: false,
         explanation:
-          "Inspector busca vulnerabilidades de software conocidas en instancias EC2, imágenes de contenedores y funciones Lambda. Aparece por sonar a investigación, pero no registra cambios ni estados del proveedor.",
+          "Amazon Inspector busca vulnerabilidades de software conocidas en instancias EC2, imágenes de contenedores y funciones Lambda. Aparece por sonar a investigación, pero no registra cambios ni el estado de los servicios de AWS.",
       },
       {
         id: "E",
