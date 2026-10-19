@@ -4,6 +4,7 @@ import { bank as awsCloudPractitionerSimulacro } from "./aws-cloud-practitioner-
 import { bank as awsCloudPractitionerRefuerzoGrediana } from "./aws-cloud-practitioner-refuerzo-grediana/manifest";
 import { bank as awsDataEngineerIngesta } from "./aws-data-engineer-ingesta/manifest";
 import { bank as inglesTiemposYCondicionales } from "./ingles-tiempos-y-condicionales/manifest";
+import { bank as historiaColonizacaoDaAmerica } from "./historia-colonizacao-da-america/manifest";
 
 /**
  * Todos los exámenes que la sección `/exams` puede servir. Agregar uno es crear
@@ -19,6 +20,7 @@ export const EXAM_BANKS: GeneratedExamBank[] = [
   awsCloudPractitionerRefuerzoGrediana,
   awsDataEngineerIngesta,
   inglesTiemposYCondicionales,
+  historiaColonizacaoDaAmerica,
 ];
 
 const BY_SLUG = new Map(EXAM_BANKS.map((bank) => [bank.slug, bank]));

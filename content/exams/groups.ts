@@ -56,6 +56,18 @@ export const EXAM_GROUPS: ExamGroup[] = [
     },
     examSlugs: ["ingles-tiempos-y-condicionales"],
   },
+  {
+    slug: "examenes-saymons",
+    title: {
+      es: "Exámenes Saymons",
+      en: "Saymons' exams",
+    },
+    description: {
+      es: "Las pruebas del colegio de Saymons, una por materia, escritas a partir de sus guías de estudio y en el idioma en que se rinde la prueba real.",
+      en: "Saymons' school tests, one per subject, written from the student's study guides and in the language the real test is taken in.",
+    },
+    examSlugs: ["historia-colonizacao-da-america"],
+  },
 ];
 
 /**
