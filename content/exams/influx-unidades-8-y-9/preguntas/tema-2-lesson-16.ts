@@ -15,35 +15,35 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
     id: "inf-t2-q01",
     topic: "lesson-16",
     prompt:
-      "En la Activity 1 de la Lesson 16, un profesor dice: “Would you mind not checking your phone in the classroom?”. ¿Qué respuesta del libro le corresponde?",
+      "Un profesor dice en clase: “Would you mind not checking your phone in the classroom?”. ¿Qué respuesta le corresponde?",
     options: [
       {
         id: "A",
         text: "Oh, I'm sorry. I'll put it away.",
         correct: true,
         explanation:
-          "Correcta. Would you mind not checking your phone…? = ¿te importaría no mirar el teléfono…? La respuesta del libro se disculpa y cumple: Oh, I'm sorry. I'll put it away. Put away = guardar algo en su lugar, es decir, guardar el teléfono.",
+          "Correcta. Would you mind not checking your phone…? = ¿te importaría no mirar el teléfono…? La respuesta adecuada se disculpa y cumple: Oh, I'm sorry. I'll put it away. Put away = guardar algo en su lugar, es decir, guardar el teléfono.",
       },
       {
         id: "B",
         text: "Oh, I'm sorry. I promise I won't be late again.",
         correct: false,
         explanation:
-          "Es una disculpa con una promesa: perdón, prometo no volver a llegar tarde (promise + won't). En el libro responde a la profesora que dice I'd appreciate it if you tried to come to class on time. Tienta porque también es una disculpa en el aula. Pero el problema aquí es el teléfono, no la puntualidad.",
+          "Es una disculpa con una promesa: perdón, prometo no volver a llegar tarde (promise + won't). Responde a una profesora que dice I'd appreciate it if you tried to come to class on time. Tienta porque también es una disculpa en el aula. Pero el problema aquí es el teléfono, no la puntualidad.",
       },
       {
         id: "C",
         text: "You must be kidding! No way!",
         correct: false,
         explanation:
-          "You must be kidding! No way! = ¡debes estar bromeando! ¡de ninguna manera!, un rechazo rotundo. En el libro responde al chico que pide el auto prestado (Do you think you could lend me your car this weekend?). Tienta porque un pedido con would you mind se puede rechazar. Pero no es la respuesta que el libro empareja con el profesor.",
+          "You must be kidding! No way! = ¡debes estar bromeando! ¡de ninguna manera!, un rechazo rotundo. Es la respuesta natural a quien pide el auto prestado (Do you think you could lend me your car this weekend?). Tienta porque un pedido con would you mind se puede rechazar. Pero ante un profesor que pide algo razonable sería una falta de respeto.",
       },
       {
         id: "D",
         text: "Of course. Here you go.",
         correct: false,
         explanation:
-          "Of course. Here you go. = claro, aquí tienes: se dice al entregar algo en la mano. En el libro responde a Could you pass me that grocery bag over there, please? Tienta porque acepta el pedido. Pero el profesor no pide que le den el teléfono: pide que no lo usen.",
+          "Of course. Here you go. = claro, aquí tienes: se dice al entregar algo en la mano. Es la respuesta natural a Could you pass me that grocery bag over there, please? Tienta porque acepta el pedido. Pero el profesor no pide que le den el teléfono: pide que no lo usen.",
       },
     ],
     tips: [
@@ -55,7 +55,7 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
     id: "inf-t2-q02",
     topic: "lesson-16",
     prompt:
-      "Te preguntan: “Would you mind calling me tomorrow?”. Quieres aceptar. ¿Qué respuesta del Consolidation Exercise de la Lesson 16 corresponde?",
+      "Te preguntan: “Would you mind calling me tomorrow?”. Quieres aceptar. ¿Qué respuesta corresponde?",
     options: [
       {
         id: "A",
@@ -69,21 +69,21 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "No, not at all. Is it OK if I call you at noon then?",
         correct: true,
         explanation:
-          "Correcta. Con would you mind, aceptar es decir que no te importa: No, not at all (no, para nada). Es la respuesta del libro, que además propone una hora: Is it OK if I call you at noon then?",
+          "Correcta. Con would you mind, aceptar es decir que no te importa: No, not at all (no, para nada). Y se puede añadir una propuesta: Is it OK if I call you at noon then?",
       },
       {
         id: "C",
         text: "I'm afraid I can't. I have a Math test tomorrow.",
         correct: false,
         explanation:
-          "I'm afraid I can't = me temo que no puedo: un rechazo cortés, de la lista Refusing a request. En el libro responde a la invitación Why don't you come with us tonight? Tienta porque menciona tomorrow. Pero rechaza, y la consigna pide aceptar.",
+          "I'm afraid I can't = me temo que no puedo: un rechazo cortés (refusing a request). Es la respuesta natural a una invitación como Why don't you come with us tonight? Tienta porque menciona tomorrow. Pero rechaza, y la consigna pide aceptar.",
       },
       {
         id: "D",
         text: "Sure. Here you are, take it.",
         correct: false,
         explanation:
-          "Sure. Here you are. = claro, aquí tienes: se dice al entregar un objeto (en el libro responde a Could you pass me the sugar, please?). Tienta porque empieza con Sure, que acepta. Pero here you are acompaña a pasar algo de mano en mano, y una llamada no se entrega.",
+          "Sure. Here you are. = claro, aquí tienes: se dice al entregar un objeto (por ejemplo, ante Could you pass me the sugar, please?). Tienta porque empieza con Sure, que acepta. Pero here you are acompaña a pasar algo de mano en mano, y una llamada no se entrega.",
       },
     ],
     tips: [
@@ -95,14 +95,14 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
     id: "inf-t2-q03",
     topic: "lesson-16",
     prompt:
-      "La Activity 2 de la Lesson 16 reparte frases en dos listas: Accepting a request y Refusing a request. ¿Cuál va en Refusing?",
+      "Al responder a un pedido, ¿cuál de estas frases sirve para rechazarlo (refusing a request)?",
     options: [
       {
         id: "A",
         text: "Sure! I'd be glad to.",
         correct: false,
         explanation:
-          "Sure! I'd be glad to. = ¡claro! lo haría con gusto (glad = contento). Acepta con entusiasmo. Tienta porque es muy cortés, igual que muchas negativas suaves. Pero va en la lista de aceptar.",
+          "Sure! I'd be glad to. = ¡claro! lo haría con gusto (glad = contento). Acepta con entusiasmo. Tienta porque es muy cortés, igual que muchas negativas suaves. Pero es una forma de aceptar, no de rechazar.",
       },
       {
         id: "B",
@@ -116,7 +116,7 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "I don't think I can today.",
         correct: true,
         explanation:
-          "Correcta. I don't think I can today. = no creo que pueda hoy. Es una negativa suave: no rechaza de golpe, pero dice que no. Va en Refusing junto con I'm afraid I can't, I'd rather not, I'm sorry but I can't right now, No way! y What? You must be kidding!",
+          "Correcta. I don't think I can today. = no creo que pueda hoy. Es una negativa suave: no rechaza de golpe, pero dice que no. Es de la misma familia que I'm afraid I can't, I'd rather not, I'm sorry but I can't right now, No way! y What? You must be kidding!",
       },
       {
         id: "D",
@@ -142,7 +142,7 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "I'd rather not",
         correct: false,
         explanation:
-          "I'd rather not = preferiría que no (eu preferia que não), un rechazo suave. Tienta porque es una key phrase de la misma lección. Pero contradice el Sure del principio: no se puede aceptar y rechazar en la misma frase.",
+          "I'd rather not = preferiría que no (eu preferia que não), un rechazo suave. Tienta porque es una frase hecha muy usada al responder pedidos. Pero contradice el Sure del principio: no se puede aceptar y rechazar en la misma frase.",
       },
       {
         id: "B",
@@ -156,14 +156,14 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "I was wondering",
         correct: false,
         explanation:
-          "I was wondering… = estaba pensando…, será que…: introduce un pedido (I was wondering… could I invite Mike to your party too?). Tienta porque es una de las frases más destacadas de la lección. Pero la usa quien pide, no quien responde.",
+          "I was wondering… = estaba pensando…, será que…: introduce un pedido (I was wondering… could I invite Mike to your party too?). Tienta porque es una de las frases más usadas para pedir. Pero la usa quien pide, no quien responde.",
       },
       {
         id: "D",
         text: "it would be a pleasure",
         correct: true,
         explanation:
-          "Correcta. It would be a pleasure = sería un placer (seria um prazer). Acepta un pedido con gusto. Es la respuesta de la mamá en el Dialog Sample 3 de la Lesson 15: Sure, it would be a pleasure. They're all garbage, anyway.",
+          "Correcta. It would be a pleasure = sería un placer (seria um prazer). Acepta un pedido con gusto. Por ejemplo: Sure, it would be a pleasure. They're all garbage, anyway.",
       },
     ],
     tips: [
@@ -182,7 +182,7 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "I really appreciate it!",
         correct: true,
         explanation:
-          "Correcta. I appreciate it! / I really appreciate it! = ¡te lo agradezco (mucho)! (eu agradeço). Agradece algo que ya te ofrecieron o hicieron. Es la respuesta del Dialog Sample 4 de la Lesson 15.",
+          "Correcta. I appreciate it! / I really appreciate it! = ¡te lo agradezco (mucho)! (eu agradeço). Agradece algo que ya te ofrecieron o hicieron.",
       },
       {
         id: "B",
@@ -203,7 +203,7 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "Sure! No problem!",
         correct: false,
         explanation:
-          "Sure! No problem! = ¡claro! ¡sin problema!: acepta un pedido. Tienta porque es la respuesta más frecuente del libro. Pero A no le pide nada a B; le ofrece quedarse, y una oferta se agradece, no se acepta como un pedido.",
+          "Sure! No problem! = ¡claro! ¡sin problema!: acepta un pedido. Tienta porque es la respuesta más frecuente a un pedido. Pero A no le pide nada a B; le ofrece quedarse, y una oferta se agradece, no se acepta como un pedido.",
       },
     ],
     tips: [
@@ -221,14 +221,14 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "for the time being",
         correct: false,
         explanation:
-          "For the time being = por ahora, por el momento (por enquanto): You can keep on living here for the time being. Tienta porque es otra expresión de tiempo del mismo recuadro del ejercicio. Pero no cuenta repeticiones: “cuarta vez por ahora” no dice que fueran seguidas.",
+          "For the time being = por ahora, por el momento (por enquanto): You can keep on living here for the time being. Tienta porque es otra expresión de tiempo. Pero no cuenta repeticiones: “cuarta vez por ahora” no dice que fueran seguidas.",
       },
       {
         id: "B",
         text: "in a row",
         correct: true,
         explanation:
-          "Correcta. In a row = seguidas, consecutivas. Your fourth time in a row = tu cuarta vez seguida. Es el diálogo c del Consolidation Exercise 3 de la Lesson 16.",
+          "Correcta. In a row = seguidas, consecutivas. Your fourth time in a row = tu cuarta vez seguida.",
       },
       {
         id: "C",
@@ -242,7 +242,7 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "somehow",
         correct: false,
         explanation:
-          "Somehow = de alguna forma, de alguna manera (I'll make it up to you somehow, en la Lesson 17). Tienta por la posición final y por ser otro adverbio del libro. Pero habla de la manera de hacer algo, no de cuántas veces seguidas pasó.",
+          "Somehow = de alguna forma, de alguna manera (I'll make it up to you somehow). Tienta por la posición final y por ser otro adverbio. Pero habla de la manera de hacer algo, no de cuántas veces seguidas pasó.",
       },
     ],
     tips: [
@@ -281,7 +281,7 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "por ahora, por el momento",
         correct: true,
         explanation:
-          "Correcta. For the time being = por ahora, por el momento (por enquanto). En el libro: You can keep on living here for the time being, until you find a place for yourself: puedes seguir viviendo aquí por ahora, hasta que encuentres un lugar.",
+          "Correcta. For the time being = por ahora, por el momento (por enquanto). Por ejemplo: You can keep on living here for the time being, until you find a place for yourself: puedes seguir viviendo aquí por ahora, hasta que encuentres un lugar.",
       },
     ],
     tips: [
@@ -293,14 +293,14 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
     id: "inf-t2-q08",
     topic: "lesson-16",
     prompt:
-      "Completa: “I think my daughter ____ the recipe ____.” (Traducción del libro: “Eu acho que minha filha jogou a receita fora.”)",
+      "Completa: “I think my daughter ____ the recipe ____.” (En portugués: “Eu acho que minha filha jogou a receita fora.”)",
     options: [
       {
         id: "A",
         text: "threw … away",
         correct: true,
         explanation:
-          "Correcta. To throw away = jogar fora, tirar a la basura; throw es irregular (throw / threw / thrown). Va separado alrededor del objeto: threw the recipe away. El libro lo usa también en Could you throw these old magazines away for me?",
+          "Correcta. To throw away = jogar fora, tirar a la basura; throw es irregular (throw / threw / thrown). Va separado alrededor del objeto: threw the recipe away. También: Could you throw these old magazines away for me?",
       },
       {
         id: "B",
@@ -346,14 +346,14 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "down",
         correct: true,
         explanation:
-          "Correcta. Turn down = bajar el volumen (turn down the volume, de la lista del Exercise 2). Es el pedido C de la Activity 1: That TV is too loud and I can't get to sleep. Would you mind turning it down?",
+          "Correcta. Turn down = bajar el volumen (turn down the volume). Por ejemplo: That TV is too loud and I can't get to sleep. Would you mind turning it down?",
       },
       {
         id: "C",
         text: "out",
         correct: false,
         explanation:
-          "Turn out significa sobre todo resultar, salir de cierta manera (It turned out to be easy). Tienta porque out aparece en otros phrasal verbs de la lección, como put the garbage out. Pero no tiene que ver con el volumen.",
+          "Turn out significa sobre todo resultar, salir de cierta manera (It turned out to be easy). Tienta porque out aparece en otros phrasal verbs del tema, como put the garbage out. Pero no tiene que ver con el volumen.",
       },
       {
         id: "D",
@@ -372,35 +372,35 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
     id: "inf-t2-q10",
     topic: "lesson-16",
     prompt:
-      "En el Exercise 2 de la Lesson 16 se combina un verbo de List 1 (chop up, turn down, put out, warm up) con un sustantivo de List 2. ¿Qué verbo va con the garbage?",
+      "De estos phrasal verbs (chop up, turn down, put out, warm up), ¿cuál se combina con the garbage?",
     options: [
       {
         id: "A",
         text: "chop up",
         correct: false,
         explanation:
-          "Chop up = picar, cortar en trozos pequeños. En la lista va con the tomatoes (chop up the tomatoes). Tienta porque también es algo que se hace en la cocina, donde está la basura. Pero la basura no se pica.",
+          "Chop up = picar, cortar en trozos pequeños. Se combina con the tomatoes (chop up the tomatoes). Tienta porque también es algo que se hace en la cocina, donde está la basura. Pero la basura no se pica.",
       },
       {
         id: "B",
         text: "warm up",
         correct: false,
         explanation:
-          "Warm up = calentar algo que estaba frío. En la lista va con the milk (warm up the milk). Tienta porque es otro phrasal verb doméstico de la misma lista. Pero no tiene sentido con la basura.",
+          "Warm up = calentar algo que estaba frío. Se combina con the milk (warm up the milk). Tienta porque es otro phrasal verb doméstico. Pero no tiene sentido con la basura.",
       },
       {
         id: "C",
         text: "put out",
         correct: true,
         explanation:
-          "Correcta. Put out the garbage = colocar o lixo pra fora, sacar la basura. El libro da también la otra forma: take out the garbage (levar o lixo pra fora). En la Lesson 17 aparece de nuevo: my daughter keeps forgetting to put the garbage out.",
+          "Correcta. Put out the garbage = colocar o lixo pra fora, sacar la basura. También existe la otra forma: take out the garbage (levar o lixo pra fora). Por ejemplo: my daughter keeps forgetting to put the garbage out.",
       },
       {
         id: "D",
         text: "turn down",
         correct: false,
         explanation:
-          "Turn down = bajar el volumen. En la lista va con the volume (turn down the volume). Tienta porque es un pedido típico del libro (Would you mind turning it down?). Pero la basura no tiene volumen que bajar.",
+          "Turn down = bajar el volumen. Se combina con the volume (turn down the volume). Tienta porque es un pedido típico (Would you mind turning it down?). Pero la basura no tiene volumen que bajar.",
       },
     ],
     tips: [
@@ -418,14 +418,14 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "seguir, continuar",
         correct: false,
         explanation:
-          "Seguir, continuar es el sentido de keep cuando va seguido de -ing o de on + -ing: She kept on interrupting me, Keep smiling. Tienta porque es el uso de keep que más practica la unidad. Pero aquí keep va seguido de un objeto (this jacket), no de un verbo.",
+          "Seguir, continuar es el sentido de keep cuando va seguido de -ing o de on + -ing: She kept on interrupting me, Keep smiling. Tienta porque es el uso más conocido de keep. Pero aquí keep va seguido de un objeto (this jacket), no de un verbo.",
       },
       {
         id: "B",
         text: "cumplir, mantener la palabra",
         correct: false,
         explanation:
-          "Cumplir es el sentido de keep en keep a promise (cumplir una promesa). Tienta porque es una colocación de la Lesson 15. Pero solo funciona con promise; una chaqueta no se cumple.",
+          "Cumplir es el sentido de keep en keep a promise (cumplir una promesa). Tienta porque es una colocación muy conocida de keep. Pero solo funciona con promise; una chaqueta no se cumple.",
       },
       {
         id: "C",
@@ -439,7 +439,7 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "quedarse con ella",
         correct: true,
         explanation:
-          "Correcta. Keep + objeto = quedarse con algo (ficar com), uno de los sentidos de keep en el Vocabulary Expansion de la Lesson 15 (manter, guardar, ficar, ficar com, continuar). Por eso la respuesta es un rechazo: No way. I paid a lot for it.",
+          "Correcta. Keep + objeto = quedarse con algo (ficar com), uno de los sentidos de keep (manter, guardar, ficar, ficar com, continuar). Por eso la respuesta es un rechazo: No way. I paid a lot for it.",
       },
     ],
     tips: [
@@ -451,35 +451,35 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
     id: "inf-t2-q12",
     topic: "lesson-16",
     prompt:
-      "Te invitan: “I was wondering... Why don't you come with us tonight?”. ¿Qué respuesta del Consolidation Exercise 1 de la Lesson 16 corresponde?",
+      "Te invitan: “I was wondering... Why don't you come with us tonight?”. ¿Qué respuesta corresponde?",
     options: [
       {
         id: "A",
         text: "I'm afraid I can't. I have a Math test tomorrow.",
         correct: true,
         explanation:
-          "Correcta. I'm afraid I can't = me temo que no puedo: rechazo cortés de la lista Refusing a request, seguido de la razón. Responde bien a una invitación para esta noche: mañana hay examen y hay que quedarse estudiando.",
+          "Correcta. I'm afraid I can't = me temo que no puedo: rechazo cortés (refusing a request), seguido de la razón. Responde bien a una invitación para esta noche: mañana hay examen y hay que quedarse estudiando.",
       },
       {
         id: "B",
         text: "Sure. Anything you want. Just ask.",
         correct: false,
         explanation:
-          "Sure. Anything you want. Just ask. = claro, lo que quieras, solo pídelo. En el libro responde a Could you do me a favor?, cuando el favor todavía no se dijo. Tienta porque acepta con entusiasmo. Pero Just ask invita a formular un pedido, y la invitación ya está formulada.",
+          "Sure. Anything you want. Just ask. = claro, lo que quieras, solo pídelo. Es la respuesta natural a Could you do me a favor?, cuando el favor todavía no se dijo. Tienta porque acepta con entusiasmo. Pero Just ask invita a formular un pedido, y la invitación ya está formulada.",
       },
       {
         id: "C",
         text: "No way. I paid a lot for it.",
         correct: false,
         explanation:
-          "No way. I paid a lot for it. = de ninguna manera, pagué mucho por ella: rechaza que otro se quede con algo. En el libro responde a Can I keep this jacket? Tienta porque también es un rechazo. Pero la razón (pagué mucho) no tiene sentido ante una invitación.",
+          "No way. I paid a lot for it. = de ninguna manera, pagué mucho por ella: rechaza que otro se quede con algo. Es la respuesta natural a Can I keep this jacket? Tienta porque también es un rechazo. Pero la razón (pagué mucho) no tiene sentido ante una invitación.",
       },
       {
         id: "D",
         text: "Don't worry teacher. I promise this will never happen again.",
         correct: false,
         explanation:
-          "Es una disculpa con promesa: no se preocupe, profesor, prometo que no se repetirá (promise + will). En el libro responde a I'd really appreciate it if you didn't come late next class. Tienta porque es una respuesta educada. Pero nadie se queja aquí: es una invitación.",
+          "Es una disculpa con promesa: no se preocupe, profesor, prometo que no se repetirá (promise + will). Es la respuesta natural a I'd really appreciate it if you didn't come late next class. Tienta porque es una respuesta educada. Pero nadie se queja aquí: es una invitación.",
       },
     ],
     tips: [
@@ -504,7 +504,7 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "closed",
         correct: true,
         explanation:
-          "Correcta. Would you mind if I + pasado = ¿te importa si yo…? El libro lo da así: would you mind if I closed (or close) the window? Aquí quien va a cerrar es el que habla, y el pasado closed suena más cortés; el libro acepta también close.",
+          "Correcta. Would you mind if I + pasado = ¿te importa si yo…? La estructura es: would you mind if I closed (or close) the window? Aquí quien va a cerrar es el que habla, y el pasado closed suena más cortés; también se acepta close.",
       },
       {
         id: "C",
@@ -518,7 +518,7 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "would close",
         correct: false,
         explanation:
-          "Would close es un condicional (cerraría). Tienta porque la pregunta ya empieza con would y parece que hay que repetirlo. Pero el would va en would you mind; después de if el libro pone el pasado (closed) o el presente (close).",
+          "Would close es un condicional (cerraría). Tienta porque la pregunta ya empieza con would y parece que hay que repetirlo. Pero el would va en would you mind; después de if va el pasado (closed) o el presente (close).",
       },
     ],
     tips: [
@@ -536,28 +536,28 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "Sure! No problem!",
         correct: false,
         explanation:
-          "Sure! No problem! = ¡claro! ¡sin problema!: acepta un pedido. Tienta porque es la respuesta más común del libro a un pedido. Pero la frase siguiente, You never pay me back (nunca me devuelves la plata), es una razón para negarse, no para aceptar.",
+          "Sure! No problem! = ¡claro! ¡sin problema!: acepta un pedido. Tienta porque es la respuesta más común a un pedido. Pero la frase siguiente, You never pay me back (nunca me devuelves la plata), es una razón para negarse, no para aceptar.",
       },
       {
         id: "B",
         text: "I really appreciate it!",
         correct: false,
         explanation:
-          "I really appreciate it! = ¡te lo agradezco mucho!: la dice quien recibe un favor. Tienta porque es una key phrase del mismo recuadro. Pero aquí el que pide es A; B no tiene nada que agradecer.",
+          "I really appreciate it! = ¡te lo agradezco mucho!: la dice quien recibe un favor. Tienta porque es una frase hecha muy usada en pedidos. Pero aquí el que pide es A; B no tiene nada que agradecer.",
       },
       {
         id: "C",
         text: "What? You must be kidding! No way!",
         correct: true,
         explanation:
-          "Correcta. You must be kidding! = ¡debes estar bromeando! y No way! = ¡de ninguna manera!: un rechazo fuerte, de la lista Refusing a request. Se justifica con lo que sigue: You never pay me back. Es el diálogo a del Exercise 3 de la Lesson 16.",
+          "Correcta. You must be kidding! = ¡debes estar bromeando! y No way! = ¡de ninguna manera!: un rechazo fuerte (refusing a request). Se justifica con lo que sigue: You never pay me back.",
       },
       {
         id: "D",
         text: "I promise.",
         correct: false,
         explanation:
-          "I promise = lo prometo: compromete a quien habla (I'm sorry. I promise I won't do it anymore). Tienta porque también está en el recuadro del ejercicio. Pero B no está prometiendo nada: está respondiendo a un pedido de dinero.",
+          "I promise = lo prometo: compromete a quien habla (I'm sorry. I promise I won't do it anymore). Tienta porque es una frase hecha muy común en diálogos. Pero B no está prometiendo nada: está respondiendo a un pedido de dinero.",
       },
     ],
     tips: [
@@ -575,7 +575,7 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "I was wondering if",
         correct: false,
         explanation:
-          "I was wondering if… = será que…: introduce un pedido, pero necesita sujeto y modal después (I was wondering if you could…). Tienta porque es la fórmula estrella de la lección. Pero aquí sigue directamente carry, y I was wondering if carry queda sin sujeto.",
+          "I was wondering if… = será que…: introduce un pedido, pero necesita sujeto y modal después (I was wondering if you could…). Tienta porque es la fórmula estrella para pedir favores. Pero aquí sigue directamente carry, y I was wondering if carry queda sin sujeto.",
       },
       {
         id: "B",
@@ -589,14 +589,14 @@ export const TEMA_LESSON_16: ExamQuestionWithTopic[] = [
         text: "I really appreciate it",
         correct: false,
         explanation:
-          "I really appreciate it = te lo agradezco mucho: agradece un favor ya hecho. Tienta porque está en el mismo recuadro del Exercise 3. Pero no introduce un pedido ni puede ir seguido de un verbo.",
+          "I really appreciate it = te lo agradezco mucho: agradece un favor ya hecho. Tienta porque es una frase hecha muy común en diálogos de pedidos. Pero no introduce un pedido ni puede ir seguido de un verbo.",
       },
       {
         id: "D",
         text: "Could you please",
         correct: true,
         explanation:
-          "Correcta. Could you please + forma base es el pedido cortés más usual del libro (can / could are more usual). Could you please carry this suitcase to my bedroom for me? — Sure! No problem!",
+          "Correcta. Could you please + forma base es el pedido cortés más usual (can / could are more usual). Could you please carry this suitcase to my bedroom for me? — Sure! No problem!",
       },
     ],
     tips: [

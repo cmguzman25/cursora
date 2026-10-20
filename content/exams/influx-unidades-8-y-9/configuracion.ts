@@ -29,29 +29,29 @@ export const TEMAS: ExamTopic[] = [
   {
     id: "lesson-15",
     name: {
-      es: "Lesson 15 · Favors and Requests: vocabulario y estructuras",
-      en: "Lesson 15 · Favors and Requests: vocabulary and structures",
+      es: "Favors and Requests: vocabulario y estructuras",
+      en: "Favors and Requests: vocabulary and structures",
     },
   },
   {
     id: "lesson-16",
     name: {
-      es: "Lesson 16 · Aceptar y rechazar pedidos",
-      en: "Lesson 16 · Accepting and refusing requests",
+      es: "Aceptar y rechazar pedidos",
+      en: "Accepting and refusing requests",
     },
   },
   {
     id: "lesson-17",
     name: {
-      es: "Lesson 17 · Complaints and Apologies: vocabulario y verbos",
-      en: "Lesson 17 · Complaints and Apologies: vocabulary and verbs",
+      es: "Complaints and Apologies: vocabulario y verbos",
+      en: "Complaints and Apologies: vocabulary and verbs",
     },
   },
   {
     id: "lesson-18",
     name: {
-      es: "Lessons 17–18 · Key phrases, excusas y disculpas",
-      en: "Lessons 17–18 · Key phrases, excuses and apologies",
+      es: "Frases clave: excusas y disculpas",
+      en: "Key phrases: excuses and apologies",
     },
   },
 ];

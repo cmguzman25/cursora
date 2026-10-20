@@ -20,28 +20,28 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "do",
         correct: true,
         explanation:
-          "Correcta. El Helping You de la Lesson 15 lo enseña así: you do (somebody) a favor = hacerle un favor a alguien. “Can you do me a favor?” es la forma estándar de pedir un favor: quien lo hace es el otro, y el verbo que se combina con favor es do.",
+          "Correcta. You do (somebody) a favor = hacerle un favor a alguien. “Can you do me a favor?” es la forma estándar de pedir un favor: quien lo hace es el otro, y el verbo que se combina con favor es do.",
       },
       {
         id: "B",
         text: "make",
         correct: false,
         explanation:
-          "Make significa fabricar, producir o crear algo, y forma colocaciones del libro como make a request, make a promise o make a complaint. Tienta porque en español decimos “hacer un favor” y make también se traduce como hacer. Pero favor no va con make: en inglés el favor se hace con do.",
+          "Make significa fabricar, producir o crear algo, y forma colocaciones como make a request, make a promise o make a complaint. Tienta porque en español decimos “hacer un favor” y make también se traduce como hacer. Pero favor no va con make: en inglés el favor se hace con do.",
       },
       {
         id: "C",
         text: "ask",
         correct: false,
         explanation:
-          "Ask significa preguntar o pedir; en el libro aparece en ask (somebody) (for) a favor = pedirle un favor a alguien (“Can I ask you a favor?”). Tienta porque también va con favor. Pero aquí el sujeto es you y el favor me lo hace a mí: “Can you ask me a favor?” significaría “¿puedes pedirme un favor?”, al revés de lo que se quiere decir.",
+          "Ask significa preguntar o pedir; con favor forma ask (somebody) (for) a favor = pedirle un favor a alguien (“Can I ask you a favor?”). Tienta porque también va con favor. Pero aquí el sujeto es you y el favor me lo hace a mí: “Can you ask me a favor?” significaría “¿puedes pedirme un favor?”, al revés de lo que se quiere decir.",
       },
       {
         id: "D",
         text: "give",
         correct: false,
         explanation:
-          "Give significa dar, y en el libro aparece en give (somebody) an excuse = darle una excusa a alguien. Tienta porque “dar un favor” suena posible si se traduce palabra por palabra. Pero favor no se combina con give: la colocación fija es do a favor.",
+          "Give significa dar, y forma give (somebody) an excuse = darle una excusa a alguien. Tienta porque “dar un favor” suena posible si se traduce palabra por palabra. Pero favor no se combina con give: la colocación fija es do a favor.",
       },
     ],
     tips: [
@@ -53,28 +53,28 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
     id: "inf-t1-q02",
     topic: "lesson-15",
     prompt:
-      "El libro dice que también se puede usar will / would para pedir un favor (“Will you do me a favor?”), pero que hay otro par de verbos más usual. ¿Cuál?",
+      "También se puede usar will / would para pedir un favor (“Will you do me a favor?”), pero hay otro par de verbos más usual. ¿Cuál?",
     options: [
       {
         id: "A",
         text: "must / should",
         correct: false,
         explanation:
-          "Must expresa una obligación fuerte y should da un consejo (el libro lo usa en “You should apologize to the teacher for arriving late”). Tientan porque son modales, como could y would. Pero ninguno de los dos pide: uno ordena y el otro aconseja, así que usarlos para un favor suena a imposición.",
+          "Must expresa una obligación fuerte y should da un consejo (“You should apologize to the teacher for arriving late”). Tientan porque son modales, como could y would. Pero ninguno de los dos pide: uno ordena y el otro aconseja, así que usarlos para un favor suena a imposición.",
       },
       {
         id: "B",
         text: "can / could",
         correct: true,
         explanation:
-          "Correcta. El Helping You de la Lesson 15 lo dice textual: you can also use will / would to ask a favor or make a request (but can / could are more usual). Por eso los ejemplos del libro empiezan casi siempre con Can you… o Could you please…: “Can you pass me the groceries…?”, “Could you please carry this suitcase to the car for me?”.",
+          "Correcta. Will / would también sirven para pedir un favor o hacer un pedido, pero can / could son más usuales. Por eso la mayoría de los pedidos empiezan con Can you… o Could you please…: “Can you pass me the groceries…?”, “Could you please carry this suitcase to the car for me?”.",
       },
       {
         id: "C",
         text: "may / might",
         correct: false,
         explanation:
-          "May y might expresan posibilidad (It might rain), y may también sirve para pedir permiso de forma muy formal (May I come in?). Tientan porque may aparece en pedidos de permiso. Pero con ellos uno pide permiso para hacer algo uno mismo, no que el otro haga un favor, y el libro no los menciona como la forma usual.",
+          "May y might expresan posibilidad (It might rain), y may también sirve para pedir permiso de forma muy formal (May I come in?). Tientan porque may aparece en pedidos de permiso. Pero con ellos uno pide permiso para hacer algo uno mismo, no que el otro haga un favor, y no son la forma usual de pedir un favor.",
       },
       {
         id: "D",
@@ -92,7 +92,7 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
   {
     id: "inf-t1-q03",
     topic: "lesson-15",
-    prompt: "En el libro aparecen tres verbos que se combinan con promise. ¿Cuál significa cumplir una promesa?",
+    prompt: "Hay tres verbos que se combinan con promise. ¿Cuál significa cumplir una promesa?",
     options: [
       {
         id: "A",
@@ -106,21 +106,21 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "break a promise",
         correct: false,
         explanation:
-          "Break a promise = romper una promesa, no cumplirla. Tienta porque está en la misma línea del libro (make / keep / break a promise) y es fácil confundir la dirección. Pero significa justo lo contrario de lo que se pregunta.",
+          "Break a promise = romper una promesa, no cumplirla. Tienta porque forma la misma serie (make / keep / break a promise) y es fácil confundir la dirección. Pero significa justo lo contrario de lo que se pregunta.",
       },
       {
         id: "C",
         text: "keep a promise",
         correct: true,
         explanation:
-          "Correcta. Keep a promise = cumplir (mantener) una promesa. Keep es uno de los verbos del Vocabulary Expansion de la Lesson 15 (keep / kept / kept = manter, guardar, ficar, ficar com, continuar), y con promise toma el sentido de mantener lo prometido.",
+          "Correcta. Keep a promise = cumplir (mantener) una promesa. Keep (keep / kept / kept = manter, guardar, ficar, ficar com, continuar) tiene muchos sentidos, y con promise toma el sentido de mantener lo prometido.",
       },
       {
         id: "D",
         text: "do a promise",
         correct: false,
         explanation:
-          "Do significa hacer y forma colocaciones fijas como do (somebody) a favor (“Can you do me a favor?”). Tienta porque favor y promise están juntos en el vocabulario de la lección. Pero do no se combina con promise: do a promise no existe en inglés.",
+          "Do significa hacer y forma colocaciones fijas como do (somebody) a favor (“Can you do me a favor?”). Tienta porque favor y promise suelen estudiarse juntos. Pero do no se combina con promise: do a promise no existe en inglés.",
       },
     ],
     tips: [
@@ -131,35 +131,35 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
   {
     id: "inf-t1-q04",
     topic: "lesson-15",
-    prompt: "Completa el Helping You de la Lesson 15: “you agree to a request, or you ____ a request”.",
+    prompt: "Completa con la forma que significa lo mismo que agree to: “You agree to a request, or you ____ a request.”",
     options: [
       {
         id: "A",
         text: "refuse",
         correct: false,
         explanation:
-          "Refuse a request = rechazar un pedido; la Lesson 16 tiene toda una lista de frases para eso (I'm afraid I can't, I'd rather not…). Tienta porque aparece en la misma tanda de colocaciones del libro. Pero agree to es aceptar, y refuse es lo opuesto.",
+          "Refuse a request = rechazar un pedido; para eso hay toda una lista de frases (I'm afraid I can't, I'd rather not…). Tienta porque forma parte de la misma serie de colocaciones con request. Pero agree to es aceptar, y refuse es lo opuesto.",
       },
       {
         id: "B",
         text: "make",
         correct: false,
         explanation:
-          "Make a request = hacer un pedido. Tienta porque es la primera colocación de esa lista del libro. Pero la hace quien pide, y agree to describe lo que hace quien recibe el pedido.",
+          "Make a request = hacer un pedido. Tienta porque es la colocación más común con request. Pero la hace quien pide, y agree to describe lo que hace quien recibe el pedido.",
       },
       {
         id: "C",
         text: "ask",
         correct: false,
         explanation:
-          "Ask significa pedir o preguntar, y en el libro aparece con favor: ask (somebody) (for) a favor. Tienta porque request y pedir suenan a ask. Pero ask a request no es una colocación del libro, y además describiría a quien pide, no a quien acepta.",
+          "Ask significa pedir o preguntar, y se combina con favor: ask (somebody) (for) a favor. Tienta porque request y pedir suenan a ask. Pero ask a request no es una colocación del inglés, y además describiría a quien pide, no a quien acepta.",
       },
       {
         id: "D",
         text: "accept",
         correct: true,
         explanation:
-          "Correcta. El libro presenta las dos formas como equivalentes: you agree to a request or you accept a request = aceptar un pedido. La opuesta es you refuse a request.",
+          "Correcta. Las dos formas son equivalentes: you agree to a request or you accept a request = aceptar un pedido. La opuesta es you refuse a request.",
       },
     ],
     tips: [
@@ -170,35 +170,35 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
   {
     id: "inf-t1-q05",
     topic: "lesson-15",
-    prompt: "En el Helping You de la Lesson 15, garbage man lleva un sinónimo entre paréntesis. ¿Cuál es?",
+    prompt: "¿Qué otra expresión significa lo mismo que garbage man?",
     options: [
       {
         id: "A",
         text: "garbage collector",
         correct: true,
         explanation:
-          "Correcta. El libro escribe: garbage can / garbage man (or garbage collector). Garbage man y garbage collector son la misma persona: el recolector de basura.",
+          "Correcta. Garbage man y garbage collector son la misma persona: el recolector de basura.",
       },
       {
         id: "B",
         text: "garbage can",
         correct: false,
         explanation:
-          "Garbage can es el bote o tacho de basura, el recipiente donde se tira (lixeira). Tienta porque está en la misma línea del libro: garbage can / garbage man. Pero es un objeto, no una persona.",
+          "Garbage can es el bote o tacho de basura, el recipiente donde se tira (lixeira). Tienta porque se estudia junto a garbage man: garbage can / garbage man. Pero es un objeto, no una persona.",
       },
       {
         id: "C",
         text: "garbage bag",
         correct: false,
         explanation:
-          "Garbage bag es la bolsa de basura; el libro enseña que bag se combina así con otras palabras: grocery bag, plastic bag, paper bag, tea bag, shopping bag. Tienta por el mismo patrón garbage + sustantivo. Pero es una bolsa, no el trabajador que recoge la basura.",
+          "Garbage bag es la bolsa de basura; bag se combina así con otras palabras: grocery bag, plastic bag, paper bag, tea bag, shopping bag. Tienta por el mismo patrón garbage + sustantivo. Pero es una bolsa, no el trabajador que recoge la basura.",
       },
       {
         id: "D",
         text: "grocery store",
         correct: false,
         explanation:
-          "Grocery store es el supermercado o almacén (mercado, supermercado, en el libro). Tienta porque es vocabulario de la misma lección y se parece en la forma: palabra + sustantivo. Pero no tiene nada que ver con la basura.",
+          "Grocery store es el supermercado o almacén (mercado, supermercado). Tienta porque es vocabulario del mismo tema y se parece en la forma: palabra + sustantivo. Pero no tiene nada que ver con la basura.",
       },
     ],
     tips: [
@@ -223,7 +223,7 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "pieces of baggage",
         correct: true,
         explanation:
-          "Correcta. Baggage es incontable, así que para contarlo se usa piece: one piece of baggage / two pieces of baggage. Es exactamente el ejemplo del libro: How many pieces of baggage do you have? — Only these two.",
+          "Correcta. Baggage es incontable, así que para contarlo se usa piece: one piece of baggage / two pieces of baggage. Por eso: How many pieces of baggage do you have? — Only these two.",
       },
       {
         id: "C",
@@ -237,20 +237,20 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "bags of baggage",
         correct: false,
         explanation:
-          "Bag es bolsa, sacola o mala, y bags of sirve para contar contenido: two bags of groceries. Tienta porque parece la unidad lógica para contar equipaje. Pero el libro enseña que la unidad de baggage es piece; bags of baggage es redundante y no se usa.",
+          "Bag es bolsa, sacola o mala, y bags of sirve para contar contenido: two bags of groceries. Tienta porque parece la unidad lógica para contar equipaje. Pero la unidad para contar baggage es piece; bags of baggage es redundante y no se usa.",
       },
     ],
     tips: [
       "Baggage es incontable: one piece of baggage, two pieces of baggage.",
       "How many va con contables; con un incontable se pregunta how much.",
-      "Otras combinaciones del libro: checked baggage, excess baggage.",
+      "Otras combinaciones: checked baggage, excess baggage.",
     ],
   },
   {
     id: "inf-t1-q07",
     topic: "lesson-15",
     prompt:
-      "Completa: “Every time she goes to the gym she carries that ____ with her.” (Traducción del libro: “…ela carrega aquela mochila com ela.”)",
+      "Completa: “Every time she goes to the gym she carries that ____ with her.” (En portugués: “…ela carrega aquela mochila com ela.”)",
     options: [
       {
         id: "A",
@@ -271,14 +271,14 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "backpack",
         correct: true,
         explanation:
-          "Correcta. Backpack = mochila, del Vocabulary Expansion de la Lesson 15. Es la bolsa que se lleva a la espalda, como en la frase del gimnasio: she carries that backpack with her.",
+          "Correcta. Backpack = mochila. Es la bolsa que se lleva a la espalda, como en la frase del gimnasio: she carries that backpack with her.",
       },
       {
         id: "D",
         text: "grocery bag",
         correct: false,
         explanation:
-          "Grocery bag es la bolsa de las compras del supermercado (Could you please help me carry those grocery bags?). Tienta porque también se lleva encima y aparece mucho en la lección. Pero es la bolsa del súper, no una mochila.",
+          "Grocery bag es la bolsa de las compras del supermercado (Could you please help me carry those grocery bags?). Tienta porque también se lleva encima y es vocabulario del mismo tema. Pero es la bolsa del súper, no una mochila.",
       },
     ],
     tips: [
@@ -296,7 +296,7 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "groceries",
         correct: true,
         explanation:
-          "Correcta. Groceries = compras del supermercado, mantimentos. Es el primer diálogo de la Lesson 15: Can you pass me the groceries in those bags over there? — Sure! No problem!",
+          "Correcta. Groceries = compras del supermercado, mantimentos. Por ejemplo: Can you pass me the groceries in those bags over there? — Sure! No problem!",
       },
       {
         id: "B",
@@ -310,7 +310,7 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "garbage",
         correct: false,
         explanation:
-          "Garbage es basura (lixo), lo que se saca con take out / put out the garbage. Tienta porque la basura también se guarda en bolsas. Pero nadie pide que le pasen la basura; en el diálogo del libro lo que está en las bolsas son las compras.",
+          "Garbage es basura (lixo), lo que se saca con take out / put out the garbage. Tienta porque la basura también se guarda en bolsas. Pero nadie pide que le pasen la basura; lo que hay en las bolsas son las compras.",
       },
       {
         id: "D",
@@ -335,21 +335,21 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "keeped",
         correct: false,
         explanation:
-          "Keeped sería un pasado regular, formado con -ed. Tienta porque esa es la regla general del pasado. Pero keep es irregular: keep / kept / kept, como figura en la tabla de verbos de la Lesson 15.",
+          "Keeped sería un pasado regular, formado con -ed. Tienta porque esa es la regla general del pasado. Pero keep es irregular: keep / kept / kept.",
       },
       {
         id: "B",
         text: "kept",
         correct: true,
         explanation:
-          "Correcta. Keep on + -ing = keep + -ing = seguir haciendo algo (continuar, ficar). El pasado de keep es kept, y while I was speaking pide pasado. Es el ejemplo exacto del Helping You: She kept on interrupting me while I was speaking.",
+          "Correcta. Keep on + -ing = keep + -ing = seguir haciendo algo (continuar, ficar). El pasado de keep es kept, y while I was speaking pide pasado. Por eso: She kept on interrupting me while I was speaking.",
       },
       {
         id: "C",
         text: "keep",
         correct: false,
         explanation:
-          "Keep es la forma base, la que aparece en presente, como en el otro ejemplo del libro: Don't keep interrupting me while I'm speaking. Tienta porque es el mismo verbo. Pero con she en presente sería keeps, y esta frase está en pasado (was speaking).",
+          "Keep es la forma base, la que aparece en presente, como en Don't keep interrupting me while I'm speaking. Tienta porque es el mismo verbo. Pero con she en presente sería keeps, y esta frase está en pasado (was speaking).",
       },
       {
         id: "D",
@@ -374,7 +374,7 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "will",
         correct: false,
         explanation:
-          "Will es el futuro que acompaña a promise en presente: I promise I won't tell anyone what happened. Tienta porque es la estructura más conocida para prometer. Pero aquí el verbo es promised, en pasado, y el libro enseña que promised va con would.",
+          "Will es el futuro que acompaña a promise en presente: I promise I won't tell anyone what happened. Tienta porque es la estructura más conocida para prometer. Pero aquí el verbo es promised, en pasado, y promised va con would.",
       },
       {
         id: "B",
@@ -388,14 +388,14 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "would",
         correct: true,
         explanation:
-          "Correcta. El libro lo enseña en pares: you say (I) promise… will, y (I) promised… would. Como promised está en pasado, el futuro se desplaza a would: She promised she would tell him the truth.",
+          "Correcta. Funciona en pares: you say (I) promise… will, y (I) promised… would. Como promised está en pasado, el futuro se desplaza a would: She promised she would tell him the truth.",
       },
       {
         id: "D",
         text: "to",
         correct: false,
         explanation:
-          "To + verbo es la otra estructura de promise que trae el libro: She promised to tell him the truth. Tienta porque es correcta con promise. Pero esa forma no lleva sujeto en medio; con she entre promised y tell hace falta would.",
+          "To + verbo es la otra estructura posible con promise: She promised to tell him the truth. Tienta porque es correcta con promise. Pero esa forma no lleva sujeto en medio; con she entre promised y tell hace falta would.",
       },
     ],
     tips: [
@@ -413,7 +413,7 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "to not telling",
         correct: false,
         explanation:
-          "To + -ing mezcla dos formas distintas: el infinitivo (to tell) y el gerundio (telling). Tienta porque parece una negación de to tell. Pero tras to va la forma base, y en el libro la negación va antes del to: promise (not) to do something.",
+          "To + -ing mezcla dos formas distintas: el infinitivo (to tell) y el gerundio (telling). Tienta porque parece una negación de to tell. Pero tras to va la forma base, y la negación va antes del to: promise (not) to do something.",
       },
       {
         id: "B",
@@ -427,14 +427,14 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "not telling",
         correct: false,
         explanation:
-          "Not + -ing es el gerundio negativo, que va tras verbos como mind (Would you mind not checking your phone in the classroom?, en la Lesson 16). Tienta porque esa estructura aparece en el mismo libro. Pero promise pide infinitivo, no gerundio.",
+          "Not + -ing es el gerundio negativo, que va tras verbos como mind (Would you mind not checking your phone in the classroom?). Tienta porque es una negación muy usada en pedidos. Pero promise pide infinitivo, no gerundio.",
       },
       {
         id: "D",
         text: "not to tell",
         correct: true,
         explanation:
-          "Correcta. El libro: you say (I) promise (not) to do something — I promise not to tell anyone what happened. La negación not va delante del to.",
+          "Correcta. You say (I) promise (not) to do something — I promise not to tell anyone what happened. La negación not va delante del to.",
       },
     ],
     tips: [
@@ -446,14 +446,14 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
     id: "inf-t1-q12",
     topic: "lesson-15",
     prompt:
-      "Completa: “____ you could lend me your beach house this weekend?” (Traducción del libro: “Será que você poderia me emprestar sua casa de praia este fim de semana?”)",
+      "Completa: “____ you could lend me your beach house this weekend?” (En portugués: “Será que você poderia me emprestar sua casa de praia este fim de semana?”)",
     options: [
       {
         id: "A",
         text: "I was wondering if",
         correct: true,
         explanation:
-          "Correcta. I was wondering if… = será que…, eu estava pensando se… Es la fórmula que el libro destaca como muy usada para pedir favores, y va seguida de you could: I was wondering if you could… (= I wonder if you could…).",
+          "Correcta. I was wondering if… = será que…, eu estava pensando se… Es una fórmula muy usada para pedir favores, y va seguida de you could: I was wondering if you could… (= I wonder if you could…).",
       },
       {
         id: "B",
@@ -499,7 +499,7 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "lending",
         correct: true,
         explanation:
-          "Correcta. Would you mind + -ing = ¿te importaría…? (você se importaria). Es la estructura del ejemplo del libro, Would you mind closing the window for me?, y del Consolidation Exercise: Would you mind lending me your motorcycle for a while?",
+          "Correcta. Would you mind + -ing = ¿te importaría…? (você se importaria). Es la estructura de Would you mind closing the window for me? y de Would you mind lending me your motorcycle for a while?",
       },
       {
         id: "C",
@@ -513,7 +513,7 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "lent",
         correct: false,
         explanation:
-          "Lent es el pasado de lend, y el pasado solo aparece en la otra estructura del libro: would you mind if I + pasado (Would you mind if I closed the window?). Tienta por eso. Pero aquí no hay if ni sujeto: tras mind va directamente -ing.",
+          "Lent es el pasado de lend, y el pasado solo aparece en la otra estructura: would you mind if I + pasado (Would you mind if I closed the window?). Tienta por eso. Pero aquí no hay if ni sujeto: tras mind va directamente -ing.",
       },
     ],
     tips: [
@@ -525,7 +525,7 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
     id: "inf-t1-q14",
     topic: "lesson-15",
     prompt:
-      "Completa: “I'll try my best to be there before eight but ____.” (Traducción del libro: “…mas não prometo nada.”)",
+      "Completa: “I'll try my best to be there before eight but ____.” (En portugués: “…mas não prometo nada.”)",
     options: [
       {
         id: "A",
@@ -546,14 +546,14 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "I can't promise anything",
         correct: true,
         explanation:
-          "Correcta. I can't promise anything = no puedo prometer nada (eu não posso prometer nada, eu não prometo nada), una de las key phrases de la Lesson 15. Encaja con el but: lo voy a intentar, pero no lo garantizo.",
+          "Correcta. I can't promise anything = no puedo prometer nada (eu não posso prometer nada, eu não prometo nada). Encaja con el but: lo voy a intentar, pero no lo garantizo.",
       },
       {
         id: "D",
         text: "I really appreciate it",
         correct: false,
         explanation:
-          "I really appreciate it = te lo agradezco mucho (eu agradeço). Sirve para agradecer un favor que te hicieron. Tienta porque es otra key phrase de la misma lección. Pero aquí nadie está agradeciendo nada.",
+          "I really appreciate it = te lo agradezco mucho (eu agradeço). Sirve para agradecer un favor que te hicieron. Tienta porque es otra frase hecha muy usada en pedidos. Pero aquí nadie está agradeciendo nada.",
       },
     ],
     tips: [
@@ -565,7 +565,7 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
     id: "inf-t1-q15",
     topic: "lesson-15",
     prompt:
-      "Completa: “When you ____ your baggage, could you please not forget to take sunscreen?” (Traducción del libro: “Quando você for arrumar sua bagagem…”)",
+      "Completa: “When you ____ your baggage, could you please not forget to take sunscreen?” (En portugués: “Quando você for arrumar sua bagagem…”)",
     options: [
       {
         id: "A",
@@ -586,14 +586,14 @@ export const TEMA_LESSON_15: ExamQuestionWithTopic[] = [
         text: "pass",
         correct: false,
         explanation:
-          "Pass = pasar algo de mano en mano (Could you please pass me that red sweater in the first drawer?). Tienta por ser otro verbo de la misma tabla de la lección. Pero nadie pasa su equipaje para acordarse del protector solar.",
+          "Pass = pasar algo de mano en mano (Could you please pass me that red sweater in the first drawer?). Tienta por ser otro verbo que se usa con objetos y equipaje. Pero nadie pasa su equipaje para acordarse del protector solar.",
       },
       {
         id: "D",
         text: "pack",
         correct: true,
         explanation:
-          "Correcta. Pack = empacotar, embalar, fazer as malas. El libro lo enseña como pack your bags / baggage / suitcase (hacer las maletas) y pack something in a suitcase / bag. Es el segundo diálogo de la Lesson 15.",
+          "Correcta. Pack = empacotar, embalar, fazer as malas. Se usa en pack your bags / baggage / suitcase (hacer las maletas) y pack something in a suitcase / bag.",
       },
     ],
     tips: [

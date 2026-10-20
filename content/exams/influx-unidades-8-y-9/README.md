@@ -21,8 +21,14 @@ basa en ese contenido. Pertenece al grupo **Influx exámenes** (`influx-examenes
 **Sobre el idioma.** Las preguntas viven en `questions.es`, que es el nombre del
 casillero obligatorio y no una promesa sobre el idioma del contenido: las frases
 evaluadas están en inglés y así tienen que quedar. Cuando el libro trae una
-traducción al portugués, el enunciado la cita ("Traducción del libro: …") para
-desambiguar, igual que hacen los Consolidation Exercises. Quedó pendiente, a
+traducción al portugués, el enunciado la cita ("En portugués: …") para
+desambiguar, igual que hacen los Consolidation Exercises.
+
+**Independiente del libro.** El contenido sale del libro, pero ni los
+enunciados ni las explicaciones ni los tips ni los nombres de los temas lo
+mencionan (nada de "Lesson 16", "Activity 1", "Helping You", "según el libro"…).
+Así lo pidió el usuario: cada pregunta tiene que entenderse sin el libro al
+lado. Las referencias quedan solo en los comentarios del código. Quedó pendiente, a
 pedido del usuario, una versión en portugués; si se hace, tiene que ser
 estrictamente paralela (mismas preguntas, mismo orden, mismos ids de opción,
 mismas correctas) y hay que subir `VERSION_DEL_BANCO`.
