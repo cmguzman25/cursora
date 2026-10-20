@@ -68,6 +68,18 @@ export const EXAM_GROUPS: ExamGroup[] = [
     },
     examSlugs: ["historia-colonizacao-da-america", "geografia-industrializacao-brasileira"],
   },
+  {
+    slug: "influx-examenes",
+    title: {
+      es: "Influx exámenes",
+      en: "Influx exams",
+    },
+    description: {
+      es: "Repaso del libro de inglés Influx, por unidades, con las frases, el vocabulario y los diálogos tal como están en el libro.",
+      en: "Review of the Influx English book, unit by unit, using the phrases, vocabulary and dialogs exactly as they appear in the book.",
+    },
+    examSlugs: ["influx-unidades-8-y-9"],
+  },
 ];
 
 /**

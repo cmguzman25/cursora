@@ -6,6 +6,7 @@ import { bank as awsDataEngineerIngesta } from "./aws-data-engineer-ingesta/mani
 import { bank as inglesTiemposYCondicionales } from "./ingles-tiempos-y-condicionales/manifest";
 import { bank as historiaColonizacaoDaAmerica } from "./historia-colonizacao-da-america/manifest";
 import { bank as geografiaIndustrializacaoBrasileira } from "./geografia-industrializacao-brasileira/manifest";
+import { bank as influxUnidades8Y9 } from "./influx-unidades-8-y-9/manifest";
 
 /**
  * Todos los exámenes que la sección `/exams` puede servir. Agregar uno es crear
@@ -23,6 +24,7 @@ export const EXAM_BANKS: GeneratedExamBank[] = [
   inglesTiemposYCondicionales,
   historiaColonizacaoDaAmerica,
   geografiaIndustrializacaoBrasileira,
+  influxUnidades8Y9,
 ];
 
 const BY_SLUG = new Map(EXAM_BANKS.map((bank) => [bank.slug, bank]));
