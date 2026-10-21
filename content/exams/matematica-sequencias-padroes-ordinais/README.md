@@ -85,9 +85,12 @@ emojis, las flechas, el bambú y el ascensor.
   secuencias de figuras), se tapó con un recuadro y un "?"; donde había escrito
   (calculadora, camisetas, botones, emojis, flechas, fichas, bambú) se recortó
   alrededor.
-- **Están en `.gitignore`**: son ilustraciones del libro y el repositorio es
-  público. En un clon nuevo faltan, el verificador lo avisa sin fallar y la app
-  muestra las preguntas sin ellas.
+- **Están en el repositorio**, por decisión del dueño, para que se vean en el
+  despliegue de Vercel (2026-10-21). Antes estaban en `.gitignore` porque son
+  ilustraciones del libro y el repositorio es público; si eso vuelve a importar,
+  la alternativa es un bucket privado de Supabase Storage con URLs firmadas.
+- Si falta un archivo, el verificador lo avisa sin fallar y la app muestra la
+  pregunta sin la imagen.
 - Los enunciados siguen describiendo lo esencial con palabras, así que la
   pregunta se entiende también sin la imagen.
 

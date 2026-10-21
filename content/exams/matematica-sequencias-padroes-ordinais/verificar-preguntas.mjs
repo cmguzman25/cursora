@@ -165,9 +165,9 @@ function revisarPregunta(q, etiqueta) {
   }
 
   // La imagen es opcional, pero si está tiene que poder describirse y cargarse.
-  // Que el archivo falte es un aviso y no un fallo: las imágenes de este examen
-  // están en `.gitignore` (son recortes del libro y el repositorio es público),
-  // así que en un clon nuevo faltan todas y la app muestra las preguntas sin ellas.
+  // Que el archivo falte es un aviso y no un fallo: la app muestra la pregunta
+  // sin la imagen, que se sigue entendiendo porque el enunciado describe lo
+  // esencial con palabras.
   if (q.image) {
     const { src, alt, width, height } = q.image;
     if (!alt?.trim()) fallo(`${etiqueta}: imagen sin texto alternativo`);

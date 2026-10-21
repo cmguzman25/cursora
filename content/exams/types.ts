@@ -62,9 +62,8 @@ export type ExamQuestionWithTopic = ExamQuizQuestion & {
  * Una imagen servida desde `public/` (`src` empieza con `/`). Ancho y alto son los
  * del archivo, para que la página reserve el espacio antes de que cargue.
  *
- * Si el archivo no está —por ejemplo, porque está en `.gitignore` y el
- * repositorio se clonó en otro lado—, la pregunta se muestra sin la imagen en vez
- * de dibujar una imagen rota.
+ * Si el archivo no está, la pregunta se muestra sin la imagen en vez de dibujar
+ * una imagen rota.
  */
 export interface ExamQuestionImage {
   src: string;

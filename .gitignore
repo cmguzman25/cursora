@@ -44,7 +44,3 @@ next-env.d.ts
 # supabase cli scratch (migrations under supabase/migrations are tracked)
 supabase/.temp
 supabase/.branches
-
-# Ilustraciones recortadas de libros para los exámenes de /exams: son de uso
-# privado y el repositorio es público. Las preguntas se ven sin ellas si faltan.
-/public/exams/
