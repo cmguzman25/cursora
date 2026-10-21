@@ -19,6 +19,8 @@ import { ExamQuestionGrid, type Celda } from "@/components/lessons/exam/ExamQues
 import { ExamSubmitDialog } from "@/components/lessons/exam/ExamSubmitDialog";
 import { ExamQuestionCard } from "@/components/exams/ExamQuestionCard";
 import { ExamScoreCard } from "@/components/exams/ExamScoreCard";
+import { useExamTheme } from "@/components/exams/theme/exam-theme-context";
+import { UnicornCelebration } from "@/components/exams/theme/UnicornCelebration";
 
 interface TimedExamRunProps {
   examSlug: string;
@@ -59,6 +61,7 @@ export function TimedExamRun({
   locale,
 }: TimedExamRunProps) {
   const t = useTranslations("exam");
+  const tema = useExamTheme();
   const tExams = useTranslations("exams");
   const router = useRouter();
 
@@ -211,20 +214,29 @@ export function TimedExamRun({
   if (fase === "results" && resultado) {
     if (!revisando) {
       return (
-        <ExamScoreCard
-          examSlug={examSlug}
-          result={resultado}
-          topics={topics}
-          questions={questions}
-          passingPercent={passingPercent}
-          autoSubmitted={attempt?.autoSubmitted === true}
-          locale={locale}
-          onStartReview={() => {
-            setRevisando(true);
-            setFiltro("all");
-            irA(0);
-          }}
-        />
+        <>
+          {/*
+            El tema `unicornio` festeja el aprobado. Este modo no revela nada
+            pregunta por pregunta, así que el único momento de festejar es acá.
+          */}
+          {tema === "unicornio" && resultado.passed && (
+            <UnicornCelebration event={{ id: 1, kind: "finish" }} />
+          )}
+          <ExamScoreCard
+            examSlug={examSlug}
+            result={resultado}
+            topics={topics}
+            questions={questions}
+            passingPercent={passingPercent}
+            autoSubmitted={attempt?.autoSubmitted === true}
+            locale={locale}
+            onStartReview={() => {
+              setRevisando(true);
+              setFiltro("all");
+              irA(0);
+            }}
+          />
+        </>
       );
     }
 

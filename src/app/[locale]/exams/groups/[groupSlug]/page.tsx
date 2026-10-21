@@ -5,6 +5,7 @@ import { Flag, ListChecks, Timer } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { ExamThemeScope } from "@/components/exams/theme/ExamThemeScope";
 import { ExamCard } from "@/components/exams/ExamCard";
 import { EXAM_GROUP_SLUGS, getExamGroup, listExamSummariesInGroup } from "@content/exams/registry";
 import { localize } from "@content/exams/types";
@@ -51,6 +52,8 @@ export default async function ExamGroupPage({
     notFound();
   }
 
+  const tema = grupo.theme ?? null;
+
   const t = await getTranslations("exams");
   const pruebas = listExamSummariesInGroup(groupSlug);
   const pendientes = await contarPendientesPorExamen();
@@ -62,7 +65,10 @@ export default async function ExamGroupPage({
     : 0;
 
   return (
-    <div className="flex min-h-screen flex-1 flex-col bg-zinc-50 dark:bg-zinc-950">
+    <ExamThemeScope
+      theme={tema}
+      className="flex min-h-screen flex-1 flex-col bg-zinc-50 dark:bg-zinc-950"
+    >
       <AppHeader />
       <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-8 px-6 py-10">
         <div className="flex flex-col gap-3">
@@ -124,6 +130,6 @@ export default async function ExamGroupPage({
           </div>
         )}
       </main>
-    </div>
+    </ExamThemeScope>
   );
 }

@@ -1,4 +1,10 @@
-import type { ExamGroup, ExamGroupSummary, ExamSummary, GeneratedExamBank } from "./types";
+import type {
+  ExamGroup,
+  ExamGroupSummary,
+  ExamSummary,
+  ExamVisualTheme,
+  GeneratedExamBank,
+} from "./types";
 import { EXAM_GROUPS } from "./groups";
 import { bank as awsCloudPractitionerSimulacro } from "./aws-cloud-practitioner-simulacro/manifest";
 import { bank as awsCloudPractitionerRefuerzoGrediana } from "./aws-cloud-practitioner-refuerzo-grediana/manifest";
@@ -7,6 +13,7 @@ import { bank as inglesTiemposYCondicionales } from "./ingles-tiempos-y-condicio
 import { bank as historiaColonizacaoDaAmerica } from "./historia-colonizacao-da-america/manifest";
 import { bank as geografiaIndustrializacaoBrasileira } from "./geografia-industrializacao-brasileira/manifest";
 import { bank as influxUnidades8Y9 } from "./influx-unidades-8-y-9/manifest";
+import { bank as matematicaSequenciasPadroesOrdinais } from "./matematica-sequencias-padroes-ordinais/manifest";
 
 /**
  * Todos los exámenes que la sección `/exams` puede servir. Agregar uno es crear
@@ -25,6 +32,7 @@ export const EXAM_BANKS: GeneratedExamBank[] = [
   historiaColonizacaoDaAmerica,
   geografiaIndustrializacaoBrasileira,
   influxUnidades8Y9,
+  matematicaSequenciasPadroesOrdinais,
 ];
 
 const BY_SLUG = new Map(EXAM_BANKS.map((bank) => [bank.slug, bank]));
@@ -94,6 +102,11 @@ function banksOfGroup(group: ExamGroup): GeneratedExamBank[] {
 /** El grupo al que pertenece una prueba, o null si no se la dio de alta en ninguno. */
 export function getGroupOfExam(examSlug: string): ExamGroup | null {
   return EXAM_GROUPS.find((group) => group.examSlugs.includes(examSlug)) ?? null;
+}
+
+/** El tema visual de una prueba: el de su grupo, o null si no tiene. */
+export function getExamTheme(examSlug: string): ExamVisualTheme | null {
+  return getGroupOfExam(examSlug)?.theme ?? null;
 }
 
 /** Las fichas de la portada: un grupo por tarjeta, con lo que suman sus pruebas. */

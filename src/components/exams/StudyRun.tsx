@@ -14,6 +14,11 @@ import { isAnswerCorrect } from "@/lib/exams/grading";
 import { toggleSelection } from "@/components/lessons/question-options";
 import { ExamQuestionGrid, type Celda } from "@/components/lessons/exam/ExamQuestionGrid";
 import { ExamQuestionCard } from "@/components/exams/ExamQuestionCard";
+import { useExamTheme } from "@/components/exams/theme/exam-theme-context";
+import {
+  UnicornCelebration,
+  type CelebrationEvent,
+} from "@/components/exams/theme/UnicornCelebration";
 
 interface StudyRunProps {
   examSlug: string;
@@ -60,6 +65,19 @@ export function StudyRun({ examSlug, questions }: StudyRunProps) {
   const flags = useExamReviewFlags({ userKey: user?.id ?? null, examSlug });
 
   const [terminado, setTerminado] = useState(false);
+
+  // Solo el tema `unicornio` celebra. Se dispara desde los manejadores de evento,
+  // no derivado de "la pregunta actual está bien": volver a una pregunta ya
+  // acertada, o recargar la página, no tiene que festejar de nuevo.
+  const tema = useExamTheme();
+  const [celebracion, setCelebracion] = useState<CelebrationEvent | null>(null);
+  const celebrar = useCallback(
+    (kind: CelebrationEvent["kind"]) => {
+      if (tema !== "unicornio") return;
+      setCelebracion((anterior) => ({ id: (anterior?.id ?? 0) + 1, kind }));
+    },
+    [tema],
+  );
 
   const respuestas = useMemo(() => attempt?.answers ?? {}, [attempt?.answers]);
   const posicion = Math.min(attempt?.cursor ?? 0, Math.max(0, questions.length - 1));
@@ -142,9 +160,10 @@ export function StudyRun({ examSlug, questions }: StudyRunProps) {
       // el resultado en el historial.
       if (siguiente.size === correctas) {
         void recordAnswer(pregunta.id, [...siguiente]);
+        celebrar(isAnswerCorrect([...siguiente], pregunta) ? "correct" : "wrong");
       }
     },
-    [questions, posicion, respuestas, reveladas, update, recordAnswer],
+    [questions, posicion, respuestas, reveladas, update, recordAnswer, celebrar],
   );
 
   const respondidas = questions.filter((p) => reveladas.has(p.id));
@@ -180,6 +199,7 @@ export function StudyRun({ examSlug, questions }: StudyRunProps) {
   if (terminado) {
     return (
       <div className="flex flex-col gap-4 rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
+        <UnicornCelebration event={celebracion} />
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-white">
           {tExams("studyFinishedTitle")}
         </h2>
@@ -219,6 +239,7 @@ export function StudyRun({ examSlug, questions }: StudyRunProps) {
 
   return (
     <div className="flex flex-col gap-5">
+      <UnicornCelebration event={celebracion} />
       {!isPersisted && (
         <p className="flex items-start gap-2.5 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300">
           <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
@@ -288,7 +309,14 @@ export function StudyRun({ examSlug, questions }: StudyRunProps) {
           </Button>
         </div>
         {esUltima && (
-          <Button onClick={() => setTerminado(true)}>{tExams("studyFinish")}</Button>
+          <Button
+            onClick={() => {
+              setTerminado(true);
+              celebrar("finish");
+            }}
+          >
+            {tExams("studyFinish")}
+          </Button>
         )}
       </div>
     </div>

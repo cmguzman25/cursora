@@ -4,9 +4,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { ExamThemeScope } from "@/components/exams/theme/ExamThemeScope";
 import { ExamStartPanel } from "@/components/exams/ExamStartPanel";
 import { buttonClasses } from "@/components/ui/Button";
-import { EXAM_SLUGS, getExamBank, getGroupOfExam } from "@content/exams/registry";
+import { EXAM_SLUGS, getExamBank, getExamTheme, getGroupOfExam } from "@content/exams/registry";
 import { localize } from "@content/exams/types";
 import { examQuestions, DURACION_MAXIMA, DURACION_MINIMA } from "@/lib/exams/generated";
 import { leerRendidasAbiertas } from "@/lib/exams/server-queries";
@@ -54,6 +55,8 @@ export default async function ExamStartPage({
     notFound();
   }
 
+  const tema = getExamTheme(examSlug);
+
   const t = await getTranslations("exams");
   const preguntas = examQuestions(bank, locale as AppLocale);
 
@@ -70,7 +73,10 @@ export default async function ExamStartPage({
   const abiertas = await leerRendidasAbiertas(examSlug);
 
   return (
-    <div className="flex min-h-screen flex-1 flex-col bg-zinc-50 dark:bg-zinc-950">
+    <ExamThemeScope
+      theme={tema}
+      className="flex min-h-screen flex-1 flex-col bg-zinc-50 dark:bg-zinc-950"
+    >
       <AppHeader />
       <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col gap-8 px-6 py-10">
         <div className="flex flex-col gap-3">
@@ -120,6 +126,6 @@ export default async function ExamStartPage({
           {t("goToReview")}
         </Link>
       </main>
-    </div>
+    </ExamThemeScope>
   );
 }

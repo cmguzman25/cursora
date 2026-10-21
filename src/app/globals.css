@@ -140,3 +140,229 @@ body {
   line-height: 1.7;
   max-width: min(70ch, 100%);
 }
+
+/*
+ * Tema visual "unicornio" de los exámenes (ver `ExamThemeScope` y el campo
+ * `theme` de `content/exams/groups.ts`).
+ *
+ * No toca ningún componente: redefine, solo dentro de `[data-exam-theme]`, las
+ * variables con las que Tailwind v4 pinta sus utilidades (`bg-zinc-50` es
+ * `var(--color-zinc-50)`). Las variables personalizadas se heredan, así que el
+ * valor más cercano gana sobre el de `:root`, y el resto de la app no se entera.
+ *
+ *   - indigo (acentos, opción elegida)  → rosa
+ *   - violet (degradado de los botones) → lila
+ *   - zinc (fondos, bordes, textos)     → neutros rosados, claros y oscuros
+ *   - emerald y red quedan: verde = acierto y rojo = error se entienden solos.
+ *
+ * También agranda la letra (variables `--text-*`) y redondea las esquinas.
+ */
+[data-exam-theme="unicornio"] {
+  --color-indigo-50: #fdf2f8;
+  --color-indigo-100: #fce7f3;
+  --color-indigo-200: #fbcfe8;
+  --color-indigo-300: #f9a8d4;
+  --color-indigo-400: #f472b6;
+  --color-indigo-500: #ec4899;
+  --color-indigo-600: #db2777;
+  --color-indigo-700: #be185d;
+  --color-indigo-800: #9d174d;
+  --color-indigo-900: #831843;
+
+  --color-violet-400: #c084fc;
+  --color-violet-500: #a855f7;
+  --color-violet-600: #9333ea;
+
+  --color-zinc-50: #fff5fb;
+  --color-zinc-100: #fde8f4;
+  --color-zinc-200: #f8d3e8;
+  --color-zinc-300: #eeb3d4;
+  --color-zinc-400: #c98bb0;
+  --color-zinc-500: #9a5a80;
+  --color-zinc-600: #7f4468;
+  --color-zinc-700: #653352;
+  --color-zinc-800: #3f1f37;
+  --color-zinc-900: #2e1529;
+  --color-zinc-950: #1e0d1b;
+
+  --text-xs: 0.875rem;
+  --text-sm: 1.0625rem;
+  --text-base: 1.1875rem;
+  --text-lg: 1.375rem;
+  --text-xl: 1.625rem;
+  --text-2xl: 2rem;
+
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+
+  /* Los adornos del fondo van con z-index negativo dentro de este contexto. */
+  isolation: isolate;
+  background-image:
+    radial-gradient(circle at 10% 0%, rgb(251 207 232 / 0.7), transparent 40%),
+    radial-gradient(circle at 90% 20%, rgb(233 213 255 / 0.7), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgb(254 215 170 / 0.35), transparent 50%);
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-exam-theme="unicornio"] {
+    background-image:
+      radial-gradient(circle at 10% 0%, rgb(131 24 67 / 0.45), transparent 40%),
+      radial-gradient(circle at 90% 20%, rgb(88 28 135 / 0.45), transparent 45%);
+  }
+}
+
+[data-exam-theme="unicornio"] h1 {
+  font-weight: 700;
+  color: #be185d;
+}
+
+[data-exam-theme="unicornio"] h1::after {
+  content: " 🦄";
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-exam-theme="unicornio"] h1 {
+    color: #f9a8d4;
+  }
+}
+
+/* Las opciones: más aire y un saltito al pasar por encima. */
+[data-exam-theme="unicornio"] button[aria-pressed] {
+  padding-block: 0.875rem;
+  border-width: 2px;
+  transition:
+    transform 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+[data-exam-theme="unicornio"] button[aria-pressed]:not(:disabled):hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.exam-theme-adornos {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.exam-theme-adornos span {
+  position: absolute;
+  opacity: 0.22;
+  animation: unicornio-flotar ease-in-out infinite alternate;
+}
+
+@keyframes unicornio-flotar {
+  from {
+    transform: translateY(0) rotate(-6deg);
+  }
+  to {
+    transform: translateY(-18px) rotate(6deg);
+  }
+}
+
+/* La celebración: chispas que suben desde abajo y un cartel en el centro. */
+.unicornio-celebracion {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.unicornio-chispa {
+  position: absolute;
+  bottom: -3rem;
+  animation-name: unicornio-subir;
+  animation-timing-function: cubic-bezier(0.2, 0.7, 0.4, 1);
+  animation-fill-mode: both;
+}
+
+@keyframes unicornio-subir {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0) scale(0.6);
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--deriva), -90vh) rotate(var(--giro)) scale(1.1);
+  }
+}
+
+.unicornio-cartel {
+  position: absolute;
+  left: 50%;
+  top: 38%;
+  margin: 0;
+  padding: 1rem 1.75rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #f472b6, #c084fc);
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 12px 40px rgb(236 72 153 / 0.4);
+  animation: unicornio-cartel 3.4s ease both;
+}
+
+.unicornio-cartel-suave {
+  background: #f3e8ff;
+  color: #6b21a8;
+  font-size: 1.375rem;
+  box-shadow: 0 8px 24px rgb(168 85 247 / 0.25);
+  animation-duration: 2.4s;
+}
+
+.unicornio-cartel-final {
+  font-size: 2rem;
+  animation-duration: 4.2s;
+}
+
+@keyframes unicornio-cartel {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.6);
+  }
+  12% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1.08);
+  }
+  20% {
+    transform: translate(-50%, 0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -20px) scale(0.95);
+  }
+}
+
+@media (max-width: 480px) {
+  .unicornio-cartel {
+    font-size: 1.25rem;
+    white-space: normal;
+    width: max-content;
+    max-width: calc(100vw - 2rem);
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exam-theme-adornos span,
+  .unicornio-chispa {
+    display: none;
+  }
+
+  [data-exam-theme="unicornio"] button[aria-pressed]:not(:disabled):hover {
+    transform: none;
+  }
+}

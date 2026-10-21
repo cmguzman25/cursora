@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
-import type { ExamQuestionWithTopic } from "@content/exams/types";
+import type { ExamQuestionImage, ExamQuestionWithTopic } from "@content/exams/types";
 import { FlagButton, OptionButton, TipsPanel } from "@/components/lessons/question-options";
 
 interface ExamQuestionCardProps {
@@ -63,6 +65,8 @@ export function ExamQuestionCard({
 
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-white">{question.prompt}</h2>
 
+        {question.image && <QuestionImage key={question.image.src} image={question.image} />}
+
         {!revealed && (
           <p className="text-sm text-zinc-500 dark:text-zinc-400">
             {question.multiple ? t("selectMultiple", { count: correctas }) : t("selectOne")}
@@ -91,5 +95,28 @@ export function ExamQuestionCard({
 
       {revealed && <TipsPanel tips={question.tips} title={t("tipsTitle")} />}
     </div>
+  );
+}
+
+/**
+ * La imagen de una pregunta. Si el archivo no carga, desaparece: una pregunta sin
+ * su imagen se sigue pudiendo leer, y una imagen rota solo distrae. La `key` del
+ * llamador la reinicia al cambiar de pregunta, así que un fallo no se arrastra a
+ * la siguiente.
+ */
+function QuestionImage({ image }: { image: ExamQuestionImage }) {
+  const [fallo, setFallo] = useState(false);
+  if (fallo) return null;
+
+  return (
+    <Image
+      src={image.src}
+      alt={image.alt}
+      width={image.width}
+      height={image.height}
+      sizes="(max-width: 896px) 100vw, 848px"
+      className="h-auto w-full max-w-3xl rounded-xl border border-zinc-200 bg-white dark:border-zinc-700"
+      onError={() => setFallo(true)}
+    />
   );
 }

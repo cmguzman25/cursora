@@ -44,7 +44,35 @@ export type ExamDifficulty = "introductory" | "intermediate" | "advanced" | "mix
  * adaptador de `src/lib/exams/generated.ts` lo traduce a `domain` para que el
  * calificador compartido funcione sin cambios.
  */
-export type ExamQuestionWithTopic = ExamQuizQuestion & { topic: string };
+export type ExamQuestionWithTopic = ExamQuizQuestion & {
+  topic: string;
+  /**
+   * Una imagen que acompaña al enunciado, opcional. Existe para los exámenes que
+   * salen de un libro con ilustraciones —un tablero, un bolo con pastillas de
+   * colores, un ascensor— que la pregunta necesita mostrar tal como están en el
+   * libro. `ExamQuestionCard` la dibuja entre el enunciado y las opciones.
+   *
+   * Nunca tiene que mostrar la respuesta: si la foto la trae escrita, se recorta
+   * o se tapa antes.
+   */
+  image?: ExamQuestionImage;
+};
+
+/**
+ * Una imagen servida desde `public/` (`src` empieza con `/`). Ancho y alto son los
+ * del archivo, para que la página reserve el espacio antes de que cargue.
+ *
+ * Si el archivo no está —por ejemplo, porque está en `.gitignore` y el
+ * repositorio se clonó en otro lado—, la pregunta se muestra sin la imagen en vez
+ * de dibujar una imagen rota.
+ */
+export interface ExamQuestionImage {
+  src: string;
+  /** Qué se ve en la imagen, para quien no la puede ver. Obligatorio. */
+  alt: string;
+  width: number;
+  height: number;
+}
 
 /**
  * Las preguntas en cada idioma en el que se escribieron. Misma forma y misma
@@ -134,7 +162,24 @@ export interface ExamGroup {
    * grupos: `content/exams/verificar-grupos.mjs` comprueba las dos cosas.
    */
   examSlugs: string[];
+  /**
+   * Aspecto visual opcional de las páginas del grupo y de sus pruebas. Sin él se
+   * ven como el resto de la sección.
+   *
+   * Vive en el grupo y no en cada banco porque el aspecto es de quién rinde, no
+   * de qué se rinde: "Exámenes Lucía" se pinta para una nena de 7 años, y cada
+   * prueba nueva que entre al grupo tiene que verse igual sin acordarse de nada.
+   * Lo aplica `ExamThemeScope`; los colores están en `globals.css`.
+   */
+  theme?: ExamVisualTheme;
 }
+
+/**
+ * Los temas visuales que existen. `unicornio`: rosa, letra más grande y redonda,
+ * unicornios de fondo y una lluvia de unicornios y estrellas al acertar en el
+ * modo estudio.
+ */
+export type ExamVisualTheme = "unicornio";
 
 /**
  * Lo que el catálogo necesita de un grupo: su ficha y lo que suman sus pruebas,

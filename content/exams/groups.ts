@@ -80,6 +80,19 @@ export const EXAM_GROUPS: ExamGroup[] = [
     },
     examSlugs: ["influx-unidades-8-y-9"],
   },
+  {
+    slug: "examenes-lucia",
+    title: {
+      es: "Exámenes Lucía",
+      en: "Lucía's exams",
+    },
+    description: {
+      es: "Las pruebas del colegio de Lucía (2º ano), escritas a partir de su libro, con sus mismos ejemplos y en portugués, el idioma de la prueba real. Frases cortas, para leer a los 7 años.",
+      en: "Lucía's school tests (2nd grade), written from her textbook, with its own examples and in Portuguese, the language of the real test. Short sentences, readable at age 7.",
+    },
+    examSlugs: ["matematica-sequencias-padroes-ordinais"],
+    theme: "unicornio",
+  },
 ];
 
 /**
