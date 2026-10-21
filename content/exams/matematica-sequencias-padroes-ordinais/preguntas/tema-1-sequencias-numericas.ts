@@ -130,7 +130,7 @@ export const TEMA_SEQUENCIAS_NUMERICAS: ExamQuestionWithTopic[] = [
       height: 922,
     },
     prompt:
-      "Yuri anda no tabuleiro começando no 0 e pulando de 2 em 2. Ele já passou pelo 48 e pelo 50. Qual é a casa de saída?",
+      "Yuri pisa só nos números que aumentam de 2 em 2: 0, 2, 4, 6... Depois do 48 e do 50, em qual número ele pisa para sair do tabuleiro?",
     options: [
       {
         id: "A",

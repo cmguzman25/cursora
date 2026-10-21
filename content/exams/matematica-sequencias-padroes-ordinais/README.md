@@ -18,7 +18,7 @@ y usa **los mismos ejemplos del libro**, porque la prueba real se basa en ellos.
 | Idioma | **Portugués**, enunciados, explicaciones y tips, con frases cortas |
 | Duración sugerida | 55 min (~1,5 min por pregunta) |
 | Para aprobar | 70 % |
-| Versión del banco | 3 (la 2 agregó las imágenes; la 3 corrigió el número de pastillas del bolo y un distractor) |
+| Versión del banco | 3 (la 2 agregó las imágenes; la 3 corrigió el número de pastillas del bolo y un distractor; la 4 aclaró el enunciado del tablero) |
 | Aspecto | Tema visual `unicornio` (lo pone el grupo, ver abajo) |
 
 **Sobre el idioma.** Está en portugués porque el libro y la prueba real son en
