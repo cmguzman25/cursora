@@ -66,7 +66,11 @@ export const EXAM_GROUPS: ExamGroup[] = [
       es: "Las pruebas del colegio de Saymons, una por materia, escritas a partir de sus guías de estudio y en el idioma en que se rinde la prueba real.",
       en: "Saymons' school tests, one per subject, written from the student's study guides and in the language the real test is taken in.",
     },
-    examSlugs: ["historia-colonizacao-da-america", "geografia-industrializacao-brasileira"],
+    examSlugs: [
+      "historia-colonizacao-da-america",
+      "geografia-industrializacao-brasileira",
+      "matematica-retas-triangulos-poligonos",
+    ],
   },
   {
     slug: "influx-examenes",
