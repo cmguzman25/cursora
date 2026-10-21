@@ -10,6 +10,8 @@ import { buttonClasses } from "@/components/ui/Button";
 
 interface ExerciseCardProps {
   exercise: Exercise;
+  /** Se llama cada vez que el alumno abre la solución. */
+  onSolve?: () => void;
 }
 
 /**
@@ -19,7 +21,7 @@ interface ExerciseCardProps {
  * No hay nada que responder ni que guardar: el alumno resuelve en el cuaderno y
  * compara. Por eso el estado es solo "solución visible o no", y vive acá.
  */
-export function ExerciseCard({ exercise }: ExerciseCardProps) {
+export function ExerciseCard({ exercise, onSolve }: ExerciseCardProps) {
   const t = useTranslations("exams");
   const [abierta, setAbierta] = useState(false);
   const idSolucion = `solucion-${exercise.id}`;
@@ -27,7 +29,7 @@ export function ExerciseCard({ exercise }: ExerciseCardProps) {
   return (
     <article
       id={exercise.id}
-      className="flex scroll-mt-24 flex-col gap-4 rounded-2xl border border-zinc-200 bg-white p-5 sm:p-6 dark:border-zinc-800 dark:bg-zinc-900"
+      className="flex flex-col gap-4 rounded-2xl border border-zinc-200 bg-white p-5 sm:p-6 dark:border-zinc-800 dark:bg-zinc-900"
     >
       <div className="flex flex-col gap-3">
         <span className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
@@ -42,7 +44,10 @@ export function ExerciseCard({ exercise }: ExerciseCardProps) {
       <div>
         <button
           type="button"
-          onClick={() => setAbierta((valor) => !valor)}
+          onClick={() => {
+            if (!abierta) onSolve?.();
+            setAbierta(!abierta);
+          }}
           aria-expanded={abierta}
           aria-controls={idSolucion}
           className={buttonClasses(abierta ? "outline" : "primary")}

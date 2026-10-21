@@ -240,7 +240,12 @@
     "exercisesHide": "Hide the solution",
     "exercisesSolutionTitle": "Step-by-step solution",
     "exercisesAnswer": "Answer",
-    "exercisesNote": "Heads up"
+    "exercisesNote": "Heads up",
+    "exercisesProgress": "Exercise {current} of {total}",
+    "exercisesSeen": "{count, plural, =0 {No solutions opened yet} one {# of {total} solutions opened} other {# of {total} solutions opened}}",
+    "exercisesGridLabel": "Go to an exercise",
+    "exercisesGridCell": "Exercise {number}",
+    "exercisesGridCellSeen": "Exercise {number}, solution seen"
   },
   "courseDetail": {
     "completedCount": "{completed} / {total} lessons completed",

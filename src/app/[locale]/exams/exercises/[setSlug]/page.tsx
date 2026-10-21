@@ -6,14 +6,14 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { ExamThemeScope } from "@/components/exams/theme/ExamThemeScope";
-import { ExerciseCard } from "@/components/exams/ExerciseCard";
+import { ExerciseRun } from "@/components/exams/ExerciseRun";
 import { EXAM_GROUPS } from "@content/exams/groups";
 import { localize } from "@content/exams/types";
 import { EXERCISE_SET_SLUGS, getExerciseSet } from "@content/exercises/registry";
 
 /**
- * Una lista de ejercicios prácticos: los ejercicios del libro, capítulo por
- * capítulo, cada uno con su botón "Resolver".
+ * Una lista de ejercicios prácticos: los ejercicios del libro, uno por pantalla,
+ * cada uno con su botón "Resolver" (ver `ExerciseRun`).
  *
  * Vive bajo el segmento estático `exercises` (ver `SEGMENTO_DE_EJERCICIOS` en
  * `content/exams/groups.ts`) por el mismo motivo que los grupos: `/exams/<slug>`
@@ -56,7 +56,7 @@ export default async function ExerciseSetPage({
       className="flex min-h-screen flex-1 flex-col bg-zinc-50 dark:bg-zinc-950"
     >
       <AppHeader />
-      <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-8 px-4 py-10 sm:px-6">
+      <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col gap-8 px-4 py-10 sm:px-6">
         <div className="flex flex-col gap-3">
           <Link
             href={grupo ? `/exams/groups/${grupo.slug}` : "/exams"}
@@ -71,40 +71,9 @@ export default async function ExerciseSetPage({
             <PencilLine className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
             {t("exercisesIntro")}
           </p>
-
-          <nav aria-label={t("exercisesSectionsNav")} className="flex flex-wrap gap-2">
-            {lista.sections.map((seccion) => (
-              <a
-                key={seccion.id}
-                href={`#${seccion.id}`}
-                className="rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 hover:border-emerald-300 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200"
-              >
-                {seccion.source.split(" · ")[0]}: {seccion.title}
-              </a>
-            ))}
-          </nav>
         </div>
 
-        {lista.sections.map((seccion) => {
-          const ejercicios = lista.exercises.filter((e) => e.section === seccion.id);
-
-          return (
-            <section key={seccion.id} id={seccion.id} className="flex scroll-mt-24 flex-col gap-4">
-              <div className="flex flex-col gap-1">
-                <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                  {seccion.source}
-                </span>
-                <h2 className="text-xl font-semibold text-zinc-900 dark:text-white">{seccion.title}</h2>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                  {t("cardExercises", { count: ejercicios.length })}
-                </p>
-              </div>
-              {ejercicios.map((ejercicio) => (
-                <ExerciseCard key={ejercicio.id} exercise={ejercicio} />
-              ))}
-            </section>
-          );
-        })}
+        <ExerciseRun setSlug={lista.slug} sections={lista.sections} exercises={lista.exercises} />
       </main>
     </ExamThemeScope>
   );

@@ -38,6 +38,14 @@ interface ExamQuestionGridProps {
   celdas: readonly Celda[];
   actual: number;
   onJump: (index: number) => void;
+  /**
+   * Rótulos accesibles para cuando la grilla no recorre preguntas, como en los
+   * ejercicios prácticos. Sin ellos dice "Pregunta 3, respondida".
+   */
+  etiquetas?: {
+    grupo: string;
+    celda: (numero: number, estado: EstadoCelda) => string;
+  };
 }
 
 /**
@@ -47,7 +55,7 @@ interface ExamQuestionGridProps {
  * botones tabulables: una grilla de este tamaño con un tab stop por celda
  * vuelve el teclado inutilizable para llegar a lo que viene después.
  */
-export function ExamQuestionGrid({ celdas, actual, onJump }: ExamQuestionGridProps) {
+export function ExamQuestionGrid({ celdas, actual, onJump, etiquetas }: ExamQuestionGridProps) {
   // Namespace `exam` y no `lesson.exam`: esta grilla la usan también los
   // exámenes de `/exams`, que no son lecciones de ningún curso.
   const t = useTranslations("exam");
@@ -70,7 +78,7 @@ export function ExamQuestionGrid({ celdas, actual, onJump }: ExamQuestionGridPro
     <div
       ref={contenedorRef}
       role="group"
-      aria-label={t("gridLabel")}
+      aria-label={etiquetas?.grupo ?? t("gridLabel")}
       className="grid grid-cols-[repeat(auto-fill,minmax(2.25rem,1fr))] gap-1.5"
       onKeyDown={(event) => {
         const columnas = 10;
@@ -98,7 +106,11 @@ export function ExamQuestionGrid({ celdas, actual, onJump }: ExamQuestionGridPro
             tabIndex={posicion === posicionActual ? 0 : -1}
             onClick={() => onJump(celda.index)}
             aria-current={esActual ? "true" : undefined}
-            aria-label={t("gridCellLabel", { number: celda.index + 1, state: estados.join(", ") })}
+            aria-label={
+              etiquetas
+                ? etiquetas.celda(celda.index + 1, celda.estado)
+                : t("gridCellLabel", { number: celda.index + 1, state: estados.join(", ") })
+            }
             className={`relative h-9 rounded-lg border text-xs font-semibold tabular-nums transition-colors ${
               CLASES[celda.estado]
             } ${esActual ? "ring-2 ring-indigo-500 ring-offset-1 dark:ring-offset-zinc-950" : ""}`}

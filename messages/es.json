@@ -240,7 +240,12 @@
     "exercisesHide": "Ocultar la solución",
     "exercisesSolutionTitle": "Solución paso a paso",
     "exercisesAnswer": "Respuesta",
-    "exercisesNote": "Atención"
+    "exercisesNote": "Atención",
+    "exercisesProgress": "Ejercicio {current} de {total}",
+    "exercisesSeen": "{count, plural, =0 {Todavía no abriste ninguna solución} one {Abriste # solución de {total}} other {Abriste # soluciones de {total}}}",
+    "exercisesGridLabel": "Ir a un ejercicio",
+    "exercisesGridCell": "Ejercicio {number}",
+    "exercisesGridCellSeen": "Ejercicio {number}, solución vista"
   },
   "courseDetail": {
     "completedCount": "{completed} / {total} lecciones completadas",

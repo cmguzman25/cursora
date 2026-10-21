@@ -26,7 +26,9 @@ export function ExerciseSetCard({ set, locale }: ExerciseSetCardProps) {
         <h2 className="text-base font-semibold text-zinc-900 dark:text-white">
           {localize(set.title, locale)}
         </h2>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">{localize(set.description, locale)}</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+          {localize(set.description, locale)}
+        </p>
       </div>
 
       <ul className="mt-auto flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-zinc-500 dark:text-zinc-400">
