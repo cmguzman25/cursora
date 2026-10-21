@@ -162,6 +162,12 @@ export interface ExamGroup {
    */
   examSlugs: string[];
   /**
+   * Las listas de ejercicios prácticos del grupo (`content/exercises/`), en el
+   * orden en que se muestran. Opcional: un grupo puede no tener ninguna. A
+   * diferencia de las pruebas, no se rinden ni se califican.
+   */
+  exerciseSetSlugs?: string[];
+  /**
    * Aspecto visual opcional de las páginas del grupo y de sus pruebas. Sin él se
    * ven como el resto de la sección.
    *

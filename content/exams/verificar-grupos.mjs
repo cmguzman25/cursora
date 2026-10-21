@@ -25,7 +25,7 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { EXAM_GROUPS, SEGMENTO_DE_GRUPOS } from "./groups.ts";
+import { EXAM_GROUPS, SEGMENTO_DE_EJERCICIOS, SEGMENTO_DE_GRUPOS } from "./groups.ts";
 
 const AQUI = dirname(fileURLToPath(import.meta.url));
 
@@ -162,6 +162,9 @@ for (const { slug } of examenes) {
 // prueba con ese slug tendría su pantalla previa tapada por la de los grupos.
 if (slugsDeExamen.has(SEGMENTO_DE_GRUPOS)) {
   fallo(`hay una prueba con el slug "${SEGMENTO_DE_GRUPOS}", que es el segmento de los grupos`);
+}
+if (slugsDeExamen.has(SEGMENTO_DE_EJERCICIOS)) {
+  fallo(`hay una prueba con el slug "${SEGMENTO_DE_EJERCICIOS}", que es el segmento de los ejercicios`);
 }
 for (const grupo of EXAM_GROUPS) {
   if (grupo.slug === SEGMENTO_DE_GRUPOS) {

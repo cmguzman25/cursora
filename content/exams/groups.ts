@@ -71,6 +71,7 @@ export const EXAM_GROUPS: ExamGroup[] = [
       "geografia-industrializacao-brasileira",
       "matematica-retas-triangulos-poligonos",
     ],
+    exerciseSetSlugs: ["exercicios-retas-triangulos-poligonos"],
   },
   {
     slug: "influx-examenes",
@@ -110,3 +111,10 @@ export const EXAM_GROUPS: ExamGroup[] = [
  * repetida.
  */
 export const SEGMENTO_DE_GRUPOS = "groups";
+
+/**
+ * El segmento de ruta de una lista de ejercicios: `/exams/exercises/<slug>`. Mismo
+ * motivo que `SEGMENTO_DE_GRUPOS`: la carpeta estática gana frente a
+ * `[examSlug]`, así que ninguna prueba se puede llamar así.
+ */
+export const SEGMENTO_DE_EJERCICIOS = "exercises";

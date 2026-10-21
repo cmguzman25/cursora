@@ -228,7 +228,19 @@
     "reviewDroppedByVersion": "{count, plural, one {Há # questão de uma tentativa antiga que já não está na prova e não pode ser mostrada} other {Há # questões de tentativas antigas que já não estão na prova e não podem ser mostradas}}.",
     "reviewUnflag": "Remover a marca",
     "backToExam": "Voltar à prova",
-    "backToExams": "Voltar às provas"
+    "backToExams": "Voltar às provas",
+    "groupExercisesTitle": "Exercícios práticos",
+    "groupExercisesIntro": "Os exercícios do livro, para resolver no caderno e comparar com a solução passo a passo. Não valem nota.",
+    "exercisesBadge": "Exercícios práticos",
+    "cardExercises": "{count, plural, one {# exercício} other {# exercícios}}",
+    "cardChapters": "{count, plural, one {# capítulo} other {# capítulos}}",
+    "exercisesIntro": "Resolva cada exercício no caderno. Quando terminar, toque em «Resolver» e compare a sua resolução com a solução passo a passo.",
+    "exercisesSectionsNav": "Capítulos",
+    "exercisesSolve": "Resolver",
+    "exercisesHide": "Esconder a solução",
+    "exercisesSolutionTitle": "Solução passo a passo",
+    "exercisesAnswer": "Resposta",
+    "exercisesNote": "Atenção"
   },
   "courseDetail": {
     "completedCount": "{completed} / {total} lições concluídas",

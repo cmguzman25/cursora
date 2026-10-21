@@ -228,7 +228,19 @@
     "reviewDroppedByVersion": "{count, plural, one {There is # question from an older attempt that is no longer in this exam and can't be shown} other {There are # questions from older attempts that are no longer in this exam and can't be shown}}.",
     "reviewUnflag": "Remove the flag",
     "backToExam": "Back to the exam",
-    "backToExams": "Back to exams"
+    "backToExams": "Back to exams",
+    "groupExercisesTitle": "Practice exercises",
+    "groupExercisesIntro": "The textbook's exercises, to solve in your notebook and compare with the step-by-step solution. They are not graded.",
+    "exercisesBadge": "Practice exercises",
+    "cardExercises": "{count, plural, one {# exercise} other {# exercises}}",
+    "cardChapters": "{count, plural, one {# chapter} other {# chapters}}",
+    "exercisesIntro": "Solve each exercise in your notebook. When you are done, press “Solve” and compare your work with the step-by-step solution.",
+    "exercisesSectionsNav": "Chapters",
+    "exercisesSolve": "Solve",
+    "exercisesHide": "Hide the solution",
+    "exercisesSolutionTitle": "Step-by-step solution",
+    "exercisesAnswer": "Answer",
+    "exercisesNote": "Heads up"
   },
   "courseDetail": {
     "completedCount": "{completed} / {total} lessons completed",

@@ -7,8 +7,10 @@ import { routing } from "@/i18n/routing";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { ExamThemeScope } from "@/components/exams/theme/ExamThemeScope";
 import { ExamCard } from "@/components/exams/ExamCard";
+import { ExerciseSetCard } from "@/components/exams/ExerciseSetCard";
 import { EXAM_GROUP_SLUGS, getExamGroup, listExamSummariesInGroup } from "@content/exams/registry";
 import { localize } from "@content/exams/types";
+import { listExerciseSetSummaries } from "@content/exercises/registry";
 import { contarPendientesPorExamen } from "@/lib/exams/server-queries";
 
 /**
@@ -56,6 +58,7 @@ export default async function ExamGroupPage({
 
   const t = await getTranslations("exams");
   const pruebas = listExamSummariesInGroup(groupSlug);
+  const listasDeEjercicios = listExerciseSetSummaries(grupo.exerciseSetSlugs ?? []);
   const pendientes = await contarPendientesPorExamen();
 
   const totalPreguntas = pruebas.reduce((suma, prueba) => suma + prueba.questionCount, 0);
@@ -125,6 +128,22 @@ export default async function ExamGroupPage({
                   locale={locale}
                   pendingReview={pendientes ? (pendientes[prueba.slug] ?? 0) : null}
                 />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {listasDeEjercicios.length > 0 && (
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-1">
+              <h2 className="text-base font-semibold text-zinc-900 dark:text-white">
+                {t("groupExercisesTitle")}
+              </h2>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">{t("groupExercisesIntro")}</p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {listasDeEjercicios.map((lista) => (
+                <ExerciseSetCard key={lista.slug} set={lista} locale={locale} />
               ))}
             </div>
           </div>
