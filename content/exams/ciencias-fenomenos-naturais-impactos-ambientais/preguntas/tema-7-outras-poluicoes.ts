@@ -22,7 +22,7 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "Câncer de pele e envelhecimento precoce, pela exposição contínua à poeira da obra e ao calor do asfalto",
         correct: false,
         explanation:
-          "Câncer de pele e envelhecimento precoce são danos que o livro atribui à radiação ultravioleta, que passa mais quando a camada de ozônio está destruída. Tenta porque são problemas de saúde citados no mesmo capítulo. Mas o enunciado descreve barulho de obras e de trânsito, que é poluição sonora.",
+          "Câncer de pele e envelhecimento precoce são danos que o livro atribui à radiação ultravioleta, que passa mais quando a camada de ozônio está destruída. Parece certa porque são problemas de saúde citados no mesmo capítulo. Mas o enunciado descreve barulho de obras e de trânsito, que é poluição sonora.",
       },
       {
         id: "B",
@@ -36,14 +36,14 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "Nenhum problema de saúde, só desconforto, porque o barulho não chega a afetar o corpo humano",
         correct: false,
         explanation:
-          "'Não causa doenças, mas causa desconforto' é o que o livro diz da poluição visual, o excesso de outdoors, cartazes, placas e fios. Tenta porque o barulho também incomoda. Mas a poluição sonora causa sim problemas de saúde: surdez, irritabilidade e neurose.",
+          "'Não causa doenças, mas causa desconforto' é o que o livro diz da poluição visual, o excesso de outdoors, cartazes, placas e fios. Parece certa porque o barulho também incomoda. Mas a poluição sonora causa sim problemas de saúde: surdez, irritabilidade e neurose.",
       },
       {
         id: "D",
         text: "Desorientação para se locomover, porque o barulho impede que a pessoa perceba onde está",
         correct: false,
         explanation:
-          "A desorientação de organismos é o efeito que o livro atribui à poluição luminosa, o excesso de luzes artificiais que confunde animais que dependem do escuro. Tenta porque também é um efeito de poluição urbana. Mas pertence à poluição luminosa, e quem se desorienta são sobretudo os animais, como os pássaros.",
+          "A desorientação de organismos é o efeito que o livro atribui à poluição luminosa, o excesso de luzes artificiais que confunde animais que dependem do escuro. Parece certa porque também é um efeito de poluição urbana. Mas pertence à poluição luminosa, e quem se desorienta são sobretudo os animais, como os pássaros.",
       },
     ],
     tips: [
@@ -68,21 +68,21 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "É a poluição causada pelo excesso de luzes artificiais à noite, que deixa o céu sem estrelas",
         correct: false,
         explanation:
-          "O excesso de luzes artificiais à noite é a poluição luminosa, que desorienta organismos que dependem do escuro. Tenta porque as duas têm a ver com o que se vê. Mas a poluição visual é o excesso de informações e objetos na paisagem, como outdoors e fios, e não o excesso de luz.",
+          "O excesso de luzes artificiais à noite é a poluição luminosa, que desorienta organismos que dependem do escuro. Parece certa porque as duas têm a ver com o que se vê. Mas a poluição visual é o excesso de informações e objetos na paisagem, como outdoors e fios, e não o excesso de luz.",
       },
       {
         id: "C",
         text: "É a mais perigosa das três, porque provoca problemas de visão e câncer nos olhos de quem vive nas cidades",
         correct: false,
         explanation:
-          "Danos à visão aparecem no livro como efeito da radiação ultravioleta, quando a camada de ozônio não a filtra. Tenta porque 'visual' lembra os olhos. Mas o livro diz justamente que a poluição visual não causa doenças, apenas desconforto.",
+          "Danos à visão aparecem no livro como efeito da radiação ultravioleta, quando a camada de ozônio não a filtra. Parece certa porque 'visual' lembra os olhos. Mas o livro diz justamente que a poluição visual não causa doenças, apenas desconforto.",
       },
       {
         id: "D",
         text: "É a fumaça escura das fábricas e dos automóveis, que encobre a vista dos prédios nas cidades",
         correct: false,
         explanation:
-          "A fumaça de fábricas e automóveis é poluição do ar, com gases e partículas lançados na atmosfera, como na foto da cidade coberta de fumaça. Tenta porque a fumaça atrapalha a vista. Mas a poluição visual é o excesso de informações e objetos na paisagem, e não uma poluição do ar.",
+          "A fumaça de fábricas e automóveis é poluição do ar, com gases e partículas lançados na atmosfera, como na foto da cidade coberta de fumaça. Parece certa porque a fumaça atrapalha a vista. Mas a poluição visual é o excesso de informações e objetos na paisagem, e não uma poluição do ar.",
       },
     ],
     tips: [
@@ -100,14 +100,14 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "Porque as lâmpadas liberam gás carbônico na atmosfera e intensificam o efeito estufa",
         correct: false,
         explanation:
-          "O gás carbônico que intensifica o efeito estufa vem principalmente da queima de combustíveis fósseis e das queimadas. Tenta porque gerar eletricidade em termoelétricas solta CO2. Mas o livro não define a poluição luminosa por gases: o poluente aqui é a própria luz, que é energia.",
+          "O gás carbônico que intensifica o efeito estufa vem principalmente da queima de combustíveis fósseis e das queimadas. Parece certa porque gerar eletricidade em termoelétricas solta CO2. Mas o livro não define a poluição luminosa por gases: o poluente aqui é a própria luz, que é energia.",
       },
       {
         id: "B",
         text: "Porque a luz forte das cidades destrói a camada de ozônio e deixa passar mais raios ultravioleta",
         correct: false,
         explanation:
-          "Quem destrói a camada de ozônio são os CFCs, gases de cloro, flúor e carbono usados em aerossóis e na refrigeração. Tenta porque luz e raios UV parecem coisas parecidas. Mas a luz das cidades não afeta o ozônio; o dano da poluição luminosa é outro.",
+          "Quem destrói a camada de ozônio são os CFCs, gases de cloro, flúor e carbono usados em aerossóis e na refrigeração. Parece certa porque luz e raios UV parecem coisas parecidas. Mas a luz das cidades não afeta o ozônio; o dano da poluição luminosa é outro.",
       },
       {
         id: "C",
@@ -121,7 +121,7 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "Porque a luz esquenta o ar das cidades durante a noite e provoca a inversão térmica no inverno",
         correct: false,
         explanation:
-          "A inversão térmica acontece quando o ar frio fica preso embaixo de uma camada de ar mais quente, e é mais comum no inverno e em manhãs frias. Tenta porque fala de ar e de cidade. Mas ela é um fenômeno natural ligado ao aquecimento da superfície pelo Sol, e não à iluminação artificial.",
+          "A inversão térmica acontece quando o ar frio fica preso embaixo de uma camada de ar mais quente, e é mais comum no inverno e em manhãs frias. Parece certa porque fala de ar e de cidade. Mas ela é um fenômeno natural ligado ao aquecimento da superfície pelo Sol, e não à iluminação artificial.",
       },
     ],
     tips: [
@@ -140,21 +140,21 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "Migram mais rápido, porque a luz das cidades ilumina o caminho e eles enxergam melhor",
         correct: false,
         explanation:
-          "Essa alternativa imagina a luz artificial como uma ajuda para os pássaros. Tenta porque, para nós, luz facilita enxergar à noite. Mas os pássaros se orientam pelas estrelas e pela lua, e a luz artificial atrapalha essa orientação.",
+          "Essa alternativa imagina a luz artificial como uma ajuda para os pássaros. Parece certa porque, para nós, luz facilita enxergar à noite. Mas os pássaros se orientam pelas estrelas e pela lua, e a luz artificial atrapalha essa orientação.",
       },
       {
         id: "B",
         text: "Param de migrar, porque a luz faz a noite parecer dia e eles ficam no ninho esperando",
         correct: false,
         explanation:
-          "Essa alternativa supõe que os pássaros confundiriam a noite com o dia e deixariam de voar. Tenta porque a luz muda mesmo o ambiente noturno. Mas o livro não diz que eles param; diz que ficam desorientados durante o voo e sofrem colisões.",
+          "Essa alternativa supõe que os pássaros confundiriam a noite com o dia e deixariam de voar. Parece certa porque a luz muda mesmo o ambiente noturno. Mas o livro não diz que eles param; diz que ficam desorientados durante o voo e sofrem colisões.",
       },
       {
         id: "C",
         text: "Ficam com problemas de audição, porque o barulho das cidades iluminadas os impede de se comunicar",
         correct: false,
         explanation:
-          "Problemas de audição, como a surdez, são efeito da poluição sonora, causada por automóveis, obras e fábricas. Tenta porque as cidades iluminadas também costumam ser barulhentas. Mas o enunciado fala de iluminação, e o efeito da poluição luminosa é a desorientação.",
+          "Problemas de audição, como a surdez, são efeito da poluição sonora, causada por automóveis, obras e fábricas. Parece certa porque as cidades iluminadas também costumam ser barulhentas. Mas o enunciado fala de iluminação, e o efeito da poluição luminosa é a desorientação.",
       },
       {
         id: "D",
@@ -180,14 +180,14 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "Poluição luminosa, porque os fios levam a energia que acende as luzes artificiais da cidade",
         correct: false,
         explanation:
-          "A poluição luminosa é o excesso de luzes artificiais, que desorienta organismos que dependem do escuro. Tenta porque os fios carregam a eletricidade das lâmpadas. Mas o enunciado não fala de luz, e sim de fios e placas acumulados na paisagem, o que o livro chama de poluição visual.",
+          "A poluição luminosa é o excesso de luzes artificiais, que desorienta organismos que dependem do escuro. Parece certa porque os fios carregam a eletricidade das lâmpadas. Mas o enunciado não fala de luz, e sim de fios e placas acumulados na paisagem, o que o livro chama de poluição visual.",
       },
       {
         id: "B",
         text: "Poluição do solo, porque os postes estão fincados na terra e os fios acabam caindo no chão",
         correct: false,
         explanation:
-          "A poluição do solo é a contaminação e a degradação da terra, por lixo, chorume, defensivos químicos ou desmatamento. Tenta porque os postes estão fincados no chão. Mas fios e placas não contaminam o solo; o problema é o excesso de objetos à vista.",
+          "A poluição do solo é a contaminação e a degradação da terra, por lixo, chorume, defensivos químicos ou desmatamento. Parece certa porque os postes estão fincados no chão. Mas fios e placas não contaminam o solo; o problema é o excesso de objetos à vista.",
       },
       {
         id: "C",
@@ -201,7 +201,7 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "Poluição sonora, porque a eletricidade que passa pelos fios produz um zumbido constante",
         correct: false,
         explanation:
-          "A poluição sonora é o excesso de ruído, como o de automóveis, obras e fábricas, que pode causar surdez, irritabilidade e neurose. Tenta porque alguns fios e transformadores realmente zumbem. Mas o livro usa o excesso de fios como exemplo de poluição visual, não sonora.",
+          "A poluição sonora é o excesso de ruído, como o de automóveis, obras e fábricas, que pode causar surdez, irritabilidade e neurose. Parece certa porque alguns fios e transformadores realmente zumbem. Mas o livro usa o excesso de fios como exemplo de poluição visual, não sonora.",
       },
     ],
     tips: [
@@ -227,21 +227,21 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "Cerca de 90 % das espécies de plantas, a mesma parte da radiação UV que o ozônio filtra",
         correct: false,
         explanation:
-          "O número 90 % aparece no capítulo, mas na camada de ozônio: ela filtra em torno de 90 % da radiação ultravioleta do Sol. Tenta porque é outro número marcante do mesmo capítulo. Mas, para as abelhas, o número do livro é 73 %.",
+          "O número 90 % aparece no capítulo, mas na camada de ozônio: ela filtra em torno de 90 % da radiação ultravioleta do Sol. Parece certa porque é outro número marcante do mesmo capítulo. Mas, para as abelhas, o número do livro é 73 %.",
       },
       {
         id: "C",
-        text: "Somente as plantas que produzem mel, porque as abelhas só visitam as flores de que fazem mel",
+        text: "Somente as plantas que produzem mel, porque as abelhas só visitam as flores das quais tiram o néctar para fazer mel",
         correct: false,
         explanation:
-          "O mel é o alimento que as abelhas produzem a partir do néctar das flores. Tenta porque o mel é o produto das abelhas mais conhecido. Mas o livro diz que sem abelhas não ficaríamos apenas sem mel: a maior parte das plantas do planeta depende delas para se reproduzir.",
+          "O mel é o alimento que as abelhas produzem a partir do néctar das flores. Parece certa porque o mel é o produto das abelhas mais conhecido. Mas o livro diz que sem abelhas não ficaríamos apenas sem mel: a maior parte das plantas do planeta depende delas para se reproduzir.",
       },
       {
         id: "D",
         text: "Cerca de 15 % das espécies de plantas, porque a maior parte é polinizada pelo vento e pela água",
         correct: false,
         explanation:
-          "O número 15 aparece no capítulo como a temperatura média do planeta, 15 °C, mantida pelo efeito estufa. Tenta porque soa como uma porcentagem pequena e possível. Mas o livro diz que as abelhas polinizam 73 % das espécies de plantas, a maioria delas.",
+          "O número 15 aparece no capítulo como a temperatura média do planeta, 15 °C, mantida pelo efeito estufa. Parece certa porque soa como uma porcentagem pequena e possível. Mas o livro diz que as abelhas polinizam 73 % das espécies de plantas, a maioria delas.",
       },
     ],
     tips: [
@@ -260,11 +260,11 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "Por causa da poluição luminosa; com a extinção, só a produção de mel no mundo seria prejudicada",
         correct: false,
         explanation:
-          "A poluição luminosa é o excesso de luzes artificiais que desorienta animais noturnos, como os pássaros migratórios. Tenta porque abelhas também voam e se orientam. Mas o livro aponta outra causa para o declínio das abelhas, e diz que a extinção afetaria muito mais que o mel.",
+          "A poluição luminosa é o excesso de luzes artificiais que desorienta animais noturnos, como os pássaros migratórios. Parece certa porque abelhas também voam e se orientam. Mas o livro aponta outra causa para o declínio das abelhas, e diz que a extinção afetaria muito mais que o mel.",
       },
       {
         id: "B",
-        text: "Pelo uso descontrolado de defensivos químicos; sem elas, a maior parte das plantas, das cultivadas aos seres humanos, seria afetada",
+        text: "Pelo uso descontrolado de defensivos químicos; sem elas, a maior parte das plantas, inclusive as cultivadas, desapareceria, e com elas os animais e os seres humanos",
         correct: true,
         explanation:
           "Correta. O livro diz que as populações de abelhas estão em declínio principalmente pelo uso descontrolado de defensivos químicos. Se elas fossem extintas, a maior parte das plantas desapareceria, incluindo as cultivadas para alimentação; sem as plantas, os animais e os seres humanos também desapareceriam.",
@@ -274,14 +274,14 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "Por causa do aquecimento global; com a extinção, outros insetos ocupariam o lugar delas na polinização das plantas, sem nenhum prejuízo para ninguém",
         correct: false,
         explanation:
-          "O aquecimento global pode levar à extinção de espécies que não conseguem migrar para áreas mais amenas, segundo o livro. Tenta porque é uma causa real de extinção citada no capítulo. Mas, no caso das abelhas, o livro aponta os defensivos químicos como causa principal, e não diz que outros insetos as substituiriam.",
+          "O aquecimento global pode levar à extinção de espécies que não conseguem migrar para áreas mais amenas, segundo o livro. Parece certa porque é uma causa real de extinção citada no capítulo. Mas, no caso das abelhas, o livro aponta os defensivos químicos como causa principal, e não diz que outros insetos as substituiriam.",
       },
       {
         id: "D",
         text: "Por causa das espécies exóticas; com a extinção, só as flores ornamentais deixariam de existir",
         correct: false,
         explanation:
-          "Espécie exótica é a que vive fora da sua área de distribuição natural e pode desequilibrar o ecossistema. Tenta porque aparece logo abaixo, na mesma página. Mas o livro não a liga ao declínio das abelhas, e a extinção delas atingiria também as plantas usadas na alimentação.",
+          "Espécie exótica é a que vive fora da sua área de distribuição natural e pode desequilibrar o ecossistema. Parece certa porque aparece logo abaixo, na mesma página. Mas o livro não a liga ao declínio das abelhas, e a extinção delas atingiria também as plantas usadas na alimentação.",
       },
     ],
     tips: [
@@ -300,32 +300,32 @@ export const TEMA_OUTRAS_POLUICOES: ExamQuestionWithTopic[] = [
         text: "É uma espécie rara e colorida, e o problema é que ela atrai caçadores para os ambientes naturais",
         correct: false,
         explanation:
-          "Essa alternativa usa o sentido cotidiano de 'exótico', de algo raro ou diferente. Tenta porque é assim que a palavra é usada fora da Ciência. Mas, no livro, espécie exótica é a que está fora da sua área de distribuição natural, e o problema é o desequilíbrio que ela causa no ecossistema.",
+          "Essa alternativa usa o sentido cotidiano de 'exótico', de algo raro ou diferente. Parece certa porque é assim que a palavra é usada fora da Ciência. Mas, no livro, espécie exótica é a que está fora da sua área de distribuição natural, e o problema é o desequilíbrio que ela causa no ecossistema.",
       },
       {
         id: "B",
         text: "É uma espécie que só existe no Brasil, e o problema é que ela corre risco de ser extinta",
         correct: false,
         explanation:
-          "Uma espécie que só existe em um lugar é chamada de endêmica, e pode correr risco de extinção. Tenta porque o enunciado fala de espécies presentes no Brasil. Mas a espécie exótica é o contrário: veio de fora da sua área natural, e o problema é o dano que ela causa às espécies nativas.",
+          "Uma espécie que só existe em um lugar é chamada de endêmica, e pode correr risco de extinção. Parece certa porque o enunciado fala de espécies presentes no Brasil. Mas a espécie exótica é o contrário: veio de fora da sua área natural, e o problema é o desequilíbrio que ela causa nos ecossistemas nativos.",
       },
       {
         id: "C",
         text: "É uma espécie que sempre viveu no mesmo ambiente, e o problema é que ela não consegue se adaptar a mudanças",
         correct: false,
         explanation:
-          "Uma espécie que sempre viveu em um ambiente é chamada de nativa daquele lugar. Tenta porque o livro fala das espécies nativas na mesma frase. Mas as nativas são as que a espécie exótica prejudica; a exótica é a que chegou de fora.",
+          "Uma espécie que sempre viveu em um ambiente é chamada de nativa daquele lugar. Parece certa porque o livro fala dos ecossistemas nativos na mesma frase. Mas os nativos são os que a espécie exótica desequilibra; a exótica é a que chegou de fora.",
       },
       {
         id: "D",
-        text: "É uma espécie fora da sua área natural, e pode alterar o ecossistema, prejudicar as nativas e causar desequilíbrio",
+        text: "É uma espécie fora da sua área natural, que pode alterar o funcionamento dos ecossistemas nativos e causar desequilíbrio",
         correct: true,
         explanation:
-          "Correta. O livro define espécie exótica como qualquer espécie, animal ou vegetal, que se encontre fora da sua área de distribuição natural. A sua introdução pode alterar o funcionamento dos ecossistemas, prejudicar as espécies nativas e causar desequilíbrio ambiental.",
+          "Correta. O livro define espécie exótica como qualquer espécie, animal ou vegetal, que se encontre fora da sua área de distribuição natural. A introdução dessas espécies pode alterar o funcionamento dos ecossistemas nativos e causar desequilíbrio ambiental.",
       },
     ],
     tips: [
-      "Exótica = fora da sua área natural. Nativa = do próprio lugar.",
+      "Exótica = fora da sua área natural. Nativo = do próprio lugar.",
       "Na pesquisa proposta, o livro pede: local de origem, como chegou ao Brasil, impactos e forma de combate.",
     ],
   },

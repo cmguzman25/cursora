@@ -20,14 +20,14 @@ export const TEMA_CAMADA_DE_OZONIO: ExamQuestionWithTopic[] = [
         text: "Reter o calor do Sol na atmosfera e manter a temperatura média da Terra em torno de 15 °C",
         correct: false,
         explanation:
-          "Reter calor e manter a Terra em torno de 15 °C é o papel do efeito estufa, feito por gases como o gás carbônico, o metano e o vapor d'água. Tenta porque os dois assuntos tratam de gases que protegem a vida. Mas o ozônio não aparece como gás do efeito estufa no livro: a função dele é filtrar os raios ultravioleta.",
+          "Reter calor e manter a Terra em torno de 15 °C é o papel do efeito estufa, feito por gases como o gás carbônico, o metano e o vapor d'água. Parece certa porque os dois assuntos tratam de gases que protegem a vida. Mas o ozônio não aparece como gás do efeito estufa no livro: a função dele é filtrar os raios ultravioleta.",
       },
       {
         id: "B",
         text: "Produzir o oxigênio que os seres vivos respiram, liberando esse gás durante o dia inteiro",
         correct: false,
         explanation:
-          "O oxigênio que respiramos é produzido pela fotossíntese de plantas e algas. Tenta porque o ozônio (O3) é formado por átomos de oxigênio. Mas a camada de ozônio não produz o ar que respiramos: o papel dela, segundo o livro, é filtrar a radiação ultravioleta.",
+          "O oxigênio que respiramos é produzido pela fotossíntese de plantas e algas. Parece certa porque o ozônio (O3) é formado por átomos de oxigênio. Mas a camada de ozônio não produz o ar que respiramos: o papel dela, segundo o livro, é filtrar a radiação ultravioleta.",
       },
       {
         id: "C",
@@ -41,7 +41,7 @@ export const TEMA_CAMADA_DE_OZONIO: ExamQuestionWithTopic[] = [
         text: "Impedir que os poluentes das cidades subam, segurando-os perto da superfície durante o inverno",
         correct: false,
         explanation:
-          "Segurar os poluentes perto da superfície é o que acontece na inversão térmica, quando uma camada de ar quente fica sobre o ar frio. Tenta porque também é uma 'camada' na atmosfera. Mas isso é um problema, e não uma proteção; a camada de ozônio protege filtrando os raios UV.",
+          "Segurar os poluentes perto da superfície é o que acontece na inversão térmica, quando uma camada de ar quente fica sobre o ar frio. Parece certa porque também é uma 'camada' na atmosfera. Mas isso é um problema, e não uma proteção; a camada de ozônio protege filtrando os raios UV.",
       },
     ],
     tips: [
@@ -60,21 +60,21 @@ export const TEMA_CAMADA_DE_OZONIO: ExamQuestionWithTopic[] = [
         text: "Surdez, irritabilidade e neurose, causadas pela exposição prolongada aos raios do Sol",
         correct: false,
         explanation:
-          "Surdez, irritabilidade e neurose são os danos que o livro atribui à poluição sonora, o excesso de ruído de automóveis, obras e fábricas. Tenta porque são danos à saúde citados no mesmo capítulo. Mas não têm relação com a radiação ultravioleta.",
+          "Surdez, irritabilidade e neurose são os danos que o livro atribui à poluição sonora, o excesso de ruído de automóveis, obras e fábricas. Parece certa porque são danos à saúde citados no mesmo capítulo. Mas não têm relação com a radiação ultravioleta.",
       },
       {
         id: "B",
         text: "Doenças respiratórias e má-formação do sistema nervoso nas crianças que nascem na região",
         correct: false,
         explanation:
-          "Doenças respiratórias e o nascimento de crianças com má-formação do sistema nervoso são efeitos que o livro atribui à chuva ácida. Tenta porque também são problemas de saúde causados por algo que vem da atmosfera. Mas pertencem a outro fenômeno; a radiação UV atinge sobretudo a pele e os olhos.",
+          "Doenças respiratórias e o nascimento de crianças com má-formação do sistema nervoso são efeitos que o livro atribui à chuva ácida. Parece certa porque também são problemas de saúde causados por algo que vem da atmosfera. Mas pertencem a outro fenômeno; a radiação UV atinge sobretudo a pele e os olhos.",
       },
       {
         id: "C",
         text: "Intoxicação e danos ao sistema nervoso, pelo acúmulo de metais pesados nos tecidos do corpo",
         correct: false,
         explanation:
-          "Intoxicação e danos ao sistema nervoso pelo acúmulo de substâncias nos tecidos é o que o livro descreve para os metais tóxicos, como o mercúrio, na bioacumulação. Tenta porque também são danos graves e acumulativos. Mas vêm da ingestão de água e de alimentos contaminados, não da luz do Sol.",
+          "Intoxicação e danos ao sistema nervoso pelo acúmulo de substâncias nos tecidos é o que o livro descreve para os metais tóxicos, como o mercúrio, na bioacumulação. Parece certa porque também são danos graves e acumulativos. Mas vêm da ingestão de água e de alimentos contaminados, não da luz do Sol.",
       },
       {
         id: "D",
@@ -100,32 +100,32 @@ export const TEMA_CAMADA_DE_OZONIO: ExamQuestionWithTopic[] = [
         text: "Porque ajuda as plantas a absorver o gás carbônico do ar e, assim, diminui o aquecimento global",
         correct: false,
         explanation:
-          "Absorver gás carbônico é o que plantas e algas fazem na fotossíntese, e isso ajuda a reduzir o aquecimento global. Tenta porque a fotossíntese depende da luz do Sol. Mas o livro não liga esse benefício aos raios UV; o benefício que ele cita é para o corpo humano.",
+          "Absorver gás carbônico é o que plantas e algas fazem na fotossíntese, e isso ajuda a reduzir o aquecimento global. Parece certa porque a fotossíntese depende da luz do Sol. Mas o livro não liga esse benefício aos raios UV; o benefício que ele cita é para o corpo humano.",
       },
       {
         id: "B",
-        text: "Porque ajuda na produção de vitamina D, que absorve o cálcio, fortalece os ossos e previne a osteoporose",
+        text: "Porque ajuda na produção de vitamina D, que ajuda o corpo a absorver o cálcio, fortalece os ossos e previne a osteoporose",
         correct: true,
         explanation:
-          "Correta. Segundo o livro, em pequenas quantidades a radiação UV é benéfica para a produção de vitamina D, que, ao absorver o mineral cálcio, fortalece os ossos e previne a osteoporose, uma doença que deixa os ossos frágeis.",
+          "Correta. Segundo o livro, em pequenas quantidades a radiação UV é benéfica para a produção de vitamina D, que ajuda o corpo a absorver o mineral cálcio, fortalecendo os ossos e prevenindo a osteoporose, uma doença que deixa os ossos frágeis.",
       },
       {
         id: "C",
         text: "Porque destrói os CFCs que estão na atmosfera e ajuda a fechar o buraco na camada de ozônio",
         correct: false,
         explanation:
-          "Os CFCs são os gases que destroem a camada de ozônio. Tenta porque soaria como uma solução natural para o problema. Mas o livro diz o contrário: os CFCs é que destroem o ozônio, e as moléculas que já estão no ar vão continuar agindo por pelo menos mais cinquenta anos.",
+          "Os CFCs são os gases que destroem a camada de ozônio. Parece certa porque soaria como uma solução natural para o problema. Mas o livro diz o contrário: os CFCs é que destroem o ozônio, e as moléculas que já estão no ar vão continuar agindo por pelo menos mais cinquenta anos.",
       },
       {
         id: "D",
         text: "Porque fortalece o sistema de defesa do corpo e protege a pele contra o envelhecimento precoce e o câncer",
         correct: false,
         explanation:
-          "O sistema de defesa do corpo protege contra doenças, o envelhecimento precoce é a pele envelhecer antes do tempo, e o câncer de pele é uma doença grave da pele. Tenta porque usa termos que aparecem no mesmo parágrafo do livro. Mas os três estão na lista dos malefícios: os raios UV prejudicam a defesa do corpo e causam o envelhecimento precoce e o câncer de pele.",
+          "O sistema de defesa do corpo protege contra doenças, o envelhecimento precoce é a pele envelhecer antes do tempo, e o câncer de pele é uma doença grave da pele. Parece certa porque usa termos que aparecem no mesmo parágrafo do livro. Mas os três estão na lista dos malefícios: os raios UV prejudicam a defesa do corpo e causam o envelhecimento precoce e o câncer de pele.",
       },
     ],
     tips: [
-      "Benefício do UV: vitamina D → cálcio → ossos fortes → previne osteoporose.",
+      "Benefício do UV: vitamina D → ajuda a absorver o cálcio → ossos fortes → previne osteoporose.",
       "Cuidado com alternativas que pegam um dano e o apresentam como benefício.",
     ],
   },
@@ -147,21 +147,21 @@ export const TEMA_CAMADA_DE_OZONIO: ExamQuestionWithTopic[] = [
         text: "São formados por carbono e hidrogênio e saem principalmente da queima de carvão e de petróleo",
         correct: false,
         explanation:
-          "Carvão e petróleo são combustíveis fósseis, e a sua queima libera principalmente gás carbônico, que intensifica o efeito estufa. Tenta porque 'carbono' faz parte do nome dos CFCs. Mas os CFCs não vêm da queima de combustíveis: eram fabricados para uso em sprays e na refrigeração.",
+          "Carvão e petróleo são combustíveis fósseis, e a sua queima libera principalmente gás carbônico, que intensifica o efeito estufa. Parece certa porque 'carbono' faz parte do nome dos CFCs. Mas os CFCs não vêm da queima de combustíveis: eram fabricados para uso em sprays e na refrigeração.",
       },
       {
         id: "C",
         text: "São os gases liberados por vulcões e pântanos, que tornam a chuva mais ácida do que o normal",
         correct: false,
         explanation:
-          "Vulcões e pântanos são causas naturais da chuva ácida, segundo o livro. Tenta porque também envolvem gases nocivos na atmosfera. Mas os CFCs não são naturais: são substâncias produzidas pelos seres humanos, e o problema deles é destruir o ozônio, não acidificar a chuva.",
+          "Vulcões e pântanos são causas naturais da chuva ácida, segundo o livro. Parece certa porque também envolvem gases nocivos na atmosfera. Mas os CFCs não são naturais: são substâncias produzidas pelos seres humanos, e o problema deles é destruir o ozônio, não acidificar a chuva.",
       },
       {
         id: "D",
         text: "São nutrientes como o nitrogênio e o fósforo, que chegam aos rios pelo esgoto e pelos fertilizantes",
         correct: false,
         explanation:
-          "O nitrogênio e o fósforo são os nutrientes que, em excesso nos corpos d'água, causam a eutrofização, a proliferação de algas. Tenta porque também são substâncias lançadas pela ação humana. Mas estão na poluição da água; os CFCs são gases que agem na atmosfera.",
+          "O nitrogênio e o fósforo são os nutrientes que, em excesso nos corpos d'água, causam a eutrofização, a proliferação de algas. Parece certa porque também são substâncias lançadas pela ação humana. Mas estão na poluição da água; os CFCs são gases que agem na atmosfera.",
       },
     ],
     tips: [
@@ -180,21 +180,21 @@ export const TEMA_CAMADA_DE_OZONIO: ExamQuestionWithTopic[] = [
         text: "Passou a usar mais CFCs nas geladeiras, porque eles ajudam a resfriar a atmosfera do planeta",
         correct: false,
         explanation:
-          "Essa alternativa imagina que um gás de refrigeração também resfriaria o planeta. Tenta porque os CFCs eram mesmo usados para refrigerar geladeiras. Mas eles destroem o ozônio e ainda intensificam o efeito estufa; a resposta do mundo foi proibi-los.",
+          "Essa alternativa imagina que um gás de refrigeração também resfriaria o planeta. Parece certa porque os CFCs eram mesmo usados para refrigerar geladeiras. Mas eles destroem o ozônio e ainda intensificam o efeito estufa; a resposta do mundo foi proibi-los.",
       },
       {
         id: "B",
         text: "Assinou o Acordo de Paris, que proibiu de imediato os CFCs e fechou o buraco no mesmo ano",
         correct: false,
         explanation:
-          "O Acordo de Paris é um acordo internacional sobre as mudanças climáticas, citado no 'Saiba Mais' do livro junto com o Protocolo de Kyoto. Tenta porque é o tratado ambiental mais famoso. Mas o tratado que proibiu os CFCs foi o Protocolo de Montreal, e o buraco não se fechou: o problema continua por décadas.",
+          "O Acordo de Paris é um acordo internacional sobre as mudanças climáticas, citado no 'Saiba Mais' do livro junto com o Protocolo de Kyoto. Parece certa porque é o tratado ambiental mais famoso. Mas o tratado que proibiu os CFCs foi o Protocolo de Montreal, e o buraco não se fechou: o problema continua por décadas.",
       },
       {
         id: "C",
         text: "Decidiu proibir apenas os CFCs usados nos aerossóis e manter os gases das geladeiras",
         correct: false,
         explanation:
-          "Essa alternativa imagina uma proibição só parcial. Tenta porque os aerossóis são o uso mais lembrado dos CFCs. Mas o livro diz que os CFCs foram proibidos e que o tratado eliminou o uso dessas substâncias ao longo dos anos seguintes, sem separar os usos.",
+          "Essa alternativa imagina uma proibição só parcial. Parece certa porque os aerossóis são o uso mais lembrado dos CFCs. Mas o livro diz que os CFCs foram proibidos e que o tratado eliminou o uso dessas substâncias ao longo dos anos seguintes, sem separar os usos.",
       },
       {
         id: "D",
@@ -220,14 +220,14 @@ export const TEMA_CAMADA_DE_OZONIO: ExamQuestionWithTopic[] = [
         text: "As áreas com mais ozônio, onde a camada está mais grossa e protege melhor contra o UV",
         correct: false,
         explanation:
-          "As áreas com mais ozônio, segundo a legenda da imagem, são as que aparecem em amarelo e verde. Tenta porque as cores frias poderiam lembrar proteção. Mas a legenda é clara: roxo e azul marcam onde há menos ozônio.",
+          "As áreas com mais ozônio, segundo a legenda da imagem, são as que aparecem em amarelo e verde. Parece certa porque as cores frias poderiam lembrar proteção. Mas a legenda é clara: roxo e azul marcam onde há menos ozônio.",
       },
       {
         id: "B",
         text: "As áreas mais frias do planeta, onde o gelo das calotas polares ainda não derreteu",
         correct: false,
         explanation:
-          "As calotas polares são as grandes massas de gelo dos polos, que derretem com o aquecimento global. Tenta porque a imagem mostra justamente a região da Antártida. Mas ela não mede temperatura nem gelo: mede a quantidade de ozônio na atmosfera.",
+          "As calotas polares são as grandes massas de gelo dos polos, que derretem com o aquecimento global. Parece certa porque a imagem mostra justamente a região da Antártida. Mas ela não mede temperatura nem gelo: mede a quantidade de ozônio na atmosfera.",
       },
       {
         id: "C",
@@ -241,7 +241,7 @@ export const TEMA_CAMADA_DE_OZONIO: ExamQuestionWithTopic[] = [
         text: "As áreas com mais gás carbônico, onde o efeito estufa está mais forte em todo o planeta",
         correct: false,
         explanation:
-          "O gás carbônico é o principal gás de efeito estufa intensificado pelas atividades humanas. Tenta porque mapas coloridos da atmosfera muitas vezes mostram CO2. Mas a imagem do livro é sobre a camada de ozônio, e as cores indicam a quantidade de ozônio, não de gás carbônico.",
+          "O gás carbônico é o principal gás de efeito estufa intensificado pelas atividades humanas. Parece certa porque mapas coloridos da atmosfera muitas vezes mostram CO2. Mas a imagem do livro é sobre a camada de ozônio, e as cores indicam a quantidade de ozônio, não de gás carbônico.",
       },
     ],
     tips: [
@@ -260,7 +260,7 @@ export const TEMA_CAMADA_DE_OZONIO: ExamQuestionWithTopic[] = [
         text: "Porque o aquecimento global derrete o gelo da Antártida e esse gelo libera o ozônio guardado",
         correct: false,
         explanation:
-          "O aquecimento global derrete as calotas polares, o que diminui a radiação refletida e eleva o nível dos oceanos. Tenta porque o buraco fica sobre a Antártida, uma região de gelo. Mas o livro não fala em ozônio guardado no gelo; a camada continua sendo afetada por causa dos CFCs que já estão no ar.",
+          "O aquecimento global derrete as calotas polares, o que diminui a radiação refletida e eleva o nível dos oceanos. Parece certa porque o buraco fica sobre a Antártida, uma região de gelo. Mas o livro não fala em ozônio guardado no gelo; a camada continua sendo afetada por causa dos CFCs que já estão no ar.",
       },
       {
         id: "B",
@@ -274,19 +274,19 @@ export const TEMA_CAMADA_DE_OZONIO: ExamQuestionWithTopic[] = [
         text: "Porque o Protocolo de Montreal permitiu que os países continuassem usando CFCs nas indústrias e nas geladeiras",
         correct: false,
         explanation:
-          "O Protocolo de Montreal é o tratado internacional de 1987 que proibiu os CFCs. Tenta porque é o tratado ligado ao assunto. Mas ele não liberou o uso: proibiu e eliminou essas substâncias ao longo dos anos seguintes. Por isso a emissão hoje é quase zero.",
+          "O Protocolo de Montreal é o tratado internacional de 1987 que proibiu os CFCs. Parece certa porque é o tratado ligado ao assunto. Mas ele não liberou o uso: proibiu e eliminou essas substâncias ao longo dos anos seguintes. Por isso a emissão hoje é quase zero.",
       },
       {
         id: "D",
         text: "Porque a radiação ultravioleta que passa pelo buraco destrói, sozinha, o ozônio que ainda sobra",
         correct: false,
         explanation:
-          "A radiação ultravioleta é a que a camada de ozônio filtra; em excesso, causa câncer de pele e envelhecimento precoce. Tenta porque é ela que passa pelo buraco. Mas o livro não diz que a radiação destrói o ozônio: quem faz isso são os CFCs, que reagem com o gás.",
+          "A radiação ultravioleta é a que a camada de ozônio filtra; em excesso, causa câncer de pele e envelhecimento precoce. Parece certa porque é ela que passa pelo buraco. Mas o livro não diz que a radiação destrói o ozônio: quem faz isso são os CFCs, que reagem com o gás.",
       },
     ],
     tips: [
       "Emissão quase zero não é problema resolvido: os CFCs já lançados agem por mais 50 anos, no mínimo.",
-      "Quem destrói o ozônio são os CFCs; a radiação UV é a vítima que passa a chegar até nós.",
+      "Quem destrói o ozônio são os CFCs; com menos ozônio, mais radiação UV chega até nós.",
     ],
   },
 ];

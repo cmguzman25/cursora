@@ -21,21 +21,21 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "Quando tem pH igual a 7, que é o valor da água pura e indica a acidez máxima da escala",
         correct: false,
         explanation:
-          "O pH 7 é o ponto neutro da escala de pH, nem ácido nem alcalino. Tenta porque 7 é o número mais lembrado da escala. Mas pH 7 não é acidez máxima: quanto mais perto de 0, mais ácida a substância. A chuva ácida tem pH abaixo de 5,6.",
+          "O pH 7 é o ponto neutro da escala de pH, nem ácido nem alcalino. Parece certa porque 7 é o número mais lembrado da escala. Mas pH 7 não é acidez máxima: quanto mais perto de 0, mais ácida a substância. A chuva ácida tem pH abaixo de 5,6.",
       },
       {
         id: "B",
         text: "Quando tem pH acima de 5,6, porque, quanto maior o pH, mais ácida é a água da chuva",
         correct: false,
         explanation:
-          "Essa alternativa usa o número certo, 5,6, mas com a escala invertida. Tenta porque parece natural pensar que número maior quer dizer 'mais'. Mas, na escala de pH, quanto menor o valor, mais ácida é a substância; por isso a chuva ácida é a que tem pH inferior a 5,6.",
+          "Essa alternativa usa o número certo, 5,6, mas com a escala invertida. Parece certa porque parece natural pensar que número maior quer dizer 'mais'. Mas, na escala de pH, quanto menor o valor, mais ácida é a substância; por isso a chuva ácida é a que tem pH inferior a 5,6.",
       },
       {
         id: "C",
         text: "Somente quando cai na forma de chuva, porque a neblina e a neve, mesmo vindas de nuvens poluídas, não carregam acidez",
         correct: false,
         explanation:
-          "Neblina e neve são outras formas de precipitação, ou seja, de água que se condensa e cai ou se deposita a partir da atmosfera. Tenta porque o nome do fenômeno é 'chuva' ácida. Mas o livro diz que a chuva ácida pode cair na forma de chuva, neblina ou neve.",
+          "Neblina e neve são outras formas de precipitação, ou seja, de água que se condensa e cai ou se deposita a partir da atmosfera. Parece certa porque o nome do fenômeno é 'chuva' ácida. Mas o livro diz que a chuva ácida pode cair na forma de chuva, neblina ou neve.",
       },
       {
         id: "D",
@@ -68,21 +68,21 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "Muito alcalina e muito ácida, porque o pH mede o quanto a substância tem de alcalina",
         correct: false,
         explanation:
-          "Uma substância alcalina, ou básica, é o oposto de uma ácida, e fica na parte alta da escala de pH. Tenta porque basta trocar os dois extremos de lugar para chegar a esta resposta. Mas o pH baixo indica acidez: pH 2 é ácido e pH 12 é alcalino, não o contrário.",
+          "Uma substância alcalina, ou básica, é o oposto de uma ácida, e fica na parte alta da escala de pH. Parece certa porque basta trocar os dois extremos de lugar para chegar a esta resposta. Mas o pH baixo indica acidez: pH 2 é ácido e pH 12 é alcalino, não o contrário.",
       },
       {
         id: "C",
         text: "As duas neutras, porque o pH só indica acidez quando o valor é exatamente igual a zero",
         correct: false,
         explanation:
-          "Neutra é a substância com pH 7, nem ácida nem alcalina, como a água pura. Tenta porque o zero parece o único ponto 'ácido' da escala. Mas a acidez aumenta aos poucos conforme o valor se aproxima de 0, então pH 2 já é bem ácido, e pH 12 está longe do neutro.",
+          "Neutra é a substância com pH 7, nem ácida nem alcalina, como a água pura. Parece certa porque o zero parece o único ponto 'ácido' da escala. Mas a acidez aumenta aos poucos conforme o valor se aproxima de 0, então pH 2 já é bem ácido, e pH 12 está longe do neutro.",
       },
       {
         id: "D",
         text: "As duas ácidas, porque toda substância com pH diferente de 7 é considerada ácida pela escala",
         correct: false,
         explanation:
-          "Essa alternativa aplica a ideia de que qualquer valor fora do 7 seria ácido. Tenta porque o 7 é o ponto de referência. Mas os valores abaixo de 7 são ácidos e os acima de 7 são alcalinos; o pH 12 está do lado alcalino.",
+          "Essa alternativa aplica a ideia de que qualquer valor fora do 7 seria ácido. Parece certa porque o 7 é o ponto de referência. Mas os valores abaixo de 7 são ácidos e os acima de 7 são alcalinos; o pH 12 está do lado alcalino.",
       },
     ],
     tips: [
@@ -101,14 +101,14 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "Pelos CFCs dos aerossóis, que sobem até a camada de ozônio e voltam com a água da chuva",
         correct: false,
         explanation:
-          "Os CFCs são gases de cloro, flúor e carbono que destroem a camada de ozônio. Tenta porque também são gases lançados pelas atividades humanas. Mas o livro não os liga à chuva ácida; os responsáveis por ela são os óxidos de enxofre e de nitrogênio.",
+          "Os CFCs são gases de cloro, flúor e carbono que destroem a camada de ozônio. Parece certa porque também são gases lançados pelas atividades humanas. Mas o livro não os liga à chuva ácida; os responsáveis por ela são os óxidos de enxofre e de nitrogênio.",
       },
       {
         id: "B",
         text: "Pelos vulcões e pelos pântanos da região, que liberam gases ácidos em grande quantidade",
         correct: false,
         explanation:
-          "Vulcões e pântanos são causas naturais da chuva ácida, segundo o livro. Tenta porque realmente liberam gases que acidificam a chuva. Mas o enunciado fala de indústrias e automóveis, e a intensificação que o livro descreve vem da ação humana, não da natureza.",
+          "Vulcões e pântanos são causas naturais da chuva ácida, segundo o livro. Parece certa porque realmente liberam gases que acidificam a chuva. Mas o enunciado fala de indústrias e automóveis, e a intensificação que o livro descreve vem da ação humana, não da natureza.",
       },
       {
         id: "C",
@@ -122,7 +122,7 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "Pelo esgoto lançado nos rios, que evapora com o calor do dia levando o nitrogênio e o fósforo para as nuvens de chuva",
         correct: false,
         explanation:
-          "O esgoto rico em nitrogênio e fósforo causa a eutrofização, a proliferação exagerada de algas nos corpos d'água. Tenta porque o nitrogênio aparece nos dois assuntos. Mas na chuva ácida o nitrogênio está em óxidos lançados no ar pela queima de combustíveis, e não em nutrientes que evaporam do esgoto.",
+          "O esgoto rico em nitrogênio e fósforo causa a eutrofização, a proliferação exagerada de algas nos corpos d'água. Parece certa porque o nitrogênio aparece nos dois assuntos. Mas na chuva ácida o nitrogênio está em óxidos lançados no ar pela queima de combustíveis, e não em nutrientes que evaporam do esgoto.",
       },
     ],
     tips: [
@@ -141,7 +141,7 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "Deixa os solos mais férteis e as águas mais limpas, porque a acidez da chuva elimina os microrganismos que causam doenças",
         correct: false,
         explanation:
-          "Essa alternativa imagina a acidez como uma espécie de limpeza do ambiente. Tenta porque produtos ácidos são usados para limpar. Mas o livro diz o contrário: a chuva ácida empobrece os solos e torna as águas ácidas demais para muitos seres vivos.",
+          "Essa alternativa imagina a acidez como uma espécie de limpeza do ambiente. Parece certa porque produtos ácidos são usados para limpar. Mas o livro diz o contrário: a chuva ácida empobrece os solos e torna as águas ácidas demais para muitos seres vivos.",
       },
       {
         id: "B",
@@ -155,14 +155,14 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "Cobre a superfície dos rios com uma camada verde de algas que impede a entrada de luz",
         correct: false,
         explanation:
-          "A camada verde de algas sobre a água é a floração, típica da eutrofização, causada pelo excesso de nutrientes como nitrogênio e fósforo. Tenta porque também é uma poluição da água que prejudica os ecossistemas aquáticos. Mas é outro fenômeno, com outra causa; a chuva ácida age pela acidez da água, e não por excesso de algas.",
+          "A camada verde de algas sobre a água é a floração, típica da eutrofização, causada pelo excesso de nutrientes como nitrogênio e fósforo. Parece certa porque também é uma poluição da água que prejudica os ecossistemas aquáticos. Mas é outro fenômeno, com outra causa; a chuva ácida age pela acidez da água, e não por excesso de algas.",
       },
       {
         id: "D",
         text: "Acumula sedimentos no fundo dos rios e lagos, que ficam rasos e acabam totalmente obstruídos",
         correct: false,
         explanation:
-          "O acúmulo de sedimentos que obstrui rios e lagos é o assoreamento, consequência da erosão do solo. Tenta porque também prejudica os ambientes aquáticos. Mas é causado pela terra levada para dentro da água, e não pela acidez da chuva.",
+          "O acúmulo de sedimentos que obstrui rios e lagos é o assoreamento, consequência da erosão do solo. Parece certa porque também prejudica os ambientes aquáticos. Mas é causado pela terra levada para dentro da água, e não pela acidez da chuva.",
       },
     ],
     tips: [
@@ -188,21 +188,21 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "Porque a radiação ultravioleta que passa pelo buraco na camada de ozônio desgasta as pedras",
         correct: false,
         explanation:
-          "A radiação ultravioleta é a que a camada de ozônio filtra; o livro fala dos danos dela aos seres vivos, como câncer de pele e problemas de visão. Tenta porque também vem do céu e atinge tudo o que está ao ar livre. Mas a legenda e o texto ligam a corrosão do templo à chuva ácida.",
+          "A radiação ultravioleta é a que a camada de ozônio filtra; o livro fala dos danos dela aos seres vivos, como câncer de pele e problemas de visão. Parece certa porque também vem do céu e atinge tudo o que está ao ar livre. Mas a legenda e o texto ligam a corrosão do templo à chuva ácida.",
       },
       {
         id: "C",
         text: "Porque a erosão causada pelos ventos e pelas chuvas comuns desgasta qualquer tipo de rocha",
         correct: false,
         explanation:
-          "A erosão é o processo natural de desgaste, transporte e sedimentação de solos e rochas pela ação das chuvas e dos ventos. Tenta porque ela também desgasta rochas. Mas a foto do livro está na seção de chuva ácida, e a legenda atribui a corrosão a ela, pela acidez da água sobre o calcário.",
+          "A erosão é o processo natural de desgaste, transporte e sedimentação de solos e rochas pela ação das chuvas e dos ventos. Parece certa porque ela também desgasta rochas. Mas a foto do livro está na seção de chuva ácida, e a legenda atribui a corrosão a ela, pela acidez da água sobre o calcário.",
       },
       {
         id: "D",
         text: "Porque a inversão térmica prende o ar quente sobre o templo e faz as pedras racharem com o calor",
         correct: false,
         explanation:
-          "A inversão térmica é o fenômeno em que uma camada de ar quente fica sobre o ar frio e impede a dispersão dos poluentes. Tenta porque fala de ar quente preso. Mas ela prejudica a qualidade do ar que se respira, e o livro não a liga à corrosão de monumentos.",
+          "A inversão térmica é o fenômeno em que uma camada de ar quente fica sobre o ar frio e impede a dispersão dos poluentes. Parece certa porque fala de ar quente preso. Mas ela prejudica a qualidade do ar que se respira, e o livro não a liga à corrosão de monumentos.",
       },
     ],
     tips: [
@@ -221,21 +221,21 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "A Floresta Amazônica, por causa do mercúrio lançado pelos garimpos nos rios da região",
         correct: false,
         explanation:
-          "O mercúrio lançado pela mineração na Amazônia é um exemplo de contaminação da água por metais tóxicos, que se acumulam na cadeia alimentar. Tenta porque a Amazônia é o bioma mais citado nos problemas ambientais. Mas o mercúrio contamina rios, não a chuva; o bioma que o livro liga à chuva ácida é outro.",
+          "O mercúrio lançado pela mineração na Amazônia é um exemplo de contaminação da água por metais tóxicos, que se acumulam na cadeia alimentar. Parece certa porque a Amazônia é o bioma mais citado nos problemas ambientais. Mas o mercúrio contamina rios, não a chuva; o bioma que o livro liga à chuva ácida é outro.",
       },
       {
         id: "B",
         text: "O Cerrado, por causa das queimadas feitas para abrir espaço para as lavouras e os pastos",
         correct: false,
         explanation:
-          "O Cerrado é o bioma de savana do centro do Brasil, onde as queimadas para a agropecuária são frequentes. Tenta porque queimadas soltam gases na atmosfera. Mas o livro não cita o Cerrado na chuva ácida; ele liga o problema aos centros urbanos e industriais do litoral.",
+          "O Cerrado é o bioma de savana do centro do Brasil, onde as queimadas para a agropecuária são frequentes. Parece certa porque queimadas soltam gases na atmosfera. Mas o livro não cita o Cerrado na chuva ácida; ele liga o problema aos centros urbanos e industriais do litoral.",
       },
       {
         id: "C",
         text: "O Pantanal, por causa dos pântanos, que são a principal causa natural de chuva ácida no país",
         correct: false,
         explanation:
-          "O Pantanal é a grande planície alagável do Centro-Oeste, e os pântanos aparecem no livro como uma causa natural da chuva ácida. Tenta porque junta as duas palavras. Mas o livro não fala do Pantanal; o dano que ele cita no Brasil vem da poluição de cidades e indústrias.",
+          "O Pantanal é a grande planície alagável do Centro-Oeste, e os pântanos aparecem no livro como uma causa natural da chuva ácida. Parece certa porque junta as duas palavras. Mas o livro não fala do Pantanal; o dano que ele cita no Brasil vem da poluição de cidades e indústrias.",
       },
       {
         id: "D",
@@ -260,7 +260,7 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "Jogar cal nos rios e nos solos atingidos, para neutralizar a acidez depois que a chuva cai",
         correct: false,
         explanation:
-          "Jogar cal é uma forma de corrigir a acidez de um solo ou de uma água já atingidos, porque a cal é alcalina. Tenta porque parece resolver o problema de forma rápida. Mas trata o efeito e não a causa, e o livro não cita essa medida: ele diz que a única maneira de amenizar a chuva ácida é reduzir a emissão dos gases.",
+          "Jogar cal é uma forma de corrigir a acidez de um solo ou de uma água já atingidos, porque a cal é alcalina. Parece certa porque parece resolver o problema de forma rápida. Mas trata o efeito e não a causa, e o livro não cita essa medida: ele diz que a única maneira de amenizar a chuva ácida é reduzir a emissão dos gases.",
       },
       {
         id: "B",
@@ -274,14 +274,14 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "Proibir o uso dos CFCs nos aerossóis, como foi feito pelo Protocolo de Montreal em 1987",
         correct: false,
         explanation:
-          "O Protocolo de Montreal foi o tratado de 1987 que proibiu os CFCs para proteger a camada de ozônio. Tenta porque é a medida ambiental de maior sucesso do capítulo. Mas os CFCs não causam chuva ácida; o que a causa são os óxidos de enxofre e de nitrogênio.",
+          "O Protocolo de Montreal foi o tratado de 1987 que proibiu os CFCs para proteger a camada de ozônio. Parece certa porque é a medida ambiental de maior sucesso do capítulo. Mas os CFCs não causam chuva ácida; o que a causa são os óxidos de enxofre e de nitrogênio.",
       },
       {
         id: "D",
         text: "Construir aterros sanitários, que impedem que o chorume do lixo chegue até as nuvens de chuva",
         correct: false,
         explanation:
-          "O aterro sanitário é um local de descarte de lixo com o solo impermeabilizado, que impede a contaminação pelo chorume e capta os gases liberados e o próprio chorume. Tenta porque é uma medida de proteção ambiental do livro. Mas resolve a poluição do solo e da água pelo lixo, não a chuva ácida.",
+          "O aterro sanitário é um local de descarte de lixo com o solo impermeabilizado, que impede a contaminação pelo chorume e capta os gases liberados e o próprio chorume. Parece certa porque é uma medida de proteção ambiental do livro. Mas resolve a poluição do solo e da água pelo lixo, não a chuva ácida.",
       },
     ],
     tips: [
@@ -300,14 +300,14 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "O ar frio, mais leve, sobe, e o ar quente, mais pesado, desce até ficar parado perto do solo",
         correct: false,
         explanation:
-          "Essa alternativa troca a densidade do ar quente e do frio. Tenta porque usa os mesmos elementos da explicação correta: ar que sobe e ar que desce. Mas o ar quente é que é menos denso e sobe; o ar frio, mais denso, desce. E num dia normal o ar não fica parado: ele circula.",
+          "Essa alternativa troca a densidade do ar quente e do frio. Parece certa porque usa os mesmos elementos da explicação correta: ar que sobe e ar que desce. Mas o ar quente é que é menos denso e sobe; o ar frio, mais denso, desce. E num dia normal o ar não fica parado: ele circula.",
       },
       {
         id: "B",
         text: "Uma camada de ar quente fica acima do ar frio e impede que o ar perto da superfície se mova",
         correct: false,
         explanation:
-          "Uma camada de ar quente por cima do ar frio, impedindo a circulação, é exatamente a situação de inversão térmica. Tenta porque é a imagem mais lembrada do assunto. Mas o enunciado fala de um dia normal, quando essa camada não existe e o ar circula livremente.",
+          "Uma camada de ar quente por cima do ar frio, impedindo a circulação, é exatamente a situação de inversão térmica. Parece certa porque é a imagem mais lembrada do assunto. Mas o enunciado fala de um dia normal, quando essa camada não existe e o ar circula livremente.",
       },
       {
         id: "C",
@@ -321,7 +321,7 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "Os gases de efeito estufa retêm o calor e mantêm o ar da cidade parado em torno de 15 °C",
         correct: false,
         explanation:
-          "Os gases de efeito estufa retêm parte do calor do Sol e mantêm a temperatura média do planeta em torno de 15 °C. Tenta porque também envolve calor na atmosfera. Mas o efeito estufa trata da temperatura média do planeta todo e não explica a circulação do ar sobre uma cidade.",
+          "Os gases de efeito estufa retêm parte do calor do Sol e mantêm a temperatura média do planeta em torno de 15 °C. Parece certa porque também envolve calor na atmosfera. Mas o efeito estufa trata da temperatura média do planeta todo e não explica a circulação do ar sobre uma cidade.",
       },
     ],
     tips: [
@@ -347,21 +347,21 @@ export const TEMA_CHUVA_ACIDA_E_INVERSAO: ExamQuestionWithTopic[] = [
         text: "O frio congela os poluentes no ar, e eles ficam pesados demais para serem levados pelo vento para longe da cidade",
         correct: false,
         explanation:
-          "Congelar é passar do estado líquido para o sólido por causa do frio. Tenta porque o enunciado fala de uma manhã muito fria. Mas o livro não diz que os poluentes congelam: eles ficam presos porque o ar perto do solo não consegue subir, já que está sob uma camada de ar mais quente.",
+          "Congelar é passar do estado líquido para o sólido por causa do frio. Parece certa porque o enunciado fala de uma manhã muito fria. Mas o livro não diz que os poluentes congelam: eles ficam presos porque o ar perto do solo não consegue subir, já que está sob uma camada de ar mais quente.",
       },
       {
         id: "C",
         text: "A chuva ácida dessa manhã dissolve a fumaça e a deposita no chão, sobre ruas e construções",
         correct: false,
         explanation:
-          "A chuva ácida é a precipitação com pH abaixo de 5,6, formada por óxidos de enxofre e de nitrogênio que reagem com a água. Tenta porque também é um fenômeno de poluição do ar nas cidades. Mas o enunciado não fala de chuva, e sim de fumaça parada no ar, que é o que acontece na inversão térmica.",
+          "A chuva ácida é a precipitação com pH abaixo de 5,6, formada por óxidos de enxofre e de nitrogênio que reagem com a água. Parece certa porque também é um fenômeno de poluição do ar nas cidades. Mas o enunciado não fala de chuva, e sim de fumaça parada no ar, que é o que acontece na inversão térmica.",
       },
       {
         id: "D",
         text: "O buraco na camada de ozônio deixa o frio entrar e impede que a fumaça das chaminés suba",
         correct: false,
         explanation:
-          "O buraco na camada de ozônio é a região onde o ozônio foi destruído pelos CFCs, deixando passar mais raios ultravioleta. Tenta porque também é um problema da atmosfera. Mas o ozônio filtra radiação, não controla a temperatura nem a circulação do ar perto do solo.",
+          "O buraco na camada de ozônio é a região onde o ozônio foi destruído pelos CFCs, deixando passar mais raios ultravioleta. Parece certa porque também é um problema da atmosfera. Mas o ozônio filtra radiação, não controla a temperatura nem a circulação do ar perto do solo.",
       },
     ],
     tips: [

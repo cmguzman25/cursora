@@ -20,7 +20,7 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "É um problema criado pelas fábricas no século passado e que precisa ser eliminado por completo do planeta",
         correct: false,
         explanation:
-          "Essa alternativa trata o efeito estufa como se ele fosse a mesma coisa que a poluição causada pela indústria. Tenta porque, no dia a dia, o efeito estufa costuma aparecer como vilão. Mas o livro diz que ele é um fenômeno natural e necessário; o problema é a sua intensificação pelas atividades humanas, e não a sua existência.",
+          "Essa alternativa trata o efeito estufa como se ele fosse a mesma coisa que a poluição causada pela indústria. Parece certa porque, no dia a dia, o efeito estufa costuma aparecer como vilão. Mas o livro diz que ele é um fenômeno natural e necessário; o problema é a sua intensificação pelas atividades humanas, e não a sua existência.",
       },
       {
         id: "B",
@@ -34,14 +34,14 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "É o buraco que se abre na atmosfera e deixa passar os raios ultravioleta que causam câncer de pele",
         correct: false,
         explanation:
-          "O buraco na camada de ozônio é a região onde o gás ozônio foi destruído pelos CFCs e que deixa passar mais radiação ultravioleta. Tenta porque os dois assuntos falam de gases da atmosfera e vêm um depois do outro no livro. Mas são fenômenos diferentes: o efeito estufa retém calor, e a camada de ozônio filtra os raios UV.",
+          "O buraco na camada de ozônio é a região onde o gás ozônio foi destruído pelos CFCs e que deixa passar mais radiação ultravioleta. Parece certa porque os dois assuntos falam de gases da atmosfera e vêm um depois do outro no livro. Mas são fenômenos diferentes: o efeito estufa retém calor, e a camada de ozônio filtra os raios UV.",
       },
       {
         id: "D",
         text: "É a camada de ar quente que fica presa sobre as cidades no inverno e impede a dispersão dos poluentes",
         correct: false,
         explanation:
-          "Isso descreve a inversão térmica, em que uma camada de ar quente fica por cima do ar frio e prende os poluentes perto da superfície. Tenta porque também fala de calor preso na atmosfera. Mas a inversão térmica é um fenômeno local e passageiro, enquanto o efeito estufa envolve o planeta todo e mantém a sua temperatura média.",
+          "Isso descreve a inversão térmica, em que uma camada de ar quente fica por cima do ar frio e prende os poluentes perto da superfície. Parece certa porque também fala de calor preso na atmosfera. Mas a inversão térmica é um fenômeno local e passageiro, enquanto o efeito estufa envolve o planeta todo e mantém a sua temperatura média.",
       },
     ],
     tips: [
@@ -60,21 +60,21 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "O ozônio (O3), o oxigênio (O2) e o nitrogênio (N2), os gases mais abundantes da atmosfera",
         correct: false,
         explanation:
-          "O oxigênio e o nitrogênio são os gases mais abundantes do ar, e o ozônio forma a camada que filtra os raios ultravioleta. Tenta porque são gases famosos da atmosfera. Mas não são os que o livro cita no efeito estufa: o ozônio aparece na camada de ozônio, e o oxigênio e o nitrogênio nem são mencionados como gases de efeito estufa.",
+          "O oxigênio e o nitrogênio são os gases mais abundantes do ar, e o ozônio forma a camada que filtra os raios ultravioleta. Parece certa porque são gases famosos da atmosfera. Mas não são os que o livro cita no efeito estufa: o ozônio aparece na camada de ozônio, e o oxigênio e o nitrogênio nem são mencionados como gases de efeito estufa.",
       },
       {
         id: "B",
         text: "Os clorofluorcarbonetos (CFCs) e o óxido nitroso (N2O), lançados por aerossóis e indústrias",
         correct: false,
         explanation:
-          "Os CFCs são gases de cloro, flúor e carbono usados em aerossóis e geladeiras, e o óxido nitroso é outro gás emitido por atividades humanas. Tenta porque o livro realmente os liga ao efeito estufa. Mas eles aparecem na intensificação causada pelos seres humanos, não no efeito estufa natural.",
+          "Os CFCs são gases de cloro, flúor e carbono usados em aerossóis e geladeiras, e o óxido nitroso é outro gás emitido por atividades humanas. Parece certa porque o livro realmente os liga ao efeito estufa. Mas eles aparecem na intensificação causada pelos seres humanos, não no efeito estufa natural.",
       },
       {
         id: "C",
         text: "Os óxidos de enxofre e de nitrogênio, que se misturam à água da chuva e a tornam mais ácida",
         correct: false,
         explanation:
-          "Os óxidos de enxofre e de nitrogênio são liberados pela queima de combustíveis fósseis e, ao reagir com a água, formam a chuva ácida. Tenta porque também são gases poluentes da atmosfera. Mas pertencem ao assunto da chuva ácida, e não estão entre os gases do efeito estufa natural.",
+          "Os óxidos de enxofre e de nitrogênio são liberados pela queima de combustíveis fósseis e, ao reagir com a água, formam a chuva ácida. Parece certa porque também são gases poluentes da atmosfera. Mas pertencem ao assunto da chuva ácida, e não estão entre os gases do efeito estufa natural.",
       },
       {
         id: "D",
@@ -107,21 +107,21 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "Porque as árvores derrubadas e as águas poluídas passam a soltar ozônio, que esquenta a superfície",
         correct: false,
         explanation:
-          "O ozônio é o gás que forma a camada que filtra a radiação ultravioleta do Sol. Tenta porque é um gás da atmosfera que o capítulo estuda logo depois. Mas o livro não diz que árvores ou oceanos soltem ozônio; o que eles fazem é absorver gás carbônico, e o problema é deixarem de absorvê-lo.",
+          "O ozônio é o gás que forma a camada que filtra a radiação ultravioleta do Sol. Parece certa porque é um gás da atmosfera que o capítulo estuda logo depois. Mas o livro não diz que árvores ou oceanos soltem ozônio; o que eles fazem é absorver gás carbônico, e o problema é deixarem de absorvê-lo.",
       },
       {
         id: "C",
         text: "Porque a falta de árvores deixa o solo exposto ao vento, e a poeira levantada esquenta o planeta",
         correct: false,
         explanation:
-          "O solo exposto pelo desmatamento sofre erosão, que é o desgaste e o transporte do solo pela chuva e pelo vento. Tenta porque é outro efeito real do desmatamento. Mas a erosão é um problema do solo; para o aquecimento global, o livro aponta a redução da captura de gás carbônico.",
+          "O solo exposto pelo desmatamento sofre erosão, que é o desgaste e o transporte do solo pela chuva e pelo vento. Parece certa porque é outro efeito real do desmatamento. Mas a erosão é um problema do solo; para o aquecimento global, o livro aponta a redução da captura de gás carbônico.",
       },
       {
         id: "D",
         text: "Porque os oceanos poluídos ficam mais escuros e passam a refletir mais luz do Sol para a atmosfera",
         correct: false,
         explanation:
-          "Refletir luz é devolver ao espaço parte da radiação que chega; no livro, quem faz isso são as calotas polares. Tenta porque a reflexão aparece no assunto do aquecimento. Mas superfícies escuras refletem menos, e não mais; e o livro liga os oceanos ao aquecimento pela captura de CO2 feita pelas algas.",
+          "Refletir luz é devolver ao espaço parte da radiação que chega; no livro, quem faz isso são as calotas polares. Parece certa porque a reflexão aparece no assunto do aquecimento. Mas superfícies escuras refletem menos, e não mais; e o livro liga os oceanos ao aquecimento pela captura de CO2 feita pelas algas.",
       },
     ],
     tips: [
@@ -139,14 +139,14 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "Não há diferença: são dois nomes para o mesmo fenômeno causado pelas fábricas e pelos automóveis",
         correct: false,
         explanation:
-          "Essa alternativa trata os dois termos como sinônimos. Tenta porque eles aparecem juntos no título da seção e se misturam no noticiário. Mas o livro separa os dois: o efeito estufa existe naturalmente e mantém a vida, e o aquecimento global é o aumento anormal da temperatura causado pela intensificação desse efeito.",
+          "Essa alternativa trata os dois termos como sinônimos. Parece certa porque eles aparecem juntos no título da seção e se misturam no noticiário. Mas o livro separa os dois: o efeito estufa existe naturalmente e mantém a vida, e o aquecimento global é o aumento anormal da temperatura causado pela intensificação desse efeito.",
       },
       {
         id: "B",
         text: "O efeito estufa acontece só nas cidades poluídas, e o aquecimento global, nas regiões polares",
         correct: false,
         explanation:
-          "Essa alternativa separa os dois fenômenos por lugar. Tenta porque a poluição se concentra nas cidades e o derretimento acontece nos polos. Mas os dois são fenômenos do planeta inteiro; a diferença entre eles não é de lugar, e sim de ser natural (efeito estufa) ou de ser um aumento anormal (aquecimento global).",
+          "Essa alternativa separa os dois fenômenos por lugar. Parece certa porque a poluição se concentra nas cidades e o derretimento acontece nos polos. Mas os dois são fenômenos do planeta inteiro; a diferença entre eles não é de lugar, e sim de ser natural (efeito estufa) ou de ser um aumento anormal (aquecimento global).",
       },
       {
         id: "C",
@@ -160,7 +160,7 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "O aquecimento global é natural e necessário à vida; o efeito estufa é a poluição causada pelos seres humanos",
         correct: false,
         explanation:
-          "Essa alternativa inverte os dois conceitos. Tenta porque usa as palavras certas, natural e anormal, só que trocadas. Mas o natural e necessário é o efeito estufa; o aquecimento global é a consequência indesejada da sua intensificação.",
+          "Essa alternativa inverte os dois conceitos. Parece certa porque usa as palavras certas, natural e anormal, só que trocadas. Mas o natural e necessário é o efeito estufa; o aquecimento global é a consequência indesejada da sua intensificação.",
       },
     ],
     tips: [
@@ -179,7 +179,7 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "A diminuição da acidez dos oceanos e o crescimento dos recifes e dos corais em todo o planeta",
         correct: false,
         explanation:
-          "Os recifes de coral são estruturas marinhas formadas por pequenos animais, os corais, que são sensíveis à química da água. Tenta porque os oceanos e os corais também aparecem nas consequências do aquecimento. Mas o livro diz o contrário: a acidez dos oceanos aumenta e os recifes diminuem, e isso não é atribuído ao derretimento das calotas.",
+          "Os recifes de coral são estruturas marinhas formadas por pequenos animais, os corais, que são sensíveis à química da água. Parece certa porque os oceanos e os corais também aparecem nas consequências do aquecimento. Mas o livro diz o contrário: a acidez dos oceanos aumenta e os recifes diminuem, e isso não é atribuído ao derretimento das calotas.",
       },
       {
         id: "B",
@@ -193,14 +193,14 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "O aumento da camada de ozônio sobre a Antártida e a diminuição dos raios ultravioleta",
         correct: false,
         explanation:
-          "O buraco na camada de ozônio fica sobre a Antártida, e a camada é o que filtra os raios ultravioleta. Tenta porque a Antártida tem gelo e aparece no mesmo capítulo. Mas a camada de ozônio é destruída pelos CFCs e não depende do derretimento do gelo; o livro não liga uma coisa à outra.",
+          "O buraco na camada de ozônio fica sobre a Antártida, e a camada é o que filtra os raios ultravioleta. Parece certa porque a Antártida tem gelo e aparece no mesmo capítulo. Mas a camada de ozônio é destruída pelos CFCs e não depende do derretimento do gelo; o livro não liga uma coisa à outra.",
       },
       {
         id: "D",
         text: "O resfriamento das regiões próximas aos polos e o aumento do gelo nas montanhas mais altas",
         correct: false,
         explanation:
-          "Resfriar é baixar a temperatura, o oposto do que o aquecimento global provoca. Tenta porque água de gelo derretido parece algo frio. Mas o derretimento faz o planeta refletir menos radiação e esquentar mais, e a água vai para os oceanos, aumentando o seu nível.",
+          "Resfriar é baixar a temperatura, o oposto do que o aquecimento global provoca. Parece certa porque água de gelo derretido parece algo frio. Mas o derretimento faz o planeta refletir menos radiação e esquentar mais, e a água vai para os oceanos, aumentando o seu nível.",
       },
     ],
     tips: [
@@ -219,21 +219,21 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "A alteração do ciclo da água, que faz algumas áreas terem longos períodos de seca",
         correct: false,
         explanation:
-          "A alteração do ciclo da água é a mudança na forma como a água evapora e cai como chuva, fazendo algumas áreas terem secas longas e outras receberem chuva demais. Tenta porque também é consequência do aquecimento. Mas a seca atinge a terra firme; não explica a perda de recifes que estão debaixo d'água.",
+          "A alteração do ciclo da água é a mudança na forma como a água evapora e cai como chuva, fazendo algumas áreas terem secas longas e outras receberem chuva demais. Parece certa porque também é consequência do aquecimento. Mas a seca atinge a terra firme; não explica a perda de recifes que estão debaixo d'água.",
       },
       {
         id: "B",
         text: "A intensificação dos eventos climáticos, como tornados, furacões e grandes tempestades",
         correct: false,
         explanation:
-          "Eventos climáticos extremos são fenômenos como furacões, tornados, tempestades e queimadas, que o aquecimento torna mais frequentes. Tenta porque furacões passam pelo mar. Mas o livro liga a redução dos recifes e dos corais a outra consequência: o aumento da acidez dos oceanos.",
+          "Eventos climáticos extremos são fenômenos como furacões, tornados, tempestades e queimadas, que o aquecimento torna mais frequentes. Parece certa porque furacões passam pelo mar. Mas o livro liga a redução dos recifes e dos corais a outra consequência: o aumento da acidez dos oceanos.",
       },
       {
         id: "C",
         text: "A migração de espécies que causam doenças para as áreas urbanas, onde vivem mais pessoas",
         correct: false,
         explanation:
-          "A migração de espécies que causam doenças para as cidades é a consequência do aquecimento que agrava os problemas de saúde humana. Tenta porque fala de espécies se deslocando por causa do calor. Mas os corais vivem presos ao fundo do mar e não migram; o que os afeta, segundo o livro, é a acidez da água.",
+          "A migração de espécies que causam doenças para as cidades é a consequência do aquecimento que agrava os problemas de saúde humana. Parece certa porque fala de espécies se deslocando por causa do calor. Mas os corais vivem presos ao fundo do mar e não migram; o que os afeta, segundo o livro, é a acidez da água.",
       },
       {
         id: "D",
@@ -266,21 +266,21 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "Porque o aumento da radiação ultravioleta mata os animais que vivem mais perto da superfície",
         correct: false,
         explanation:
-          "O aumento da radiação ultravioleta é o efeito da destruição da camada de ozônio, que pode causar câncer de pele e problemas de visão. Tenta porque é outro perigo vindo do céu. Mas pertence ao assunto do ozônio; no aquecimento global, a extinção vem da dificuldade de migrar para lugares mais frescos.",
+          "O aumento da radiação ultravioleta é o efeito da destruição da camada de ozônio, que pode causar câncer de pele e problemas de visão. Parece certa porque é outro perigo vindo do céu. Mas pertence ao assunto do ozônio; no aquecimento global, a extinção vem da dificuldade de migrar para lugares mais frescos.",
       },
       {
         id: "C",
         text: "Porque as espécies exóticas trazidas de outros países ocupam o lugar das espécies nativas",
         correct: false,
         explanation:
-          "Espécie exótica é a que está fora da sua área de distribuição natural; o livro diz que ela pode prejudicar as nativas e desequilibrar o ecossistema. Tenta porque também leva espécies a desaparecer. Mas é outro problema ambiental, ligado à introdução de espécies, e não ao aumento da temperatura.",
+          "Espécie exótica é a que está fora da sua área de distribuição natural; o livro diz que ela pode alterar o funcionamento dos ecossistemas nativos e causar desequilíbrio. Parece certa porque também leva espécies a desaparecer. Mas é outro problema ambiental, ligado à introdução de espécies, e não ao aumento da temperatura.",
       },
       {
         id: "D",
         text: "Porque o frio intenso causado pelo derretimento do gelo congela os ambientes onde elas vivem",
         correct: false,
         explanation:
-          "Essa alternativa imagina que o gelo derretido esfriaria o planeta. Tenta porque gelo lembra frio. Mas o livro diz que o derretimento das calotas faz o planeta refletir menos radiação e esquentar mais; o risco para as espécies é o calor, não o frio.",
+          "Essa alternativa imagina que o gelo derretido esfriaria o planeta. Parece certa porque gelo lembra frio. Mas o livro diz que o derretimento das calotas faz o planeta refletir menos radiação e esquentar mais; o risco para as espécies é o calor, não o frio.",
       },
     ],
     tips: [
@@ -299,14 +299,14 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "Usar mais o carro particular, porque os veículos novos já não soltam nenhum tipo de gás",
         correct: false,
         explanation:
-          "Essa alternativa parte da ideia de que carro novo não polui. Tenta porque os motores atuais poluem menos que os antigos. Mas automóveis que queimam combustível continuam soltando gás carbônico; o livro sugere o contrário: andar de bicicleta e usar o transporte público.",
+          "Essa alternativa parte da ideia de que carro novo não polui. Parece certa porque os motores atuais poluem menos que os antigos. Mas automóveis que queimam combustível continuam soltando gás carbônico; o livro sugere o contrário: andar de bicicleta e usar o transporte público.",
       },
       {
         id: "B",
         text: "Comprar produtos que vêm de muito longe, porque eles costumam ser feitos em fábricas modernas",
         correct: false,
         explanation:
-          "Produtos que vêm de longe precisam ser transportados por caminhões, navios ou aviões. Tenta porque fábrica moderna parece sinônimo de menos poluição. Mas o transporte queima combustível e solta CO2; por isso o livro recomenda estimular o uso de produtos locais.",
+          "Produtos que vêm de longe precisam ser transportados por caminhões, navios ou aviões. Parece certa porque fábrica moderna parece sinônimo de menos poluição. Mas o transporte queima combustível e solta CO2; por isso o livro recomenda estimular o uso de produtos locais.",
       },
       {
         id: "C",
@@ -320,7 +320,7 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "Trocar a energia solar da casa por uma usina a carvão, que fornece eletricidade o dia inteiro",
         correct: false,
         explanation:
-          "Uma usina a carvão é uma termoelétrica: gera eletricidade queimando um combustível fóssil. Tenta porque funciona também à noite, quando não há sol. Mas é o oposto do que o livro pede: trocar os combustíveis fósseis por energias renováveis e limpas, como a solar e a eólica.",
+          "Uma usina a carvão é uma termoelétrica: gera eletricidade queimando um combustível fóssil. Parece certa porque funciona também à noite, quando não há sol. Mas é o oposto do que o livro pede: trocar os combustíveis fósseis por energias renováveis e limpas, como a solar e a eólica.",
       },
     ],
     tips: [
@@ -339,7 +339,7 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "A energia solar e a energia eólica, usadas nas usinas que abastecem as cidades",
         correct: false,
         explanation:
-          "A energia solar vem da luz do Sol, e a eólica, da força do vento. Tenta porque também servem para produzir eletricidade. Mas são energias renováveis e limpas, que o livro recomenda justamente para substituir os combustíveis fósseis.",
+          "A energia solar vem da luz do Sol, e a eólica, da força do vento. Parece certa porque também servem para produzir eletricidade. Mas são energias renováveis e limpas, que o livro recomenda justamente para substituir os combustíveis fósseis.",
       },
       {
         id: "B",
@@ -353,14 +353,14 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "O vapor d'água e o metano, que existem na atmosfera mesmo sem a ação dos seres humanos",
         correct: false,
         explanation:
-          "O vapor d'água e o metano são gases de efeito estufa, que existem naturalmente na atmosfera. Tenta porque aparecem no mesmo parágrafo. Mas são gases, não combustíveis: não são queimados para gerar energia na lista do livro.",
+          "O vapor d'água e o metano são gases de efeito estufa, que existem naturalmente na atmosfera. Parece certa porque aparecem no mesmo parágrafo. Mas o livro os apresenta como gases de efeito estufa, e os exemplos de combustíveis fósseis que ele dá são o carvão e o petróleo.",
       },
       {
         id: "D",
         text: "O ozônio e os CFCs, usados como combustível nos aerossóis e nos aparelhos de refrigeração",
         correct: false,
         explanation:
-          "O ozônio é o gás que filtra os raios ultravioleta, e os CFCs são gases usados em aerossóis e geladeiras, que destroem o ozônio. Tenta porque os aerossóis e as geladeiras usam esses gases. Mas eles não são combustíveis: não são queimados para produzir energia.",
+          "O ozônio é o gás que filtra os raios ultravioleta, e os CFCs são gases usados em aerossóis e geladeiras, que destroem o ozônio. Parece certa porque os aerossóis e as geladeiras usam esses gases. Mas eles não são combustíveis: não são queimados para produzir energia.",
       },
     ],
     tips: [
@@ -386,21 +386,21 @@ export const TEMA_EFEITO_ESTUFA: ExamQuestionWithTopic[] = [
         text: "A inversão térmica, que prende a umidade sobre algumas cidades e a tira de outras regiões",
         correct: false,
         explanation:
-          "A inversão térmica é a camada de ar quente que fica sobre o ar frio e impede a dispersão dos poluentes, principalmente no inverno. Tenta porque também mexe com a circulação do ar. Mas ela prende poluentes, não chuva, e é um fenômeno local, não uma consequência do aquecimento global.",
+          "A inversão térmica é a camada de ar quente que fica sobre o ar frio e impede a dispersão dos poluentes, principalmente no inverno. Parece certa porque também mexe com a circulação do ar. Mas ela prende poluentes, não chuva, e é um fenômeno local, não uma consequência do aquecimento global.",
       },
       {
         id: "C",
         text: "A chuva ácida, que cai em excesso perto das indústrias e deixa as áreas distantes sem água",
         correct: false,
         explanation:
-          "A chuva ácida é a precipitação com pH abaixo de 5,6, causada por óxidos de enxofre e de nitrogênio. Tenta porque fala de chuva. Mas ela muda a acidez da chuva, e não a quantidade que cai em cada lugar; não explica secas e chuvas em excesso.",
+          "A chuva ácida é a precipitação com pH abaixo de 5,6, causada por óxidos de enxofre e de nitrogênio. Parece certa porque fala de chuva. Mas ela muda a acidez da chuva, e não a quantidade que cai em cada lugar; não explica secas e chuvas em excesso.",
       },
       {
         id: "D",
         text: "O assoreamento, que acumula sedimentos nos rios e faz a água faltar em outras regiões",
         correct: false,
         explanation:
-          "Assoreamento é o acúmulo de sedimentos nos rios, lagos e mares, que obstrui os corpos d'água. Tenta porque também tem a ver com água nos rios. Mas é uma consequência da erosão, e não do aquecimento global, e não muda o regime de chuvas.",
+          "Assoreamento é o acúmulo de sedimentos nos rios, lagos e mares, que obstrui os corpos d'água. Parece certa porque também tem a ver com água nos rios. Mas é uma consequência da erosão, e não do aquecimento global, e não muda o regime de chuvas.",
       },
     ],
     tips: [

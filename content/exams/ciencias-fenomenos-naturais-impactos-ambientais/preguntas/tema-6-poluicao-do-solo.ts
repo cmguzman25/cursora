@@ -27,21 +27,21 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "Porque filtra a radiação ultravioleta do Sol antes que ela chegue às plantas e aos animais",
         correct: false,
         explanation:
-          "Filtrar a radiação ultravioleta é a função da camada de ozônio, que fica na atmosfera e filtra cerca de 90 % dos raios UV. Tenta porque também é uma proteção essencial para a vida. Mas o solo fica embaixo dos seres vivos e não tem como filtrar a luz que vem do Sol.",
+          "Filtrar a radiação ultravioleta é a função da camada de ozônio, que fica na atmosfera e filtra cerca de 90 % dos raios UV. Parece certa porque também é uma proteção essencial para a vida. Mas o solo fica embaixo dos seres vivos e não tem como filtrar a luz que vem do Sol.",
       },
       {
         id: "C",
         text: "Porque é o único lugar onde se forma o gás carbônico que as plantas usam na fotossíntese",
         correct: false,
         explanation:
-          "O gás carbônico que as plantas usam na fotossíntese está no ar, e vem de muitas fontes, como a respiração dos seres vivos e a queima de combustíveis. Tenta porque o solo é ligado ao crescimento das plantas. Mas o livro não diz que o solo produza o CO2; ele destaca outras funções do solo.",
+          "O gás carbônico que as plantas usam na fotossíntese está no ar, e vem de muitas fontes, como a respiração dos seres vivos e a queima de combustíveis. Parece certa porque o solo é ligado ao crescimento das plantas. Mas o livro não diz que o solo produza o CO2; ele destaca outras funções do solo.",
       },
       {
         id: "D",
         text: "Porque é um recurso que não pode ser degradado, já que se renova sozinho e recupera todos os nutrientes depois de cada chuva",
         correct: false,
         explanation:
-          "Essa alternativa imagina o solo como um recurso que não se estraga. Tenta porque o solo parece existir em quantidade infinita. Mas o livro diz o contrário: apesar da sua importância, o solo tem sido continuamente degradado pelas atividades humanas, e a chuva sobre o solo desprotegido causa erosão.",
+          "Essa alternativa imagina o solo como um recurso que não se estraga. Parece certa porque o solo parece existir em quantidade infinita. Mas o livro diz o contrário: apesar da sua importância, o solo tem sido continuamente degradado pelas atividades humanas, e a chuva sobre o solo desprotegido causa erosão.",
       },
     ],
     tips: [
@@ -59,21 +59,21 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "O nome dos sedimentos que a erosão arranca do solo desprotegido e leva para dentro dos rios, onde acabam obstruindo os seus leitos",
         correct: false,
         explanation:
-          "Sedimentos levados pela erosão para dentro dos rios causam o assoreamento, que obstrui os corpos d'água. Tenta porque também é algo que sai do solo e polui a água. Mas o chorume não é terra: é um líquido que vem da decomposição do lixo.",
+          "Sedimentos levados pela erosão para dentro dos rios causam o assoreamento, que obstrui os corpos d'água. Parece certa porque também é algo que sai do solo e polui a água. Mas o chorume não é terra: é um líquido que vem da decomposição do lixo.",
       },
       {
         id: "B",
         text: "O adubo produzido pela compostagem do lixo orgânico, usado para melhorar a fertilidade do solo",
         correct: false,
         explanation:
-          "A compostagem transforma o lixo orgânico em adubo, e o livro a indica como medida para reduzir a poluição. Tenta porque os dois saem da decomposição do lixo orgânico. Mas o adubo da compostagem é útil, e o chorume é um resíduo tóxico que contamina o ambiente.",
+          "A compostagem transforma o lixo orgânico em adubo, e o livro a indica como medida para reduzir a poluição. Parece certa porque os dois saem da decomposição do lixo orgânico. Mas o adubo da compostagem é útil, e o chorume é um resíduo tóxico que contamina o ambiente.",
       },
       {
         id: "C",
         text: "Um gás tóxico, liberado pelas queimadas, que destrói os microrganismos decompositores do solo",
         correct: false,
         explanation:
-          "As queimadas realmente destroem os microrganismos decompositores e liberam gases que aumentam o efeito estufa. Tenta porque mistura dois efeitos reais das queimadas. Mas o chorume não é um gás nem vem do fogo: é um líquido que se forma na decomposição do lixo.",
+          "As queimadas realmente destroem os microrganismos decompositores e liberam gases que aumentam o efeito estufa. Parece certa porque mistura dois efeitos reais das queimadas. Mas o chorume não é um gás nem vem do fogo: é um líquido que se forma na decomposição do lixo.",
       },
       {
         id: "D",
@@ -98,7 +98,7 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "Não há diferença: os dois são terrenos a céu aberto onde o lixo é jogado sem nenhuma proteção",
         correct: false,
         explanation:
-          "Essa alternativa trata os dois locais como iguais. Tenta porque nos dois o lixo da cidade é depositado no chão. Mas a definição de terreno a céu aberto, sem proteção, é só a do lixão; o aterro sanitário foi justamente criado para proteger o solo e captar os gases.",
+          "Essa alternativa trata os dois locais como iguais. Parece certa porque nos dois o lixo da cidade é depositado no chão. Mas a definição de terreno a céu aberto, sem proteção, é só a do lixão; o aterro sanitário foi justamente criado para proteger o solo e captar os gases.",
       },
       {
         id: "B",
@@ -112,14 +112,14 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "O lixão recebe só lixo hospitalar e industrial, e o aterro recebe só o lixo orgânico das residências",
         correct: false,
         explanation:
-          "Essa alternativa separa os dois locais pelo tipo de lixo. Tenta porque o livro fala de lixos diferentes, como o orgânico, o industrial e o hospitalar. Mas a diferença entre lixão e aterro está na proteção do solo e na captação de gases, e não no tipo de lixo recebido.",
+          "Essa alternativa separa os dois locais pelo tipo de lixo. Parece certa porque o livro fala de lixos diferentes, como o orgânico, o industrial e o hospitalar. Mas a diferença entre lixão e aterro está na proteção do solo e na captação de gases, e não no tipo de lixo recebido.",
       },
       {
         id: "D",
         text: "O aterro queima todo o lixo para não ocupar espaço, e o lixão o enterra para que não apareça",
         correct: false,
         explanation:
-          "Queimar lixo libera gases que poluem o ar e aumentam o efeito estufa. Tenta porque parece uma forma de 'sumir' com o lixo. Mas o livro não descreve o aterro como um lugar de queima: ele impermeabiliza o solo e capta os gases e o chorume do lixo em decomposição.",
+          "Queimar lixo libera gases que poluem o ar e aumentam o efeito estufa. Parece certa porque parece uma forma de 'sumir' com o lixo. Mas o livro não descreve o aterro como um lugar de queima: ele impermeabiliza o solo e capta os gases e o chorume do lixo em decomposição.",
       },
     ],
     tips: [
@@ -138,21 +138,21 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "Queimar todo o lixo produzido em um terreno vazio, longe das salas de aula, uma vez por semana",
         correct: false,
         explanation:
-          "Queimar lixo é uma forma de queimada: libera gases que pioram a qualidade do ar e aumentam o efeito estufa. Tenta porque o lixo desaparece da vista. Mas o problema só muda de lugar, do solo para o ar, e o livro não indica essa medida.",
+          "Queimar lixo é uma forma de queimada: libera gases que pioram a qualidade do ar e aumentam o efeito estufa. Parece certa porque o lixo desaparece da vista. Mas o problema só muda de lugar, do solo para o ar, e o livro não indica essa medida.",
       },
       {
         id: "B",
         text: "Enterrar o lixo no pátio da escola, para que ele se decomponha embaixo da terra sem cheiro",
         correct: false,
         explanation:
-          "Enterrar o lixo sem proteção faz o chorume, formado na decomposição, infiltrar-se no solo e chegar ao lençol freático. Tenta porque esconde o lixo e o cheiro. Mas é justamente a contaminação que o aterro sanitário evita ao impermeabilizar o solo.",
+          "Enterrar o lixo sem proteção faz o chorume, formado na decomposição, infiltrar-se no solo e chegar ao lençol freático. Parece certa porque esconde o lixo e o cheiro. Mas é justamente a contaminação que o aterro sanitário evita ao impermeabilizar o solo.",
       },
       {
         id: "C",
         text: "Misturar o lixo orgânico com o reciclável, para que todo o lixo seja levado de uma vez ao lixão",
         correct: false,
         explanation:
-          "Misturar os tipos de lixo é o contrário da coleta seletiva, que os separa. Tenta porque parece mais simples recolher tudo junto. Mas assim nada é reciclado nem compostado, e tudo vai para o lixão, que o livro descreve como um terreno a céu aberto, sem proteção.",
+          "Misturar os tipos de lixo é o contrário da coleta seletiva, que os separa. Parece certa porque parece mais simples recolher tudo junto. Mas assim nada é reciclado nem compostado, e tudo vai para o lixão, que o livro descreve como um terreno a céu aberto, sem proteção.",
       },
       {
         id: "D",
@@ -185,21 +185,21 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "Só traz benefícios, porque os fertilizantes devolvem ao solo todos os nutrientes perdidos",
         correct: false,
         explanation:
-          "Fertilizantes são produtos que acrescentam nutrientes ao solo para as plantas crescerem melhor. Tenta porque essa é justamente a função deles. Mas o livro diz que, em excesso, eles degradam o solo e reduzem a sua fertilidade, além de fazerem mal à saúde.",
+          "Fertilizantes são produtos que acrescentam nutrientes ao solo para as plantas crescerem melhor. Parece certa porque essa é justamente a função deles. Mas o livro diz que, em excesso, eles degradam o solo e reduzem a sua fertilidade, além de fazerem mal à saúde.",
       },
       {
         id: "C",
         text: "Prejudica apenas o agricultor que aplica o produto, porque o efeito não sai da plantação",
         correct: false,
         explanation:
-          "Essa alternativa imagina que o dano dos defensivos ficaria preso à plantação. Tenta porque a foto do livro mostra trabalhadores com roupas de proteção aplicando o produto. Mas o livro diz que esses produtos podem contaminar a água e o ar, atingindo também outros seres vivos, como as abelhas.",
+          "Essa alternativa imagina que o dano dos defensivos ficaria preso à plantação. Parece certa porque a foto do livro mostra trabalhadores com roupas de proteção aplicando o produto. Mas o livro diz que esses produtos podem contaminar a água e o ar, atingindo também outros seres vivos, como as abelhas.",
       },
       {
         id: "D",
         text: "Causa a erosão do solo, porque os produtos químicos dissolvem as rochas e abrem grandes crateras",
         correct: false,
         explanation:
-          "A erosão é o desgaste, transporte e sedimentação de solos e rochas pela chuva e pelo vento, intensificado pela retirada da vegetação. Tenta porque também é uma forma de degradação do solo. Mas o livro não diz que os defensivos dissolvem rochas; ele liga o excesso deles à perda de fertilidade.",
+          "A erosão é o desgaste, transporte e sedimentação de solos e rochas pela chuva e pelo vento, intensificado pela retirada da vegetação. Parece certa porque também é uma forma de degradação do solo. Mas o livro não diz que os defensivos dissolvem rochas; ele liga o excesso deles à perda de fertilidade.",
       },
     ],
     tips: [
@@ -217,14 +217,14 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "O aumento da biodiversidade, porque as áreas abertas recebem espécies novas vindas de outros lugares",
         correct: false,
         explanation:
-          "Biodiversidade é a variedade de seres vivos de um lugar. Tenta porque espécies novas podem chegar a uma área aberta. Mas o livro diz o contrário: o desmatamento reduz a biodiversidade, e espécies vindas de fora podem ser exóticas e desequilibrar o ambiente.",
+          "Biodiversidade é a variedade de seres vivos de um lugar. Parece certa porque espécies novas podem chegar a uma área aberta. Mas o livro diz o contrário: o desmatamento reduz a biodiversidade, e espécies vindas de fora podem ser exóticas e desequilibrar o ambiente.",
       },
       {
         id: "B",
         text: "A redução do efeito estufa, porque sem árvores há menos folhas soltando gás carbônico no ar",
         correct: false,
         explanation:
-          "Essa alternativa imagina que as árvores seriam fontes de gás carbônico. Tenta porque as plantas também respiram. Mas o livro diz que plantas absorvem CO2 na fotossíntese, e que o desmatamento intensifica o efeito estufa em vez de reduzi-lo.",
+          "Essa alternativa imagina que as árvores seriam fontes de gás carbônico. Parece certa porque as plantas também respiram. Mas o livro diz que plantas absorvem CO2 na fotossíntese, e que o desmatamento intensifica o efeito estufa em vez de reduzi-lo.",
       },
       {
         id: "C",
@@ -238,7 +238,7 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "O aumento da fertilidade do solo, porque as cinzas e os galhos das árvores derrubadas viram adubo",
         correct: false,
         explanation:
-          "Adubo é matéria que acrescenta nutrientes ao solo, como o produzido na compostagem. Tenta porque restos de plantas realmente podem virar adubo. Mas o livro diz que o desmatamento e as queimadas deixam o solo mais pobre em nutrientes e sujeito à erosão.",
+          "Adubo é matéria que acrescenta nutrientes ao solo, como o produzido na compostagem. Parece certa porque restos de plantas realmente podem virar adubo. Mas o livro diz que o desmatamento e as queimadas deixam o solo mais pobre em nutrientes e sujeito à erosão.",
       },
     ],
     tips: [
@@ -257,21 +257,21 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "O fogo faz a chuva ficar ácida naquela área, e a chuva ácida retira os nutrientes do solo",
         correct: false,
         explanation:
-          "A chuva ácida é a precipitação com pH abaixo de 5,6, causada por óxidos de enxofre e de nitrogênio, e também empobrece o solo. Tenta porque o efeito final é o mesmo. Mas o livro explica o empobrecimento pelas queimadas de outro jeito: pela morte dos microrganismos decompositores.",
+          "A chuva ácida é a precipitação com pH abaixo de 5,6, causada por óxidos de enxofre e de nitrogênio, e também empobrece o solo. Parece certa porque o efeito final é o mesmo. Mas o livro explica o empobrecimento pelas queimadas de outro jeito: pela morte dos microrganismos decompositores.",
       },
       {
         id: "B",
         text: "As cinzas formam uma camada escura que impede a entrada de luz no solo, como a floração das algas faz na superfície da água",
         correct: false,
         explanation:
-          "A floração é a camada de algas que se forma na superfície da água na eutrofização e impede a entrada de luz. Tenta porque as cinzas também cobrem a superfície. Mas o livro não fala de bloqueio de luz no solo; o problema das queimadas está nos decompositores destruídos.",
+          "A floração é a camada de algas que se forma na superfície da água na eutrofização e impede a entrada de luz. Parece certa porque as cinzas também cobrem a superfície. Mas o livro não fala de bloqueio de luz no solo; o problema das queimadas está nos decompositores destruídos.",
       },
       {
         id: "C",
         text: "O fogo derrete as rochas do solo, que endurecem e deixam de absorver a água das chuvas",
         correct: false,
         explanation:
-          "Essa alternativa imagina o fogo derretendo rochas. Tenta porque o solo realmente fica mais duro e exposto depois do fogo. Mas uma queimada não chega a derreter rochas; o livro liga o empobrecimento do solo à destruição dos microrganismos que reciclam os nutrientes.",
+          "Essa alternativa imagina o fogo derretendo rochas. Parece certa porque o solo realmente fica mais duro e exposto depois do fogo. Mas uma queimada não chega a derreter rochas; o livro liga o empobrecimento do solo à destruição dos microrganismos que reciclam os nutrientes.",
       },
       {
         id: "D",
@@ -303,21 +303,21 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "É a transformação de uma paisagem em deserto, causada só pela falta de chuva ao longo dos anos",
         correct: false,
         explanation:
-          "A transformação de uma paisagem em deserto é a desertificação. Tenta porque as duas aparecem juntas na mesma seção do livro, e a erosão é uma das causas dela. Mas a erosão é o desgaste do solo e das rochas, e a desertificação não é causada só pela falta de chuva: o livro cita desmatamento, agropecuária e mineração.",
+          "A transformação de uma paisagem em deserto é a desertificação. Parece certa porque as duas aparecem juntas na mesma seção do livro, e a erosão é uma das causas dela. Mas a erosão é o desgaste do solo e das rochas, e a desertificação não é causada só pela falta de chuva: o livro cita desmatamento, agropecuária e mineração.",
       },
       {
         id: "C",
         text: "É a contaminação do solo pelo chorume do lixo, que se infiltra na terra e chega ao lençol freático",
         correct: false,
         explanation:
-          "O chorume é o líquido tóxico que se forma na decomposição do lixo orgânico. Tenta porque também é uma forma de degradação do solo. Mas o chorume contamina o solo com substâncias tóxicas, enquanto a erosão desgasta e transporta o próprio solo.",
+          "O chorume é o líquido tóxico que se forma na decomposição do lixo orgânico. Parece certa porque também é uma forma de degradação do solo. Mas o chorume contamina o solo com substâncias tóxicas, enquanto a erosão desgasta e transporta o próprio solo.",
       },
       {
         id: "D",
         text: "É o acúmulo de sedimentos dentro de rios e lagos, que vão ficando rasos ao longo do tempo",
         correct: false,
         explanation:
-          "O acúmulo de sedimentos nos corpos d'água é o assoreamento. Tenta porque o livro diz que a erosão provoca o assoreamento: uma é causa da outra. Mas a erosão acontece no solo, que é desgastado e transportado; o assoreamento é o que acontece quando esse material chega à água.",
+          "O acúmulo de sedimentos nos corpos d'água é o assoreamento. Parece certa porque o livro diz que a erosão provoca o assoreamento: uma é causa da outra. Mas a erosão acontece no solo, que é desgastado e transportado; o assoreamento é o que acontece quando esse material chega à água.",
       },
     ],
     tips: [
@@ -336,7 +336,7 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "Porque os sedimentos liberam metais tóxicos que se acumulam no corpo dos peixes",
         correct: false,
         explanation:
-          "Metais tóxicos, como o mercúrio, se acumulam nos tecidos dos seres vivos na bioacumulação. Tenta porque também mata organismos aquáticos. Mas os metais vêm de indústrias e da mineração; o livro explica a morte no assoreamento pela falta de luz e de oxigênio.",
+          "Metais tóxicos, como o mercúrio, se acumulam nos tecidos dos seres vivos na bioacumulação. Parece certa porque também mata organismos aquáticos. Mas os metais vêm de indústrias e da mineração; o livro explica a morte no assoreamento pela falta de luz e de oxigênio.",
       },
       {
         id: "B",
@@ -350,14 +350,14 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "Porque a água fica com pH abaixo de 5,6 e se torna ácida demais para os peixes e as plantas que vivem nela",
         correct: false,
         explanation:
-          "Água com pH abaixo de 5,6 é a consequência da chuva ácida nos ambientes aquáticos. Tenta porque a chuva ácida também faz os ambientes aquáticos perderem biodiversidade. Mas o assoreamento não muda a acidez: é a terra acumulada que bloqueia a luz e reduz o oxigênio.",
+          "Água com pH abaixo de 5,6 é a consequência da chuva ácida nos ambientes aquáticos. Parece certa porque a chuva ácida também faz os ambientes aquáticos perderem biodiversidade. Mas o assoreamento não muda a acidez: é a terra acumulada que bloqueia a luz e reduz o oxigênio.",
       },
       {
         id: "D",
         text: "Porque os sedimentos esquentam a água do rio, como faz o aquecimento global nos oceanos",
         correct: false,
         explanation:
-          "O aquecimento global é o aumento anormal das temperaturas médias do planeta, que deixa os oceanos mais ácidos e reduz os recifes e os corais. Tenta porque também prejudica ambientes aquáticos. Mas o livro não diz que os sedimentos esquentam a água; o problema é a luz e o oxigênio.",
+          "O aquecimento global é o aumento anormal das temperaturas médias do planeta, que deixa os oceanos mais ácidos e reduz os recifes e os corais. Parece certa porque também prejudica ambientes aquáticos. Mas o livro não diz que os sedimentos esquentam a água; o problema é a luz e o oxigênio.",
       },
     ],
     tips: [
@@ -376,14 +376,14 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "A formação de crateras no solo pela ação das chuvas fortes sobre terrenos sem vegetação",
         correct: false,
         explanation:
-          "Crateras abertas pela chuva em solo sem vegetação são um resultado da erosão, como na foto do processo erosivo do livro. Tenta porque a erosão aparece junto da desertificação e é uma das suas causas. Mas a desertificação é a transformação da paisagem toda em algo parecido com um deserto, e não só a formação de crateras.",
+          "Crateras abertas pela chuva em solo sem vegetação são um resultado da erosão, como na foto do processo erosivo do livro. Parece certa porque a erosão aparece junto da desertificação e é uma das suas causas. Mas a desertificação é a transformação da paisagem toda em algo parecido com um deserto, e não só a formação de crateras.",
       },
       {
         id: "B",
         text: "O derretimento de grandes áreas de gelo, que deixam o solo exposto, seco, sem nutrientes e coberto apenas de pedras",
         correct: false,
         explanation:
-          "O derretimento do gelo das calotas polares é uma consequência do aquecimento global, que eleva o nível dos oceanos. Tenta porque também é uma mudança enorme na paisagem. Mas a desertificação é a transformação de solos produtivos em áreas secas, e não tem a ver com o gelo.",
+          "O derretimento do gelo das calotas polares é uma consequência do aquecimento global, que eleva o nível dos oceanos. Parece certa porque também é uma mudança enorme na paisagem. Mas a desertificação é a transformação de solos produtivos em áreas secas, e não tem a ver com o gelo.",
       },
       {
         id: "C",
@@ -397,7 +397,7 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "O acúmulo de areia trazida pelo vento nos rios e lagos, que acabam secando com o tempo",
         correct: false,
         explanation:
-          "O acúmulo de sedimentos em rios e lagos é o assoreamento, que obstrui os corpos d'água. Tenta porque a areia e a seca lembram um deserto. Mas o assoreamento acontece na água, e a desertificação é a transformação do solo e da paisagem em área árida.",
+          "O acúmulo de sedimentos em rios e lagos é o assoreamento, que obstrui os corpos d'água. Parece certa porque a areia e a seca lembram um deserto. Mas o assoreamento acontece na água, e a desertificação é a transformação do solo e da paisagem em área árida.",
       },
     ],
     tips: [
@@ -416,21 +416,21 @@ export const TEMA_POLUICAO_DO_SOLO: ExamQuestionWithTopic[] = [
         text: "Água para abastecer as cidades; o rompimento só causou falta de água nas torneiras da população que vivia na região",
         correct: false,
         explanation:
-          "Barragens de abastecimento guardam água para o consumo das cidades. Tenta porque 'barragem' costuma lembrar represa de água. Mas as barragens de Mariana e Brumadinho eram de contenção de rejeitos da mineração, e o rompimento espalhou lama, não apenas água.",
+          "Barragens de abastecimento guardam água para o consumo das cidades. Parece certa porque 'barragem' costuma lembrar represa de água. Mas as barragens de Mariana e Brumadinho eram de contenção de rejeitos da mineração, e o rompimento espalhou lama, não apenas água.",
       },
       {
         id: "B",
         text: "Petróleo extraído do subsolo; o rompimento cobriu os rios com uma mancha negra de óleo",
         correct: false,
         explanation:
-          "A mancha negra de óleo é o efeito do derramamento de petróleo, causado por vazamentos de jazidas, navios e plataformas. Tenta porque, nos dois casos, um material cobre a água e impede a fotossíntese. Mas as barragens de Minas Gerais guardavam rejeitos de minério, e o que se espalhou foi lama.",
+          "A mancha negra de óleo é o efeito do derramamento de petróleo, causado por vazamentos de jazidas, navios e plataformas. Parece certa porque, nos dois casos, um material cobre a água e impede a fotossíntese. Mas as barragens de Minas Gerais guardavam rejeitos de minério, e o que se espalhou foi lama.",
       },
       {
         id: "C",
         text: "Lixo das cidades próximas; o rompimento espalhou chorume pelo solo e pelo lençol freático",
         correct: false,
         explanation:
-          "O chorume é o líquido tóxico do lixo orgânico em decomposição, que o aterro sanitário procura conter. Tenta porque os dois são resíduos guardados para não contaminar o ambiente. Mas as barragens de Mariana e Brumadinho não guardavam lixo urbano: guardavam rejeitos da mineração.",
+          "O chorume é o líquido tóxico do lixo orgânico em decomposição, que o aterro sanitário procura conter. Parece certa porque os dois são resíduos guardados para não contaminar o ambiente. Mas as barragens de Mariana e Brumadinho não guardavam lixo urbano: guardavam rejeitos da mineração.",
       },
       {
         id: "D",
