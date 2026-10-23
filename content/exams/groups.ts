@@ -70,6 +70,7 @@ export const EXAM_GROUPS: ExamGroup[] = [
       "historia-colonizacao-da-america",
       "geografia-industrializacao-brasileira",
       "matematica-retas-triangulos-poligonos",
+      "ciencias-fenomenos-naturais-impactos-ambientais",
     ],
     exerciseSetSlugs: ["exercicios-retas-triangulos-poligonos"],
   },

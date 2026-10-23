@@ -15,6 +15,7 @@ import { bank as geografiaIndustrializacaoBrasileira } from "./geografia-industr
 import { bank as influxUnidades8Y9 } from "./influx-unidades-8-y-9/manifest";
 import { bank as matematicaSequenciasPadroesOrdinais } from "./matematica-sequencias-padroes-ordinais/manifest";
 import { bank as matematicaRetasTriangulosPoligonos } from "./matematica-retas-triangulos-poligonos/manifest";
+import { bank as cienciasFenomenosNaturaisImpactosAmbientais } from "./ciencias-fenomenos-naturais-impactos-ambientais/manifest";
 
 /**
  * Todos los exámenes que la sección `/exams` puede servir. Agregar uno es crear
@@ -35,6 +36,7 @@ export const EXAM_BANKS: GeneratedExamBank[] = [
   influxUnidades8Y9,
   matematicaSequenciasPadroesOrdinais,
   matematicaRetasTriangulosPoligonos,
+  cienciasFenomenosNaturaisImpactosAmbientais,
 ];
 
 const BY_SLUG = new Map(EXAM_BANKS.map((bank) => [bank.slug, bank]));
