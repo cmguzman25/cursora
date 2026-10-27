@@ -30,7 +30,11 @@ export const EXAM_GROUPS: ExamGroup[] = [
       es: "La certificación de entrada a AWS: qué es la nube, qué servicio hace qué, cómo se factura y de quién es cada responsabilidad de seguridad.",
       en: "The entry-level AWS certification: what the cloud is, which service does what, how it is billed, and who owns each security responsibility.",
     },
-    examSlugs: ["aws-cloud-practitioner-simulacro", "aws-cloud-practitioner-refuerzo-grediana"],
+    examSlugs: [
+      "aws-cloud-practitioner-simulacro",
+      "aws-cloud-practitioner-refuerzo-grediana",
+      "aws-cloud-practitioner-refuerzo-2-grediana",
+    ],
   },
   {
     slug: "aws-data-engineer",
